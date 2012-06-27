@@ -1,4 +1,18 @@
-﻿[B]0.9.5[/B]
+[B] reFocus BIG v.03[/B]
+Bigger fonts with optional setting for original reFocus fonts.
+Poster/clearart and network/channel/studio logo on video pause screen.
+Movie sets support, accesible from movies home menu.
+Galefury Gallery View for Episodes
+Galefury Themes: black leather,denim,red,lime,fabric,royal and wood.
+Galefury Blue Gallery and Seekbar.
+Sabish reAlaska and reAlaska Dark themes.
+Sabish reAlaska Video OSD.
+Support for Artist logos.
+Support for 8 smart video playlists on videos home menu.
+Support for 6 add-ons and 2 programs on add-ons home view.
+Support for 1 smart playlist on music home menu.﻿
+
+[B]0.9.5[/B]
 ADDED: videowindow in videoplaylist screen can be selected to switch to playing video
 ADDED: artworkdownloader add-on support
 ADDED: option to download extrafanart
