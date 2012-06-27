@@ -1,0 +1,63 @@
+﻿<includes>
+	<include name="global_Background">
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<texture background="true">$VAR[global_Background.Fallback]</texture>
+			<visible>Skin.HasSetting(fanart.global) + IsEmpty(ListItem.Property(Fanart_Image)) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.global)] + !ControlGroup(6000).HasFocus</visible>
+			<include>transition_Fanart</include>
+			<include>menu_BackgroundHide</include>
+		</control>
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<visible>Skin.HasSetting(fanart.global) + !IsEmpty(ListItem.Property(Fanart_Image)) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.global)] + !ControlGroup(6000).HasFocus</visible>
+			<include>transition_Fanart</include>
+			<fadetime>fadetime_Fanart</fadetime>
+			<include>menu_BackgroundHide</include>
+		</control>
+		<!--playing video background-->
+		<control type="group">
+			<visible>Player.HasVideo + Skin.HasSetting(backgroundvideo.global)</visible>
+			<control type="image">
+				<aspectratio>stretch</aspectratio>
+				<include>screen_Dimensions</include>
+				<texture>black.png</texture>
+				<visible></visible>
+			</control>
+			<control type="videowindow">
+				<include>screen_Dimensions</include>
+				<visible>![Window.IsActive(pictures) + Control.IsVisible(531)] + !Window.IsActive(weather)</visible>
+			</control>
+		</control>
+		<!--global background-->
+		<control type="image">
+			<aspectratio>stretch</aspectratio>
+			<include>screen_Dimensions</include>
+			<texture background="true">backgrounds/background.png</texture>
+			<visible>[![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + !Window.IsActive(weather)</visible>
+			<include>transition_BG</include>
+		</control>
+		<!--vignette-->
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<texture background="true">overlays/vignette.png</texture>
+			<visible>[![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + Skin.HasSetting(fanart.global.alt)</visible>
+			<include>transition_BG</include>
+		</control>
+	</include>
+	<!--slideshows-->
+	<include name="home_Slideshows">
+		<control type="multiimage" id="1">
+			<imagepath>special://profile/Thumbnails/Video/Fanart/</imagepath>
+			<visible>!Skin.HasSetting(slideshow.fanart) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.home)] + !ControlGroup(2100).HasFocus</visible>
+			<include>home_Slideshow</include>
+			<include>screen_Dimensions</include>
+		</control>
+		<control type="multiimage" id="1">
+			<info>Skin.String(slideshow.custom)</info>
+			<visible>Skin.HasSetting(slideshow.fanart) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.home)]</visible>
+			<include>home_Slideshow</include>
+			<include>screen_Dimensions</include>
+		</control>
+	</include>
+</includes>

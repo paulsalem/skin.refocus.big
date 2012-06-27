@@ -1,0 +1,209 @@
+﻿<window id="132">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<include>dialogOpen</include>
+	<coordinates>
+		<system>1</system>
+		<posx>315</posx>
+		<posy>39</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<width>650</width>
+			<height>642</height>
+			<include>dialogWindow</include>
+		</control>
+		<control type="label" id="1">
+			<width>582</width>
+			<label>$LOCALIZE[20333]</label>
+			<include>dialog_Windowtitle</include>
+		</control>
+		<control type="group" id="9002">
+			<posx>19</posx>
+			<posy>75</posy>
+			<control type="group" id="9003">
+				<control type="label">
+					<posx>14</posx>
+					<width>613</width>
+					<height>36</height>
+					<textcolor>Color4</textcolor>	
+					<font>smallerCaps</font>
+					<label>[B]$LOCALIZE[20344][/B]</label>
+				</control>
+				<control type="group">
+					<posy>40</posy>
+					<control type="image">
+						<width>613</width>
+						<include>dialog_Separator</include>
+					</control>
+					<!--content picker-->
+					<control type="spincontrolex" id="3">
+						<!--important-->
+						<posy>0</posy>
+						<!---->
+						<width>613</width>
+						<label>-</label>
+						<font>-</font>
+						<onleft>-</onleft>
+						<onup>9001</onup>
+						<ondown>4</ondown>
+						<texturefocus border="3">dialogs/list-focus.png</texturefocus>
+						<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
+						<include>dialog_Spin</include>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<width>556</width>
+						<height>36</height>
+						<textcolor>Color4</textcolor>	
+						<font>small</font>
+						<label>$INFO[Control.GetLabel(3)]</label>
+						<visible>!Control.HasFocus(3)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<width>556</width>
+						<height>36</height>
+						<textcolor>Color1</textcolor>	
+						<font>small</font>
+						<label>$INFO[Control.GetLabel(3)]</label>
+						<visible>Control.HasFocus(3)</visible>
+					</control>
+				</control>
+			</control>
+			<!---scrapers--->
+			<control type="group" id="9004">
+				<posy>95</posy>
+				<visible>!SubString(Control.GetLabel(3),$LOCALIZE[231])</visible>
+				<control type="label">
+					<posx>14</posx>
+					<width>613</width>
+					<height>36</height>
+					<label>[B]$LOCALIZE[20195][/B]</label>
+					<textcolor>Color4</textcolor>
+					<font>smallerCaps</font>
+				</control>
+				<control type="image">
+					<posy>40</posy>
+					<width>613</width>
+					<include>dialog_Separator</include>
+				</control>
+				<control type="list" id="4">
+					<posy>40</posy>
+					<width>613</width>
+					<height>80</height>
+					<onleft>-</onleft>
+					<onright>-</onright>
+					<onup>3</onup>
+					<ondown>5</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime tween="Cubic" easing="Out">200</scrolltime>
+					<itemlayout height="40">
+						<control type="image">
+							<width>613</width>
+							<include>dialog_CommonList</include>
+						</control>
+						<control type="label">
+							<width>613</width>
+							<info>ListItem.Label</info>
+							<include>dialog_CommonListItem</include>
+						</control>
+					</itemlayout>
+					<focusedlayout height="40">
+						<control type="image">
+							<width>613</width>
+							<height>40</height>
+							<include>dialog_CommonList</include>
+						</control>
+						<control type="image">
+							<width>613</width>
+							<include>dialog_CommonListFocus</include>
+							<visible>Control.HasFocus(4)</visible>
+						</control>
+						<control type="label">
+							<width>613</width>
+							<info>ListItem.Label</info>
+							<include>dialog_CommonListItem</include>
+							<visible>!Control.HasFocus(4)</visible>
+						</control>
+						<control type="label">
+							<width>613</width>
+							<info>ListItem.Label</info>
+							<include>dialog_CommonListItemFocus</include>
+							<visible>Control.HasFocus(4)</visible>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<!---options--->
+			<control type="group" id="9005">
+				<posy>230</posy>
+				<animation effect="slide" start="0,0" end="0,-135"  time="0" condition="SubString(Control.GetLabel(3),$LOCALIZE[231])">Conditional</animation>
+				<control type="label">
+					<posx>14</posx>
+					<width>613</width>
+					<height>38</height>
+					<textcolor>Color4</textcolor>
+					<font>smallerCaps</font>
+					<label>[B]$LOCALIZE[33063][/B]</label>
+				</control>
+				<control type="image">
+					<posy>40</posy>
+					<width>613</width>
+					<include>dialog_Separator</include>
+				</control>
+				<!--controla area-->
+				<control type="grouplist" id="5">
+					<posy>40</posy>
+					<width>613</width>
+					<height>200</height>
+					<itemgap>0</itemgap>
+					<onleft>-</onleft>
+					<onright>-</onright>
+					<onup>4</onup>
+					<ondown>9001</ondown>
+				</control>
+			</control>
+			<control type="button" id="7">
+				<description>Default Button</description>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<include>dialog_Radio</include>
+			</control>
+		</control>
+		<!---dialog buttons--->
+		<control type="group" id="9001">
+			<posx>34</posx>
+			<posy>567</posy>
+			<!--settings-->
+			<control type="button" id="6">
+				<label>5</label>
+				<onleft>29</onleft>
+				<onright>28</onright>
+				<onup>9005</onup>
+				<ondown>9003</ondown>
+				<include>dialog_Button</include>
+			</control>
+			<!--ok-->
+			<control type="button" id="28">
+				<posx>333</posx>
+				<label>186</label>
+				<onleft>6</onleft>
+				<onright>29</onright>
+				<onup>9005</onup>
+				<ondown>9003</ondown>
+				<include>dialog_Button</include>
+			</control>
+			<!--cancel-->
+			<control type="button" id="29">
+				<posx>463</posx>
+				<label>222</label>
+				<onleft>28</onleft>
+				<onright>6</onright>
+				<onup>9005</onup>
+				<ondown>9003</ondown>
+				<include>dialog_Button</include>
+			</control>
+		</control>
+	</controls>
+</window>
