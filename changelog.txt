@@ -1,4 +1,4 @@
-[B] reFocus BIG v.03[/B]
+[B]reFocus BIG v.03[/B]
 Bigger fonts with optional setting for original reFocus fonts.
 Poster/clearart and network/channel/studio logo on video pause screen.
 Movie sets support, accesible from movies home menu.
