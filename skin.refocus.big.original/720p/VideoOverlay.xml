@@ -1,0 +1,60 @@
+﻿<window id="2904">
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<visible>Player.HasVideo + !Skin.HasSetting(overlay.enable) + ![Window.IsActive(infodialog) | Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(home) | Window.IsActive(fullscreenvideo) | Window.IsActive(614)]</visible>
+			<include>toggle_ToastMute</include>
+			<control type="label" id="200">
+				<posx>180r</posx>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<font>titleLow</font>
+				<include>toast_Top</include>
+			</control>
+			<control type="label" id="201">
+				<posx>180r</posx>
+				<posy>28</posy>
+				<label>$INFO[VideoPlayer.Genre]</label>
+				<font>titleSmallest</font>
+				<include>toast_Bottom</include>
+				<visible>VideoPlayer.Content(movies) + !SubString(Player.Filenameandpath,http://)</visible>
+			</control>
+			<control type="label" id="203">
+				<posx>180r</posx>
+				<label>$INFO[VideoPlayer.TVShowTitle]</label>
+				<font>titleLow</font>
+				<include>toast_Bottom</include>
+				<visible>VideoPlayer.Content(episodes)</visible>
+			</control>
+			<control type="label" id="204">
+				<posx>180r</posx>
+				<posy>28</posy>
+				<label>$INFO[VideoPlayer.Artist]</label>
+				<font>titleSmallest</font>
+				<include>toast_Bottom</include>
+				<visible>VideoPlayer.Content(musicvideos)</visible>
+			</control>
+			<control type="label" id="201">
+				<posx>180r</posx>
+				<label>$INFO[VideoPlayer.ChannelName]</label>
+				<font>titleSmallest</font>
+				<include>toast_Bottom</include>
+			</control>
+			<control type="label" id="201">
+				<posx>180r</posx>
+				<label>$INFO[VideoPlayer.Duration,, $LOCALIZE[31100]]</label>
+				<include>toast_Bottom</include>
+				<visible>VideoPlayer.Content(files) | SubString(Player.Filenameandpath,http://)</visible>
+			</control>
+			<control type="label" id="1">
+				<posx>170r</posx>
+				<label>$INFO[VideoPlayer.TimeRemaining(hh:mm:ss)]</label>
+				<font>titleInfoDialogSmaller</font>
+				<include>toast_Side</include>
+			</control>
+		</control>
+	</controls>
+</window>

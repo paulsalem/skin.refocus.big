@@ -1,0 +1,19 @@
+<colors>
+	<color name="Color0">FF333333</color>
+	<color name="Color1">ff444444</color>
+	<color name="Color2">ff006690</color>
+	<color name="Color3">ff5f5b5b</color>
+	<color name="Color4">FF696a6c</color>
+	<color name="Color5">FF222222</color>
+	<color name="Color7">FF222222</color>
+	<color name="Color8">ffffffff</color>
+	
+	<color name="Focused">FF333333</color>
+	<color name="Disabled">FF646363</color>
+	<color name="Selected">ff184b69</color>
+	
+	<color name="column1">ff222222</color>
+	<color name="column2">DDFFFFFF</color>
+	<color name="column3">dd568eaf</color>
+	<color name="column4">ee2d5a83</color>
+</colors>
