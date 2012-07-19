@@ -1,6 +1,6 @@
 ﻿<window id="115">
 	<defaultcontrol>-</defaultcontrol>
-	<visible>[Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] + ![Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
+	<visible>!Player.HasAudio + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] + ![Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 	<controls>
 		
 		<include>clock</include>
@@ -27,7 +27,7 @@
 		</control>
 		<control type="group">
 			<posy>300</posy>
-			<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)] + ![Window.IsActive(2901)]</visible>
+			<visible>[Skin.HasSetting(videoosd.realaska)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)] + ![Window.IsActive(2901)]</visible>
 			<control type="image">
 				<height>200</height>
 				<include>screenwidth</include>
@@ -37,7 +37,7 @@
 		</control>
 		<control type="group">
 			<posy>369</posy>
-			<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(files)] + ![Window.IsActive(2901)]</visible>
+			<visible>[Skin.HasSetting(videoosd.realaska)] + [VideoPlayer.Content(files)] + ![Window.IsActive(2901)]</visible>
 			<control type="image">
 				<height>200</height>
 				<include>screenwidth</include>
@@ -60,14 +60,14 @@
 				<width>1280</width>
 				<height>220</height>
 				<texture border="24">infoOverlay.png</texture>
-				<visible>Skin.HasSetting(videoosd.realaska) + Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
+				<visible>[Skin.HasSetting(videoosd.realaska)] + Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 			</control>
 			<control type="image" id="1">
 			<posy>500</posy>
 				<width>1280</width>
 				<height>220</height>
 				<texture border="24">infoOverlay.png</texture>
-				<visible>Skin.HasSetting(videoosd.realaska) + Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)</visible>
+				<visible>[Skin.HasSetting(videoosd.realaska)] + Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)</visible>
 			</control>
 
 		<!---TV Shows-->
@@ -157,15 +157,7 @@
 					<visible>Skin.HasSetting(videoosd.realaska) + Player.HasAudio</visible>
 				</control>
 				
-				<control type="label" id="1">
-					<posy>98</posy>
-					<width>850</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-					<textcolor>Color3</textcolor>
-					<font>osdTitle</font>
-					<include>info_Sub</include>
-					<visible>Skin.HasSetting(videoosd.realaska) + Player.HasAudio</visible>
-				</control>
+			
 				
 				<control type="label" id="1">
 					<posy>54</posy>
@@ -198,7 +190,7 @@
 				<!--plot-->
 				<control type="group" id="1">
 					<posy>55</posy>
-					<visible>Skin.HasSetting(videoosd.realaska) + Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
+					<visible>[Skin.HasSetting(videoosd.realaska)] + Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 					<control type="textbox" id="1">
 						<height>55</height>
 						<width>950</width>

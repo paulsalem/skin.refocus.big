@@ -947,16 +947,21 @@
 					<visible>Player.HasAudio</visible>
 				</control>
 				
-				<control type="label" id="1">
-					<posy>98</posy>
-					<width>850</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-					<textcolor>Color3</textcolor>
-					<font>osdTitle</font>
-					<include>info_Sub</include>
-					<visible>Player.HasAudio</visible>
+				<control type="group" id="1">
+					<posy>95</posy>
+					<visible>Player.HasAudio + !Skin.HasSetting(osd.progressbar)</visible>
+					<control type="label" id="1">
+						<width>850</width>
+						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+						<textcolor>Color3</textcolor>
+						<font>description</font>
+						<include>info_Sub</include>
+					</control>
+					<control type="label" id="1">
+						<label>$VAR[player_Status.Condition]</label>
+						<include>seekbar_Label-Info</include>
+					</control>
 				</control>
-				
 				<control type="label" id="1">
 					<posy>54</posy>
 					<width>850</width>
@@ -1007,7 +1012,7 @@
 				</control>
 				<!---progress------>
 				<control type="group" id="1">
-					<posy>120</posy>
+					<posy>127</posy>
 					<animation effect="slide" start="0,0" end="0,-44" time="0" condition="Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">Conditional</animation>
 					<visible>Skin.HasSetting(osd.progressbar)</visible>
 					<control type="progress" id="1">

@@ -35,19 +35,19 @@
   <actions>
     <action>
       <name>left</name>
-      <file>cursor.wav</file>
+      <file>Cursor.wav</file>
     </action>
     <action>
       <name>right</name>
-      <file>cursor.wav</file>
+      <file>Cursor.wav</file>
     </action>
     <action>
       <name>up</name>
-      <file>cursor.wav</file>
+      <file>Cursor.wav</file>
     </action>
     <action>
       <name>down</name>
-      <file>cursor.wav</file>
+      <file>Cursor.wav</file>
     </action>
     <action>
       <name>select</name>
