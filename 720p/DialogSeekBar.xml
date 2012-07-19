@@ -325,7 +325,7 @@
 			
 			<!-- movie poster -->
 			<control type ="image">
-				<posx>1010</posx>
+				<posx>10</posx>
 				<posy>375</posy>
 				<width>215</width>
 				<height>300</height>
@@ -407,7 +407,7 @@
 					<width>770</width>
 					<texturebg border="10">dialogs/progressBackground.png</texturebg>
 					<info>Player.Progress</info>
-					<visible>!Skin.HasSetting(videoosd.realaska) + Skin.HasSetting(osd.progressbar)</visible>
+					<visible>!Skin.HasSetting(videoosd.realaska)</visible>
 				</control>
 			</control>
 			<control type="group" id="1">
