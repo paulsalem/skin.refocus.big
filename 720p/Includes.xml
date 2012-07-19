@@ -124,11 +124,13 @@
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
+				<shadowcolor>black</shadowcolor>
 				<include>toast_Top</include>
 			</control>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$INFO[System.Date(DDD)] $INFO[System.Date(d)] $INFO[System.Date(MMM)]</label>
+				<shadowcolor>black</shadowcolor>
 				<include>toast_Bottom</include>
 				<visible>Skin.HasSetting(home.date)</visible>
 			</control>
