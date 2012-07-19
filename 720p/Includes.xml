@@ -218,7 +218,6 @@
 				<label>$VAR[global_Clock.Formats]</label>
 				<textcolor>Color1</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<font>clock</font>
 				<include>toast_Top</include>
 				<visible>!Window.IsActive(fullscreenvideo)</visible>
 			</control>
@@ -227,7 +226,6 @@
 				<label>$VAR[global_Clock.Formats]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<font>clock</font>
 				<include>toast_Top_Home</include>
 				<visible>Window.IsActive(fullscreenvideo)</visible>
 			</control>
@@ -236,8 +234,6 @@
 				<label>$INFO[System.Date(DDD)] $INFO[System.Date(d)] $INFO[System.Date(MMM)]</label>
 				<textcolor>Color1</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<font>date</font>
-				<posy>46</posy>
 				<include>toast_Bottom</include>
 				<visible>!Window.IsActive(fullscreenvideo)</visible>
 			</control>
@@ -246,8 +242,6 @@
 				<label>$LOCALIZE[31068] $INFO[Player.FinishTime]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<font>finishtime</font>
-				<posy>48</posy>
 				<include>toast_Bottom_Player</include>
 				<visible>Window.IsActive(fullscreenvideo)</visible>
 			</control>

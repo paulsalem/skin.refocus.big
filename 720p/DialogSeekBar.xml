@@ -204,7 +204,6 @@
 						<width>950</width>
 						<label>$VAR[player_Plot.Condition]</label>
 						<textcolor>Color3</textcolor>
-						<font>descriptionBig</font>
 						<include>description_OSD</include>
 						<visible>Skin.HasSetting(videoosd.realaska) + Skin.HasSetting(osd.progressbarrealaska)</visible>
 					</control>
@@ -213,7 +212,6 @@
 						<width>950</width>
 						<label>$VAR[player_Plot.Condition]</label>
 						<textcolor>Color3</textcolor>
-						<font>Big</font>
 						<include>description_OSD</include>
 						<visible>Skin.HasSetting(videoosd.realaska) + !Skin.HasSetting(osd.progressbarrealaska)</visible>
 					</control>
@@ -372,7 +370,7 @@
 			<animation type="WindowClose">
 				<effect type="slide" start="0,0" end="0,64" tween="Cubic" center="auto" easing="Out" time="250" />
 			</animation>
-			<visible>!Skin.HasSetting(videoosd.realaska) + Skin.HasSetting(osd.progressbar)</visible>
+			<visible>!Skin.HasSetting(videoosd.realaska)</visible>
 			<control type="image">
 			    <include>transition_OSD</include>
 			    <include>screenwidth</include>
@@ -420,7 +418,7 @@
 					<posx>240</posx>
 					<label>$VAR[player_Status.Condition]</label>
 					<include>seekbar_Label</include>
-					<visible>!Skin.HasSetting(videoosd.realaska) + Skin.HasSetting(osd.progressbar)</visible>
+					<visible>!Skin.HasSetting(videoosd.realaska)</visible>
 				</control>
 				<control type="label" id="22">
 				    <font>description</font>
@@ -430,7 +428,7 @@
 					<align>left</align>
 					<label>[B]$INFO[Player.Time][/B] / $INFO[Player.Duration]</label>
 					<include>seekbar_Label</include>
-					<visible>!Skin.HasSetting(videoosd.realaska) + Skin.HasSetting(osd.progressbar)</visible>
+					<visible>!Skin.HasSetting(videoosd.realaska)</visible>
 				</control>
 			</control>
 		</control>
