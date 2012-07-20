@@ -659,10 +659,10 @@
 			<size>22</size>
 		</font>
 		<font>
-			<name>listAlt</name>
-			<filename>Regular.ttf</filename>
-			<size>22</size>
-		</font>
+           		 <name>listAlt</name>
+           		 <filename>RegularCaps.ttf</filename>
+           		 <size>18</size>
+        	</font>
 		<font>
 			<name>listInfo</name>
 			<filename>RegularCaps.ttf</filename>
@@ -721,14 +721,14 @@
 			<size>20</size>
 		</font>
 		<font>
-			<name>titleLow</name>
-			<filename>Light.ttf</filename>
-			<size>28</size>
-		</font>
+           		 <name>titleLow</name>
+           		 <filename>LightCaps.ttf</filename>
+            		<size>24</size>
+       		</font>
 		<font>
-			<name>titleSpecial</name>
-			<filename>Light.ttf</filename>
-			<size>42</size>
+            		<name>titleSpecial</name>
+            		<filename>LightCaps.ttf</filename>
+            		<size>32</size>
 		</font>
 		<font>
 			<name>titleSpecialFit</name>
@@ -737,10 +737,10 @@
 			<aspect>0.70</aspect>
 		</font>
 		<font>
-			<name>titleSpecial2</name>
-			<filename>Light.ttf</filename>
-			<size>30</size>
-		</font>
+            		<name>titleSpecial2</name>
+            		<filename>LightCaps.ttf</filename>
+            		<size>32</size>
+        	</font>
 		<font>
 			<name>description</name>
 			<filename>Light.ttf</filename>

@@ -69,7 +69,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31049">Retour 16X</string>
 <string id="31050">Retour 32X</string>
 <string id="31051">Lecture</string>
-<string id="31052">-</string>
+<string id="31052">Desactiver les sous-titres</string>
 <string id="31053">Activer l'indicateur d'accès au menu</string>
 <string id="31054">Posters</string>
 <string id="31055">Masquer la barre de défilement jusqu'à l'arrêt</string>
@@ -193,8 +193,8 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31930">Choisir un type de vue</string>
 <string id="31931">[COLOR=Color2]Nouveaux[/COLOR] clips vidéo</string>
 <string id="31932">[COLOR=Color2]Nouveaux[/COLOR] albums</string>
-<string id="31933">-</string>
-<string id="31934">-</string>
+<string id="31933">Afficher bouton de recherche</string>
+<string id="31934">Utiliser l'Add-on GlobalSearch</string>
 <string id="31935">-</string>
 <string id="31936">Utiliser un Slideshow pour les fanarts</string>
 <string id="31937">Slideshow personnalisé</string>
@@ -258,4 +258,29 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31987">EPG</string>
 <string id="31988">Replay</string>
 <string id="31990">Enregistrements</string>
+<string id="31991">Appliquer</string>
+
+<!--programs-->
+<string id="31992">Programme</string>
+
+<!--moviesets-->
+<string id="31993">Movie Sets</string>
+
+<!--date-->
+<string id="31994">Afficher la date</string>
+
+<!--artist logos-->
+<string id="31995">Afficher les Logos d'artiste dans votre bibliothèque musicale</string>
+<string id="31996">Indiquer le chemin de votre bibliothèque musicale</string>
+
+<!--realaska-->
+<string id="31997">Afficher l'OSD reAlaska </string>
+<string id="31998">Afficher la barre de progression dans l'OSD reAlaska</string>
+
+<!--BIG-->
+<string id="31999">Afficher la date/heure originale</string>
+
+<!--Backspace to Home-->
+<string id="32000">Touche Backspace pour retourner à l'accueil</string>
+
 </strings>

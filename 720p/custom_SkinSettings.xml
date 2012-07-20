@@ -445,6 +445,15 @@
 				<selected>Skin.HasSetting(search.addon)</selected>
 				<include>button_Settings</include>
 			</control>
+			<!--artistslideshow-->
+			<control type="radiobutton" id="803">
+				<label>$LOCALIZE[32001]</label>
+				<onclick>Skin.ToggleSetting(background-slideshow)</onclick>
+				<selected>Skin.HasSetting(background-slideshow)</selected>
+				<enable>System.HasAddon(script.artistslideshow)</enable>
+				<visible>System.HasAddon(script.artistslideshow)</visible>
+				<include>button_Settings</include>
+			</control>
 		</control>
 <!---OTHER------>
 		<control type="grouplist" id="900">

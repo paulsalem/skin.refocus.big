@@ -281,4 +281,7 @@ Please consider supporting the development of XBMC by making a donation.
 <!--Backspace to Home-->
 <string id="32000">Backspace key to Home</string>
 
+<!--Artistslideshow-->
+<string id="32001">Use Artistslideshow Add-on</string>
+
 </strings>
