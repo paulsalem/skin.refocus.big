@@ -2,7 +2,6 @@
 	<defaultcontrol>7000</defaultcontrol>
 	<controls>
 	<!--TRIGGER-->
-		<!--TRIGGER-->
 		<control type="button" id="6000">
 			<label>SHOULD NOT SEE ME</label>
 			<onup>-</onup>
@@ -40,7 +39,7 @@
 				<texture>infoOverlayTop.png</texture>
 				<include>transition_OSD2</include>
 			</control>
-			</control>
+		</control>
 	
 			
 	<!--		<include>osd_Info</include>
@@ -52,14 +51,14 @@
 			<visible>Skin.HasSetting(videoosd.realaska) + [Window.IsVisible(fullscreenvideo) | Window.IsActive(visualisation)] + ![[Window.IsActive(seekbar) + Skin.HasSetting(osd.progressbar)]  | [Window.IsActive(visualisationpresetlist) | Window.IsActive(videoosd) | Window.IsVisible(bookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsActive(script-XBMC_Lyrics-main.xml)]]</visible>
 
 			<control type="image" id="1">
-			<posy>500</posy>
+				<posy>500</posy>
 				<width>1280</width>
 				<height>220</height>
 				<texture border="24">infoOverlay.png</texture>
 				<visible>Skin.HasSetting(videoosd.realaska) + Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 			</control>
 			<control type="image" id="1">
-			<posy>500</posy>
+				<posy>500</posy>
 				<width>1280</width>
 				<height>220</height>
 				<texture border="24">infoOverlay.png</texture>
@@ -180,6 +179,7 @@
 					<height>32</height>
 					<aspectratio align="right">keep</aspectratio>
 					<texture>flags/codec/$INFO[MusicPlayer.Codec,,.png]</texture>
+					<visible>Skin.HasSetting(videoosd.realaska)</visible>				
 				</control>
 				<control type="image" id="1">
 					<posx>815</posx>
@@ -188,6 +188,7 @@
 					<height>22</height>
 					<texture>$INFO[Player.StarRating,rating/nf-,]</texture>
 					<aspectratio align="right">keep</aspectratio>
+					<visible>Skin.HasSetting(videoosd.realaska)</visible>		
 				</control>
 				
 				<!--plot-->
@@ -252,8 +253,9 @@
 				</control>
 				</control>
 
-		<include>clock</include>
+		
 		<control type="group">
+			<include>clock</include>
 			<include>osd_Info</include>
 			<include>transition_OSD</include>
 			<visible>!Skin.HasSetting(videoosd.realaska)</visible>

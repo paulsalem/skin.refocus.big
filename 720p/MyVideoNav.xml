@@ -812,7 +812,16 @@
 						<font>descriptionbig</font>
 					<include>description_OSD</include>
 				</control>
-			    <control type="group">
+ 				<control type="image">
+					<posx>995</posx>
+					<posy>-5</posy>
+					<width>55</width>
+					<height>55</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture>flags/video/HD/nf-HD.png</texture>
+					<visible>stringcompare(Listitem.VideoResolution,720) | stringcompare(Listitem.VideoResolution,1080)</visible>
+				</control>		
+			<!--<control type="group">
 				    <align>right</align>
 				    <posx>950</posx>
 					<posy>5</posy>
@@ -821,7 +830,7 @@
 					    <height>39</height>
 					    <texture>$INFO[Listitem.VideoResolution,flags/video/resolution/,.png]</texture>
 				    </control>
-			    </control>				
+			    </control>	-->			
 			    <control type="group">
 				    <posx>1047</posx>
 				    <posy>146</posy>
@@ -837,7 +846,7 @@
 					    <width>90</width>
 				        <height>45</height>
 					    <texture>$VAR[flag_Studio]</texture>
-						<visible>Container.Content(tvshows)</visible>
+						<visible>Container.Content(tvshows) + !Skin.HasSetting(videoosd.realaska)</visible>
 				    </control>
 			    </control>					
 			</control>

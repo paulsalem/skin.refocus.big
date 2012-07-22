@@ -1,6 +1,6 @@
 ﻿<window id="115">
 	<defaultcontrol>-</defaultcontrol>
-	<visible>!Player.HasAudio + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] + ![Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
+	<visible>![Window.IsActive(142)] + !Player.HasAudio + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] + ![Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 	<controls>
 		
 		<include>clock</include>
@@ -124,7 +124,7 @@
 				<width>48</width>
 				<height>48</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture>flags/video/hd/nf-HDReAlaska.png</texture>
+				<texture>flags/video/hd/nf-HD.png</texture>
 				<visible>Skin.HasSetting(videoosd.realaska) + IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
 			</control>
 
@@ -264,7 +264,7 @@
 			<aspectratio align="center">keep</aspectratio>
 			<visible>!Skin.HasSetting(videoosd.realaska) + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 			<include>transition_OSD</include>
-			</control>
+		</control>
 		<control type ="image">
 			<posx>1010</posx>
 			<posy>527</posy>
@@ -274,7 +274,7 @@
 			<aspectratio align="center">keep</aspectratio>
 			<visible>!Skin.HasSetting(videoosd.realaska) + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 			<include>transition_OSD</include>
-			</control>
+		</control>
 			
 			<!-- clearlogo 
 			<control type ="image">
@@ -348,7 +348,7 @@
 			<height>25</height>
 			<textcolor>Color1</textcolor>
 			<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]
-[B]$INFO[Player.ChapterName][/B]</label>
+			[B]$INFO[Player.ChapterName][/B]</label>
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>rss</font>

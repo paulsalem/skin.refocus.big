@@ -24,6 +24,7 @@
 				<height>64</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture>$VAR[art_Logo.Condition]</texture>
+				<visible>!Skin.HasSetting(videoosd.realaska)</visible>
 			</control>
 			<!---info--->	
 			<control type="group">
@@ -296,6 +297,7 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture>$VAR[flag_Studio]</texture>
+				<visible>!Skin.HasSetting(videoosd.realaska)</visible>
 			</control>
 			<!-- logo -->
 			<control type="image">
@@ -305,6 +307,7 @@
 				<height>64</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture>$VAR[art_Logo.Condition]</texture>
+				<visible>!Skin.HasSetting(videoosd.realaska)</visible>
 			</control>
 		</focusedlayout>
 	</include>
