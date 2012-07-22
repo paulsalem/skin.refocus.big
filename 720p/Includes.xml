@@ -403,7 +403,7 @@
 	<include name="info_Sub">
 		<height>25</height>
 		<aligny>center</aligny>
-		<font>list</font>
+		<font>info_sub</font>
 		<textcolor>Color2</textcolor>
 		<visible>!StringCompare(ListItem.Label,..)</visible>
 	</include>
@@ -644,7 +644,7 @@
 		<width>340</width>
 		<align>right</align>
 		<height>40</height>
-		<font>info</font>
+		<font>info_toast_top</font>
 		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
 		<scrollout>false</scrollout>
@@ -656,7 +656,7 @@
 		<width>340</width>
 		<align>right</align>
 		<height>40</height>
-		<font>info</font>
+		<font>info_toast_top</font>
 		<aligny>center</aligny>
 		<textcolor>Color8</textcolor>
 		<scrollout>false</scrollout>
@@ -668,7 +668,7 @@
 		<posy>26</posy>
 		<width>340</width>
 		<align>right</align>
-		<font>listInfo</font>
+		<font>info_toast_bottom</font>
 		<height>40</height>
 		<aligny>center</aligny>
 		<textcolor>Color2</textcolor>
@@ -680,7 +680,7 @@
 		<posy>26</posy>
 		<width>340</width>
 		<align>right</align>
-		<font>listInfo</font>
+		<font>info_toast_bottom</font>
 		<height>40</height>
 		<aligny>center</aligny>
 		<textcolor>Color8</textcolor>
@@ -693,7 +693,7 @@
 		<posy>22</posy>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>toastProgress</font>
+		<font>info_toast_side</font>
 		<textcolor>Color1</textcolor>
 		<include>transition_Toast</include>
 		<!--

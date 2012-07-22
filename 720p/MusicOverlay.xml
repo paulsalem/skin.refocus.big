@@ -11,20 +11,17 @@
 			<control type="label" id="200">
 				<posx>130r</posx>
 				<label>$INFO[MusicPlayer.Title]</label>
-				<font>titleLow</font>
 				<include>toast_Top</include>
 			</control>
 			<control type="label" id="201">
 				<posx>130r</posx>
 				<posy>28</posy>
 				<label>$INFO[MusicPlayer.Artist]</label>
-				<font>titleSmallest</font>
 				<include>toast_Bottom</include>
 			</control>
 			<control type="label" id="1">
 				<posx>120r</posx>
 				<label>$INFO[MusicPlayer.TimeRemaining(mm:ss)]</label>
-				<font>titleInfoDialogSmaller</font>
 				<include>toast_Side</include>
 			</control>
 		</control>

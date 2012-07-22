@@ -76,6 +76,26 @@
 			<size>20</size>
 		</font>
 		<font>
+			<name>info_sub</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>info_toast_top</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>info_toast_bottom</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>info_toast_side</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>45</size>
+		</font>
+		<font>
 			<name>listBig</name>
 			<filename>Ubuntu-R.ttf</filename>
 			<size>26</size>
@@ -371,6 +391,26 @@
 			<name>info</name>
 			<filename>RegularCaps.ttf</filename>
 			<size>20</size>
+		</font>
+		<font>
+			<name>info_sub</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>info_toast_top</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>info_toast_bottom</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>info_toast_side</name>
+			<filename>LightCaps.ttf</filename>
+			<size>42</size> 
 		</font>
 		<font>
 			<name>listBig</name>
@@ -672,6 +712,26 @@
 			<name>info</name>
 			<filename>RegularCaps.ttf</filename>
 			<size>20</size>
+		</font>
+		<font>
+			<name>info_sub</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>info_toast_top</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>info_toast_bottom</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>info_toast_side</name>
+			<filename>LightCaps.ttf</filename>
+			<size>42</size> 
 		</font>
 		<font>
 			<name>listBig</name>
