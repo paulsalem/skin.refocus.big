@@ -101,6 +101,11 @@
 			<size>26</size>
 		</font>
 		<font>
+			<name>listmod</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
 			<name>listBig_LongTitle</name>
 			<filename>Ubuntu-R.ttf</filename>
 			<size>26</size>
@@ -374,6 +379,11 @@
 <!-- CONTAINERS -->
 		<font>
 			<name>list</name>
+			<filename>RegularLow.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>listmod</name>
 			<filename>RegularLow.ttf</filename>
 			<size>22</size>
 		</font>
@@ -695,6 +705,11 @@
 <!---CONTAINERS------>
 		<font>
 			<name>list</name>
+			<filename>RegularLow.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>listmod</name>
 			<filename>RegularLow.ttf</filename>
 			<size>22</size>
 		</font>

@@ -284,4 +284,16 @@ Please consider supporting the development of XBMC by making a donation.
 <!--Artistslideshow-->
 <string id="32001">Use Artistslideshow Add-on</string>
 
+<!--Backgrounds-->
+<string id="32002">Customize Backgrounds</string>
+<string id="32003">Set Background Image</string>
+<string id="32004">Set Background Folder</string>
+<string id="32005">Clear</string>
+<string id="32006">User Weather Fantart Based on Current Conditions</string>
+<string id="32007">Set Weather Fanart Current Conditions Path</string>
+<string id="32008">Global</string>
+
+<!--TV Tunes-->
+<string id="32009">Use TV Tunes Add-on</string>
+<string id="32010">Download TV Tunes</string>
 </strings>

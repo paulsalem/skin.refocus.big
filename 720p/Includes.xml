@@ -139,7 +139,7 @@
 	<include name="global_Clock">
 		<control type="group">
 			<include>toggle_ToastMute</include>
-			<visible>Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + ![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
+			<visible>Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + [![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28) | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
@@ -157,7 +157,7 @@
 		</control>
 		<control type="group">
 			<include>toggle_ToastMute</include>
-			<visible>Skin.HasSetting(home.time) + Skin.HasSetting(home.timesmall) + ![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
+			<visible>Skin.HasSetting(home.time) + Skin.HasSetting(home.timesmall) + [![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
@@ -338,7 +338,7 @@
 	<include name="label_InfoDialog">
 		<height>20</height>
 		<aligny>center</aligny>
-		<font>titleSmallest</font>
+		<font>info_sub</font>
 		<textcolor>Color2</textcolor>
 	</include>
 	<include name="label_Login">
@@ -351,7 +351,7 @@
 <!---LIST LABELS------>
 	<include name="list_Label-single">
 		<height>40</height>
-		<font>listBig</font>
+		<font>listmod</font>
 		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
 		<selectedcolor>Selected</selectedcolor>

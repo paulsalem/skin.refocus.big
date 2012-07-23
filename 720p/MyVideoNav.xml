@@ -3,6 +3,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<views>47,50,51,52,521,522,53,531,54,541,57,571,574,575,576,592</views>
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+	<onload condition="Library.HasContent(TVShows) + System.HasAddon(script.tvtunes) + Skin.HasSetting(tvtunes.addon)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>	
 	<onload condition="Library.HasContent(Movies) + System.HasAddon(script.moviesets) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.moviesets,containerId=7000)</onload>
 	<controls>
 	  <include condition="System.HasAddon(script.moviesets)">ContainerMovieSets</include>
@@ -629,13 +630,12 @@
 						<control type="label">
 							<posy>28</posy>
 							<label>$INFO[ListItem.Genre]</label>
-							<font>titleSmallest</font>
 							<width>750</width>
 							<include>info_Sub</include>
 						</control>
 						<control type="label">
 							<posy>52</posy>
-							<label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31100]]</label><font>titleSmallest</font>
+							<label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31100]]</label>
 							<width>750</width>
 							<include>info_Sub</include>
 						</control>

@@ -54,10 +54,10 @@
 				<loop>yes</loop>
 				<visible>Control.IsVisible(47) + Skin.HasSetting(gallery.extrafanart)</visible>
 				</control>
-			<control type="group">
+			<!--<control type="group">
 				<include>global_Clock</include>
 				<visible>Control.IsVisible(47)</visible>
-			</control>
+			</control>-->
 		
 		<!---scroll indicators------->
 		<control type="group">

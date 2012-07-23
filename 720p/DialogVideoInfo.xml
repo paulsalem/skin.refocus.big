@@ -64,7 +64,7 @@
 				</control>
 				<control type="label">
 					<label>$VAR[videoInfo.Header]</label>
-					<font>titleSmallest</font>
+					<font>info_sub</font>
 					<height>40</height>
 					<aligny>top</aligny>
 					<textcolor>Color2</textcolor>
@@ -259,27 +259,41 @@
 							<include>button_Inline</include>
 						</control>
 					</control>
+					<!--tvtunes-->
+					<control type="group">
+						<width>125</width>
+						<visible>System.HasAddon(script.tvtunes) + Container.Content(TVShows) + StringCompare(Container.FolderPath,videodb://2/2/)</visible>
+						<control type="button" id="8003">
+							<label>tvtunes</label>
+							<onleft>8002</onleft>
+							<onright>8004</onright>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>SetFocus(999)</onclick>
+							<onclick>XBMC.RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
+							<include>button_Inline</include>
+						</control>
+					</control>
 					<!--browse-->
 					<control type="group">
 						<width>125</width>
 						<visible>Container.Content(tvshows)</visible>
-						<control type="button" id="8003">
+						<control type="button" id="8004">
 							<label>$LOCALIZE[1024]</label>
 							<onclick>SendClick(2003,8)</onclick>
-							<onleft>8002</onleft>
-							<onright>8004</onright>
+							<onleft>8003</onleft>
+							<onright>8005</onright>
 							<include>button_Inline</include>
 						</control>
 					</control>
 					<!--cast/artists-->
 					<control type="group">
 						<width>125</width>
-						<control type="button" id="8004">
+						<control type="button" id="8005">
 							<label>$VAR[videoInfo.Cast]</label>
 							<onclick>SendClick(2003,5)</onclick>
 							<ondown>50</ondown>
-							<onleft>8003</onleft>
-							<onright>8005</onright>
+							<onleft>8004</onleft>
+							<onright>8006</onright>
 							<include>button_Inline</include>
 						</control>
 					</control>
@@ -287,10 +301,10 @@
 					<control type="group">
 						<width>125</width>
 						<visible>Container.Content(movies) + !SubString(ListItem.Path,plugin://)</visible>
-						<control type="button" id="8005">
+						<control type="button" id="8006">
 							<label>$LOCALIZE[20410]</label>
 							<onclick>SendClick(2003,11)</onclick>
-							<onleft>8004</onleft>
+							<onleft>8005</onleft>
 							<onright>8007</onright>
 							<include>button_Inline</include>
 						</control>
@@ -303,7 +317,7 @@
 							<label>$LOCALIZE[21435]</label>
 							<onclick>ActivateWindow(62)</onclick>
 							<include>button_Inline</include>
-							<onleft>8005</onleft>
+							<onleft>8006</onleft>
 							<onright>8001</onright>
 						</control>
 					</control>

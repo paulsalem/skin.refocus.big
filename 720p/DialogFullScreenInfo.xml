@@ -1,6 +1,7 @@
 ﻿<window type="dialog" id="142">
 	<defaultcontrol>7000</defaultcontrol>
 	<controls>
+	<include>clock</include>
 	<!--TRIGGER-->
 		<control type="button" id="6000">
 			<label>SHOULD NOT SEE ME</label>
@@ -18,8 +19,6 @@
 			<include>osd_Info</include>
 			<include>transition_OSD</include>
 		</control>-->
-		
-
 		<control type="group">
 			<posy>300</posy>
 			<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)] + ![Window.IsActive(2901)]</visible>
@@ -255,7 +254,7 @@
 
 		
 		<control type="group">
-			<include>clock</include>
+			
 			<include>osd_Info</include>
 			<include>transition_OSD</include>
 			<visible>!Skin.HasSetting(videoosd.realaska)</visible>
