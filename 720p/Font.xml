@@ -405,7 +405,7 @@
 		<font>
 			<name>info_sub</name>
 			<filename>RegularCaps.ttf</filename>
-			<size>20</size>
+			<size>18</size>
 		</font>
 		<font>
 			<name>info_toast_top</name>
@@ -731,7 +731,7 @@
 		<font>
 			<name>info_sub</name>
 			<filename>RegularCaps.ttf</filename>
-			<size>20</size>
+			<size>18</size>
 		</font>
 		<font>
 			<name>info_toast_top</name>
