@@ -139,11 +139,11 @@
 	<include name="global_Clock">
 		<control type="group">
 			<include>toggle_ToastMute</include>
-			<visible>Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + [![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28) | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
+			<visible>Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + [![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
-					<font>clock</font>
+				<font>clock</font>
 				<include>toast_Top</include>
 			</control>
 			<control type="label">
