@@ -300,4 +300,9 @@ Please consider supporting the development of XBMC by making a donation.
 <!--Random Movie-->
 <string id="32011">Random Genre</string>
 <string id="32012">Random Movie</string>
+
+<!--Favourites-->
+<string id="32013">Use Favourites instead of Smart Playlists</string>
+<string id="32014">Favourite</string>
+
 </strings>

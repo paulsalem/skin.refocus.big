@@ -46,73 +46,79 @@
 				<scrolltime tween="Cubic" easing="Out">200</scrolltime>
 				<control type="button" id="101">
 					<width>206</width>
+					<label>$LOCALIZE[32008]</label>
+					<onfocus>Skin.SetString(Sub,Global)</onfocus>
+					<include>dialog_Button-list</include>
+				</control>
+				<control type="button" id="102">
+					<width>206</width>
 					<label>$LOCALIZE[3]</label>
 					<onfocus>Skin.SetString(Sub,Video)</onfocus>
 					<selectedcolor>Selected</selectedcolor>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="102">
+				<control type="button" id="103">
 					<width>206</width>
 					<label>$LOCALIZE[342]</label>
 					<onfocus>Skin.SetString(Sub,Movies)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="103">
+				<control type="button" id="104">
 					<width>206</width>
 					<label>$LOCALIZE[20343]</label>
 					<onfocus>Skin.SetString(Sub,Shows)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="104">
+				<control type="button" id="105">
 					<width>206</width>
 					<label>$LOCALIZE[31090]</label>
 					<onfocus>Skin.SetString(Sub,TV)</onfocus>
 					<include>dialog_Button-list</include>
 					<visible>System.GetBool(pvrmanager.enabled)</visible>
 				</control>
-				<control type="button" id="105">
+				<control type="button" id="106">
 					<width>206</width>
 					<label>$LOCALIZE[2]</label>
 					<onfocus>Skin.SetString(Sub,Music)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="106">
+				<control type="button" id="107">
 					<width>206</width>
 					<label>$LOCALIZE[1]</label>
 					<onfocus>Skin.SetString(Sub,Pictures)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="107">
+				<control type="button" id="108">
 					<width>206</width>
 					<label>$LOCALIZE[24001]</label>
 					<onfocus>Skin.SetString(Sub,Addons)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="108">
+				<control type="button" id="109">
 					<width>206</width>
 					<label>$LOCALIZE[5]</label>
 					<onfocus>Skin.SetString(Sub,System)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="109">
+				<control type="button" id="110">
 					<width>206</width>
 					<label>$LOCALIZE[1036]</label>
 					<onfocus>Skin.SetString(Sub,Favourites)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="110">
+				<control type="button" id="111">
 					<width>206</width>
 					<label>$LOCALIZE[31955]</label>
 					<onfocus>Skin.SetString(Sub,Disc)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="111">
+				<control type="button" id="112">
 					<width>206</width>
 					<label>$LOCALIZE[31947]</label>
 					<onfocus>Skin.SetString(Sub,Playing)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="112">
+				<control type="button" id="113">
 					<width>206</width>
 					<label>$LOCALIZE[400]</label>
 					<onfocus>Skin.SetString(Sub,Weather)</onfocus>
@@ -122,6 +128,26 @@
 
 		<!---control area------>	
 			<control type="group">
+			<!--global submenu-->
+				<control type="grouplist" id="200">
+					<posx>206</posx>
+					<width>557</width>
+					<height>480</height>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<itemgap>0</itemgap>
+					<visible>Skin.String(Sub,Global)</visible>
+					<!--Favourites settings-->
+					<control type="radiobutton" id="201">
+						<width>557</width>
+						<label>$LOCALIZE[32013]</label>
+						<onclick>Skin.ToggleSetting(favourites.global)</onclick>
+						<selected>Skin.HasSetting(favourites.global)</selected>
+						<include>dialog_Radio</include>
+					</control>
+				</control>
 			<!--video submenu-->
 				<control type="grouplist" id="200">
 					<posx>206</posx>
@@ -173,6 +199,7 @@
 						<onclick>Skin.SetString(videomenu.playlist1.label)</onclick>
 						<include>dialog_Radio</include>
 						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>!Skin.HasSetting(favourites.global)</visible>
 					</control>
 					<!--playlist 2-->
 					<control type="button" id="211">
@@ -186,6 +213,7 @@
 						<onclick>Skin.SetString(videomenu.playlist2.label)</onclick>
 						<include>dialog_Radio</include>
 						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>!Skin.HasSetting(favourites.global)</visible>
 					</control>
 					<!--playlist 3-->
 					<control type="button" id="212">
@@ -199,6 +227,7 @@
 						<onclick>Skin.SetString(videomenu.playlist3.label)</onclick>
 						<include>dialog_Radio</include>
 						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>!Skin.HasSetting(favourites.global)</visible>
 					</control>
 					<!--playlist 4-->
 					<control type="button" id="213">
@@ -212,6 +241,7 @@
 						<onclick>Skin.SetString(videomenu.playlist4.label)</onclick>
 						<include>dialog_Radio</include>
 						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>!Skin.HasSetting(favourites.global)</visible>
 					</control>
 					<!--playlist 5-->
 					<control type="button" id="214">
@@ -225,6 +255,7 @@
 						<onclick>Skin.SetString(videomenu.playlist5.label)</onclick>
 						<include>dialog_Radio</include>
 						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>!Skin.HasSetting(favourites.global)</visible>
 					</control>
 					<!--folder 2-->
 					<!--playlist 6-->
@@ -239,6 +270,7 @@
 						<onclick>Skin.SetString(videomenu.playlist6.label)</onclick>
 						<include>dialog_Radio</include>
 						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>!Skin.HasSetting(favourites.global)</visible>
 					</control>
 					<!--folder 3-->
 					<!--playlist 7-->
@@ -253,6 +285,7 @@
 						<onclick>Skin.SetString(videomenu.playlist7.label)</onclick>
 						<include>dialog_Radio</include>
 						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>!Skin.HasSetting(favourites.global)</visible>
 					</control>
 					<!--folder 4-->
 					<!--playlist 8-->
@@ -267,6 +300,88 @@
 						<onclick>Skin.SetString(videomenu.playlist8.label)</onclick>
 						<include>dialog_Radio</include>
 						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>!Skin.HasSetting(favourites.global)</visible>
+					</control>
+
+					<!--favourite 1-->
+					<control type="button" id="210">
+						<width>557</width>
+						<label>$LOCALIZE[32014] 1</label>
+       						<label2>$INFO[Skin.String(CustomVideo.1.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.1)</onclick>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>Skin.HasSetting(favourites.global)</visible>
+					</control>
+					<!--favourite 2-->
+					<control type="button" id="211">
+						<width>557</width>
+						<label>$LOCALIZE[32014] 2</label>
+       						<label2>$INFO[Skin.String(CustomVideo.2.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.2)</onclick>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>Skin.HasSetting(favourites.global)</visible>
+					</control>
+					<!--favourite 3-->
+					<control type="button" id="212">
+						<width>557</width>
+						<label>$LOCALIZE[32014] 3</label>
+       						<label2>$INFO[Skin.String(CustomVideo.3.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.3)</onclick>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>Skin.HasSetting(favourites.global)</visible>
+					</control>
+					<!--favourite 4-->
+					<control type="button" id="213">
+						<width>557</width>
+						<label>$LOCALIZE[32014] 4</label>
+       						<label2>$INFO[Skin.String(CustomVideo.4.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.4)</onclick>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>Skin.HasSetting(favourites.global)</visible>
+					</control>
+					<!--favourite 5-->
+					<control type="button" id="214">
+						<width>557</width>
+						<label>$LOCALIZE[32014] 5</label>
+       						<label2>$INFO[Skin.String(CustomVideo.5.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.5)</onclick>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>Skin.HasSetting(favourites.global)</visible>
+					</control>
+					<!--favourite 6-->
+					<control type="button" id="215">
+						<width>557</width>
+						<label>$LOCALIZE[32014] 6</label>
+       						<label2>$INFO[Skin.String(CustomVideo.6.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.6)</onclick>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>Skin.HasSetting(favourites.global)</visible>
+					</control>
+					<!--favourite 7-->
+					<control type="button" id="216">
+						<width>557</width>
+						<label>$LOCALIZE[32014] 7</label>
+       						<label2>$INFO[Skin.String(CustomVideo.7.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.7)</onclick>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>Skin.HasSetting(favourites.global)</visible>
+					</control>
+					<!--favourite 8-->
+					<control type="button" id="217">
+						<width>557</width>
+						<label>$LOCALIZE[32014] 8</label>
+       						<label2>$INFO[Skin.String(CustomVideo.8.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.8)</onclick>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>Skin.HasSetting(favourites.global)</visible>
 					</control>
 				</control>
 			<!--movies submenu-->
@@ -634,6 +749,17 @@
 						<onclick>Skin.SetString(musicmenu.playlist1.label)</onclick>
 						<include>dialog_Radio</include>
 						<enable>!Skin.HasSetting(homemenu.music)</enable>
+						<visible>!Skin.HasSetting(favourites.global)</visible>
+					</control>
+					<!--favourite 1-->
+					<control type="button" id="212">
+						<width>557</width>
+						<label>$LOCALIZE[32014] 1</label>
+       						<label2>$INFO[Skin.String(CustomMusic.1.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomMusic.1)</onclick>
+						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.videos)</enable>
+						<visible>Skin.HasSetting(favourites.global)</visible>
 					</control>
 					
 				</control>
