@@ -334,7 +334,7 @@
 					<label>$INFO[ListItem.Plot]</label>
 				    <font>descriptionbig</font>
 					<include>autoscroll-plot</include>
-					<visible allowhiddenfocus="true">![Control.HasFocus(8004) | Control.HasFocus(50)]</visible>
+					<visible allowhiddenfocus="true">![Control.HasFocus(8005) | Control.HasFocus(50)]</visible>
 				</control>
 				<!--cast list-->
 				<control type="list" id="50">
@@ -345,7 +345,7 @@
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<scrolltime tween="Cubic" easing="Out">200</scrolltime>
-					<visible allowhiddenfocus="true">Control.HasFocus(8004) | Control.HasFocus(50)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(8005) | Control.HasFocus(50)</visible>
 					<itemlayout height="44">
 						<control type="image">
 							<width>645</width>
