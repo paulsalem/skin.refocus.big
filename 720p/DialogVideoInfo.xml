@@ -318,9 +318,35 @@
 							<onclick>ActivateWindow(62)</onclick>
 							<include>button_Inline</include>
 							<onleft>8006</onleft>
-							<onright>8001</onright>
+							<onright>8008</onright>
 						</control>
 					</control>
+					<!--random genre-->
+					<control type="group">
+						<width>125</width>
+						<visible>System.HasAddon(script.randommovie)</visible>
+						<control type="button" id="8008">
+							<label>random</label>
+							<onleft>8007</onleft>
+							<onright>8009</onright>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>XBMC.RunScript(script.randommovie, filtergenre=True)</onclick>
+							<include>button_Inline</include>
+						</control>
+					</control>
+					<!--random movie
+					<control type="group">
+						<width>125</width>
+						<visible>System.HasAddon(script.randommovie)</visible>
+						<control type="button" id="8009">
+							<label>random</label>
+							<onleft>8008</onleft>
+							<onright>8001</onright>
+							<onclick>Playlist.Clear</onclick>
+							<onclick>RunScript(script.randommovie)</onclick>
+							<include>button_Inline</include>
+						</control>
+					</control>-->
 				</control>
 				<!--spacer-->
 				<control type="label">
