@@ -296,4 +296,8 @@ Please consider supporting the development of XBMC by making a donation.
 <!--TV Tunes-->
 <string id="32009">Use TV Tunes Add-on</string>
 <string id="32010">Download TV Tunes</string>
+
+<!--Random Movie-->
+<string id="32011">Random Genre</string>
+<string id="32012">Random Movie</string>
 </strings>

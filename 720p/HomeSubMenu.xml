@@ -491,6 +491,16 @@
 						<onclick>ActivateWindow(10025,videodb://1/7/,return)</onclick>
 						<visible>Skin.HasSetting(moviesmenu.moviesets) + Library.HasContent(Movies)</visible>
 					</item>
+					<item id="11">
+						<label>$LOCALIZE[32011]</label>
+						<onclick>RunScript(script.randommovie, filtergenre=True)</onclick>
+						<visible>System.HasAddon(script.randommovie) + Skin.HasSetting(moviesmenu.randomgenre)</visible>
+					</item>
+					<item id="12">
+						<label>$LOCALIZE[32012]</label>
+						<onclick>RunScript(script.randommovie)</onclick>
+						<visible>System.HasAddon(script.randommovie) + Skin.HasSetting(moviesmenu.randommovie)</visible>
+					</item>
 				</content>
 			</control>
 

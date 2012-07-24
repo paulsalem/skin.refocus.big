@@ -47,17 +47,17 @@
 				<item id="3">
 					<label>$LOCALIZE[342]</label>
 					<onclick>SetFocus(1200)</onclick>
-					<visible>Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + [Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors)]</visible>
+					<visible>Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + [Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors) | Skin.HasSetting(moviesmenu.moviesets) | Skin.HasSetting(moviesmenu.randomgenre) | Skin.HasSetting(moviesmenu.randommovie)]</visible>
 				</item>
 				<item id="4">
 					<label>$LOCALIZE[342]</label>
 					<onclick>ActivateWindow(MyVideoLibrary,movietitles)</onclick>
-					<visible>!Skin.HasSetting(backspacehome.enable) + Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + ![Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors)]</visible>
+					<visible>!Skin.HasSetting(backspacehome.enable) + Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + ![Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors) | Skin.HasSetting(moviesmenu.moviesets) | Skin.HasSetting(moviesmenu.randomgenre) | Skin.HasSetting(moviesmenu.randommovie)]</visible>
 				</item>
 				<item id="4">
 					<label>$LOCALIZE[342]</label>
 					<onclick>ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
-					<visible>Skin.HasSetting(backspacehome.enable) + Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + ![Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors)]</visible>
+					<visible>Skin.HasSetting(backspacehome.enable) + Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + ![Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors) | Skin.HasSetting(moviesmenu.moviesets) | Skin.HasSetting(moviesmenu.randomgenre) | Skin.HasSetting(moviesmenu.randommovie)]</visible>
 				</item>
 				<!--tv shows-->
 				<item id="5">
