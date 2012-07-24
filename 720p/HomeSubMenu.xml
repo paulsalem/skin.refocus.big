@@ -25,7 +25,7 @@
 					<item id="2">
 						<label>$INFO[Skin.String(videomenu.playlist1.label)]</label>
 						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist1.path)],return)</onclick>
-						<visible>!IsEmpty(Skin.String(videomenu.playlist1.path)) + !Skin.HasSetting(favourites.global)</visible>
+						<visible>!IsEmpty(Skin.String(videomenu.playlist1.path))</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Skin.String(videomenu.playlist2.label)]</label>
@@ -73,44 +73,44 @@
 						<visible>!Skin.HasSetting(videomenu.videoplaylists)</visible>
 					</item>
 					<item id="12">
-						<visible>!IsEmpty(Skin.String(CustomVideo.1.Path))</visible>
+						<visible>!IsEmpty(Skin.String(CustomVideo.1.Path)) + Skin.HasSetting(favourites.global)</visible>
             					<label>$INFO[Skin.String(CustomVideo.1.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.1.Path)] + Skin.HasSetting(favourites.global)</onclick>
+            					<onclick>$INFO[Skin.String(CustomVideo.1.Path)]</onclick>
 					</item>
 					<item id="13">
-						<visible>!IsEmpty(Skin.String(CustomVideo.2.Path))</visible>
+						<visible>!IsEmpty(Skin.String(CustomVideo.2.Path)) + Skin.HasSetting(favourites.global)</visible>
             					<label>$INFO[Skin.String(CustomVideo.2.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.2.Path)] + Skin.HasSetting(favourites.global)</onclick>
+            					<onclick>$INFO[Skin.String(CustomVideo.2.Path)]</onclick>
 					</item>
 					<item id="14">
-						<visible>!IsEmpty(Skin.String(CustomVideo.3.Path))</visible>
+						<visible>!IsEmpty(Skin.String(CustomVideo.3.Path)) + Skin.HasSetting(favourites.global)</visible>
             					<label>$INFO[Skin.String(CustomVideo.3.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.3.Path)] + Skin.HasSetting(favourites.global)</onclick>
+            					<onclick>$INFO[Skin.String(CustomVideo.3.Path)]</onclick>
 					</item>
 					<item id="15">
-						<visible>!IsEmpty(Skin.String(CustomVideo.4.Path))</visible>
+						<visible>!IsEmpty(Skin.String(CustomVideo.4.Path)) + Skin.HasSetting(favourites.global)</visible>
             					<label>$INFO[Skin.String(CustomVideo.4.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.4.Path)] + Skin.HasSetting(favourites.global)</onclick>
+            					<onclick>$INFO[Skin.String(CustomVideo.4.Path)]</onclick>
 					</item>
 					<item id="16">
-						<visible>!IsEmpty(Skin.String(CustomVideo.5.Path))</visible>
+						<visible>!IsEmpty(Skin.String(CustomVideo.5.Path)) + Skin.HasSetting(favourites.global)</visible>
             					<label>$INFO[Skin.String(CustomVideo.5.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.5.Path)] + Skin.HasSetting(favourites.global)</onclick>
+            					<onclick>$INFO[Skin.String(CustomVideo.5.Path)]</onclick>
 					</item>
 					<item id="17">
-						<visible>!IsEmpty(Skin.String(CustomVideo.6.Path))</visible>
+						<visible>!IsEmpty(Skin.String(CustomVideo.6.Path)) + Skin.HasSetting(favourites.global)</visible>
             					<label>$INFO[Skin.String(CustomVideo.6.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.6.Path)] + Skin.HasSetting(favourites.global)</onclick>
+            					<onclick>$INFO[Skin.String(CustomVideo.6.Path)]</onclick>
 					</item>
 					<item id="18">
-						<visible>!IsEmpty(Skin.String(CustomVideo.7.Path))</visible>
+						<visible>!IsEmpty(Skin.String(CustomVideo.7.Path)) + Skin.HasSetting(favourites.global)</visible>
             					<label>$INFO[Skin.String(CustomVideo.7.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.7.Path)] + Skin.HasSetting(favourites.global)</onclick>
+            					<onclick>$INFO[Skin.String(CustomVideo.7.Path)]</onclick>
 					</item>
 					<item id="19">
-						<visible>!IsEmpty(Skin.String(CustomVideo.8.Path))</visible>
+						<visible>!IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(favourites.global)</visible>
             					<label>$INFO[Skin.String(CustomVideo.8.Label)]</label>
-            					<onclick>$INFO[Skin.String(CustomVideo.8.Path)] + Skin.HasSetting(favourites.global)</onclick>
+            					<onclick>$INFO[Skin.String(CustomVideo.8.Path)]</onclick>
 					</item>
 				</content>
 			</control>
@@ -243,7 +243,7 @@
 						<visible>!IsEmpty(Skin.String(musicmenu.playlist1.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="13">
-						<visible>!IsEmpty(Skin.String(CustomMusic.1.Path))</visible>
+						<visible>!IsEmpty(Skin.String(CustomMusic.1.Path)) + Skin.HasSetting(favourites.global)</visible>
             					<label>$INFO[Skin.String(CustomMusic.1.Label)]</label>
             					<onclick>$INFO[Skin.String(CustomMusic.1.Path)]</onclick>
 					</item>
