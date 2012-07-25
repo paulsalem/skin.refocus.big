@@ -25,7 +25,7 @@
 					<item id="2">
 						<label>$INFO[Skin.String(videomenu.playlist1.label)]</label>
 						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist1.path)],return)</onclick>
-						<visible>!IsEmpty(Skin.String(videomenu.playlist1.path))</visible>
+						<visible>!IsEmpty(Skin.String(videomenu.playlist1.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Skin.String(videomenu.playlist2.label)]</label>
