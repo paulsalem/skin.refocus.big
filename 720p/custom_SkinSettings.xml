@@ -137,8 +137,15 @@
 				<include>button_Settings</include>
 				<visible>Skin.HasSetting(home.time)</visible>
 			</control>
-			<!--statistics-->
 			<control type="radiobutton" id="106">
+				<label>$LOCALIZE[32018]</label>
+				<onclick>Skin.ToggleSetting(home.datewhite)</onclick>
+				<selected>Skin.HasSetting(home.datewhite)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(home.time) + Skin.HasSetting(home.date)</visible>
+			</control>
+			<!--statistics-->
+			<control type="radiobutton" id="107">
 				<label>$LOCALIZE[31128]</label>
 				<onclick>Skin.ToggleSetting(home.stats)</onclick>
 				<selected>Skin.HasSetting(home.stats)</selected>

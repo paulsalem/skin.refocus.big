@@ -305,4 +305,12 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32013">Use Favourites instead of Smart Playlists</string>
 <string id="32014">Favourite</string>
 
+<!--context menu-->
+<string id="32015">Search on youtube</string>
+<string id="32016">Play random movie</string>
+<string id="32017">Play random genre</string>
+
+<!--date-->
+<string id="32018">Display Date on White on Home Menu</string>
+
 </strings>

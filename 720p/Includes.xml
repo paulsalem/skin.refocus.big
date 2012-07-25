@@ -115,7 +115,16 @@
 				<shadowcolor>black</shadowcolor>
 				<font>date</font>
 				<include>toast_Bottom</include>
-				<visible>Skin.HasSetting(home.date)</visible>
+				<visible>Skin.HasSetting(home.date) + !Skin.HasSetting(home.datewhite)</visible>
+			</control>
+			<control type="label">
+				<posx>25r</posx>
+				<posy>46</posy>
+				<label>$INFO[System.Date(DDD)] $INFO[System.Date(d)] $INFO[System.Date(MMM)]</label>
+				<shadowcolor>black</shadowcolor>
+				<font>date</font>
+				<include>toast_Bottom_Home</include>
+				<visible>Skin.HasSetting(home.date) + Skin.HasSetting(home.datewhite)</visible>
 			</control>
 		</control>
 	</include>
@@ -134,7 +143,14 @@
 				<label>$INFO[System.Date(DDD)] $INFO[System.Date(d)] $INFO[System.Date(MMM)]</label>
 				<shadowcolor>black</shadowcolor>
 				<include>toast_Bottom</include>
-				<visible>Skin.HasSetting(home.date)</visible>
+				<visible>Skin.HasSetting(home.date) + !Skin.HasSetting(home.datewhite)</visible>
+			</control>
+			<control type="label">
+				<posx>25r</posx>
+				<label>$INFO[System.Date(DDD)] $INFO[System.Date(d)] $INFO[System.Date(MMM)]</label>
+				<shadowcolor>black</shadowcolor>
+				<include>toast_Bottom_Home</include>
+				<visible>Skin.HasSetting(home.date) + Skin.HasSetting(home.datewhite)</visible>
 			</control>
 		</control>
 	</include>
@@ -674,6 +690,18 @@
 		<height>40</height>
 		<aligny>center</aligny>
 		<textcolor>Color2</textcolor>
+		<scroll>false</scroll>
+		<pauseatend>2000</pauseatend>
+		<include>transition_Toast</include>
+	</include>
+	<include name="toast_Bottom_Home">
+		<posy>26</posy>
+		<width>340</width>
+		<align>right</align>
+		<font>info_toast_bottom</font>
+		<height>40</height>
+		<aligny>center</aligny>
+		<textcolor>Color8</textcolor>
 		<scroll>false</scroll>
 		<pauseatend>2000</pauseatend>
 		<include>transition_Toast</include>

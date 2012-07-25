@@ -330,6 +330,7 @@
 							<onleft>8007</onleft>
 							<onright>8009</onright>
 							<onclick>Playlist.Clear</onclick>
+							<onclick>Dialog.Close(MovieInformation)</onclick>
 							<onclick>XBMC.RunScript(script.randommovie, filtergenre=True)</onclick>
 							<include>button_Inline</include>
 						</control>
