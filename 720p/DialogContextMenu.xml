@@ -52,6 +52,16 @@
 				<onclick>XBMC.RunScript(script.randommovie, filtergenre=True)</onclick>
 				<include>dialog_Button-list</include>			
 			</control>
+			 <control type="button" id="2010">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>302</width>
+				<description>actor/director info button (visible only container is MovieActors, MovieDirectors or TvShowActors)</description>
+				<label>Actor Information</label>
+				<onclick>RunScript(script.metadata.actors,$INFO[ListItem.Label])</onclick>
+				<visible>System.HasAddon(script.metadata.actors) + [SubString(Container.FolderPath,videodb://1/4/) | SubString(Container.FolderPath,videodb://1/5/) | SubString(Container.FolderPath,videodb://2/4/)]</visible>
+				<include>dialog_Button-list</include>
+		    	</control>
         	</control>
 		<!--default button-->
 		<control type="button" id="1000">

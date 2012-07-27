@@ -1,10 +1,13 @@
 ﻿<window>
 	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="true">9000</defaultcontrol>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
 		<posy>0</posy>
 	</coordinates>
+	<include>global_Background</include>
+		<include>global_Includes</include>
 	<controls>
 		<control type="group">
 			<include>transition_BG</include>
