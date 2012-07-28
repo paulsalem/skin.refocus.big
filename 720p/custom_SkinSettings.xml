@@ -242,6 +242,13 @@
 				<visible>Skin.HasSetting(tvshowlogos.enable)</visible>
 				<enable>System.HasAddon(script.artwork.downloader)</enable>
 			</control>
+			<!--tv network logos-->
+			<control type="radiobutton" id="616">
+				<label>$LOCALIZE[32020]</label>
+				<onclick>Skin.ToggleSetting(tvnetworklogos.enable)</onclick>
+				<selected>Skin.HasSetting(tvnetworklogos.enable)</selected>
+				<include>button_Settings</include>
+			</control>
 			<control type="radiobutton" id="617">
 				<label>$LOCALIZE[31132]</label>
 				<onclick>Skin.ToggleSetting(gallery.extrafanart)</onclick>

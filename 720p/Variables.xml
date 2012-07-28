@@ -92,9 +92,9 @@
 		<value>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31100]]</value>
 	</variable>
 	<variable name="tvshow_Info.NextAired">
-		<!--nextaired--><value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[Window(Home).Property(NextAired.NextDate),$LOCALIZE[31076] ]</value>
-		<!--canceled tv show--><value condition="Container.Content(tvshows) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)">$INFO[Window(Home).Property(NextAired.Status)]</value>
-		<!--tv shows--><value condition="Container.Content(tvshows) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + !StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)">$INFO[Window(Home).Property(NextAired.LatestDate),$LOCALIZE[31075] ]</value>
+		<!--nextaired--><value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.Label)) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[Window(Home).Property(NextAired.NextDate),$LOCALIZE[31076] ]</value>
+		<!--canceled tv show--><value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.Label)) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)">$INFO[Window(Home).Property(NextAired.Status)]</value>
+		<!--tv shows--><value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.Label)) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + !StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)">$INFO[Window(Home).Property(NextAired.LatestDate),$LOCALIZE[31075] ]</value>
 	</variable>
 	
 	<variable name="playlist_Title">

@@ -33,6 +33,454 @@
 			</control>
 		</control>
 	</include>
+	<!-- MPAA RATING-->
+	<!-- Largex64-->
+	<include name="flag_MPAA">
+		<control type="image">
+			<description>Rated General</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_G.png</texture>
+			<colordiffuse>Color4</colordiffuse>
+			<visible>substring(ListItem.MPAA,Rated G)</visible>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<description>Rated PG</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_PG.png</texture>
+			<colordiffuse>Color4</colordiffuse>
+			<visible>substring(ListItem.MPAA,Rated PG) + !substring(ListItem.MPAA,Rated PG-13)</visible>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<description>Rated PG-13</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_PG-13.png</texture>
+			<visible>substring(ListItem.MPAA,Rated PG-13)</visible>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<description>Rated R</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_R.png</texture>
+			<colordiffuse>Color4</colordiffuse>
+			<visible>substring(ListItem.MPAA,Rated R)</visible>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<description>Rated NC-17</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_NC-17.png</texture>
+			<visible>substring(ListItem.MPAA,Rated NC-17)</visible>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<description>No Rating</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_NR.png</texture>
+			<visible>[Container.Content(movies) | Container.Content(tvshows)] + [!ListItem.IsFolder | !SubString(Container.FolderPath,videodb)] + IsEmpty(ListItem.MPAA)</visible>
+		</control>
+		<control type="image">
+			<description>Korea-All</description>
+			<width>64</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KR_All.png</texture>
+			<visible>substring(ListItem.MPAA,모든 연령 시청가)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-15</description>
+			<width>64</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KOR-15.png</texture>
+			<visible>substring(ListItem.MPAA,15세이상관람가)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-19</description>
+			<width>64</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KOR-19.png</texture>
+			<visible>substring(ListItem.MPAA,19세이상관람가)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-R</description>
+			<width>64</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KR_R.png</texture>
+			<visible>substring(ListItem.MPAA,청소년관람불가)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-All</description>
+			<width>64</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KR_All.png</texture>
+			<visible>[substring(ListItem.MPAA,HK-I),left]</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-15</description>
+			<width>64</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KOR-15.png</texture>
+			<visible>substring(ListItem.MPAA,HK-IIA)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-19</description>
+			<width>64</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KOR-19.png</texture>
+			<visible>substring(ListItem.MPAA,HK-IIB)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-R</description>
+			<width>64</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KR_R.png</texture>
+			<visible>substring(ListItem.MPAA,HK-III)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-G</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-G.png</texture>
+			<visible>substring(ListItem.MPAA,TV-G)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-PG</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-PG.png</texture>
+			<visible>substring(ListItem.MPAA,TV-PG)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-14</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-14.png</texture>
+			<visible>substring(ListItem.MPAA,TV-14)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-MA</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-MA.png</texture>
+			<visible>substring(ListItem.MPAA,TV-MA)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-Y7</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-Y7.png</texture>
+			<visible>substring(ListItem.MPAA,TV-Y7)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-Y</description>
+			<width>256</width>
+			<height>64</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-Y.png</texture>
+			<visible>substring(ListItem.MPAA,TV-Y)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+	</include>
+	<!-- Smallx48-->
+	<include name="flag_MPAAx48">
+		<control type="image">
+			<description>Rated General</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_G.png</texture>
+			<visible>substring(ListItem.MPAA,Rated G)</visible>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<description>Rated PG</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_PG.png</texture>
+			<visible>substring(ListItem.MPAA,Rated PG) + !substring(ListItem.MPAA,Rated PG-13)</visible>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<description>Rated PG-13</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_PG-13.png</texture>
+			<visible>substring(ListItem.MPAA,Rated PG-13)</visible>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<description>Rated R</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_R.png</texture>
+			<visible>substring(ListItem.MPAA,Rated R)</visible>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<description>Rated NC-17</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_NC-17.png</texture>
+			<visible>substring(ListItem.MPAA,Rated NC-17)</visible>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<description>No Rating</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/MPAA_NR.png</texture>
+			<visible>[Container.Content(movies) | Container.Content(tvshows)] + [!ListItem.IsFolder | !SubString(Container.FolderPath,videodb)] + IsEmpty(ListItem.MPAA)</visible>
+		</control>
+		<control type="image">
+			<description>Korea-All</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KR_All.png</texture>
+			<visible>substring(ListItem.MPAA,모든 연령 시청가)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-12</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KOR-12.png</texture>
+			<visible>substring(ListItem.MPAA,12세이상관람가)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-15</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KOR-15.png</texture>
+			<visible>substring(ListItem.MPAA,15세이상관람가)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-19</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KOR-19.png</texture>
+			<visible>substring(ListItem.MPAA,19세이상관람가)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Korea-R</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KR_R.png</texture>
+			<visible>substring(ListItem.MPAA,청소년관람불가)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>HK-I</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KR_All.png</texture>
+			<visible>[substring(ListItem.MPAA,HK-I),left]</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>HK-II</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/HK-Cat2.png</texture>
+			<visible>[substring(ListItem.MPAA,HK-II),left]</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>HK-IIA</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KOR-15.png</texture>
+			<visible>substring(ListItem.MPAA,HK-IIA)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>HK-IIB</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KOR-19.png</texture>
+			<visible>substring(ListItem.MPAA,HK-IIB)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>HK-III</description>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/KR_R.png</texture>
+			<visible>substring(ListItem.MPAA,HK-III)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-G</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-G.png</texture>
+			<visible>substring(ListItem.MPAA,TV-G)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-PG</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-PG.png</texture>
+			<visible>substring(ListItem.MPAA,TV-PG)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-14</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-14.png</texture>
+			<visible>substring(ListItem.MPAA,TV-14)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-MA</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-MA.png</texture>
+			<visible>substring(ListItem.MPAA,TV-MA)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-Y7</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-Y7.png</texture>
+			<visible>substring(ListItem.MPAA,TV-Y7)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="image">
+			<description>Rated TV-Y</description>
+			<width>192</width>
+			<height>48</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture>rating/TV-Y.png</texture>
+			<visible>substring(ListItem.MPAA,TV-Y)</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+		</control>
+	</include>
+	<!-- 80x64 (TV)-->
+	<include name="flag_MPAA-TV">
+		<control type="group">
+			<posx>100</posx>
+			<posy>1</posy>
+			<visible>Control.IsVisible(5411) + Control.HasFocus(5411) + Container.Content(tvshows)</visible>
+			<control type="image">
+				<description>Rated TV-G</description>
+				<width>80</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>rating/small/TV-G.png</texture>
+				<visible>substring(ListItem.MPAA,TV-G)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			</control>
+			<control type="image">
+				<description>Rated TV-PG</description>
+				<width>80</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>rating/small/TV-PG.png</texture>
+				<visible>substring(ListItem.MPAA,TV-PG)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			</control>
+			<control type="image">
+				<description>Rated TV-14</description>
+				<width>80</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>rating/small/TV-14.png</texture>
+				<visible>substring(ListItem.MPAA,TV-14)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			</control>
+			<control type="image">
+				<description>Rated TV-MA</description>
+				<width>80</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>rating/small/TV-MA.png</texture>
+				<visible>substring(ListItem.MPAA,TV-MA)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			</control>
+			<control type="image">
+				<description>Rated TV-Y7</description>
+				<width>80</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>rating/small/TV-Y7.png</texture>
+				<visible>substring(ListItem.MPAA,TV-Y7)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			</control>
+			<control type="image">
+				<description>Rated TV-Y</description>
+				<width>80</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>rating/small/TV-Y.png</texture>
+				<visible>substring(ListItem.MPAA,TV-Y)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			</control>
+		</control>
+	</include>
 	<!--video info dialog-->
 	<include name="flags_Type-info">
 		<control type="grouplist" id="100">

@@ -313,4 +313,13 @@ Please consider supporting the development of XBMC by making a donation.
 <!--date-->
 <string id="32018">Display Date on White on Home Menu</string>
 
+<!--double row banner view-->
+<string id="32019">Banners Double Row</string>
+
+<!--tv netowork logos-->
+<string id="32020">enable TV Network Logos</string>
+
+<!--poster banner view-->
+<string id="32021">Banners Poster</string>
+
 </strings>
