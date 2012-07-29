@@ -18,17 +18,17 @@
 				<item id="1">
 					<label>$LOCALIZE[3]</label>
 					<onclick>SetFocus(1110)</onclick>
-					<visible>!Skin.HasSetting(homemenu.videos) + ![IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path))+ Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)]</visible>
+					<visible>!Skin.HasSetting(homemenu.videos) + ![IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path))+ IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)]</visible>
 				</item>
 				<item id="2">
 					<label>$LOCALIZE[3]</label>
 					<onclick>ActivateWindow(Videos,Files)</onclick>
-					<visible>!Skin.HasSetting(backspacehome.enable) + !Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
+					<visible>!Skin.HasSetting(backspacehome.enable) + !Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
 				</item>
 				<item id="2">
 					<label>$LOCALIZE[3]</label>
 					<onclick>ActivateWindow(Videos,Files,return)</onclick>
-					<visible>Skin.HasSetting(backspacehome.enable) + !Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
+					<visible>Skin.HasSetting(backspacehome.enable) + !Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
 				</item>
 				<!-- MOVIE SETS 
 					<item id="523">
@@ -90,12 +90,12 @@
 				<item id="9">
 					<label>$LOCALIZE[2]</label>
 					<onclick>SetFocus(1130)</onclick>
-					<visible>!Skin.HasSetting(homemenu.music) + [Skin.HasSetting(musicmenu.recent) | Skin.HasSetting(musicmenu.artists) | Skin.HasSetting(musicmenu.played) | Skin.HasSetting(musicmenu.genres) | Skin.HasSetting(musicmenu.addons) | Skin.HasSetting(musicmenu.playlists) | Skin.HasSetting(musicmenu.partymode) | Skin.HasSetting(musicmenu.lastfm) | Skin.HasSetting(musicmenu.videos)]</visible>
+					<visible>!Skin.HasSetting(homemenu.music) + [Skin.HasSetting(musicmenu.recent) | Skin.HasSetting(musicmenu.artists) | Skin.HasSetting(musicmenu.played) | Skin.HasSetting(musicmenu.genres) | Skin.HasSetting(musicmenu.addons) | Skin.HasSetting(musicmenu.playlists) | Skin.HasSetting(musicmenu.partymode) | Skin.HasSetting(musicmenu.lastfm) | Skin.HasSetting(musicmenu.videos) | !IsEmpty(Skin.String(musicmenu.playlist1.path)) | !IsEmpty(Skin.String(CustomMusic.1.Path))]</visible>
 				</item>
 				<item id="10">
 					<label>$LOCALIZE[2]</label>
 					<onclick>ActivateWindow(MyMusicLibrary)</onclick>
-					<visible>!Skin.HasSetting(homemenu.music) + ![Skin.HasSetting(musicmenu.recent) | Skin.HasSetting(musicmenu.artists) | Skin.HasSetting(musicmenu.played) | Skin.HasSetting(musicmenu.genres) | Skin.HasSetting(musicmenu.addons) | Skin.HasSetting(musicmenu.playlists) | Skin.HasSetting(musicmenu.partymode) | Skin.HasSetting(musicmenu.lastfm) | Skin.HasSetting(musicmenu.videos)]</visible>
+					<visible>!Skin.HasSetting(homemenu.music) + ![Skin.HasSetting(musicmenu.recent) | Skin.HasSetting(musicmenu.artists) | Skin.HasSetting(musicmenu.played) | Skin.HasSetting(musicmenu.genres) | Skin.HasSetting(musicmenu.addons) | Skin.HasSetting(musicmenu.playlists) | Skin.HasSetting(musicmenu.partymode) | Skin.HasSetting(musicmenu.lastfm) | Skin.HasSetting(musicmenu.videos) | !IsEmpty(Skin.String(musicmenu.playlist1.path)) | !IsEmpty(Skin.String(CustomMusic.1.Path))]</visible>
 				</item>
 				<!--pictures-->
 				<item id="11">

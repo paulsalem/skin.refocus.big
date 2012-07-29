@@ -97,6 +97,11 @@
 		<!--tv shows--><value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.Label)) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + !StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)">$INFO[Window(Home).Property(NextAired.LatestDate),$LOCALIZE[31075] ]</value>
 	</variable>
 	
+	<variable name="tvshow_Info.ShowStatus">
+        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label))">$INFO[Window(Home).Property(NextAired.Status)]</value>
+        <value>$LOCALIZE[32022]</value>
+    	</variable>		
+
 	<variable name="playlist_Title">
 		<value condition="!IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>

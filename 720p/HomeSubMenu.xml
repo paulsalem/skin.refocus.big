@@ -462,7 +462,7 @@
 						<description>play</description>
 						<label>$LOCALIZE[208]</label>
 						<onclick>PlayDVD</onclick>
-					</item>
+					es</item>
 					<item id="2">
 						<description>eject</description>
 						<label>$LOCALIZE[13391]</label>
@@ -488,6 +488,12 @@
 					<item id="1">
 						<label>$LOCALIZE[1024]</label>
 						<onclick>ActivateWindow(Videos,MovieTitles)</onclick>
+						<visible>!Skin.HasSetting(backspacehome.enable)</visible>
+					</item>
+					<item id="1">
+						<label>$LOCALIZE[1024]</label>
+						<onclick>ActivateWindow(videolibrary,movietitles,return)</onclick>
+						<visible>Skin.HasSetting(backspacehome.enable)</visible>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[31086]</label>
@@ -567,6 +573,12 @@
 					<item id="1">
 						<label>$LOCALIZE[1024]</label>
 						<onclick>ActivateWindow(Videos,tvshowtitles)</onclick>
+						<visible>!Skin.HasSetting(backspacehome.enable)</visible>
+					</item>
+					<item id="1">
+						<label>$LOCALIZE[1024]</label>
+						<onclick>ActivateWindow(videolibrary,tvshowtitles,return)</onclick>
+						<visible>Skin.HasSetting(backspacehome.enable)</visible>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[31086]</label>
