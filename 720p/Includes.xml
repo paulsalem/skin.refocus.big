@@ -91,6 +91,33 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$INFO[Listitem.Studio,flags/networks/,.png]</texture>
+				<texture>$VAR[flag_Studio]</texture>
+				<include>toggle_Menu</include>
+				<include>transition_Container</include>
+				<include>infoDialogHide</include>
+				<visible>Skin.HasSetting(indicator.enable) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+			</control>
+			<control type="image" id="99199">
+				<posx>30</posx>
+				<posy>0</posy>
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture fallback="empty">$INFO[Listitem.Studio,flags/networks/,.png]</texture>
+				<texture>$VAR[flag_Studio]</texture>
+				<include>toggle_Menu</include>
+				<include>transition_Container</include>
+				<include>infoDialogHide</include>
+				<visible>!Skin.HasSetting(indicator.enable) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+			</control>
+			<!--Network Logo with indicators-->
+			<control type="image" id="99299">
+				<posx>55</posx>
+				<posy>0</posy>
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture fallback="empty">$INFO[Listitem.Studio,flags/networks/,.png]</texture>
 				<include>toggle_Menu</include>
 				<include>transition_Container</include>
 				<include>infoDialogHide</include>
