@@ -329,6 +329,7 @@
 			<width>690</width>
 			<height>177</height>
 			<label>$VAR[global_Plot.Condition]</label>
+			<!--<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>-->
 			<include>description_Small</include>
 			<textcolor>Color4</textcolor>
 			<include>transition_Container</include>
@@ -344,6 +345,7 @@
 			<width>690</width>
 			<height>177</height>
 			<label>$VAR[global_Plot.Condition]</label>
+			<!--<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>-->
 			<include>description_Small</include>
 			<textcolor>Color4</textcolor>
 			<include>transition_Container</include>
