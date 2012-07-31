@@ -124,18 +124,6 @@
 				<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 			</control>
 		</control>
-		<control type="image">
-			<posx>30</posx>
-			<posy>0</posy>
-			<width>128</width>
-			<height>64</height>
-			<aspectratio align="right">keep</aspectratio>
-			<texture>$VAR[flag_Studio]</texture>
-			<include>toggle_Menu</include>
-			<include>transition_Container</include>
-			<include>infoDialogHide</include>
-			<visible>Control.IsVisible(5411) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
-		</control>
 		 <control type ="image">
 			<posx>1040</posx>
 			<posy>520</posy>
@@ -286,18 +274,6 @@
 				<aspectratio align="left">keep</aspectratio>
 				<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 			</control>
-		</control>
-		<control type="image">
-			<posx>30</posx>
-			<posy>0</posy>
-			<width>128</width>
-			<height>64</height>
-			<aspectratio align="right">keep</aspectratio>
-			<texture>$VAR[flag_Studio]</texture>
-			<include>toggle_Menu</include>
-			<include>transition_Container</include>
-			<include>infoDialogHide</include>
-			<visible>Control.IsVisible(54111) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 		</control>
 		 <control type ="image">
 			<posx>1040</posx>

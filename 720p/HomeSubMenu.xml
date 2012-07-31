@@ -462,7 +462,7 @@
 						<description>play</description>
 						<label>$LOCALIZE[208]</label>
 						<onclick>PlayDVD</onclick>
-					es</item>
+					</item>
 					<item id="2">
 						<description>eject</description>
 						<label>$LOCALIZE[13391]</label>

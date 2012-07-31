@@ -4,6 +4,22 @@
 	<controls>
 		
 		<include>clock</include>
+
+		<control type="label">
+			<description>Chapters</description>
+			<include>transition_Toast</include>
+			<posx>28</posx>
+			<posy>400</posy>
+			<width>500</width>
+			<height>25</height>
+			<textcolor>Color1</textcolor>
+			<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]
+[B]$INFO[Player.ChapterName][/B]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>rss</font>
+			<visible>Player.ChapterCount</visible>
+		</control>	
 		
 		<!-- reAlaska OSD -->
 		

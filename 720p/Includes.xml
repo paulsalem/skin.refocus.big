@@ -51,7 +51,8 @@
 		<include>global_Clock</include>
 		<include>clock_views</include>
 		<include>global_Sortletter</include>
-		<include>global_Itemcount</include>	
+		<include>global_Itemcount</include>
+		<include>global_ItemcountViews</include>	
 		<include>global_Devmode</include>
 	</include>
 	<include name="global_Itemcount">
@@ -63,7 +64,58 @@
 			<font>smallerCaps</font>
 			<textcolor>Color3</textcolor>
 			<include>transition_WindowTitle</include>
-			<visible>Skin.HasSetting(numitems.enable) + [Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(3000)]</visible>
+			<visible>![Control.IsVisible(5411) | Control.IsVisible(54111)] + Skin.HasSetting(numitems.enable) + [Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(3000)]</visible>
+		</control>
+	</include>
+	<include name="global_ItemcountViews">
+		<control type="group">
+			<visible>[Control.IsVisible(5411) | Control.IsVisible(54111)]</visible> 
+			<!--Network Logo without indicators-->
+			<control type="image" id="99199">
+				<posx>30</posx>
+				<posy>0</posy>
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture fallback="empty">$INFO[Listitem.Studio,flags/networks/,.png]</texture>
+				<include>toggle_Menu</include>
+				<include>transition_Container</include>
+				<include>infoDialogHide</include>
+				<visible>!Skin.HasSetting(indicator.enable) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+			</control>
+			<!--Network Logo with indicators-->
+			<control type="image" id="99299">
+				<posx>55</posx>
+				<posy>0</posy>
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture fallback="empty">$INFO[Listitem.Studio,flags/networks/,.png]</texture>
+				<include>toggle_Menu</include>
+				<include>transition_Container</include>
+				<include>infoDialogHide</include>
+				<visible>Skin.HasSetting(indicator.enable) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+			</control>
+			<control type="label">
+				<posx>190</posx>
+				<posy>1</posy>
+				<width>500</width>
+				<label>[B]$INFO[Container.NumItems][/B] $LOCALIZE[31116], $LOCALIZE[31117] $INFO[Container.SortMethod]</label>
+				<font>smallerCaps</font>
+				<textcolor>Color3</textcolor>
+				<include>transition_WindowTitle</include>
+				<visible>![StringCompare(Control.GetLabel(99199),empty) | StringCompare(Control.GetLabel(99299),empty)] + Skin.HasSetting(numitems.enable) + [Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(3000)]</visible>
+			</control>
+			<control type="label">
+				<posx>82</posx>
+				<posy>1</posy>
+				<width>500</width>
+				<label>[B]$INFO[Container.NumItems][/B] $LOCALIZE[31116], $LOCALIZE[31117] $INFO[Container.SortMethod]</label>
+				<font>smallerCaps</font>
+				<textcolor>Color3</textcolor>
+				<include>transition_WindowTitle</include>
+				<visible>[StringCompare(Control.GetLabel(99199),empty) | StringCompare(Control.GetLabel(99299),empty)] + Skin.HasSetting(numitems.enable) + [Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(3000)]</visible>
+			</control>
 		</control>
 	</include>
 	<include name="global_Sortletter">
@@ -305,7 +357,7 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>navigation/indicator_Left.png</texture>
-				<visible>[Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(541) | Control.IsVisible(57) | Control.IsVisible(571) | Control.IsVisible(572) | Control.IsVisible(573) | Control.IsVisible(574) | Control.IsVisible(575) | Control.IsVisible(576) | Window.IsActive(weather) | Window.IsActive(600)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(3000)]</visible>
+				<visible>[Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(541) | Control.IsVisible(5411) | Control.IsVisible(54111) | Control.IsVisible(57) | Control.IsVisible(571) | Control.IsVisible(572) | Control.IsVisible(573) | Control.IsVisible(574) | Control.IsVisible(575) | Control.IsVisible(576) | Window.IsActive(weather) | Window.IsActive(600)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(3000)]</visible>
 				<include>nav_IndicatorLeft</include>
 			</control>
 			<control type="image">
