@@ -8,8 +8,8 @@
 		<control type="label">
 			<description>Chapters</description>
 			<include>transition_Toast</include>
-			<posx>28</posx>
-			<posy>400</posy>
+			<posx>190</posx>
+			<posy>1</posy>
 			<width>500</width>
 			<height>25</height>
 			<textcolor>Color1</textcolor>
