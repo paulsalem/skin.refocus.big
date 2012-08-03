@@ -325,4 +325,15 @@ Please consider supporting the development of XBMC by making a donation.
 <!--tv show status-->
 <string id="32022">Ended</string>
 
+<!--xperience1080 OSD-->
+<string id="32023">Enable xperience1080 OSD</string>
+
+<!--opacity-->
+<string id="32024">Background Opacity Settings</string>
+<string id="32025">Light Opacity</string>
+<string id="32026">Medium Opacity</string>
+<string id="32027">Heavy Opacity</string>
+
+<!--alternate watched icons-->
+<string id="32028">Alternative Watched Overlays</string>
 </strings>

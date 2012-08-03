@@ -77,9 +77,22 @@
 			<control type="group">
 				<posx>718</posx>
 				<posy>390</posy>
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
 				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
 				<control type="image">
 					<include>overlay_UnWatched</include>
+				</control>
+				<control type="image">
+					<include>overlay_Resumable</include>
+				</control>
+			</control>
+			<control type="group">
+				<posx>718</posx>
+				<posy>390</posy>
+				<visible>Skin.HasSetting(watched.alternative)</visible>
+				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<include>overlay_UnWatchedAlt</include>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
@@ -119,8 +132,20 @@
 			<control type="group">
 				<posx>718</posx>
 				<posy>390</posy>
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<include>overlay_UnWatched</include>
+				</control>
+				<control type="image">
+					<include>overlay_Resumable</include>
+				</control>
+			</control>
+			<control type="group">
+				<posx>718</posx>
+				<posy>390</posy>
+				<visible>Skin.HasSetting(watched.alternative)</visible>
+				<control type="image">
+					<include>overlay_UnWatchedAlt</include>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>

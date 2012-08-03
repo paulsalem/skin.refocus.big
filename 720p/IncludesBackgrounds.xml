@@ -29,19 +29,73 @@
 				<visible>![Window.IsActive(pictures) + Control.IsVisible(531)] + !Window.IsActive(weather)</visible>
 			</control>
 		</control>
+		<!--global background default opacity-->
+		<control type="image">
+			<aspectratio>stretch</aspectratio>
+			<include>screen_Dimensions</include>
+			<texture background="true">backgrounds/background.png</texture>
+			<visible>![Skin.HasSetting(background.opacitylight) | Skin.HasSetting(background.opacitymedium) | Skin.HasSetting(background.opacityheavy)] + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + !Window.IsActive(weather)</visible>
+			<include>transition_BG</include>
+		</control>
+		<!--vignette default opacity-->
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<texture background="true">overlays/vignette.png</texture>
+			<visible>![Skin.HasSetting(background.opacitylight) | Skin.HasSetting(background.opacitymedium) | Skin.HasSetting(background.opacityheavy)] + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + Skin.HasSetting(fanart.global.alt)</visible>
+			<include>transition_BG</include>
+		</control>
+		<!--light opacity-->
 		<!--global background-->
 		<control type="image">
 			<aspectratio>stretch</aspectratio>
 			<include>screen_Dimensions</include>
 			<texture background="true">backgrounds/background.png</texture>
-			<visible>[![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + !Window.IsActive(weather)</visible>
+			<colordiffuse>99FFFFFF</colordiffuse>
+			<visible>Skin.HasSetting(background.opacitylight) + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + !Window.IsActive(weather)</visible>
 			<include>transition_BG</include>
 		</control>
 		<!--vignette-->
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true">overlays/vignette.png</texture>
-			<visible>[![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + Skin.HasSetting(fanart.global.alt)</visible>
+			<colordiffuse>99FFFFFF</colordiffuse>
+			<visible>Skin.HasSetting(background.opacitylight) + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + Skin.HasSetting(fanart.global.alt)</visible>
+			<include>transition_BG</include>
+		</control>
+		<!--medium opacity-->
+		<!--global background-->
+		<control type="image">
+			<aspectratio>stretch</aspectratio>
+			<include>screen_Dimensions</include>
+			<texture background="true">backgrounds/background.png</texture>
+			<colordiffuse>77FFFFFF</colordiffuse>
+			<visible>Skin.HasSetting(background.opacitymedium) + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + !Window.IsActive(weather)</visible>
+			<include>transition_BG</include>
+		</control>
+		<!--vignette-->
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<texture background="true">overlays/vignette.png</texture>
+			<colordiffuse>77FFFFFF</colordiffuse>
+			<visible>Skin.HasSetting(background.opacitymedium) + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + Skin.HasSetting(fanart.global.alt)</visible>
+			<include>transition_BG</include>
+		</control>
+		<!--high opacity-->
+		<!--global background-->
+		<control type="image">
+			<aspectratio>stretch</aspectratio>
+			<include>screen_Dimensions</include>
+			<texture background="true">backgrounds/background.png</texture>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<visible>Skin.HasSetting(background.opacityheavy) + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + !Window.IsActive(weather)</visible>
+			<include>transition_BG</include>
+		</control>
+		<!--vignette-->
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<texture background="true">overlays/vignette.png</texture>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<visible>Skin.HasSetting(background.opacityheavy) + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + Skin.HasSetting(fanart.global.alt)</visible>
 			<include>transition_BG</include>
 		</control>
 	</include>

@@ -266,6 +266,11 @@
 			<name>osd7</name>
 			<filename>Light.ttf</filename>
 			<size>48</size>
+		</font>	
+		<font>
+			<name>osdxperience</name>
+			<filename>Light.ttf</filename>
+			<size>36</size>
 		</font>		
 <!-- DIALOGS -->
 		<font>

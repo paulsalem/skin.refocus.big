@@ -324,9 +324,9 @@
 					<!--random genre-->
 					<control type="group">
 						<width>125</width>
-						<visible>System.HasAddon(script.randommovie)</visible>
+						<visible>System.HasAddon(script.randommovie) + Container.Content(movies) </visible>
 						<control type="button" id="8008">
-							<label>random</label>
+							<label>Random</label>
 							<onleft>8007</onleft>
 							<onright>8009</onright>
 							<onclick>Playlist.Clear</onclick>

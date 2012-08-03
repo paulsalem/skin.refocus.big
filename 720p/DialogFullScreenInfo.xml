@@ -1,7 +1,7 @@
 ﻿<window type="dialog" id="142">
 	<defaultcontrol>7000</defaultcontrol>
 	<controls>
-	<include>clock</include>
+	
 	<!--TRIGGER-->
 		<control type="button" id="6000">
 			<label>SHOULD NOT SEE ME</label>
@@ -54,14 +54,14 @@
 				<width>1280</width>
 				<height>220</height>
 				<texture border="24">infoOverlay.png</texture>
-				<visible>Skin.HasSetting(videoosd.realaska) + Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
+				<visible>[Skin.HasSetting(videoosd.realaska)] + [Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]]</visible>
 			</control>
 			<control type="image" id="1">
 				<posy>500</posy>
 				<width>1280</width>
 				<height>220</height>
 				<texture border="24">infoOverlay.png</texture>
-				<visible>Skin.HasSetting(videoosd.realaska) + Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)</visible>
+				<visible>[Skin.HasSetting(videoosd.realaska)] + [Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 			</control>
 
 		<!--TV Shows-->
@@ -254,10 +254,17 @@
 
 		
 		<control type="group">
-			
+			<include>clock</include>
 			<include>osd_Info</include>
 			<include>transition_OSD</include>
-			<visible>!Skin.HasSetting(videoosd.realaska)</visible>
+			<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
 		</control>
+		<control type="group">
+			<include>osd_InfoXperience</include>
+			<include>transition_OSD</include>
+			<include>OSDWeatherClock</include>
+			<visible>Skin.HasSetting(videoosd.xperience1080)</visible>
+		</control>
+		
 	</controls>
 </window>

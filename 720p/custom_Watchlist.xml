@@ -105,7 +105,21 @@
 								<height>32</height>
 								<texture>overlays/OverlayResumable.png</texture>
 								<aspect>keepaspect</aspect>
-								<visible>SubString(ListItem.Property(Progress),True)</visible>
+								<visible>SubString(ListItem.Property(Progress),True) + !Skin.HasSetting(watched.alternative)</visible>
+							</control>
+						</control>
+						<control type="group">
+							<posx>174</posx>
+							<posy>262</posy>
+							<control type="image">
+								<include>overlay_UnWatchedAlt</include>
+							</control>
+							<control type="image">
+								<width>32</width>
+								<height>32</height>
+								<texture>overlays/OverlayResumable.png</texture>
+								<aspect>keepaspect</aspect>
+								<visible>SubString(ListItem.Property(Progress),True) + Skin.HasSetting(watched.alternative)</visible>
 							</control>
 						</control>
 					</control>
@@ -165,7 +179,21 @@
 								<height>32</height>
 								<texture>overlays/OverlayResumable.png</texture>
 								<aspect>keepaspect</aspect>
-								<visible>SubString(ListItem.Property(Progress),True)</visible>
+								<visible>SubString(ListItem.Property(Progress),True) + !Skin.HasSetting(watched.alternative)</visible>
+							</control>
+						</control>
+						<control type="group">
+							<posx>174</posx>
+							<posy>262</posy>
+							<control type="image">
+								<include>overlay_UnWatchedAlt</include>
+							</control>
+							<control type="image">
+								<width>32</width>
+								<height>32</height>
+								<texture>overlays/OverlayResumable.png</texture>
+								<aspect>keepaspect</aspect>
+								<visible>SubString(ListItem.Property(Progress),True) + Skin.HasSetting(watched.alternative)</visible>
 							</control>
 						</control>
 					</control>

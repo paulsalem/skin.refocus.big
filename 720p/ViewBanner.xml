@@ -43,6 +43,13 @@
 					<posx>549</posx>
 					<posy>87</posy>
 					<include>overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+				</control>
+				<control type="image">
+					<posx>549</posx>
+					<posy>87</posy>
+					<include>overlay_UnWatchedAlt</include>
+					<visible>Skin.HasSetting(watched.alternative)</visible>				
 				</control>				
 			</itemlayout>															
 			<focusedlayout height="137" width="600">
@@ -79,7 +86,14 @@
 					<posx>549</posx>
 					<posy>87</posy>
 					<include>overlay_UnWatched</include>
-				</control>					
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+				</control>
+				<control type="image">
+					<posx>549</posx>
+					<posy>87</posy>
+					<include>overlay_UnWatchedAlt</include>
+					<visible>Skin.HasSetting(watched.alternative)</visible>				
+				</control>						
 			</focusedlayout>
 		</control>
 			<!---container info--->
@@ -181,6 +195,13 @@
 					<posx>549</posx>
 					<posy>89</posy>
 					<include>overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+				</control>
+				<control type="image">
+					<posx>549</posx>
+					<posy>89</posy>
+					<include>overlay_UnWatchedAlt</include>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
 				</control>				
 			</itemlayout>															
 			<focusedlayout height="137" width="600">
@@ -217,7 +238,14 @@
 					<posx>549</posx>
 					<posy>89</posy>
 					<include>overlay_UnWatched</include>
-				</control>					
+					<visible>!Skin.HasSetting(watched.alternative)</visible>		
+				</control>
+				<control type="image">
+					<posx>549</posx>
+					<posy>89</posy>
+					<include>overlay_UnWatchedAlt</include>
+					<visible>Skin.HasSetting(watched.alternative)</visible>		
+				</control>			
 			</focusedlayout>
 		</control>
 			<!---container info--->
@@ -397,8 +425,21 @@
 					<posx>787</posx>
 					<posy>132</posy>
 					<include>focus_Banner</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>787</posx>
+					<posy>132</posy>
+					<include>focus_Banner</include>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -512,8 +553,21 @@
 					<posx>164</posx>
 					<posy>239</posy>
 					<include>focus_Banner</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>164</posx>
+					<posy>239</posy>
+					<include>focus_Banner</include>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -608,6 +662,13 @@
 					<posx>592</posx>
 					<posy>87</posy>
 					<include>overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+				</control>
+				<control type="image">
+					<posx>592</posx>
+					<posy>87</posy>
+					<include>overlay_UnWatchedAlt</include>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout width="645" height="122">
@@ -632,6 +693,13 @@
 					<posx>592</posx>
 					<posy>87</posy>
 					<include>overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+				</control>
+				<control type="image">
+					<posx>592</posx>
+					<posy>87</posy>
+					<include>overlay_UnWatchedAlt</include>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
 				</control>
 			</focusedlayout>
 		</control>

@@ -376,6 +376,7 @@
 			<control type="radiobutton" id="713">
 				<label>$LOCALIZE[31997]</label>
 				<onclick>Skin.ToggleSetting(videoosd.realaska)</onclick>
+				<onclick>Skin.Reset(videoosd.xperience1080)</onclick>
 				<selected>Skin.HasSetting(videoosd.realaska)</selected>
 				<include>button_Settings</include>
 			</control>
@@ -385,6 +386,14 @@
 				<selected>Skin.HasSetting(osd.progressbarrealaska)</selected>
 				<include>button_Settings</include>
 				<visible>Skin.HasSetting(videoosd.realaska)</visible>
+			</control>
+			<!--xperience1080 video osd-->
+			<control type="radiobutton" id="715">
+				<label>$LOCALIZE[32023]</label>
+				<onclick>Skin.ToggleSetting(videoosd.xperience1080)</onclick>
+				<onclick>Skin.Reset(videoosd.realaska)</onclick>
+				<selected>Skin.HasSetting(videoosd.xperience1080)</selected>
+				<include>button_Settings</include>
 			</control>
 		</control>
 <!---ADDONS------>
@@ -449,8 +458,8 @@
 			<height>605</height>
 			<onleft>9001</onleft>
 			<onright>9001</onright>
-			<onup>800</onup>
-			<ondown>800</ondown>
+			<onup>900</onup>
+			<ondown>900</ondown>
 			<itemgap>0</itemgap>
 			<visible>Skin.String(SkinSettings,Other)</visible>
 			<include>transition_Container</include>
@@ -494,6 +503,43 @@
 				<label>$LOCALIZE[31058]</label>
 				<onclick>Skin.ToggleSetting(intro.enable)</onclick>
 				<selected>!Skin.HasSetting(intro.enable)</selected>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="907">
+				<label>$LOCALIZE[32028]</label>
+				<onclick>Skin.ToggleSetting(watched.alternative)</onclick>
+				<selected>Skin.HasSetting(watched.alternative)</selected>
+				<include>button_Settings</include>
+			</control>
+			<!--opacity-->
+			<control type="label" id="908">
+				<label>$LOCALIZE[32024]</label>
+				<font>category</font>
+				<textcolor>Color2</textcolor>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="909">
+				<label>$LOCALIZE[32025]</label>
+				<onclick>Skin.ToggleSetting(background.opacitylight)</onclick>
+				<onclick>Skin.Reset(background.opacitymedium)</onclick>
+				<onclick>Skin.Reset(background.opacityheavy)</onclick>
+				<selected>Skin.HasSetting(background.opacitylight)</selected>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="910">
+				<label>$LOCALIZE[32026]</label>
+				<onclick>Skin.ToggleSetting(background.opacitymedium)</onclick>
+				<onclick>Skin.Reset(background.opacitylight)</onclick>
+				<onclick>Skin.Reset(background.opacityheavy)</onclick>
+				<selected>Skin.HasSetting(background.opacitymedium)</selected>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="911">
+				<label>$LOCALIZE[32027]</label>
+				<onclick>Skin.ToggleSetting(background.opacityheavy)</onclick>
+				<onclick>Skin.Reset(background.opacitylight)</onclick>
+				<onclick>Skin.Reset(background.opacitymedium)</onclick>
+				<selected>Skin.HasSetting(background.opacityheavy)</selected>
 				<include>button_Settings</include>
 			</control>
 		</control>

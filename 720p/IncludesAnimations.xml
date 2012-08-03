@@ -385,4 +385,65 @@
 		<animation effect="slide" start="-265" end="0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container(11).OnNext">Focus</animation>
 		<animation effect="slide" start="265" end="0" time="100" reversible="false"  tween="quadratic" easing="out" condition="Container(11).OnPrevious">Focus</animation>
 	</include>
+<!-- Xperience 1080-->
+	<include name="NowPlayingFullscreenOSD">
+        <animation type="WindowOpen" condition="Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding" reversible="false">
+            <effect type="fade" start="0" end="100" time="400" tween="sine" easing="inout" />
+        </animation>
+        <animation type="WindowOpen" condition="![Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]" reversible="false">
+            <effect type="fade" start="0" end="100" time="500" tween="sine" easing="out" />
+            <effect type="zoom" start="110" end="100" time="500" center="960,540" tween="back" easing="out" />
+        </animation>
+        <animation type="Visible" reversible="false">
+            <effect type="fade" start="0" end="100" time="500" tween="sine" easing="out" />
+            <effect type="zoom" start="110" end="100" time="500" center="960,540" tween="back" easing="out" />
+        </animation>
+        <animation type="Hidden" reversible="false">
+            <effect type="zoom" start="100" end="90" time="800" center="960,540" tween="back" easing="inout" />
+            <effect type="fade" start="100" end="0" time="500" tween="sine" easing="out" />
+        </animation>
+        <animation type="WindowClose" condition="Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding" reversible="false">
+            <effect type="fade" start="100" end="0" time="400" tween="sine" easing="inout" />
+        </animation>
+        <animation type="WindowClose" condition="![Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]" reversible="false">
+            <effect type="zoom" start="100" end="90" time="800" center="960,540" tween="back" easing="inout" />
+            <effect type="fade" start="100" end="0" time="500" tween="sine" easing="out" />
+        </animation>
+    </include>
+	 <include name="OSDHideShowAnimation">
+        <animation type="Visible" reversible="false">
+            <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
+            <effect type="slide" start="0,-50" end="0,0" time="400" tween="sine" easing="out" />
+        </animation>
+        <animation type="Hidden" reversible="false">
+            <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+            <effect type="slide" start="0,0" end="0,-50" time="300" tween="sine" easing="out" />
+        </animation>
+    </include>
+	 <include name="visiblehidefadeinfo">
+        <animation type="Visible" reversible="false">
+            <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+        </animation>
+        <animation type="Hidden" reversible="false">
+            <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+        </animation>
+    </include>
+	 <include name="NowPlayingFullscreen">
+        <animation type="WindowOpen" reversible="false">
+            <effect type="fade" start="0" end="100" time="500" tween="sine" easing="out" />
+            <effect type="zoom" start="110" end="100" time="500" center="960,540" tween="back" easing="out" />
+        </animation>
+        <animation type="WindowClose" reversible="false">
+            <effect type="zoom" start="100" end="90" time="800" center="960,540" tween="back" easing="inout" />
+            <effect type="fade" start="100" end="0" time="500" tween="sine" easing="out" />
+        </animation>
+        <animation type="Visible" reversible="false">
+            <effect type="fade" start="0" end="100" time="500" tween="sine" easing="out" />
+            <effect type="zoom" start="110" end="100" time="500" center="960,540" tween="back" easing="out" />
+        </animation>
+        <animation type="Hidden" reversible="false">
+            <effect type="zoom" start="100" end="90" time="800" center="960,540" tween="back" easing="inout" />
+            <effect type="fade" start="100" end="0" time="500" tween="sine" easing="out" />
+        </animation>
+    </include>
 </includes>

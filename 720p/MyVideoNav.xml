@@ -70,7 +70,18 @@
 						<posy>295</posy>
 						<control type="image">
 							<include>overlay_UnWatched</include>
-							<visible>!Container.Content(files)</visible>
+							<visible>!Container.Content(files) + !Skin.HasSetting(watched.alternative)</visible>
+						</control>
+						<control type="image">
+							<include>overlay_Resumable-list</include>
+						</control>
+					</control>
+					<control type="group">
+						<posx>532</posx>
+						<posy>295</posy>
+						<control type="image">
+							<include>overlay_UnWatchedAlt</include>
+							<visible>!Container.Content(files) + Skin.HasSetting(watched.alternative)</visible>
 						</control>
 						<control type="image">
 							<include>overlay_Resumable-list</include>
@@ -116,6 +127,18 @@
 						<posy>591</posy>
 						<control type="image">
 							<include>overlay_UnWatched</include>
+							<visible>!Skin.HasSetting(watched.alternative)</visible>
+						</control>
+						<control type="image">
+							<include>overlay_Resumable-list</include>
+						</control>
+					</control>
+					<control type="group">
+						<posx>397</posx>
+						<posy>591</posy>
+						<control type="image">
+							<include>overlay_UnWatchedAlt</include>
+							<visible>Skin.HasSetting(watched.alternative)</visible>
 						</control>
 						<control type="image">
 							<include>overlay_Resumable-list</include>
@@ -144,7 +167,14 @@
 						<posy>526</posy>
 						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
 						<include>overlay_UnWatched</include>
-						<visible>!SubString(Container.FolderPath,special://videoplaylists)</visible>
+						<visible>!SubString(Container.FolderPath,special://videoplaylists) + !Skin.HasSetting(watched.alternative)</visible>
+					</control>
+					<control type="image">
+						<posx>-54</posx>
+						<posy>526</posy>
+						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
+						<include>overlay_UnWatchedAlt</include>
+						<visible>!SubString(Container.FolderPath,special://videoplaylists) + Skin.HasSetting(watched.alternative)</visible>
 					</control>
 					<control type="image">
 						<posx>-54</posx>
@@ -837,7 +867,16 @@
 				    <posx>1047</posx>
 				    <posy>146</posy>
 				    <control type="image">
-					    <include>overlay_UnWatched</include>
+					<include>overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+				    </control>
+			    </control>
+				<control type="group">
+				    <posx>1047</posx>
+				    <posy>146</posy>
+				    <control type="image">
+					<include>overlay_UnWatchedAlt</include>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
 				    </control>
 			    </control>
 			    <control type="group">

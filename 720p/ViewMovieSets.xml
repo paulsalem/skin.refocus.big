@@ -50,7 +50,14 @@
 					<control type="image">
 						<posx>210</posx><!--396-->
 						<posy>117</posy><!--219-->
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
 						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<posx>210</posx><!--396-->
+						<posy>117</posy><!--219-->
+						<visible>Skin.HasSetting(watched.alternative)</visible>
+						<include>overlay_UnWatchedAlt</include>
 					</control>
 					<control type="image">
 						<posx>254</posx>
@@ -97,7 +104,14 @@
 					<control type="image">
 						<posx>210</posx><!--396-->
 						<posy>117</posy><!--219-->
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
 						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<posx>210</posx><!--396-->
+						<posy>117</posy><!--219-->
+						<visible>Skin.HasSetting(watched.alternative)</visible>
+						<include>overlay_UnWatchedAlt</include>
 					</control>
 					<control type="image">
 						<posx>254</posx><!--396-->

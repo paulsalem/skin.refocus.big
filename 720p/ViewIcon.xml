@@ -32,8 +32,20 @@
 				<control type="group">
 					<posx>139</posx>
 					<posy>213</posy>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>139</posx>
+					<posy>213</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -54,9 +66,22 @@
 				<control type="group">
 					<posx>139</posx>
 					<posy>213</posy>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<include>focus_ThumbPoster</include>
 					<control type="image">
 						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>139</posx>
+					<posy>213</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<include>focus_ThumbPoster</include>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -100,6 +125,18 @@
 					<posy>147</posy>
 					<control type="image">
 						<include>overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>96</posx>
+					<posy>147</posy>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
+						<visible>Skin.HasSetting(watched.alternative)</visible>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -119,9 +156,22 @@
 				<control type="group">
 					<posx>96</posx>
 					<posy>147</posy>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<include>focus_ThumbPosterInfo</include>
 					<control type="image">
 						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>96</posx>
+					<posy>147</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<include>focus_ThumbPosterInfo</include>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -333,8 +383,20 @@
 				<control type="group">
 					<posx>336</posx>
 					<posy>184</posy>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>336</posx>
+					<posy>184</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -394,8 +456,20 @@
 				<control type="group">
 					<posx>336</posx>
 					<posy>184</posy>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>336</posx>
+					<posy>184</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>

@@ -155,14 +155,26 @@
 			    <control type="group">
 				    <posx>-49</posx>
 				    <posy>135</posy>
-				    <control type="image">
+				<control type="image">
 					    <include>overlay_UnWatched</include>
-				    </control>
-				    <control type="image">
+				</control>
+				<control type="image">
 							<include>overlay_Resumable-list</include>
-						</control>
-				    <visible>Container.Content(episodes)</visible>	
-			    </control>				
+				</control>
+				<visible>Container.Content(episodes) + !Skin.HasSetting(watched.alternative)</visible>	
+			    </control>
+			 <control type="group">
+				    <posx>-49</posx>
+				    <posy>135</posy>
+				<control type="image">
+					    <include>overlay_UnWatchedAlt</include>
+				</control>
+				<control type="image">
+							<include>overlay_Resumable-list</include>
+				</control>
+				<visible>Container.Content(episodes) + Skin.HasSetting(watched.alternative)</visible>	
+			    </control>	
+			
 			</control>			
 		</control>	
 	</include>

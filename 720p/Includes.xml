@@ -623,7 +623,7 @@
 	<include name="art_TVShowLogo">
 		<texture background="true">$INFO[ListItem.Path]logo.png</texture>
 		<aspectratio align="center">keep</aspectratio>
-		<fadetime>200</fadetime>
+		<fadetime>200</fadetime>d
 		<visible>Container.Content(tvshows) + Skin.HasSetting(tvshowlogos.enable)</visible>
 	</include>
 	<!--watchedOverlay-->
@@ -634,6 +634,34 @@
 		<aspectratio align="right">keep</aspectratio>
 		<visible>[Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
 	</include>
+	<!--watchedOverlayAlt-->
+	<include name="overlay_UnWatchedAlt">
+		<width>32</width>
+		<height>32</height>
+		<texture>$INFO[ListItem.Overlay]</texture>
+		<aspectratio align="right">keep</aspectratio>
+		<visible>[Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
+	</include>
+	<!--
+	<include name="overlay_UnWatched">
+		<control type = "group">
+			<control type="image" id = "1">
+				<width>32</width>
+				<height>32</height>
+				<texture>$INFO[ListItem.Overlay,overlays/,/default-fo.png]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>[Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
+			</control>
+				<!--watchedOverlayAlt-->
+			<!--<control type="image" id = "1">
+				<width>64</width>
+				<height>64</height>
+				<texture>$INFO[ListItem.Overlay]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>Skin.HasSetting(watched.alternative) + [Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
+			</control>	
+		</control>
+	</include>-->
 	<!--resumableOverlay-->
 	<include name="overlay_Resumable">
 		<width>32</width>
@@ -641,14 +669,14 @@
 		<texture>overlays/OverlayResumable.png</texture>
 		<aspect>keepaspect</aspect>
 		<!--<visible>[Container.Content(movies) | Container.Content(episodes)] + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + IsEmpty(ListItem.Property(ReleaseDate) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>-->
-		<visible>ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>	
+		<visible>!Skin.HasSetting(watched.alternative) + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>	
 	</include>
 	<include name="overlay_Resumable-list">
 		<width>32</width>
 		<height>32</height>
 		<texture>overlays/OverlayResumable.png</texture>
 		<aspect>keepaspect</aspect>
-		<visible>Container(50).ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>
+		<visible>!Skin.HasSetting(watched.alternative) + Container(50).ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>
 	</include>
 
 <!---COLUMNS------>
@@ -1049,7 +1077,7 @@
 				<posx>160</posx>
 				<posy>34</posy>
 				<control type="label" id="1">
-					<width>970</width>
+					<width>870</width>
 					<label>$VAR[osd.Title]</label>
 					<textcolor>Color1</textcolor>
 					<font>titleSpecial</font>
@@ -1173,6 +1201,416 @@
 			</control>
 		</control>
 	</include>
+<!--XperienceOSD Info-->
+<include name="osd_InfoXperience">
+		<!--<control type ="image">
+				<posx>10</posx>
+				<posy>1</posy>
+				<width>180</width>
+				<height>68</height>
+				<texture>$VAR[flag_Studio.player]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>VideoPlayer.Content(episodes)</visible>
+		</control>-->
+	<control type="group" id="1">			
+		<posy>458</posy>
+		<include>NowPlayingFullscreen</include>
+		<animation effect="slide" start="0,0" end="0,-458" time="0" condition="Skin.HasSetting(VideoOSD.OnTop)">Conditional</animation>
+            <animation effect="slide" end="0,120" time="300" tween="sine" easing="inout" condition="Skin.HasSetting(VideoOSD.OnTop) + Window.IsActive(seekbar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd)]">Conditional</animation>
+            <animation effect="slide" end="0,-120" time="300" tween="sine" easing="inout" condition="!Skin.HasSetting(VideoOSD.OnTop) + Window.IsActive(seekbar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd)]">Conditional</animation>
+            <visible>[Window.IsVisible(fullscreenvideo) | Window.IsActive(visualisation)] + ![[Window.IsActive(seekbar) + Skin.HasSetting(osd.progressbar)]  | [Window.IsActive(visualisationpresetlist) | Window.IsActive(videoosd) | Window.IsVisible(bookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsActive(script-XBMC_Lyrics-main.xml)]]</visible>
+		<control type="image" id="1">
+			<width>1280</width>
+			<height>300</height>
+			<texture border="24">osd/infoOverlayBlack_Xperience.png</texture>
+			<visible>Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
+		</control>
+		<control type="image" id="1">
+			<width>1280</width>
+			<height>300</height>
+			<texture border="24">osd/infoOverlayBlack_Xperience.png</texture>
+			<visible>Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)</visible>
+		</control>
+		<!--<control type="image" id="1">
+			<posx>14</posx>
+			<posy>10</posy>
+			<width>128</width>
+			<height>48</height>
+			<texture>$VAR[flag_Studio.player]</texture>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + !VideoPlayer.Content(movies)</visible>
+		</control>-->
+		<control type="image" id="10">
+			<posx>7</posx>
+			<posy>80</posy>
+			<width>268</width>
+			<height>150</height>
+			<texture fallback="empty">$INFO[Player.FolderPath]../clearart.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+		</control>
+		<control type="image" id="11">
+			<posx>7</posx>
+			<posy>80</posy>
+			<width>268</width>
+			<height>150</height>
+			<texture fallback="empty">$INFO[Player.FolderPath]/clearart.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+		</control>
+		<control type ="image" id="111">
+			<posx>25</posx>
+			<posy>1</posy>
+			<width>215</width>
+			<height>280</height>
+			<texture fallback="empty">$INFO[VideoPlayer.Cover]</texture>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>[StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+		</control>
+		--<control type="image" id="1111">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>128</width>
+			<height>64</height>
+			<texture fallback="empty">$VAR[flag_Studio.player]</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+		</control>
+		<control type="image" id="1">
+			<posx>14</posx>
+			<posy>34</posy>
+			<width>128</width>
+			<height>128</height>
+			<texture>$INFO[MusicPlayer.Cover]</texture>
+			<aspectratio align="center">stretch</aspectratio>
+		</control>
+		<control type="image" id="1">
+			<posx>25</posx>
+			<posy>1</posy>
+			<width>215</width>
+			<height>280</height>
+			<texture>$INFO[VideoPlayer.Cover]</texture>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>VideoPlayer.Content(livetv) | VideoPlayer.Content(files)</visible>
+		</control>
+		<control type="image" id="1">
+			<posx>1206</posx>
+			<posy>5</posy>
+			<width>48</width>
+			<height>48</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>flags/video/hd/nf-HD.png</texture>
+			<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
+		</control>
+		<!---info--->
+		<control type="group" id="1">
+			<posx>280</posx>
+			<posy>10</posy>
+			<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty) + StringCompare(Control.GetLabel(111),empty) + StringCompare(Control.GetLabel(1111),empty)]</visible>
+			<control type="label" id="1">
+				<width>870</width>
+				<label>$VAR[osd.Title]</label>
+				<textcolor>Color1</textcolor>
+				<font>titleSpecial</font>
+			</control>
+			<control type="label" id="1">
+				<posy>40</posy>
+				<width>850</width>
+				<label>$VAR[osd.Info]</label>
+				<textcolor>Color2</textcolor>
+				<font>titleSmallest</font>
+				<include>info_Sub</include>
+			</control>
+			<control type="label" id="1">
+				<posy>41</posy>
+				<width>850</width>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Artist,]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</label>
+				<textcolor>Color3</textcolor>
+				<font>titletiny</font>
+				<include>info_Sub</include>
+				<visible>Player.HasAudio</visible>
+			</control>
+			
+			<control type="group" id="1">
+				<posy>75</posy>
+				<visible>Player.HasAudio + !Skin.HasSetting(osd.progressbar)</visible>
+				<control type="label" id="1">
+					<width>850</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<textcolor>Color3</textcolor>
+					<font>description</font>
+					<include>info_Sub</include>
+				</control>
+				<control type="label" id="1">
+					<label>$VAR[player_Status.Condition]</label>
+					<include>seekbar_Label-Info</include>
+				</control>
+			</control>
+			<control type="label" id="1">
+				<posy>34</posy>
+				<width>850</width>
+				<label>$LOCALIZE[209]: $INFO[VideoPlayer.Offset(1).Artist,]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[VideoPlayer.PlaylistPosition,]$INFO[VideoPlayer.PlaylistLength,/])</label>
+				<textcolor>Color3</textcolor>
+				<font>titleSpecial</font>
+				<include>info_Sub</include>
+				<visible>VideoPlayer.Content(musicvideos)</visible>
+			</control>
+			<control type="image" id="1">
+				<posx>1020</posx>
+				<posy>-3</posy>
+				<width>82</width>
+				<height>32</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/codec/$INFO[MusicPlayer.Codec,,.png]</texture>
+			</control>
+			<control type="image" id="1">
+				<posx>845</posx>
+				<posy>35</posy>
+				<width>128</width>
+				<height>22</height>
+				<texture>$INFO[Player.StarRating,rating/nf-,]</texture>
+				<aspectratio align="right">keep</aspectratio>
+			</control>
+			<!---plot------>
+			<control type="group" id="1">
+				<posy>65</posy>
+				<visible>Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
+				<control type="textbox" id="1">
+					<height>134</height>
+					<width>970</width>
+					<label>$VAR[player_Plot.Condition]</label>
+					<textcolor>Color3</textcolor>
+					<font>descriptionbig</font>
+					<include>description_OSD</include>
+					<visible>Skin.HasSetting(osd.progressbar)</visible>
+				</control>
+				<control type="textbox" id="1">
+					<height>220</height>
+					<width>1090</width>
+					<label>$VAR[player_Plot.Condition]</label>
+					<textcolor>Color3</textcolor>
+					<font>descriptionbig</font>
+					<include>description_OSD</include>
+					<visible>!Skin.HasSetting(osd.progressbar)</visible>
+				</control>
+			</control>
+			<!--flags-->
+			<control type="group" id="1">
+				<posy>140</posy>
+				<posx>599</posx>
+				<control type="image" id="1">
+					<width>96</width>
+					<height>64</height>
+					<texture>$VAR[flag_Studio.player]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>VideoPlayer.Content(files)</visible>
+				</control>
+				<control type="image" id="1">
+					<posx>101</posx>
+					<width>96</width>
+					<height>64</height>
+					<texture>$INFO[VideoPlayer.VideoResolution,flags/video/resolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>VideoPlayer.Content(files)</visible>
+				</control>
+				<control type="image" id ="1">
+					<posx>192</posx>
+					<width>96</width>
+					<height>64</height>
+					<texture>$INFO[VideoPlayer.AudioCodec,flags/codec/,.png]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>[VideoPlayer.Content(files)]+ !IsEmpty(VideoPlayer.AudioCodec)</visible>
+				</control>
+				<control type="image" id ="1">
+					<posx>282</posx>
+					<width>96</width>
+					<height>64</height>
+					<texture>$INFO[VideoPlayer.VideoAspect,flags/video/aspectratio/,.png]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>[VideoPlayer.Content(files)] + !IsEmpty(VideoPlayer.VideoAspect)</visible>
+				</control>
+			</control>
+			<!---progress------>
+			<control type="group" id="1">
+				<posy>190</posy>
+				<!--animation effect="slide" start="0,0" end="0,-44" time="0" condition="Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">Conditional</animation>-->
+				<visible>Skin.HasSetting(osd.progressbar)</visible>
+				<control type="progress" id="1">
+					<posy>10</posy>
+					<width>970</width>
+					<height>18</height>
+					<texturebg border="10">dialogs/progressBackground.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="10.5">dialogs/progressSlider_Xperience.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<info>Player.Progress</info>
+				</control>
+				<control type="group" id="1">
+					<posy>30</posy>
+					<control type="label" id="1">
+						<posx>0</posx>
+						<width>1000</width>
+						<label>$INFO[Player.Time]</label>
+						<font>description</font>
+						<textcolor>Color3</textcolor>
+					</control>
+					<control type="label" id="1">
+						<posx>970</posx>
+						<width>1000</width>
+						<label>$INFO[Player.Duration]</label>
+						<align>right</align>
+						<font>description</font>
+						<textcolor>Color3</textcolor>
+					</control>
+					<control type="label" id="1">
+						<label>$VAR[player_Status.Condition]</label>
+						<include>seekbar_Label-Info_xperience</include>
+					</control>
+				</control>
+			</control>
+		</control>
+	<!---info complete
+		<control type="group" id="1">
+			<posx>10</posx>
+			<posy>10</posy>
+			<visible>[StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty) + StringCompare(Control.GetLabel(111),empty)]</visible>			
+				
+			<control type="label" id="1">
+				<width>870</width>
+				<label>$VAR[osd.Title]</label>
+				<textcolor>Color1</textcolor>
+				<font>titleSpecial</font>
+			</control>
+			<control type="label" id="1">
+				<posy>40</posy>
+				<width>850</width>
+				<label>$VAR[osd.Info]</label>
+				<textcolor>Color2</textcolor>
+				<font>titleSmallest</font>
+				<include>info_Sub</include>
+			</control>
+			<control type="label" id="1">
+				<posy>41</posy>
+				<width>850</width>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Artist,]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</label>
+				<textcolor>Color3</textcolor>
+				<font>titletiny</font>
+				<include>info_Sub</include>
+				<visible>Player.HasAudio</visible>
+			</control>
+			
+			<control type="group" id="1">
+				<posy>75</posy>
+				<visible>Player.HasAudio + !Skin.HasSetting(osd.progressbar)</visible>
+				<control type="label" id="1">
+					<width>850</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<textcolor>Color3</textcolor>
+					<font>description</font>
+					<include>info_Sub</include>
+				</control>
+				<control type="label" id="1">
+					<label>$VAR[player_Status.Condition]</label>
+					<include>seekbar_Label-Info</include>
+				</control>
+			</control>
+			<control type="label" id="1">
+				<posy>34</posy>
+				<width>850</width>
+				<label>$LOCALIZE[209]: $INFO[VideoPlayer.Offset(1).Artist,]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[VideoPlayer.PlaylistPosition,]$INFO[VideoPlayer.PlaylistLength,/])</label>
+				<textcolor>Color3</textcolor>
+				<font>titleSpecial</font>
+				<include>info_Sub</include>
+				<visible>VideoPlayer.Content(musicvideos)</visible>
+			</control>
+			<control type="image" id="1">
+				<posx>1020</posx>
+				<posy>-3</posy>
+				<width>82</width>
+				<height>32</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/codec/$INFO[MusicPlayer.Codec,,.png]</texture>
+			</control>
+			<control type="image" id="1">
+				<posx>845</posx>
+				<posy>35</posy>
+				<width>128</width>
+				<height>22</height>
+				<texture>$INFO[Player.StarRating,rating/nf-,]</texture>
+				<aspectratio align="right">keep</aspectratio>
+			</control>
+			<control type="group" id="1">
+				<posy>65</posy>
+				<visible>Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
+				<control type="textbox" id="1">
+					<height>134</height>
+					<width>970</width>
+					<label>$VAR[player_Plot.Condition]</label>
+					<textcolor>Color3</textcolor>
+					<font>descriptionbig</font>
+					<include>description_OSD</include>
+					<visible>Skin.HasSetting(osd.progressbar)</visible>
+				</control>
+				<control type="textbox" id="1">
+					<height>220</height>
+					<width>1090</width>
+					<label>$VAR[player_Plot.Condition]</label>
+					<textcolor>Color3</textcolor>
+					<font>descriptionbig</font>
+					<include>description_OSD</include>
+					<visible>!Skin.HasSetting(osd.progressbar)</visible>
+				</control>
+			</control>
+			<control type="image">
+				<posy>65</posy>
+				<width>96</width>
+				<height>64</height>
+				<texture>$VAR[flag_Studio.player]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>VideoPlayer.Content(files)</visible>
+			</control>
+			<control type="group" id="1">
+				<posy>190</posy>
+				<animation effect="slide" start="0,0" end="0,-44" time="0" condition="Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">Conditional</animation>
+				<visible>Skin.HasSetting(osd.progressbar)</visible>
+				<control type="progress" id="1">
+					<posy>10</posy>
+					<width>970</width>
+					<height>18</height>
+					<texturebg border="10">dialogs/progressBackground.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="10.5">dialogs/progressSlider_Xperience.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<info>Player.Progress</info>
+				</control>
+				<control type="group" id="1">
+					<posy>30</posy>
+					<control type="label" id="1">
+						<posx>0</posx>
+						<width>1000</width>
+						<label>$INFO[Player.Time]</label>
+						<font>description</font>
+						<textcolor>Color3</textcolor>
+					</control>
+					<control type="label" id="1">
+						<posx>970</posx>
+						<width>1000</width>
+						<label>$INFO[Player.Duration]</label>
+						<align>right</align>
+						<font>description</font>
+						<textcolor>Color3</textcolor>
+					</control>
+					<control type="label" id="1">
+						<label>$VAR[player_Status.Condition]</label>
+						<include>seekbar_Label-Info_xperience</include>
+					</control>
+				</control>
+			</control>
+		</control>-->
+	</control>
+</include>
 	
 
 <!---WINDOW TITLES------->
@@ -1236,6 +1674,219 @@
 			<include>windowTitle</include>
 		</control>
 	</include>
+
+<!-- xperience1080 OSD -->>
+<include name="OSDWeatherClock">
+        <control type="group">
+            <animation effect="slide" end="-100" time="300" tween="sine" easing="inout" condition="Player.Muted | substring(Player.Volume,-60.0)">Conditional</animation>
+            <animation effect="slide" end="-213" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,635" time="400" tween="sine" easing="inout" condition="Skin.HasSetting(VideoOSD.OnTop) + Window.IsActive(fullscreenvideo)">Conditional</animation>
+            <include>OSDHideShowAnimation</include>
+            <visible>Skin.HasSetting(videoosd.xperience1080)</visible>
+            <!--<control type="image">
+                <posx>700</posx>
+                <posy>0</posy>
+                <width>535</width>
+                <height>194</height>
+                <texture>osd/fullscreen/osd-back-weatherclock.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>-->
+            <control type="image">
+                <description>Small weather</description>
+                <posx>905</posx>
+                <posy>-5</posy>
+                <width>100</width>
+                <height>100</height>
+                <texture fallback="weather/small/na.png">weather/small/$INFO[Weather.FanartCode].png</texture>
+            </control>
+            <control type="label">
+                <description>Temp label</description>
+                <posx>1060</posx>
+                <posy>30</posy>
+                <width>75</width>
+                <height>34</height>
+                <label>$INFO[Weather.Temperature]</label>
+               <font>osdxperience</font>
+         <color>Color8</color>
+	<shadowcolor>black</shadowcolor>
+                <align>right</align>
+                <scroll>false</scroll>
+                <visible>Weather.IsFetched</visible>
+            </control>
+            <control type="group">
+                <visible>!Player.Forwarding + !Player.Rewinding</visible>
+                <include>visiblehidefadeinfo</include>
+                <control type="image">
+                    <description>Cock image</description>
+                    <posx>1060</posx>
+                    <posy>-5</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture>osd/fullscreen/clock.png</texture>
+                    <visible>!Control.IsVisible(24)</visible>
+                </control>
+                <control type="image" id="24">
+                    <description>Cock image</description>
+                    <posx>1060</posx>
+                    <posy>-5</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture>osd/fullscreen/clock-pm.png</texture>
+                    <visible>substring(System.Time,Pm)</visible>
+                </control>
+                <control type="label">
+                    <description>Clock label</description>
+                    <posx>1225</posx>
+                    <posy>30</posy>
+                    <width>150</width>
+                    <height>34</height>
+                    <label>$INFO[System.Time(hh)]:$INFO[System.Time(mm)]</label>
+                 	  <font>osdxperience</font>
+         <color>Color8</color>
+	<shadowcolor>black</shadowcolor>
+                    <align>right</align>
+                    <scroll>false</scroll>
+                </control>
+            </control>
+            <control type="group">
+                <visible>Player.Forwarding | Player.Rewinding</visible>
+                <include>visiblehidefadeinfo</include>
+                <control type="image">
+                    <description>Forwarding image</description>
+                    <posx>1060</posx>
+                    <posy>-5</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture>osd/fullscreen/fw.png</texture>
+                    <visible>Player.Forwarding</visible>
+                </control>
+                <control type="image">
+                    <description>Rewinding image</description>
+                    <posx>1060</posx>
+                    <posy>-5</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture>osd/fullscreen/rw.png</texture>
+                    <visible>Player.Rewinding</visible>
+                </control>
+                <control type="label">
+                    <description>Forwarding / Rewinding 2x</description>
+                    <include>OSDFwRwLabel</include>
+                    <label>2x</label>
+                    <visible>Player.Forwarding2x | Player.Rewinding2x</visible>
+                </control>
+                <control type="label">
+                    <description>Forwarding / Rewinding 4x</description>
+                    <include>OSDFwRwLabel</include>
+                    <label>4x</label>
+                    <visible>Player.Forwarding4x | Player.Rewinding4x</visible>
+                </control>
+                <control type="label">
+                    <description>Forwarding / Rewinding 8x</description>
+                    <include>OSDFwRwLabel</include>
+                    <label>8x</label>
+                    <visible>Player.Forwarding8x | Player.Rewinding8x</visible>
+                </control>
+                <control type="label">
+                    <description>Forwarding / Rewinding 16x</description>
+                    <include>OSDFwRwLabel</include>
+                    <label>16x</label>
+                    <visible>Player.Forwarding16x | Player.Rewinding16x</visible>
+                </control>
+                <control type="label">
+                    <description>Forwarding / Rewinding 32x</description>
+                    <include>OSDFwRwLabel</include>
+                    <label>32x</label>
+                    <visible>Player.Forwarding32x | Player.Rewinding32x</visible>
+                </control>
+            </control>
+        </control>
+<!-- xperience1080 OSD -->>
+<include name="OSDWeatherClockInfo">
+        <control type="group">
+            <visible>Skin.HasSetting(videoosd.xperience1080)</visible>
+            <!--<control type="image">
+                <posx>700</posx>
+                <posy>0</posy>
+                <width>535</width>
+                <height>194</height>
+                <texture>osd/fullscreen/osd-back-weatherclock.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>-->
+            <control type="image">
+                <description>Small weather</description>
+                <posx>905</posx>
+                <posy>-5</posy>
+                <width>100</width>
+                <height>100</height>
+                <texture fallback="weather/small/na.png">weather/small/$INFO[Weather.FanartCode].png</texture>
+            </control>
+            <control type="label">
+                <description>Temp label</description>
+                <posx>1060</posx>
+                <posy>30</posy>
+                <width>75</width>
+                <height>34</height>
+                <label>$INFO[Weather.Temperature]</label>
+               <font>osdxperience</font>
+         <color>Color8</color>
+	<shadowcolor>black</shadowcolor>
+                <align>right</align>
+                <scroll>false</scroll>
+                <visible>Weather.IsFetched</visible>
+            </control>
+            <control type="group">
+                <visible>!Player.Forwarding + !Player.Rewinding</visible>
+                <include>visiblehidefadeinfo</include>
+                <control type="image">
+                    <description>Cock image</description>
+                    <posx>1060</posx>
+                    <posy>-5</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture>osd/fullscreen/clock.png</texture>
+                    <visible>!Control.IsVisible(24)</visible>
+                </control>
+                <control type="image" id="24">
+                    <description>Cock image</description>
+                    <posx>1060</posx>
+                    <posy>-5</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture>osd/fullscreen/clock-pm.png</texture>
+                    <visible>substring(System.Time,Pm)</visible>
+                </control>
+                <control type="label">
+                    <description>Clock label</description>
+                    <posx>1210</posx>
+                    <posy>30</posy>
+                    <width>150</width>
+                    <height>34</height>
+                    <label>$INFO[System.Time(hh)]:$INFO[System.Time(mm)]</label>
+                 	  <font>osdxperience</font>
+		 	  <color>Color8</color>
+			   <shadowcolor>black</shadowcolor>
+		            <align>right</align>
+		            <scroll>false</scroll>
+		        </control>
+		    </control>
+            
+        </control>
+    </include>
+    </include>
+	<include name="OSDFwRwLabel">
+        <posx>1190</posx>
+        <posy>30</posy>
+        <width>150</width>
+        <height>34</height>
+	<font>osdxperience</font>
+         <color>Color8</color>
+	<shadowcolor>black</shadowcolor>
+        <align>right</align>
+        <scroll>false</scroll>
+    </include>
+
+	
 
 <!---INTRO------>
 	<include name="intro_Enable">

@@ -100,7 +100,6 @@
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
-	
 	<default type="sliderex">
 		<height>40</height>
 		<texturefocus border="3">list-focus.png</texturefocus>
