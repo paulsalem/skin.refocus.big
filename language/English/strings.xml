@@ -336,4 +336,8 @@ Please consider supporting the development of XBMC by making a donation.
 
 <!--alternate watched icons-->
 <string id="32028">Alternative Watched Overlays</string>
+
+<!--enable zoom on artistslideshow-->
+<string id="32029">Enable Zoom on Artist Slideshow</string>
+
 </strings>

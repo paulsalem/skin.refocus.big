@@ -432,8 +432,17 @@
 				<visible>System.HasAddon(script.artistslideshow)</visible>
 				<include>button_Settings</include>
 			</control>
-			<!--tvtunes-->
+			<!--artistslideshow zoom-->
 			<control type="radiobutton" id="804">
+				<label>$LOCALIZE[32029]</label>
+				<onclick>Skin.ToggleSetting(background-slideshow-zoom)</onclick>
+				<selected>Skin.HasSetting(background-slideshow-zoom)</selected>
+				<enable>System.HasAddon(script.artistslideshow)</enable>
+				<visible>System.HasAddon(script.artistslideshow) + Skin.HasSetting(background-slideshow)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--tvtunes-->
+			<control type="radiobutton" id="805">
 				<label>$LOCALIZE[32009]</label>
 				<onclick>Skin.ToggleSetting(tvtunes.addon)</onclick>
 				<selected>Skin.HasSetting(tvtunes.addon)</selected>
@@ -441,7 +450,7 @@
 				<visible>System.HasAddon(script.tvtunes)</visible>
 				<include>button_Settings</include>
 			</control>
-			<control type="button" id="805">
+			<control type="button" id="806">
 				<label>- $LOCALIZE[32010]</label>
 				<onclick>XBMC.RunScript(script.tvtunes)</onclick>
 				<include>button_Settings</include>
