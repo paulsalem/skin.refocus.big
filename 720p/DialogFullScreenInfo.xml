@@ -120,7 +120,7 @@
 				<width>48</width>
 				<height>48</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture>flags/video/hd/nf-HD.png</texture>
+				<texture>flags/video/HD/nf-HD.png</texture>
 				<visible>Skin.HasSetting(videoosd.realaska) + IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
 			</control>
 

@@ -594,6 +594,11 @@
 			<filename>Light.ttf</filename>
 			<size>48</size>
 		</font>		
+		<font>
+			<name>osdxperience</name>
+			<filename>Light.ttf</filename>
+			<size>36</size>
+		</font>	
 <!-- DIALOGS -->
 		<font>
 			<name>titleInfoDialog</name>
@@ -895,6 +900,11 @@
 			<filename>LightCaps.ttf</filename>
 			<size>32</size>
 		</font>
+		<font>
+			<name>osdxperience</name>
+			<filename>LightCaps.ttf</filename>
+			<size>32</size>
+		</font>	
 		<font>
 			<name>osdHeader</name>
 			<filename>Light.ttf</filename>

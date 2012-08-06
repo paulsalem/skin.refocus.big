@@ -1,5 +1,5 @@
 ﻿<window type="dialog" id="114">
-	<defaultcontrol>702</defaultcontrol>
+	<defaultcontrol>3</defaultcontrol>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
 	<controls>
 		<control type="group">

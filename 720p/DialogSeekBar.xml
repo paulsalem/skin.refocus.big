@@ -3,28 +3,18 @@
 	<visible>![Window.IsActive(142)] + !Player.HasAudio + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] + ![Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 	<controls>
 		
-		<!--<include>clock</include>
-
-		<control type="label">
-			<description>Chapters</description>
-			<include>transition_Toast</include>
-			<posx>190</posx>
-			<posy>1</posy>
-			<width>500</width>
-			<height>25</height>
-			<textcolor>Color1</textcolor>
-			<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]
-[B]$INFO[Player.ChapterName][/B]</label>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>rss</font>
-			<visible>Player.ChapterCount</visible>
-		</control>	-->
+		<!--<include>clock</include>-->
+			<control type="group">
+				<visible>!Skin.HasSetting(videoosd.xperience1080)</visible>
+				<include>clock</include>
+			</control>
+		
 
 
 <!--xperience1080 OSD-->
 <control type="group">
             <include>NowPlayingFullscreen</include>
+		<include>chapters</include>
             <visible>Skin.HasSetting(videoosd.xperience1080)</visible>
             <include>OSDWeatherClock</include>
             <control type="group">
@@ -38,8 +28,38 @@
                     <effect type="fade" start="100" end="0" time="500" tween="sine" easing="out" />
                 </animation>
                 <control type="group">
-                    <animation effect="slide" start="0,0" end="0,-560" time="400" tween="sine" easing="inout" condition="Skin.HasSetting(VideoOSD.OnTop)">Conditional</animation>
-                    <!--<control type="image">
+                    <animation effect="slide" start="0,0" end="0,-665" time="400" tween="sine" easing="inout" condition="Skin.HasSetting(VideoOSD.OnTop)">Conditional</animation>
+		<control type="group" id="1">                
+			<control type="image" id="1">
+				<posy>663</posy>
+				<width>1280</width>
+				<height>90</height>
+				<texture border="24">osd/infoOverlayBlack_Xperience_OSD.png</texture>
+				<visible>!Window.IsActive(videoosd)</visible>
+			</control>
+
+			
+			<control type="image" id="1">
+				<posy>663</posy>
+				<width>120</width>
+				<height>90</height>
+				<texture border="24">osd/infoOverlayBlack_Xperience_OSD.png</texture>
+				<visible>Window.IsActive(videoosd)</visible>
+			</control>
+
+			<control type="image" id="1">
+				<posy>663</posy>
+				<posx>1160</posx>
+				<width>120</width>
+				<height>90</height>
+				<texture border="24">osd/infoOverlayBlack_Xperience_OSD.png</texture>
+				<visible>Window.IsActive(videoosd)</visible>
+			</control>
+			
+		</control>
+		
+		       
+		   <!--<control type="image">
                         <posx>0</posx>
                         <posy>10</posy>
                         <width>1080</width>
@@ -78,31 +98,31 @@
                         </control>
                     </control>-->
                     <control type="label">
-                        <posx>10</posx>
-                        <posy>605</posy>
+                        <posx>-18</posx>
+                        <posy>660</posy>
                         <width>158</width>
                         <height>68</height>
                         <label>$INFO[Player.Time]</label>
                         <font>osdxperience</font>
-         		<color>Color8</color>
+         		<textcolor>Color8</textcolor>
 			<shadowcolor>black</shadowcolor>
                         <align>center</align>
                     </control>
                     <control type="label">
-                        <posx>1090</posx>
-                        <posy>605</posy>
+                        <posx>1140</posx>
+                        <posy>660</posy>
                         <width>158</width>
                         <height>68</height>
 			<label>$INFO[Player.TimeRemaining]</label>
                         <font>osdxperience</font>
-         		<color>Color8</color>
+         		<textcolor>Color8</textcolor>
 			<shadowcolor>black</shadowcolor>
                         <align>center</align>
                     </control>
                     <control type="fadelabel">
                         <description>Pause / finish time</description>
                         <posx>410</posx>
-                        <posy>605</posy>
+                        <posy>660</posy>
                         <width>420</width>
                         <height>66</height>
                         <label>$LOCALIZE[112]</label>
@@ -111,7 +131,7 @@
                         <scrollout>false</scrollout>
                         <pauseatend>5000</pauseatend>
                         <font>osdxperience</font>
-         		<color>Color8</color>
+         		<textcolor>Color8</textcolor>
 			<shadowcolor>black</shadowcolor>
                         <align>center</align>
                         <aligny>center</aligny>
@@ -125,12 +145,12 @@
                         <animation effect="fade" start="100" end="0" time="0" >Hidden</animation>
                         <control type="label">
                             <posx>410</posx>
-                            <posy>605</posy>
+                            <posy>660</posy>
                             <width>420</width>
                             <height>68y</height>
                             <label>$LOCALIZE[773] $INFO[Player.SeekOffset]</label>
                             <font>osdxperience</font>
-        		 <color>Color8</color>
+        		 <textcolor>Color8</textcolor>
 			<shadowcolor>black</shadowcolor>
                             <align>center</align>
                         </control>
@@ -189,7 +209,8 @@
 			
 			<animation effect="slide" start="0,0" end="0,42" time="0" condition="Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">Conditional</animation>
 			<visible>Skin.HasSetting(videoosd.realaska) + [Window.IsVisible(fullscreenvideo) | Window.IsActive(visualisation)] + ![[Window.IsActive(seekbar) + Skin.HasSetting(osd.progressbar)]  | [Window.IsActive(visualisationpresetlist) | Window.IsActive(videoosd) | Window.IsVisible(bookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsActive(script-XBMC_Lyrics-main.xml)]]</visible>
-
+			
+			
 			<control type="image" id="1">
 			<posy>500</posy>
 				<width>1280</width>
@@ -259,7 +280,7 @@
 				<width>48</width>
 				<height>48</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture>flags/video/hd/nf-HD.png</texture>
+				<texture>flags/video/HD/nf-HD.png</texture>
 				<visible>Skin.HasSetting(videoosd.realaska) + IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
 			</control>
 

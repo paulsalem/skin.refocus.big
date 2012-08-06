@@ -1,5 +1,5 @@
 ﻿<window type="dialog" id="120">
-	<defaultcontrol always="true">702</defaultcontrol>
+	<defaultcontrol always="true">3</defaultcontrol>
 	<controls>
 		<control type="group">
 			<include>controls_Music</include>

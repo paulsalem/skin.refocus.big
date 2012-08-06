@@ -7,6 +7,7 @@
 	<color name="Color5">FF000000</color>
 	<color name="Color7">FFebebeb</color>
 	<color name="Color8">ffffffff</color>
+	<color name="Color9">ffcacaca</color>
 	
 	<color name="Focused">FF111111</color>
 	<color name="Disabled">ff9a9a9a</color>

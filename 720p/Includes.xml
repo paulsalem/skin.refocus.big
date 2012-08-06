@@ -183,7 +183,7 @@
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
 				<font>clock</font>
-				<color>Color8</color>
+				<textcolor>Color1</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<include>toast_Top_Home</include>
 			</control>
@@ -283,6 +283,7 @@
 			</control>
 		</control>
 	</include>
+	
 	<include name="clock">
 		<control type="group">
 			<visible>Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + !Window.IsActive(infodialog)</visible>
@@ -324,6 +325,28 @@
 				<include>toast_Bottom_Player</include>
 				<visible>Window.IsActive(fullscreenvideo)</visible>
 			</control>
+			<control type="label">
+				<posx>25r</posx>
+				<description>Chapters</description>
+				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
+				<textcolor>Color8</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>finishtime</font>
+				<posy>70</posy>
+				<include>toast_Bottom_Player</include>
+				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
+			</control>
+			<control type="label">
+				<posx>25r</posx>
+				<description>Chapters</description>
+				<label>[B]$INFO[Player.ChapterName][/B]</label>
+				<textcolor>Color8</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>finishtime</font>
+				<posy>90</posy>
+				<include>toast_Bottom_Player</include>
+				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
+			</control>
 		</control>
 		<control type="group">
 			<visible>Skin.HasSetting(home.time) + Skin.HasSetting(home.timesmall) + !Window.IsActive(infodialog)</visible>
@@ -358,6 +381,76 @@
 				<shadowcolor>black</shadowcolor>
 				<include>toast_Bottom_Player</include>
 				<visible>Window.IsActive(fullscreenvideo)</visible>
+			</control>
+			<control type="label">
+				<posx>25r</posx>
+				<posy>45</posy>
+				<description>Chapters</description>
+				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
+				<textcolor>Color8</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>toast_Bottom_Player</include>
+				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
+			</control>
+			<control type="label">
+				<posx>25r</posx>
+				<posy>64</posy>
+				<description>Chapters</description>
+				<label>[B]$INFO[Player.ChapterName][/B]</label>
+				<textcolor>Color8</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>toast_Bottom_Player</include>
+				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="chapters">
+		<control type="group">
+			<visible>!Skin.HasSetting(home.timesmall)</visible>
+			<control type="label">
+				<posx>64r</posx>
+				<description>Chapters</description>
+				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
+				<textcolor>Color8</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>finishtime</font>
+				<posy>100</posy>
+				<include>toast_Bottom_Player</include>
+				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
+			</control>
+			<control type="label">
+				<posx>64r</posx>
+				<description>Chapters</description>
+				<label>[B]$INFO[Player.ChapterName][/B]</label>
+				<textcolor>Color8</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>finishtime</font>
+				<posy>120</posy>
+				<include>toast_Bottom_Player</include>
+				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(home.timesmall)</visible>
+			<control type="label">
+				<posx>64r</posx>
+				<posy>100</posy>
+				<description>Chapters</description>
+				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
+				<textcolor>Color8</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>toast_Bottom_Player</include>
+				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
+			</control>
+			<control type="label">
+				<posx>64r</posx>
+				<posy>120</posy>
+				<description>Chapters</description>
+				<label>[B]$INFO[Player.ChapterName][/B]</label>
+				<textcolor>Color8</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<include>toast_Bottom_Player</include>
+				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
 			</control>
 		</control>
 	</include>
@@ -1069,7 +1162,7 @@
 				<width>48</width>
 				<height>48</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture>flags/video/hd/nf-HD.png</texture>
+				<texture>flags/video/HD/nf-HD.png</texture>
 				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
 			</control>
 			<!---info--->
@@ -1299,7 +1392,7 @@
 			<width>48</width>
 			<height>48</height>
 			<aspectratio align="right">keep</aspectratio>
-			<texture>flags/video/hd/nf-HD.png</texture>
+			<texture>flags/video/HD/nf-HD-OSD.png</texture>
 			<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
 		</control>
 		<!---info--->
@@ -1310,7 +1403,7 @@
 			<control type="label" id="1">
 				<width>870</width>
 				<label>$VAR[osd.Title]</label>
-				<textcolor>Color1</textcolor>
+				<textcolor>Color8</textcolor>
 				<font>titleSpecial</font>
 			</control>
 			<control type="label" id="1">
@@ -1325,7 +1418,7 @@
 				<posy>41</posy>
 				<width>850</width>
 				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Artist,]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</label>
-				<textcolor>Color3</textcolor>
+				<textcolor>Color9</textcolor>
 				<font>titletiny</font>
 				<include>info_Sub</include>
 				<visible>Player.HasAudio</visible>
@@ -1337,7 +1430,7 @@
 				<control type="label" id="1">
 					<width>850</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-					<textcolor>Color3</textcolor>
+					<textcolor>Color9</textcolor>
 					<font>description</font>
 					<include>info_Sub</include>
 				</control>
@@ -1350,7 +1443,7 @@
 				<posy>34</posy>
 				<width>850</width>
 				<label>$LOCALIZE[209]: $INFO[VideoPlayer.Offset(1).Artist,]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[VideoPlayer.PlaylistPosition,]$INFO[VideoPlayer.PlaylistLength,/])</label>
-				<textcolor>Color3</textcolor>
+				<textcolor>Color9</textcolor>
 				<font>titleSpecial</font>
 				<include>info_Sub</include>
 				<visible>VideoPlayer.Content(musicvideos)</visible>
@@ -1379,7 +1472,7 @@
 					<height>134</height>
 					<width>970</width>
 					<label>$VAR[player_Plot.Condition]</label>
-					<textcolor>Color3</textcolor>
+					<textcolor>Color9</textcolor>
 					<font>descriptionbig</font>
 					<include>description_OSD</include>
 					<visible>Skin.HasSetting(osd.progressbar)</visible>
@@ -1388,7 +1481,7 @@
 					<height>220</height>
 					<width>1090</width>
 					<label>$VAR[player_Plot.Condition]</label>
-					<textcolor>Color3</textcolor>
+					<textcolor>Color9</textcolor>
 					<font>descriptionbig</font>
 					<include>description_OSD</include>
 					<visible>!Skin.HasSetting(osd.progressbar)</visible>
@@ -1453,7 +1546,7 @@
 						<width>1000</width>
 						<label>$INFO[Player.Time]</label>
 						<font>description</font>
-						<textcolor>Color3</textcolor>
+						<textcolor>Color9</textcolor>
 					</control>
 					<control type="label" id="1">
 						<posx>970</posx>
@@ -1461,11 +1554,18 @@
 						<label>$INFO[Player.Duration]</label>
 						<align>right</align>
 						<font>description</font>
-						<textcolor>Color3</textcolor>
+						<textcolor>Color9</textcolor>
 					</control>
 					<control type="label" id="1">
 						<label>$VAR[player_Status.Condition]</label>
 						<include>seekbar_Label-Info_xperience</include>
+					</control>
+					<control type="label" id="1">
+						 <label>$INFO[Player.FinishTime,$LOCALIZE[41371] ,]</label>
+						<font>description</font>
+						<textcolor>Color9</textcolor>
+						<include>seekbar_Label-Info_xperience</include>
+						 <visible>!Player.Paused + ![Window.IsActive(videoosd) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding]</visible>
 					</control>
 				</control>
 			</control>
@@ -1680,7 +1780,7 @@
         <control type="group">
             <animation effect="slide" end="-100" time="300" tween="sine" easing="inout" condition="Player.Muted | substring(Player.Volume,-60.0)">Conditional</animation>
             <animation effect="slide" end="-213" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>
-            <animation effect="slide" start="0,0" end="0,635" time="400" tween="sine" easing="inout" condition="Skin.HasSetting(VideoOSD.OnTop) + Window.IsActive(fullscreenvideo)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,668" time="400" tween="sine" easing="inout" condition="Skin.HasSetting(VideoOSD.OnTop) + Window.IsActive(fullscreenvideo)">Conditional</animation>
             <include>OSDHideShowAnimation</include>
             <visible>Skin.HasSetting(videoosd.xperience1080)</visible>
             <!--<control type="image">
@@ -1691,23 +1791,58 @@
                 <texture>osd/fullscreen/osd-back-weatherclock.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>-->
+		
+		<control type="image" id="1">
+			<width>1280</width>
+			<height>80</height>
+			<texture border="24">osd/infoOverlayBlack_Xperience_OSD.png</texture>
+			
+		</control>
+		<control type="group" id="1">
+			<posx>5</posx>
+			<posy>15</posy>
+			<visible>Skin.HasSetting(videoosd.xperience1080MediaName)</visible>
+			<control type="label" id="1">
+				<width>631</width>
+				<label>$VAR[osd.Title]</label>
+				<textcolor>Color8</textcolor>
+				<textcolor>Color2</textcolor>
+				<font>titleSpecial</font>
+			</control>
+			<control type="label" id="1">
+				<posx>700</posx>
+				<width>250</width>
+				<label>$VAR[osd.Info]</label>
+				<textcolor>Color2</textcolor>
+				<font>titleSmallest</font>
+			</control>
+			<!-->
+				<control type="image" id="1">
+				<posx>1000</posx>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/video/hd/nf-HD.png</texture>
+				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
+			</control>-->
+		</control> 
             <control type="image">
                 <description>Small weather</description>
-                <posx>905</posx>
-                <posy>-5</posy>
+                <posx>941</posx>
+                <posy>-25</posy>
                 <width>100</width>
                 <height>100</height>
                 <texture fallback="weather/small/na.png">weather/small/$INFO[Weather.FanartCode].png</texture>
             </control>
             <control type="label">
                 <description>Temp label</description>
-                <posx>1060</posx>
-                <posy>30</posy>
+                <posx>1097</posx>
+                <posy>10</posy>
                 <width>75</width>
                 <height>34</height>
                 <label>$INFO[Weather.Temperature]</label>
                <font>osdxperience</font>
-         <color>Color8</color>
+         <textcolor>Color8</textcolor>
 	<shadowcolor>black</shadowcolor>
                 <align>right</align>
                 <scroll>false</scroll>
@@ -1718,8 +1853,8 @@
                 <include>visiblehidefadeinfo</include>
                 <control type="image">
                     <description>Cock image</description>
-                    <posx>1060</posx>
-                    <posy>-5</posy>
+                    <posx>1080</posx>
+                    <posy>-25</posy>
                     <width>100</width>
                     <height>100</height>
                     <texture>osd/fullscreen/clock.png</texture>
@@ -1727,8 +1862,8 @@
                 </control>
                 <control type="image" id="24">
                     <description>Cock image</description>
-                    <posx>1060</posx>
-                    <posy>-5</posy>
+                    <posx>1080</posx>
+                    <posy>-25</posy>
                     <width>100</width>
                     <height>100</height>
                     <texture>osd/fullscreen/clock-pm.png</texture>
@@ -1736,13 +1871,13 @@
                 </control>
                 <control type="label">
                     <description>Clock label</description>
-                    <posx>1225</posx>
-                    <posy>30</posy>
+                    <posx>1277</posx>
+                    <posy>10</posy>
                     <width>150</width>
                     <height>34</height>
-                    <label>$INFO[System.Time(hh)]:$INFO[System.Time(mm)]</label>
+                    <label>$INFO[System.Time(hh)]:$INFO[System.Time(mm)]$INFO[System.Time(xx)]</label>
                  	  <font>osdxperience</font>
-         <color>Color8</color>
+         <textcolor>Color8</textcolor>
 	<shadowcolor>black</shadowcolor>
                     <align>right</align>
                     <scroll>false</scroll>
@@ -1753,8 +1888,8 @@
                 <include>visiblehidefadeinfo</include>
                 <control type="image">
                     <description>Forwarding image</description>
-                    <posx>1060</posx>
-                    <posy>-5</posy>
+                    <posx>1100</posx>
+                    <posy>-25</posy>
                     <width>100</width>
                     <height>100</height>
                     <texture>osd/fullscreen/fw.png</texture>
@@ -1762,8 +1897,8 @@
                 </control>
                 <control type="image">
                     <description>Rewinding image</description>
-                    <posx>1060</posx>
-                    <posy>-5</posy>
+                    <posx>1100</posx>
+                    <posy>-25</posy>
                     <width>100</width>
                     <height>100</height>
                     <texture>osd/fullscreen/rw.png</texture>
@@ -1829,7 +1964,7 @@
                 <height>34</height>
                 <label>$INFO[Weather.Temperature]</label>
                <font>osdxperience</font>
-         <color>Color8</color>
+         <textcolor>Color8</textcolor>
 	<shadowcolor>black</shadowcolor>
                 <align>right</align>
                 <scroll>false</scroll>
@@ -1858,13 +1993,13 @@
                 </control>
                 <control type="label">
                     <description>Clock label</description>
-                    <posx>1210</posx>
+                    <posx>1195</posx>
                     <posy>30</posy>
                     <width>150</width>
                     <height>34</height>
-                    <label>$INFO[System.Time(hh)]:$INFO[System.Time(mm)]</label>
+                    <label>$INFO[System.Time(hh)]:$INFO[System.Time(mm)]:$INFO[System.Time(xx)]</label>
                  	  <font>osdxperience</font>
-		 	  <color>Color8</color>
+		 	  <textcolor>Color8</textcolor>
 			   <shadowcolor>black</shadowcolor>
 		            <align>right</align>
 		            <scroll>false</scroll>
@@ -1875,12 +2010,12 @@
     </include>
     </include>
 	<include name="OSDFwRwLabel">
-        <posx>1190</posx>
-        <posy>30</posy>
+        <posx>1230</posx>
+        <posy>10</posy>
         <width>150</width>
         <height>34</height>
 	<font>osdxperience</font>
-         <color>Color8</color>
+         <textcolor>Color8</textcolor>
 	<shadowcolor>black</shadowcolor>
         <align>right</align>
         <scroll>false</scroll>
