@@ -1478,7 +1478,7 @@
 					<visible>Skin.HasSetting(osd.progressbar)</visible>
 				</control>
 				<control type="textbox" id="1">
-					<height>220</height>
+					<height>190</height>
 					<width>1090</width>
 					<label>$VAR[player_Plot.Condition]</label>
 					<textcolor>Color9</textcolor>
