@@ -1506,7 +1506,7 @@
 				<posy>65</posy>
 				<visible>Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 				<control type="textbox" id="1">
-					<height>134</height>
+					<height>129</height>
 					<width>950</width>
 					<label>$VAR[player_Plot.Condition]</label>
 					<textcolor>Color9</textcolor>
