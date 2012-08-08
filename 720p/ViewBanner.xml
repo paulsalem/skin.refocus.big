@@ -388,7 +388,7 @@
 					<posx>55</posx>
 					<posy>27</posy>
 					<width>700</width>
-					<label fallback="32022">$VAR[tvshow_Info.ShowStatus]</label>
+					<label>$INFO[ListItem.Genre]</label>
 					<font>listInfo</font>
 					<textcolor>Color2</textcolor>
 				</control>
@@ -464,7 +464,7 @@
 				<control type="label">
 					<posx>34</posx>
 					<posy>210</posy>
-					<label fallback="32022">$VAR[tvshow_Info.NextAired]</label>
+					<label>$INFO[ListItem.Genre]</label>
 					<font>info</font>
 					<textcolor>Color4</textcolor>
 					<align>left</align>
@@ -472,6 +472,7 @@
 					<include>focus_Banner</include>
 					<visible>![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
 				</control>
+				
 				<control type="label">
 					<posx>34</posx>
 					<posy>234</posy>
