@@ -103,6 +103,18 @@
 				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
 			</control>
 			<control type="image">
+				<posx>590</posx>
+				<posy>37</posy>
+				<width>32</width>
+				<height>32</height>
+				
+					<include>overlay_UnWatchedAlt</include>
+				
+				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>Skin.HasSetting(watched.alternative)</visible>
+			</control>
+			<control type="image">
 				<posx>475</posx>
 				<posy>12</posy>
 				<width>128</width>
@@ -155,6 +167,16 @@
 				<texture>flags/video/HD/nf-HD.png</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
+			</control>
+			<control type="image">
+				<posx>590</posx>
+				<posy>37</posy>
+				<width>32</width>
+				<height>32</height>
+					<include>overlay_UnWatchedAlt</include>
+				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>Skin.HasSetting(watched.alternative)</visible>
 			</control>
 			<control type="image">
 				<posx>475</posx>

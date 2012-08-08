@@ -352,4 +352,7 @@ Please consider supporting the development of XBMC by making a donation.
 <!--Opacity-->
 <string id="32033">Apply Opacity only to Media Views</string>
 
+<!--OSD-->
+<string id="32034">Show progress on bottom on xperience1080 OSD</string>
+
 </strings>

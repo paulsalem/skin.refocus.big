@@ -440,8 +440,16 @@
 				<visible>Skin.HasSetting(videoosd.xperience1080)</visible>
 				<include>button_Settings</include>
 			</control>
-			<!--Chapters-->
+			<!--xperience1080 video osd-->
 			<control type="radiobutton" id="755">
+				<label>$LOCALIZE[32034]</label>
+				<onclick>Skin.ToggleSetting(videoosd.xperience1080progressbottom)</onclick>
+				<selected>Skin.HasSetting(videoosd.xperience1080progressbottom)</selected>
+				<visible>Skin.HasSetting(videoosd.xperience1080)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Chapters-->
+			<control type="radiobutton" id="757">
 				<label>$LOCALIZE[32031]</label>
 				<onclick>Skin.ToggleSetting(videoosd.showchapters)</onclick>
 				<selected>Skin.HasSetting(videoosd.showchapters)</selected>

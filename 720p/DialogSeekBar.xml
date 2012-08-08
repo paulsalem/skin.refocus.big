@@ -459,15 +459,26 @@
 			</control>-->
 			
 			<!-- network logo -->
-			<control type ="image">
+			<control type ="image" id="22522">
 				<posx>10</posx>
 				<posy>1</posy>
 				<width>180</width>
 				<height>68</height>
-				<texture>$VAR[flag_Studio.player]</texture>
+				<texture fallback ="empty">$VAR[flag_Studio.player]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(episodes)</visible>
-					<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
+				<visible>!StringCompare(Control.GetLabel(22522),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(episodes)</visible>
+				<visible>!StringCompare(Control.GetLabel(22522),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
+				<include>transition_OSD</include>
+			</control>
+			<control type ="image" id="22722">
+				<posx>10</posx>
+				<posy>1</posy>
+				<width>180</width>
+				<height>68</height>
+				<texture fallback ="empty">$VAR[flag_Studio.player_alt]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>!StringCompare(Control.GetLabel(22722),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(episodes)</visible>
+				<visible>!StringCompare(Control.GetLabel(22722),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 				<include>transition_OSD</include>
 			</control>
 			
@@ -484,17 +495,29 @@
 				<include>transition_OSD</include>
 				</control>
 				<!-- studio logo -->
-				<control type ="image">
+				<control type ="image" id="77577">
 					<posx>10</posx>
-				<posy>1</posy>
-				<width>180</width>
-				<height>68</height>
-					<texture>$VAR[flag_Studio.player]</texture>
+					<posy>1</posy>
+					<width>180</width>
+					<height>68</height>
+					<texture fallback="empty">$VAR[flag_Studio.player]</texture>
 					<aspectratio align="center">keep</aspectratio>
-					<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(movies)</visible>
-					<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
+					<visible>!StringCompare(Control.GetLabel(77577),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(movies)</visible>
+					<visible>!StringCompare(Control.GetLabel(77577),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 					<include>transition_OSD</include>
 				</control>
+				<control type ="image" id="77877">
+					<posx>10</posx>
+					<posy>1</posy>
+					<width>180</width>
+					<height>68</height>
+					<texture fallback="empty">$VAR[flag_Studio.player_alt]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>!StringCompare(Control.GetLabel(77877),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(movies)</visible>
+					<visible>!StringCompare(Control.GetLabel(77877),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
+					<include>transition_OSD</include>
+				</control>
+
 		<!---<control type="label">
 			<description>Chapters</description>
 			<include>transition_Toast</include>

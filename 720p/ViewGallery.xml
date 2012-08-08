@@ -132,7 +132,7 @@
 			<control type="group">
 				<posx>718</posx>
 				<posy>390</posy>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
+				<visible>!Skin.HasSetting(watched.alternative) + !Control.HasFocus(8000)</visible>
 				<control type="image">
 					<include>overlay_UnWatched</include>
 				</control>
@@ -143,7 +143,7 @@
 			<control type="group">
 				<posx>718</posx>
 				<posy>390</posy>
-				<visible>Skin.HasSetting(watched.alternative)</visible>
+				<visible>Skin.HasSetting(watched.alternative) + !Control.HasFocus(8000)</visible>
 				<control type="image">
 					<include>overlay_UnWatchedAlt</include>
 				</control>

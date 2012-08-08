@@ -289,7 +289,6 @@
 			<control type="label">
 				<width>500</width>
 				<label fallback="32022">$VAR[tvshow_Info.ShowStatus]</label>
-				<label>testing</label>-->
 				<include>info_Sub</include>
 				<visible>!SubString(ListItem.Icon,default) + IsEmpty(Window(Home).Property(NextAired.Label))</visible>
 			</control>
@@ -389,7 +388,7 @@
 					<posx>55</posx>
 					<posy>27</posy>
 					<width>700</width>
-					<label>$INFO[ListItem.Genre]</label>
+					<label fallback="32022">$VAR[tvshow_Info.ShowStatus]</label>
 					<font>listInfo</font>
 					<textcolor>Color2</textcolor>
 				</control>
@@ -465,7 +464,7 @@
 				<control type="label">
 					<posx>34</posx>
 					<posy>210</posy>
-					<label>$INFO[ListItem.Genre]</label>
+					<label fallback="32022">$VAR[tvshow_Info.NextAired]</label>
 					<font>info</font>
 					<textcolor>Color4</textcolor>
 					<align>left</align>
@@ -494,14 +493,25 @@
 					<include>focus_Banner</include>
 					<visible>!SubString(ListItem.Icon,default)</visible>
 				</control>
-				<control type="image">
+				<control type="image" id="99199">
 					<posx>678</posx>
 					<posy>214</posy>
 					<width>128</width>
 					<height>48</height>
-					<texture>$INFO[ListItem.Studio,flags/networks/mono/,.png]</texture>
+					<texture fallback="empty">$VAR[flag_Studio]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<include>focus_Banner</include>
+					<visible>!StringCompare(Control.GetLabel(99199),empty)</visible> 
+				</control>
+				<control type="image" id="99299">
+					<posx>678</posx>
+					<posy>214</posy>
+					<width>128</width>
+					<height>48</height>
+					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<include>focus_Banner</include>
+					<visible>!StringCompare(Control.GetLabel(99299),empty)</visible> 
 				</control>
 			</focusedlayout>
 			
@@ -607,6 +617,7 @@
 					<width>128</width>
 					<height>22</height>
 					<texture>$INFO[ListItem.StarRating,rating/fo-,]</texture>
+					<textcolor>Color4</textcolor>
 					<aspectratio align="right">keep</aspectratio>
 					<include>focus_Banner</include>
 					<visible>!SubString(ListItem.Icon,default)</visible>
@@ -617,9 +628,10 @@
 					<width>690</width>
 					<height>163</height>
 					<label>$VAR[global_Plot.Condition]</label>
+					<textcolor>Color4</textcolor>
 					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
 					<include>description_Small</include>
-					<textcolor>Color4</textcolor>
+					
 					<include>focus_Banner</include>
 					<visible>!SubString(ListItem.Icon,default)</visible>
 				</control>
@@ -751,17 +763,29 @@
 				<include>description_Small</include>
 			</control>
 		</control>
-		<control type="image">
+		<control type="image" id="12345">
 			<posx>695</posx>
 			<posy>610</posy>
 			<width>128</width>
 			<height>64</height>
 			<aspectratio align="left">keep</aspectratio>
-			<texture>$VAR[flag_Studio]</texture>
+			<texture fallback="empty">$VAR[flag_Studio]</texture>
 			<include>toggle_Menu</include>
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
-			<visible>Control.IsVisible(541) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+			<visible>!StringCompare(Control.GetLabel(12345),empty) + Control.IsVisible(541) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+		</control>
+		<control type="image" id="1234567">
+			<posx>695</posx>
+			<posy>610</posy>
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
+			<include>toggle_Menu</include>
+			<include>transition_Container</include>
+			<include>infoDialogHide</include>
+			<visible>!StringCompare(Control.GetLabel(1234567),empty) + Control.IsVisible(541) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 		</control>
 	</include>
 </includes>

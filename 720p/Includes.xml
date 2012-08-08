@@ -77,7 +77,7 @@
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture fallback="empty">$INFO[Listitem.Studio,flags/networks/,.png]</texture>
+				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<include>toggle_Menu</include>
 				<include>transition_Container</include>
 				<include>infoDialogHide</include>
@@ -90,7 +90,7 @@
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture fallback="empty">$INFO[Listitem.Studio,flags/networks/,.png]</texture>
+				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<include>toggle_Menu</include>
 				<include>transition_Container</include>
 				<include>infoDialogHide</include>
@@ -102,7 +102,7 @@
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture fallback="empty">$INFO[Listitem.Studio,flags/networks/,.png]</texture>
+				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<include>toggle_Menu</include>
 				<include>transition_Container</include>
 				<include>infoDialogHide</include>
@@ -115,7 +115,7 @@
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture fallback="empty">$INFO[Listitem.Studio,flags/networks/,.png]</texture>
+				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<include>toggle_Menu</include>
 				<include>transition_Container</include>
 				<include>infoDialogHide</include>
@@ -408,24 +408,24 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(home.timesmall)</visible>
 			<control type="label">
-				<posx>64r</posx>
+				<posx>25r</posx>
 				<description>Chapters</description>
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<font>finishtime</font>
-				<posy>100</posy>
+				<posy>50</posy>
 				<include>toast_Bottom_Player</include>
 				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
 			</control>
 			<control type="label">
-				<posx>64r</posx>
+				<posx>25r</posx>
 				<description>Chapters</description>
 				<label>[B]$INFO[Player.ChapterName][/B]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<font>finishtime</font>
-				<posy>120</posy>
+				<posy>90</posy>
 				<include>toast_Bottom_Player</include>
 				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
 			</control>
@@ -433,8 +433,8 @@
 		<control type="group">
 			<visible>Skin.HasSetting(home.timesmall)</visible>
 			<control type="label">
-				<posx>64r</posx>
-				<posy>100</posy>
+				<posx>25r</posx>
+				<posy>50</posy>
 				<description>Chapters</description>
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
 				<textcolor>Color8</textcolor>
@@ -443,8 +443,8 @@
 				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
 			</control>
 			<control type="label">
-				<posx>64r</posx>
-				<posy>120</posy>
+				<posx>25r</posx>
+				<posy>70</posy>
 				<description>Chapters</description>
 				<label>[B]$INFO[Player.ChapterName][/B]</label>
 				<textcolor>Color8</textcolor>
@@ -1076,13 +1076,23 @@
 					<aspectratio align="center">scale</aspectratio>
 					<fadetime>fadetime_Thumb</fadetime>
 				</control>
-				<control type="image">
+				<control type="image" id="9919">
 					<posx>159</posx>
 					<posy>465</posy>
 					<width>128</width>
 					<height>64</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture>$VAR[flag_Studio]</texture>
+					<texture fallback="empty">$VAR[flag_Studio]</texture>
+					<visible>!StringCompare(Control.GetLabel(9919),empty)</visible>
+				</control>
+				<control type="image" id="9929">
+					<posx>159</posx>
+					<posy>465</posy>
+					<width>128</width>
+					<height>64</height>
+					<aspectratio align="center">keep</aspectratio>
+					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
+					<visible>!StringCompare(Control.GetLabel(9929),empty)</visible>
 				</control>
 			</control>
 		</control>
@@ -1121,23 +1131,41 @@
 				<texture border="24">osd/osdOverlay.png</texture>
 				<visible>Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)</visible>
 			</control>
-			<control type="image" id="1">
+			<control type="image" id="9969">
 				<posx>14</posx>
 				<posy>36</posy>
 				<width>128</width>
 				<height>48</height>
-				<texture>$VAR[flag_Studio.player]</texture>
+				<texture fallback="empty">$VAR[flag_Studio.player]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>!VideoPlayer.Content(movies)</visible>
+				<visible>!StringCompare(Control.GetLabel(9996),empty) + !VideoPlayer.Content(movies)</visible>
 			</control>
-			<control type="image" id="1">
+			<control type="image" id="9979">
+				<posx>14</posx>
+				<posy>36</posy>
+				<width>128</width>
+				<height>48</height>
+				<texture>$VAR[flag_Studio.player_alt]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>!StringCompare(Control.GetLabel(9979),empty) + !VideoPlayer.Content(movies)</visible>
+			</control>
+			<control type="image" id="9989">
 				<posx>10</posx>
 				<posy>30</posy>
 				<width>128</width>
 				<height>64</height>
 				<texture>$VAR[flag_Studio.player]</texture>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>VideoPlayer.Content(movies)</visible>
+				<visible>!StringCompare(Control.GetLabel(9989),empty) + VideoPlayer.Content(movies)</visible>
+			</control>
+			<control type="image" id="9997">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>128</width>
+				<height>64</height>
+				<texture>$VAR[flag_Studio.player_alt]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>!StringCompare(Control.GetLabel(9997),empty) + VideoPlayer.Content(movies)</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>14</posx>
@@ -1360,14 +1388,23 @@
 			<aspectratio align="center">keep</aspectratio>
 			<visible>[StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
 		</control>
-		--<control type="image" id="1111">
+		<control type="image" id="1111">
 			<posx>10</posx>
 			<posy>10</posy>
 			<width>128</width>
 			<height>64</height>
 			<texture fallback="empty">$VAR[flag_Studio.player]</texture>
 			<aspectratio align="right">keep</aspectratio>
-			<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty) + StringCompare(Control.GetLabel(1111),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+		</control>
+		<control type="image" id="11111">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>128</width>
+			<height>64</height>
+			<texture fallback="empty">$VAR[flag_Studio.player_alt]</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<visible>!StringCompare(Control.GetLabel(11111),empty) + ![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
 		</control>
 		<control type="image" id="1">
 			<posx>14</posx>
@@ -1470,33 +1507,40 @@
 				<visible>Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 				<control type="textbox" id="1">
 					<height>134</height>
-					<width>970</width>
+					<width>950</width>
 					<label>$VAR[player_Plot.Condition]</label>
 					<textcolor>Color9</textcolor>
 					<font>descriptionbig</font>
 					<include>description_OSD</include>
-					<visible>Skin.HasSetting(osd.progressbar)</visible>
+					<visible>Skin.HasSetting(osd.progressbar) + !Skin.HasSetting(videoosd.xperience1080progressbottom)</visible>
 				</control>
 				<control type="textbox" id="1">
-					<height>190</height>
-					<width>1090</width>
+					<height>170</height>
+					<width>950</width>
 					<label>$VAR[player_Plot.Condition]</label>
 					<textcolor>Color9</textcolor>
 					<font>descriptionbig</font>
 					<include>description_OSD</include>
-					<visible>!Skin.HasSetting(osd.progressbar)</visible>
+					<visible>!Skin.HasSetting(osd.progressbar) | Skin.HasSetting(videoosd.xperience1080progressbottom)</visible>
 				</control>
 			</control>
 			<!--flags-->
 			<control type="group" id="1">
 				<posy>140</posy>
 				<posx>599</posx>
-				<control type="image" id="1">
+				<control type="image" id="1234">
 					<width>96</width>
 					<height>64</height>
-					<texture>$VAR[flag_Studio.player]</texture>
+					<texture fallback="empty">$VAR[flag_Studio.player]</texture>
 					<aspectratio align="right">keep</aspectratio>
-					<visible>VideoPlayer.Content(files)</visible>
+					<visible>!StringCompare(Control.GetLabel(1234),empty) + VideoPlayer.Content(files)</visible>
+				</control>
+				<control type="image" id="12345">
+					<width>96</width>
+					<height>64</height>
+					<texture fallback="empty">$VAR[flag_Studio.player_alt]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>!StringCompare(Control.GetLabel(12345),empty) + VideoPlayer.Content(files)</visible>
 				</control>
 				<control type="image" id="1">
 					<posx>101</posx>
@@ -1527,7 +1571,7 @@
 			<control type="group" id="1">
 				<posy>190</posy>
 				<!--animation effect="slide" start="0,0" end="0,-44" time="0" condition="Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">Conditional</animation>-->
-				<visible>Skin.HasSetting(osd.progressbar)</visible>
+				<visible>Skin.HasSetting(osd.progressbar) + !Skin.HasSetting(videoosd.xperience1080progressbottom)</visible>
 				<control type="progress" id="1">
 					<posy>10</posy>
 					<width>970</width>
@@ -1801,7 +1845,7 @@
 		<control type="group" id="1">
 			<posx>5</posx>
 			<posy>15</posy>
-			<visible>Skin.HasSetting(videoosd.xperience1080MediaName)</visible>
+			<visible>Skin.HasSetting(videoosd.xperience1080MediaName) + !Window.IsActive(fullscreeninfo) + !Window.IsActive(videoosd)</visible>
 			<control type="label" id="1">
 				<width>631</width>
 				<label>$VAR[osd.Title]</label>
@@ -1826,6 +1870,50 @@
 				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
 			</control>-->
 		</control> 
+		<control type="progress" id="1">
+			<posx>5</posx>
+			<posy>10</posy>
+			<width>937</width>
+			<height>18</height>
+			<texturebg border="10">dialogs/progressBackground.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture border="10.5">dialogs/progressSlider_Xperience.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<info>Player.Progress</info>
+			<visible>[Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd)] + Skin.HasSetting(videoosd.xperience1080progressbottom)</visible>
+		</control>
+		<control type="group" id="1">
+			<posy>25</posy>
+			<visible>[Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd)] + Skin.HasSetting(videoosd.xperience1080progressbottom)</visible>
+			<control type="label" id="1">
+				<posx>5</posx>
+				<width>1000</width>
+				<label>$INFO[Player.Time]</label>
+				<font>description</font>
+				<textcolor>Color9</textcolor>
+			</control>
+			<control type="label" id="1">
+				<posx>937</posx>
+				<width>1000</width>
+				<label>$INFO[Player.Duration]</label>
+				<align>right</align>
+				<font>description</font>
+				<textcolor>Color9</textcolor>
+			</control>
+			<control type="label" id="1">
+				<label>$VAR[player_Status.Condition]</label>
+				<include>seekbar_Label-Info_xperience_osd</include>
+				<visible>Player.Paused</visible>
+			</control>
+			<control type="label" id="1">
+				 <label>$INFO[Player.FinishTime,$LOCALIZE[41371] ,]</label>
+				<font>description</font>
+				<textcolor>Color9</textcolor>
+				<include>seekbar_Label-Info_xperience_osd</include>
+				 <visible>!Player.Paused</visible>
+			</control>
+		</control>
             <control type="image">
                 <description>Small weather</description>
                 <posx>941</posx>
@@ -1836,7 +1924,7 @@
             </control>
             <control type="label">
                 <description>Temp label</description>
-                <posx>1097</posx>
+                <posx>1092</posx>
                 <posy>10</posy>
                 <width>75</width>
                 <height>34</height>
@@ -1853,7 +1941,7 @@
                 <include>visiblehidefadeinfo</include>
                 <control type="image">
                     <description>Cock image</description>
-                    <posx>1080</posx>
+                    <posx>1072</posx>
                     <posy>-25</posy>
                     <width>100</width>
                     <height>100</height>
@@ -1862,7 +1950,7 @@
                 </control>
                 <control type="image" id="24">
                     <description>Cock image</description>
-                    <posx>1080</posx>
+                    <posx>1072</posx>
                     <posy>-25</posy>
                     <width>100</width>
                     <height>100</height>
@@ -2010,7 +2098,7 @@
     </include>
     </include>
 	<include name="OSDFwRwLabel">
-        <posx>1230</posx>
+        <posx>1234</posx>
         <posy>10</posy>
         <width>150</width>
         <height>34</height>

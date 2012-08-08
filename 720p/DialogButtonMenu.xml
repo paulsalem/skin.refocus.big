@@ -52,6 +52,7 @@
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>XBMC.Quit()</onclick>
 					<include>dialog_Button-list</include>
+					<visible>!System.IsStandalone</visible>
 				</control>
 				<!--hibernate-->
 				<control type="button" id="503">
@@ -96,6 +97,23 @@
 					<onclick>XBMC.Powerdown()</onclick>
 					<include>dialog_Button-list</include>
 				</control>
+				<!--cancel shutdown timer-->
+				<control type="button" id="509">
+					<width>350</width>
+					<label>Cancel Shutdown Timer</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+					<include>dialog_Button-list</include>
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+				</control>
+				<!--Filemanager-->
+					<control type="button" id="510">
+					<width>350</width>
+					<label>File Manager</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>ActivateWindow(FileManager)</onclick>
+					<include>dialog_Button-list</include>
+				</control>
 				<!--minimize-->
 				<control type="button" id="508">
 					<width>352</width>
@@ -103,6 +121,7 @@
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>XBMC.Minimize()</onclick>
 					<include>dialog_Button-list</include>
+					<visible>!System.IsStandalone</visible>
 				</control>
 			</control>
 		</control>

@@ -522,12 +522,19 @@
 				<aspectratio align="center">keep</aspectratio>
 				<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoAspect)</visible>
 			</control>
-			<control type="image">
+			<control type="image" id="99799">
 				<width>96</width>
 				<height>64</height>
-				<texture>$VAR[flag_Studio]</texture>
+				<texture fallback="empty">$VAR[flag_Studio]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+				<visible>!StringCompare(Control.GetLabel(99799),empty) + Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+			</control>
+			<control type="image" id="99899">
+				<width>96</width>
+				<height>64</height>
+				<texture>$VAR[flag_Studio_alt]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>!StringCompare(Control.GetLabel(99899),empty) + Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 			</control>
 		</control>
 	</include>
