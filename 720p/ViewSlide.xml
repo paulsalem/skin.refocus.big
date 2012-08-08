@@ -14,7 +14,6 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
-				<visible>!StringCompare(Control.GetLabel(99199),empty)</visible>
 			</control>
 			<control type="image" id="99299">
 				<posx>60</posx>
@@ -23,7 +22,7 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>!StringCompare(Control.GetLabel(99299),empty)</visible>
+				<visible>StringCompare(Control.GetLabel(99199),empty)</visible>
 			</control>
 			<include>flags_Slide-media</include>
 			<!-- logo -->
@@ -354,7 +353,6 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
-				<visible>!StringCompare(Control.GetLabel(55455),empty)</visible> 
 			</control>
 			<control type="image" id="55555">
 				<posx>60</posx>
@@ -363,7 +361,7 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>!StringCompare(Control.GetLabel(55555),empty)</visible>
+				<visible>StringCompare(Control.GetLabel(55455),empty)</visible>
 			</control>
 			<!-- logo -->
 			<control type="image">

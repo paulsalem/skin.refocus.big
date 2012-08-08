@@ -502,7 +502,6 @@
 					<texture fallback="empty">$VAR[flag_Studio]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<include>focus_Banner</include>
-					<visible>!StringCompare(Control.GetLabel(99199),empty)</visible> 
 				</control>
 				<control type="image" id="99299">
 					<posx>678</posx>
@@ -512,7 +511,7 @@
 					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<include>focus_Banner</include>
-					<visible>!StringCompare(Control.GetLabel(99299),empty)</visible> 
+					<visible>StringCompare(Control.GetLabel(99199),empty)</visible> 
 				</control>
 			</focusedlayout>
 			
@@ -773,7 +772,7 @@
 			<include>toggle_Menu</include>
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
-			<visible>!StringCompare(Control.GetLabel(12345),empty) + Control.IsVisible(541) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+			<visible>Control.IsVisible(541) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 		</control>
 		<control type="image" id="1234567">
 			<posx>695</posx>
@@ -785,7 +784,7 @@
 			<include>toggle_Menu</include>
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
-			<visible>!StringCompare(Control.GetLabel(1234567),empty) + Control.IsVisible(541) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+			<visible>StringCompare(Control.GetLabel(12345),empty) + Control.IsVisible(541) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 		</control>
 	</include>
 </includes>

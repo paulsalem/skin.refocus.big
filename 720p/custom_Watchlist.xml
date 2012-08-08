@@ -3,6 +3,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<onload condition="System.HasAddon(script.watchlist) + IsEmpty(Window(Home).Property(WatchList_Running))">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=25)</onload>
 	<onload>RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=25)</onload>
+		
 	<controls>
 	<!---fanart------>
 		<control type="image">
@@ -207,19 +208,26 @@
 				<control type="group">
 					<posx>60</posx>
 					<posy>459</posy>
-					<control type="image">
+					<control type="image" id="78">
 						<width>128</width>
 						<height>64</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture>$INFO[Container(52).Listitem.Property(Studio),flags/studios/,.png]</texture>
+						<texture fallback="empty">$INFO[Container(52).Listitem.Property(Studio),flags/studios/,.png]</texture>
 						<visible>Skin.String(Watchlist,Movies)</visible>
 					</control>
-					<control type="image">
+					<control type="image" id="79">
 						<width>128</width>
 						<height>64</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture>$INFO[Container(52).Listitem.Property(Studio),flags/networks/,.png]</texture>
-						<visible>Skin.String(Watchlist,Shows)</visible>
+						<texture fallback="empty">$INFO[Container(52).Listitem.Property(Studio),flags/networks/,.png]</texture>
+						<visible>[Skin.String(Watchlist,Shows)]</visible>
+					</control>
+					<control type="image" id="799">
+						<width>128</width>
+						<height>64</height>
+						<aspectratio align="right">keep</aspectratio>
+						<texture fallback="empty">$INFO[Container(52).Listitem.Property(Studio),flags/studios/,.png]</texture>
+						<visible>StringCompare(Control.GetLabel(79),empty) + [Skin.String(Watchlist,Shows)]</visible>
 					</control>
 				</control>
 				<control type="group">

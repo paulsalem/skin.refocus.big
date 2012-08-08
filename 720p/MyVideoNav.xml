@@ -412,7 +412,6 @@
 				<height>110</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
-				<visible>!StringCompare(Control.GetLabel(789),empty)</visible>
 			</control>
 			<control type="image" id="1789">
 				<posx>30</posx>
@@ -421,7 +420,7 @@
 				<height>110</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>!StringCompare(Control.GetLabel(1789),empty)</visible>
+				<visible>StringCompare(Control.GetLabel(789),empty)</visible>
 			</control>
 			<control type="label">
 				<posx>220</posx>
@@ -466,7 +465,6 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
-				<visible>!StringCompare(Control.GetLabel(88788),empty)</visible>
 			</control>
 			<control type="image" id="88988">
 				<posx>60</posx>
@@ -475,7 +473,7 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>!StringCompare(Control.GetLabel(88988),empty)</visible>
+				<visible>StringCompare(Control.GetLabel(88788),empty)</visible>
 			</control>
 			<include>flags_Slide-media</include>
 			<!---info--->	
@@ -555,7 +553,7 @@
 					<height>64</height>
 					<texture fallback="empty">$VAR[flag_Studio]</texture>
 					<aspectratio align="right">keep</aspectratio>
-					<visible>!StringCompare(Control.GetLabel(99199),empty) + SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
+					<visible>SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="image" id="99299">
 					<posx>235r</posx>
@@ -564,7 +562,7 @@
 					<height>64</height>
 					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 					<aspectratio align="right">keep</aspectratio>
-					<visible>!StringCompare(Control.GetLabel(99299),empty) + SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
+					<visible>StringCompare(Control.GetLabel(99199),empty) + SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="group">
 					<posx>85</posx>
@@ -654,7 +652,7 @@
 				<height>64</height>
 				<aspectratio align="left">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
-				<visible>!StringCompare(Control.GetLabel(12345678),empty) + Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+				<visible>Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 			</control>
 			<control type="image" id="123456789">
 				<posx>780</posx>
@@ -663,7 +661,7 @@
 				<height>64</height>
 				<aspectratio align="left">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>!StringCompare(Control.GetLabel(123456789),empty) + Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+				<visible>StringCompare(Control.GetLabel(12345678),empty) + Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 			</control>
 		</control>
 		<include>view_IconPoster</include>
@@ -683,7 +681,6 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
-				<visible>!StringCompare(Control.GetLabel(99),empty)</visible>
 			</control>-->
 			<control type="image" id="999">
 				<posx>105</posx>
@@ -692,7 +689,7 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>!StringCompare(Control.GetLabel(999),empty)</visible>
+				<visible>StringCompare(Control.GetLabel(99),empty)</visible>
 			</control>
 			<!---strip bottom--->
 			<control type="group">
@@ -935,13 +932,13 @@
 					<width>90</width>
 					<height>45</height>
 					<texture fallback="empty">$VAR[flag_Studio]</texture>
-					<visible>!StringCompare(Control.GetLabel(9999),empty) + StringCompare()Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
+					<visible>StringCompare()Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
 				</control>
 				<control type="image" id="99999">
 					<width>90</width>
 					<height>45</height>
 					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-					<visible>!StringCompare(Control.GetLabel(99999),empty) + Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
+					<visible>StringCompare(Control.GetLabel(9999),empty) + Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
 				</control>
 			    </control>						
 			</control>

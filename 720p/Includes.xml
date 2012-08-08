@@ -77,7 +77,7 @@
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
+				<texture fallback="empty">$VAR[flag_Studio]</texture>
 				<include>toggle_Menu</include>
 				<include>transition_Container</include>
 				<include>infoDialogHide</include>
@@ -90,13 +90,13 @@
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
+				<texture fallback="empty">$VAR[flag_Studio]</texture>
 				<include>toggle_Menu</include>
 				<include>transition_Container</include>
 				<include>infoDialogHide</include>
 				<visible>Skin.HasSetting(indicator.enable) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 			</control>
-			<control type="image" id="99199">
+			<control type="image" id="99189">
 				<posx>30</posx>
 				<posy>0</posy>
 				<width>128</width>
@@ -106,10 +106,10 @@
 				<include>toggle_Menu</include>
 				<include>transition_Container</include>
 				<include>infoDialogHide</include>
-				<visible>!Skin.HasSetting(indicator.enable) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+				<visible>StringCompare(Control.GetLabel(99199),empty) + !Skin.HasSetting(indicator.enable) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 			</control>
 			<!--Network Logo with indicators-->
-			<control type="image" id="99299">
+			<control type="image" id="99289">
 				<posx>55</posx>
 				<posy>0</posy>
 				<width>128</width>
@@ -119,7 +119,7 @@
 				<include>toggle_Menu</include>
 				<include>transition_Container</include>
 				<include>infoDialogHide</include>
-				<visible>Skin.HasSetting(indicator.enable) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
+				<visible>StringCompare(Control.GetLabel(99299),empty) + Skin.HasSetting(indicator.enable) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 			</control>
 			<control type="label">
 				<posx>190</posx>
@@ -129,7 +129,7 @@
 				<font>smallerCaps</font>
 				<textcolor>Color3</textcolor>
 				<include>transition_WindowTitle</include>
-				<visible>![StringCompare(Control.GetLabel(99199),empty) | StringCompare(Control.GetLabel(99299),empty)] + Skin.HasSetting(numitems.enable) + [Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(3000)]</visible>
+				<visible>![StringCompare(Control.GetLabel(99189),empty) | StringCompare(Control.GetLabel(99289),empty)] + Skin.HasSetting(numitems.enable) + [Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(3000)]</visible>
 			</control>
 			<control type="label">
 				<posx>82</posx>
@@ -139,7 +139,7 @@
 				<font>smallerCaps</font>
 				<textcolor>Color3</textcolor>
 				<include>transition_WindowTitle</include>
-				<visible>[StringCompare(Control.GetLabel(99199),empty) | StringCompare(Control.GetLabel(99299),empty)] + Skin.HasSetting(numitems.enable) + [Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(3000)]</visible>
+				<visible>[StringCompare(Control.GetLabel(99189),empty) | StringCompare(Control.GetLabel(99289),empty)] + Skin.HasSetting(numitems.enable) + [Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + ![Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(3000)]</visible>
 			</control>
 		</control>
 	</include>
@@ -1083,7 +1083,6 @@
 					<height>64</height>
 					<aspectratio align="center">keep</aspectratio>
 					<texture fallback="empty">$VAR[flag_Studio]</texture>
-					<visible>!StringCompare(Control.GetLabel(9919),empty)</visible>
 				</control>
 				<control type="image" id="9929">
 					<posx>159</posx>
@@ -1092,7 +1091,7 @@
 					<height>64</height>
 					<aspectratio align="center">keep</aspectratio>
 					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-					<visible>!StringCompare(Control.GetLabel(9929),empty)</visible>
+					<visible>StringCompare(Control.GetLabel(9919),empty)</visible>
 				</control>
 			</control>
 		</control>
@@ -1138,7 +1137,7 @@
 				<height>48</height>
 				<texture fallback="empty">$VAR[flag_Studio.player]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>!StringCompare(Control.GetLabel(9996),empty) + !VideoPlayer.Content(movies)</visible>
+				<visible>!VideoPlayer.Content(movies)</visible>
 			</control>
 			<control type="image" id="9979">
 				<posx>14</posx>
@@ -1147,7 +1146,7 @@
 				<height>48</height>
 				<texture>$VAR[flag_Studio.player_alt]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>!StringCompare(Control.GetLabel(9979),empty) + !VideoPlayer.Content(movies)</visible>
+				<visible>StringCompare(Control.GetLabel(9969),empty) + !VideoPlayer.Content(movies)</visible>
 			</control>
 			<control type="image" id="9989">
 				<posx>10</posx>
@@ -1156,7 +1155,7 @@
 				<height>64</height>
 				<texture>$VAR[flag_Studio.player]</texture>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>!StringCompare(Control.GetLabel(9989),empty) + VideoPlayer.Content(movies)</visible>
+				<visible>VideoPlayer.Content(movies)</visible>
 			</control>
 			<control type="image" id="9997">
 				<posx>10</posx>
@@ -1165,7 +1164,7 @@
 				<height>64</height>
 				<texture>$VAR[flag_Studio.player_alt]</texture>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>!StringCompare(Control.GetLabel(9997),empty) + VideoPlayer.Content(movies)</visible>
+				<visible>StringCompare(Control.GetLabel(9989),empty) + VideoPlayer.Content(movies)</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>14</posx>
@@ -1395,7 +1394,7 @@
 			<height>64</height>
 			<texture fallback="empty">$VAR[flag_Studio.player]</texture>
 			<aspectratio align="right">keep</aspectratio>
-			<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty) + StringCompare(Control.GetLabel(1111),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
 		</control>
 		<control type="image" id="11111">
 			<posx>10</posx>
@@ -1404,7 +1403,7 @@
 			<height>64</height>
 			<texture fallback="empty">$VAR[flag_Studio.player_alt]</texture>
 			<aspectratio align="right">keep</aspectratio>
-			<visible>!StringCompare(Control.GetLabel(11111),empty) + ![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			<visible>StringCompare(Control.GetLabel(1111),empty) + ![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
 		</control>
 		<control type="image" id="1">
 			<posx>14</posx>
@@ -1533,14 +1532,14 @@
 					<height>64</height>
 					<texture fallback="empty">$VAR[flag_Studio.player]</texture>
 					<aspectratio align="right">keep</aspectratio>
-					<visible>!StringCompare(Control.GetLabel(1234),empty) + VideoPlayer.Content(files)</visible>
+					<visible>VideoPlayer.Content(files)</visible>
 				</control>
 				<control type="image" id="12345">
 					<width>96</width>
 					<height>64</height>
 					<texture fallback="empty">$VAR[flag_Studio.player_alt]</texture>
 					<aspectratio align="right">keep</aspectratio>
-					<visible>!StringCompare(Control.GetLabel(12345),empty) + VideoPlayer.Content(files)</visible>
+					<visible>StringCompare(Control.GetLabel(1234),empty) + VideoPlayer.Content(files)</visible>
 				</control>
 				<control type="image" id="1">
 					<posx>101</posx>
