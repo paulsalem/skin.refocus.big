@@ -22,7 +22,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31001">Posters</string>
 <string id="31002">Gallerie</string>
 <string id="31003">Slide</string>
-<string id="31004">Panel</string>
+<string id="31004">Panneau</string>
 <string id="31006">-</string>
 <string id="31007"></string>
 <string id="31008">-</string>
@@ -42,7 +42,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31022">-</string>
 <string id="31023">-</string>
 <string id="31024">Dossier</string>	
-<string id="31025">Activer le Media Overlays</string>
+<string id="31025">Activer les Overlays de medias</string>
 <string id="31026">Utiliser l'écran de Login</string>
 <string id="31027">-</string>
 <string id="31028">Vidéo en arrière-plan</string>
@@ -71,23 +71,25 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31051">Lecture</string>
 <string id="31052">Desactiver les sous-titres</string>
 <string id="31053">Activer l'indicateur d'accès au menu</string>
-<string id="31054">Posters</string>
+<string id="31054">Poster</string>
 <string id="31055">Masquer la barre de défilement jusqu'à l'arrêt</string>
-<string id="31057">Utiliser le plein écran pour la vue Galerie</string>
+<string id="31057">Utiliser le plein écran pour la vue Gallerie</string>
 <string id="31058">Désactiver la vidéo d'intro</string>
 <string id="31059">Utiliser les vignettes</string>
 <string id="31060">Activer le défilement doux</string>
 <string id="31061">Utiliser les Posters</string>
 <string id="31062">Afficher en plein écran</string>
 <string id="31063">Afficher en petites images</string>
+<string id="31064">Bannière</string>
+<string id="31065">Logo</string>
 <string id="31066">Activer la vue bannière pour les séries TV</string>
 <string id="31067">Utiliser les bannières stockées en local</string>
-<string id="31068">Heure de fin:</string>
+
+<string id="31068">Heure de fin :</string>
 <string id="31069"></string>
 <string id="31070">Guide TV</string>
 <string id="31071">Paramètres supplémentaires</string>
 <string id="31072">$INFO[ListItem.episode] $LOCALIZE[20360] ($INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101])</string>
-
 <string id="31073">Overview</string>
 <string id="31074">Sélectionner la miniature</string>
 
@@ -102,7 +104,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31079">Parcourir les Séries TV de la bibliothèque</string>
 <string id="31080">Les 25 plus récents films</string>
 <string id="31081">Les 25 plus récents épisodes</string>
-<string id="31082">Nombre de lectures</string>
+<string id="31082">Désactiver l'add-on Watchlist</string>
 
 <string id="31085">Minuterie</string>
 <string id="31086">Watchlist</string>
@@ -127,7 +129,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31104">-</string>
 <string id="31105">-</string>
 <string id="31106">Par</string>
-<string id="31107">Don't Flatten</string>
+<string id="31107">Ne pas ecraser</string>
 <string id="31108">Menu d'accueil</string>
 <string id="31109">Sélectionner les options de sous-menu</string>
 <string id="31110">Connectez-vous</string>
@@ -177,7 +179,6 @@ Please consider supporting the development of XBMC by making a donation.
 
 <string id="31917">Montrer la barre de progression dans l'OSD</string>
 <string id="31918">Montrer les indicateurs modifiables</string>
-
 <string id="31920">Afficher "non vu" en mode fichiers</string>
 <string id="31921">Afficher "non vu" pour les Séries TV </string>
 <string id="31922">Afficher "non vu" pour les films </string>
@@ -186,10 +187,8 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31925">[COLOR=Color2]Nouveaux[/COLOR] épisodes</string>
 <string id="31926">[COLOR=Color2]Nouveaux[/COLOR] films</string>
 <string id="31927">-</string>
-
 <string id="31928">Minuterie</string>
-
-*<string id="31929">Activer le Vignette Overlay</string>
+<string id="31929">Activer le Vignette Overlay</string>
 <string id="31930">Choisir un type de vue</string>
 <string id="31931">[COLOR=Color2]Nouveaux[/COLOR] clips vidéo</string>
 <string id="31932">[COLOR=Color2]Nouveaux[/COLOR] albums</string>
@@ -198,9 +197,8 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31935">-</string>
 <string id="31936">Utiliser un Slideshow pour les fanarts</string>
 <string id="31937">Slideshow personnalisé</string>
-
 <string id="31938">Activer cette section</string>
-
+<string id="31939">-</string>
 <string id="31941">[COLOR=Color2]Récemment[/COLOR] lus</string>
 <string id="31942">Rafraîchir les information</string>
 <string id="31943">Changer de Thumbnail</string>
@@ -282,5 +280,79 @@ Please consider supporting the development of XBMC by making a donation.
 
 <!--Backspace to Home-->
 <string id="32000">Touche Backspace pour retourner à l'accueil</string>
+
+<!--Artistslideshow-->
+<string id="32001">Use Artistslideshow Add-on</string>
+
+<!--Backgrounds-->
+<string id="32002">Personnaliser les fonds d'écrans</string>
+<string id="32003">Choisir le fond d'ecran</string>
+<string id="32004">choisir le dossier des fonds d'ecran</string>
+<string id="32005">reinitialiser</string>
+<string id="32006">Utiliser les fonds d'ecran basés sur les conditions climatiques actuelles</string>
+<string id="32007">Choisir le dossier des fonds d'ecran basés sur les conditions climatiques actuelles</string>
+<string id="32008">Global</string>
+
+<!--TV Tunes-->
+<string id="32009">Utiliser l'add-on TV Tunes</string>
+<string id="32010">Télecharger TV Tunes</string>
+
+<!--Random Movie-->
+<string id="32011">Au hasard :  Genre</string>
+<string id="32012">Au hasard : Film</string>
+
+<!--Favourites-->
+<string id="32013">Utiliser les favoris plutôt que les Smart Playlists</string>
+<string id="32014">Favori</string>
+
+<!--context menu-->
+<string id="32015">Chercher sur Youtube</string>
+<string id="32016">Lancer un film au hasard</string>
+<string id="32017">Lancer un genre au hasard</string>
+
+<!--date-->
+<string id="32018">Afficher la date de couleur blanche dur le menu d'accueil</string>
+
+<!--double row banner view-->
+<string id="32019">Bannières sur 2 colonnes</string>
+
+<!--tv netowork logos-->
+<string id="32020">Afficher les Logos de chaines TV (Networks)</string>
+
+<!--poster banner view-->
+<string id="32021">Bannières + posters</string>
+
+<!--tv show status-->
+<string id="32022">Terminée</string>
+
+<!--xperience1080 OSD-->
+<string id="32023">Activer l'OSD xperience1080</string>
+
+<!--opacity-->
+<string id="32024">Paramètres d'opacité des fonds d'écran</string>
+<string id="32025">Opacité légère</string>
+<string id="32026">Opacité moyenne</string>
+<string id="32027">Opacité élevée</string>
+
+<!--alternate watched icons-->
+<string id="32028">Activer les overlays alternatifs ("vus" plutôt que "non-vus")</string>
+
+<!--enable zoom on artistslideshow-->
+<string id="32029">Autoriser le Zoom si l'add-on Artist Slideshow est activé</string>
+
+<!--OSD-->
+<string id="32030">OSD</string>
+
+<!--Chapters-->
+<string id="32031">Afficher les informations de chapitres lorsque l'OSD est en pause</string>
+
+<!--Chapters-->
+<string id="32032">Afficher le nom du media en cours de lecture dans l'OSD xperience1080</string>
+
+<!--Opacity-->
+<string id="32033">Appliquer l'opacité uniquement sur les vues "Médias"</string>
+
+<!--OSD-->
+<string id="32034">Afficher la barre de progression dans l'OSDxperience1080</string>
 
 </strings>
