@@ -173,8 +173,8 @@
 				<posy>37</posy>
 				<width>32</width>
 				<height>32</height>
-					<include>overlay_UnWatchedAlt</include>
-				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+				<width>32</width>
+				<texture>$INFO[ListItem.Overlay]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 			</control>
