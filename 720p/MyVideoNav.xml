@@ -932,7 +932,7 @@
 					<width>90</width>
 					<height>45</height>
 					<texture fallback="empty">$VAR[flag_Studio]</texture>
-					<visible>StringCompare()Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
+					<visible>Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
 				</control>
 				<control type="image" id="99999">
 					<width>90</width>

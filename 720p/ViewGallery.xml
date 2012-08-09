@@ -28,11 +28,11 @@
 			</control>
 			<!---frame--->																	
 			<control type="image">
-				<posy>106</posy>
+				<posy>108</posy>
 				<width>screen_Width</width>
-				<height>478</height>
+				<height>475</height>
 				<aspectratio align="center">stretch</aspectratio>
-				<texture border="29">frames/frame_Gallery.png</texture>
+				<texture border="29">frames/frame_Gallery_mod.png</texture>
 			</control>
 		</control>
 		<!--container--->
@@ -88,7 +88,7 @@
 			</control>
 			<control type="group">
 				<posx>718</posx>
-				<posy>390</posy>
+				<posy>392</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
 				<control type="image">
@@ -142,7 +142,7 @@
 			</control>
 			<control type="group">
 				<posx>718</posx>
-				<posy>390</posy>
+				<posy>392</posy>
 				<visible>Skin.HasSetting(watched.alternative) + !Control.HasFocus(8000)</visible>
 				<control type="image">
 					<include>overlay_UnWatchedAlt</include>
