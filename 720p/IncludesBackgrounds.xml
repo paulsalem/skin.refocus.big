@@ -31,7 +31,7 @@
 		</control>
 		<control type="group">
 			<!--global background default opacity-->
-			<visible>!Skin.HasSetting(background.opacitymediaonly)</visible>
+			<visible>!Skin.HasSetting(background.opacitymediaonly) | ![Skin.HasSetting(background.opacitylight) | Skin.HasSetting(background.opacitymedium) | Skin.HasSetting(background.opacityheavy)]</visible>
 			<control type="image">
 				<aspectratio>stretch</aspectratio>
 				<include>screen_Dimensions</include>
@@ -103,7 +103,7 @@
 		</control>
 		<control type="group">
 			<!--global background default opacity-->
-			<visible>Skin.HasSetting(background.opacitymediaonly)</visible>
+			<visible>Skin.HasSetting(background.opacitymediaonly) + [Skin.HasSetting(background.opacitylight) | Skin.HasSetting(background.opacitymedium) | Skin.HasSetting(background.opacityheavy)]</visible>
 			<control type="image">
 				<aspectratio>stretch</aspectratio>
 				<include>screen_Dimensions</include>
