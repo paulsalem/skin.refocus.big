@@ -149,7 +149,7 @@
 				</control>
 				<control type="group">
 					<posx>174</posx>
-					<posy>262</posy>
+					<posy>264</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
@@ -160,7 +160,7 @@
 				</control>
 				<control type="group">
 					<posx>174</posx>
-					<posy>262</posy>
+					<posy>264</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatchedAlt</include>
@@ -184,7 +184,7 @@
 				</control>
 				<control type="group">
 					<posx>174</posx>
-					<posy>262</posy>
+					<posy>264</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
@@ -195,7 +195,7 @@
 				</control>
 				<control type="group">
 					<posx>174</posx>
-					<posy>262</posy>
+					<posy>264</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatchedAlt</include>
@@ -255,7 +255,7 @@
 				</control>
 				<control type="group">
 					<posx>396</posx>
-					<posy>218</posy>
+					<posy>220</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
@@ -266,7 +266,7 @@
 				</control>
 				<control type="group">
 					<posx>396</posx>
-					<posy>218</posy>
+					<posy>220</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatchedAlt</include>
@@ -299,7 +299,7 @@
 				</control>
 				<control type="group">
 					<posx>396</posx>
-					<posy>218</posy>
+					<posy>220</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
@@ -310,7 +310,7 @@
 				</control>
 				<control type="group">
 					<posx>396</posx>
-					<posy>218</posy>
+					<posy>220</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatchedAlt</include>

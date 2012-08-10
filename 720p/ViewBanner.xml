@@ -433,8 +433,8 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>787</posx>
-					<posy>132</posy>
+					<posx>789</posx>
+					<posy>134</posy>
 					<include>focus_Banner</include>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
@@ -494,7 +494,7 @@
 					<include>focus_Banner</include>
 					<visible>!SubString(ListItem.Icon,default)</visible>
 				</control>
-				<control type="image" id="99199">
+				<control type="image" id="91119">
 					<posx>678</posx>
 					<posy>214</posy>
 					<width>128</width>
@@ -503,7 +503,7 @@
 					<aspectratio align="right">keep</aspectratio>
 					<include>focus_Banner</include>
 				</control>
-				<control type="image" id="99299">
+				<control type="image" id="91219">
 					<posx>678</posx>
 					<posy>214</posy>
 					<width>128</width>
@@ -511,7 +511,7 @@
 					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<include>focus_Banner</include>
-					<visible>StringCompare(Control.GetLabel(99199),empty)</visible> 
+					<visible>StringCompare(Control.GetLabel(91119),empty)</visible> 
 				</control>
 			</focusedlayout>
 			
@@ -561,7 +561,7 @@
 				</control>
 				<control type="group">
 					<posx>164</posx>
-					<posy>239</posy>
+					<posy>241</posy>
 					<include>focus_Banner</include>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
@@ -573,7 +573,7 @@
 				</control>
 				<control type="group">
 					<posx>164</posx>
-					<posy>239</posy>
+					<posy>241</posy>
 					<include>focus_Banner</include>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
@@ -636,6 +636,29 @@
 				</control>
 			</focusedlayout>
 		</control>
+		<!--<control type="grouplist" id="54">
+			<posx>260</posx>
+			<posy>415</posy>
+			<itemgap>0</itemgap>
+			<scrolltime tween="Cubic" easing="Out">300</scrolltime>
+			<include>transition_Container</include>
+			<include>infoDialogHide</include>
+			<include>toggle_Menu</include>
+			<visible>Control.IsVisible(54) + Container.Content(tvshows)</visible>
+			 <include>NowPlayingFullscreenOSD</include>
+			<include>focus_Banner</include>
+			<control type="label" id="1">
+					<posx>34</posx>
+					<posy>210</posy>
+					<label>$VAR[tvshow_Info.NextAired]</label>
+					<font>info</font>
+					<textcolor>Color4</textcolor>
+					<align>left</align>
+					<width>650</width>
+					<include>focus_Banner</include>
+					<visible>!SubString(ListItem.Icon,default)</visible>
+			</control>
+		</control>-->
 	</include>
 
 <!---BANNERS------>
@@ -671,13 +694,13 @@
 				</control>
 				<control type="image">
 					<posx>592</posx>
-					<posy>87</posy>
+					<posy>89</posy>
 					<include>overlay_UnWatched</include>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
 					<posx>592</posx>
-					<posy>87</posy>
+					<posy>89</posy>
 					<include>overlay_UnWatchedAlt</include>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 				</control>
@@ -702,13 +725,13 @@
 				</control>
 				<control type="image">
 					<posx>592</posx>
-					<posy>87</posy>
+					<posy>89</posy>
 					<include>overlay_UnWatched</include>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
 					<posx>592</posx>
-					<posy>87</posy>
+					<posy>89</posy>
 					<include>overlay_UnWatchedAlt</include>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 				</control>

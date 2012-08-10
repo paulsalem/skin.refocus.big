@@ -694,7 +694,7 @@
 			</control>
 			<control type="group">
 				<posx>209</posx>
-				<posy>106</posy>
+				<posy>108</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<include>overlay_UnWatchedAlt</include>
@@ -770,7 +770,7 @@
 			</control>
 			<control type="group">
 				<posx>209</posx>
-				<posy>106</posy>
+				<posy>108</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<include>overlay_UnWatchedAlt</include>
@@ -847,7 +847,7 @@
 				<posy>106</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<include>overlay_UnWatched</include>
+					<include>overlay_UnWatchedAlt</include>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
@@ -855,10 +855,10 @@
 			</control>
 			<control type="group">
 				<posx>62</posx>
-				<posy>106</posy>
+				<posy>108</posy>
 				<visible>!Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<include>overlay_UnWatchedAlt</include>
+					<include>overlay_UnWatched</include>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
@@ -940,7 +940,7 @@
 			</control>
 			<control type="group">
 				<posx>62</posx>
-				<posy>106</posy>
+				<posy>108</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<include>overlay_UnWatchedAlt</include>
