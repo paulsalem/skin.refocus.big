@@ -354,5 +354,6 @@ Please consider supporting the development of XBMC by making a donation.
 
 <!--OSD-->
 <string id="32034">Show Progress on Status Bar on xperience1080 OSD</string>
+<string id="32035">Use always Poster on OSD</string>
 
 </strings>

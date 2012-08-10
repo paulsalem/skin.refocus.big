@@ -1360,77 +1360,128 @@
 			<aspectratio align="center">keep</aspectratio>
 			<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + !VideoPlayer.Content(movies)</visible>
 		</control>-->
-		<control type="image" id="10">
-			<posx>7</posx>
-			<posy>80</posy>
-			<width>268</width>
-			<height>150</height>
-			<texture fallback="empty">$INFO[Player.FolderPath]../clearart.png</texture>
-			<aspectratio align="right">keep</aspectratio>
-			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+		<control type ="group">
+			<visible>!Skin.HasSetting(videoosd.showposter)</visible>
+			<control type="image" id="10">
+				<posx>7</posx>
+				<posy>80</posy>
+				<width>268</width>
+				<height>150</height>
+				<texture fallback="empty">$INFO[Player.FolderPath]../clearart.png</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			</control>
+			<control type="image" id="11">
+				<posx>7</posx>
+				<posy>80</posy>
+				<width>268</width>
+				<height>150</height>
+				<texture fallback="empty">$INFO[Player.FolderPath]/clearart.png</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			</control>
+			<control type ="image" id="111">
+				<posx>25</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
+				<texture fallback="empty">$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>[StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			</control>
+			<control type="image" id="2222">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>128</width>
+				<height>64</height>
+				<texture fallback="empty">$VAR[flag_Studio.player.xperience]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			</control>
+			<control type="image" id="22222">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>128</width>
+				<height>64</height>
+				<texture fallback="empty">$VAR[flag_Studio.player.xperience_alt]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] +  StringCompare(Control.GetLabel(2222),empty)  + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			</control>
+			<control type="image" id="1">
+				<posx>14</posx>
+				<posy>34</posy>
+				<width>128</width>
+				<height>128</height>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+				<aspectratio align="center">stretch</aspectratio>
+			</control>
+			<control type="image" id="1">
+				<posx>25</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
+				<texture>$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>VideoPlayer.Content(livetv) | VideoPlayer.Content(files)</visible>
+			</control>
+			<control type="image" id="1">
+				<posx>1206</posx>
+				<posy>5</posy>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/video/HD/nf-HD-OSD.png</texture>
+				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
+			</control>
 		</control>
-		<control type="image" id="11">
-			<posx>7</posx>
-			<posy>80</posy>
-			<width>268</width>
-			<height>150</height>
-			<texture fallback="empty">$INFO[Player.FolderPath]/clearart.png</texture>
-			<aspectratio align="right">keep</aspectratio>
-			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+		<control type ="group">
+			<visible>Skin.HasSetting(videoosd.showposter)</visible>
+			<control type="image" id="1252">
+				<posx>21</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
+				<texture fallback="empty">$INFO[Player.FolderPath]/poster.jpg</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			</control>
+			<control type ="image" id="111">
+				<posx>25</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
+				<texture fallback="empty">$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>VideoPlayer.Content(movies) + StringCompare(Control.GetLabel(1252),empty)</visible>
+			</control>
+			<control type="image" id="1">
+				<posx>14</posx>
+				<posy>34</posy>
+				<width>128</width>
+				<height>128</height>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+				<aspectratio align="center">stretch</aspectratio>
+			</control>
+			<control type="image" id="1">
+				<posx>25</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
+				<texture>$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>VideoPlayer.Content(livetv) | VideoPlayer.Content(files)</visible>
+			</control>
+			<control type="image" id="1">
+				<posx>1206</posx>
+				<posy>5</posy>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/video/HD/nf-HD-OSD.png</texture>
+				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
+			</control>
 		</control>
-		<control type ="image" id="111">
-			<posx>25</posx>
-			<posy>1</posy>
-			<width>215</width>
-			<height>280</height>
-			<texture fallback="empty">$INFO[VideoPlayer.Cover]</texture>
-			<aspectratio align="center">keep</aspectratio>
-			<visible>[StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
-		</control>
-		<control type="image" id="1111">
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>128</width>
-			<height>64</height>
-			<texture fallback="empty">$VAR[flag_Studio.player]</texture>
-			<aspectratio align="right">keep</aspectratio>
-			<visible>![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
-		</control>
-		<control type="image" id="11111">
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>128</width>
-			<height>64</height>
-			<texture fallback="empty">$VAR[flag_Studio.player_alt]</texture>
-			<aspectratio align="right">keep</aspectratio>
-			<visible>StringCompare(Control.GetLabel(1111),empty) + ![StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
-		</control>
-		<control type="image" id="1">
-			<posx>14</posx>
-			<posy>34</posy>
-			<width>128</width>
-			<height>128</height>
-			<texture>$INFO[MusicPlayer.Cover]</texture>
-			<aspectratio align="center">stretch</aspectratio>
-		</control>
-		<control type="image" id="1">
-			<posx>25</posx>
-			<posy>1</posy>
-			<width>215</width>
-			<height>280</height>
-			<texture>$INFO[VideoPlayer.Cover]</texture>
-			<aspectratio align="center">keep</aspectratio>
-			<visible>VideoPlayer.Content(livetv) | VideoPlayer.Content(files)</visible>
-		</control>
-		<control type="image" id="1">
-			<posx>1206</posx>
-			<posy>5</posy>
-			<width>48</width>
-			<height>48</height>
-			<aspectratio align="right">keep</aspectratio>
-			<texture>flags/video/HD/nf-HD-OSD.png</texture>
-			<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
-		</control>
+
 		<!---info--->
 		<control type="group" id="1">
 			<posx>280</posx>
@@ -1439,14 +1490,15 @@
 			<control type="label" id="1">
 				<width>870</width>
 				<label>$VAR[osd.Title]</label>
-				<textcolor>Color8</textcolor>
+				<textcolor>ColorOSD1</textcolor>
+				<textcolor>ColorOSD2</textcolor>
 				<font>titleSpecial</font>
 			</control>
 			<control type="label" id="1">
 				<posy>40</posy>
 				<width>850</width>
 				<label>$VAR[osd.Info]</label>
-				<textcolor>Color2</textcolor>
+				<textcolor>ColorOSD2</textcolor>
 				<font>titleSmallest</font>
 				<include>info_Sub</include>
 			</control>
@@ -1490,14 +1542,14 @@
 				<width>82</width>
 				<height>32</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture>flags/codec/$INFO[MusicPlayer.Codec,,.png]</texture>
+				<texture>flags/codecw/$INFO[MusicPlayer.Codec,,.png]</texture>
 			</control>
 			<control type="image" id="1">
 				<posx>845</posx>
 				<posy>35</posy>
 				<width>128</width>
 				<height>22</height>
-				<texture>$INFO[Player.StarRating,rating/nf-,]</texture>
+				<texture>$INFO[Player.StarRating,ratingw/nf-,]</texture>
 				<aspectratio align="right">keep</aspectratio>
 			</control>
 			<!---plot------>
@@ -1530,14 +1582,14 @@
 				<control type="image" id="1234">
 					<width>96</width>
 					<height>64</height>
-					<texture fallback="empty">$VAR[flag_Studio.player]</texture>
+					<texture fallback="empty">$VAR[flag_Studio.player.xperience]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>VideoPlayer.Content(files)</visible>
 				</control>
 				<control type="image" id="12345">
 					<width>96</width>
 					<height>64</height>
-					<texture fallback="empty">$VAR[flag_Studio.player_alt]</texture>
+					<texture fallback="empty">$VAR[flag_Studio.player.xperience_alt]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>StringCompare(Control.GetLabel(1234),empty) + VideoPlayer.Content(files)</visible>
 				</control>
@@ -1545,7 +1597,7 @@
 					<posx>101</posx>
 					<width>96</width>
 					<height>64</height>
-					<texture>$INFO[VideoPlayer.VideoResolution,flags/video/resolution/,.png]</texture>
+					<texture>$INFO[VideoPlayer.VideoResolution,flags/videow/resolution/,.png]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>VideoPlayer.Content(files)</visible>
 				</control>
@@ -1553,7 +1605,7 @@
 					<posx>192</posx>
 					<width>96</width>
 					<height>64</height>
-					<texture>$INFO[VideoPlayer.AudioCodec,flags/codec/,.png]</texture>
+					<texture>$INFO[VideoPlayer.AudioCodec,flags/codecw/,.png]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>[VideoPlayer.Content(files)]+ !IsEmpty(VideoPlayer.AudioCodec)</visible>
 				</control>
@@ -1561,7 +1613,7 @@
 					<posx>282</posx>
 					<width>96</width>
 					<height>64</height>
-					<texture>$INFO[VideoPlayer.VideoAspect,flags/video/aspectratio/,.png]</texture>
+					<texture>$INFO[VideoPlayer.VideoAspect,flags/videow/aspectratio/,.png]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>[VideoPlayer.Content(files)] + !IsEmpty(VideoPlayer.VideoAspect)</visible>
 				</control>
@@ -1848,15 +1900,15 @@
 			<control type="label" id="1">
 				<width>631</width>
 				<label>$VAR[osd.Title]</label>
-				<textcolor>Color8</textcolor>
-				<textcolor>Color2</textcolor>
+				<textcolor>ColorOSD1</textcolor>
+				<textcolor>ColorOSD2</textcolor>
 				<font>titleSpecial</font>
 			</control>
 			<control type="label" id="1">
 				<posx>700</posx>
 				<width>250</width>
 				<label>$VAR[osd.Info]</label>
-				<textcolor>Color2</textcolor>
+				<textcolor>ColorOSD2</textcolor>
 				<font>titleSmallest</font>
 			</control>
 			<!-->

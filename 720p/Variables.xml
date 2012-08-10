@@ -195,6 +195,18 @@
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.studio,flags/networks/,.png]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.studio,flags/studios/,.png]</value>
 	</variable>
+	<variable name="flag_Studio.player.xperience">
+		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.studio,flags/studiosw/,.png]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.studio,flags/networksw/,.png]</value>
+		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.studio,flags/labelsw/,.png]</value>
+		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Icon]</value>
+		<value condition="VideoPlayer.Content(files)">$INFO[VideoPlayer.VideoCodec,flags/codecw/,.png]</value>
+		<value condition="MusicPlayer.Content(files)">$INFO[MusicPlayer.Property(Album_Label),flags/labelsw/,.png]</value>
+	</variable>
+	<variable name="flag_Studio.player.xperience_alt">
+		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.studio,flags/networksw/,.png]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.studio,flags/studiosw/,.png]</value>
+	</variable>
 
 <!---WINDOW TITLES------>
 	<variable name="window_Title.Video">
@@ -304,7 +316,7 @@
 	<variable name="osd.Title">
 		<value condition="Window.IsActive(visualisation) | Window.IsActive(slideshow)">$INFO[MusicPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TVShowTitle,,: ][COLOR=Color3]$INFO[VideoPlayer.Title][/COLOR]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TVShowTitle,,: ][COLOR=Color9]$INFO[VideoPlayer.Title][/COLOR]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="osd.Info">

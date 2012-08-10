@@ -455,6 +455,13 @@
 				<selected>Skin.HasSetting(videoosd.showchapters)</selected>
 				<include>button_Settings</include>
 			</control>
+			<!--Chapters-->
+			<control type="radiobutton" id="758">
+				<label>$LOCALIZE[32035]</label>
+				<onclick>Skin.ToggleSetting(videoosd.showposter)</onclick>
+				<selected>Skin.HasSetting(videoosd.showposter)</selected>
+				<include>button_Settings</include>
+			</control>
 			</control>
 <!---ADDONS------>
 		<control type="grouplist" id="800">

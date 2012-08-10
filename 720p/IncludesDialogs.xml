@@ -103,19 +103,19 @@
 		<width>1132</width>
 		<align>center</align>
 		<font>smallCaps</font>
-		<textcolor>Color3</textcolor>
+		<textcolor>Color9</textcolor>
 	</include>
 	<include name="seekbar_Label-Info_xperience">
 		<width>1000</width>
 		<align>center</align>
 		<font>smallCaps</font>
-		<textcolor>Color3</textcolor>
+		<textcolor>Color9</textcolor>
 	</include>
 	<include name="seekbar_Label-Info_xperience_osd">
 		<width>937</width>
 		<align>center</align>
 		<font>smallCaps</font>
-		<textcolor>Color3</textcolor>
+		<textcolor>Color9</textcolor>
 	</include>
 	<include name="dialog_Line">
 		<posx>34</posx>
