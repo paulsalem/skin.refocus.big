@@ -105,6 +105,12 @@
 		<font>smallCaps</font>
 		<textcolor>Color9</textcolor>
 	</include>
+	<include name="seekbar_Label-Info.Main">
+		<width>1132</width>
+		<align>center</align>
+		<font>smallCaps</font>
+		<textcolor>Color3</textcolor>
+	</include>
 	<include name="seekbar_Label-Info_xperience">
 		<width>1000</width>
 		<align>center</align>

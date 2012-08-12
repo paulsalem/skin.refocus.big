@@ -142,7 +142,6 @@
 				<control type="image">
 					<width>228</width>
 					<height>316</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
 					<bordertexture border="40">frames/frame_Square.png</bordertexture>
 					<aspectratio align="center">stretch</aspectratio>
@@ -178,7 +177,6 @@
 				<control type="image">
 					<width>228</width>
 					<height>316</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
 					<bordertexture border="40">frames/frame_Square.png</bordertexture>
 					<aspectratio align="center">stretch</aspectratio>

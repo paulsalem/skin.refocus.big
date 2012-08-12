@@ -1198,7 +1198,7 @@
 				<posy>34</posy>
 				<control type="label" id="1">
 					<width>870</width>
-					<label>$VAR[osd.Title]</label>
+					<label>$VAR[osd.Title.Info]</label>
 					<textcolor>Color1</textcolor>
 					<font>titleSpecial</font>
 				</control>
@@ -1206,7 +1206,7 @@
 					<posy>35</posy>
 					<width>850</width>
 					<label>$VAR[osd.Info]</label>
-					<textcolor>Color2</textcolor>
+					<textcolor>Color3</textcolor>
 					<font>titleSmallest</font>
 					<include>info_Sub</include>
 				</control>
@@ -1232,7 +1232,7 @@
 					</control>
 					<control type="label" id="1">
 						<label>$VAR[player_Status.Condition]</label>
-						<include>seekbar_Label-Info</include>
+						<include>seekbar_Label-Info.Main</include>
 					</control>
 				</control>
 				<control type="label" id="1">
@@ -1314,7 +1314,7 @@
 						</control>
 						<control type="label" id="1">
 							<label>$VAR[player_Status.Condition]</label>
-							<include>seekbar_Label-Info</include>
+							<include>seekbar_Label-Info.Main</include>
 						</control>
 					</control>
 				</control>

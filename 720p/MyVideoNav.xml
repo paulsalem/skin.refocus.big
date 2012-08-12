@@ -49,7 +49,7 @@
 				<control type="group">
 					<posx>655</posx>
 					<posy>68</posy>
-					<visible>[[Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(view.list.fanart)] | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(episodes) | SubString(Container.FolderPath,plugin.video.hulu | SubString(Container.FolderPath,plugin.video.rtmpGUIplus)</visible>
+					<visible>[[Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(view.list.fanart)] | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(episodes) | SubString(Container.FolderPath,plugin.video.hulu) | SubString(Container.FolderPath,plugin.video.the.trailers)</visible>
 					<control type="image">
 						<include>frame_Landscape-List</include>
 						<visible>!IsEmpty(Container.FolderName) + !Container.Content(files)</visible>
@@ -112,7 +112,7 @@
 			<control type="group">
 				<posx>750</posx>
 				<posy>65</posy>
-				<visible>!SubString(Container.FolderPath,plugin://)</visible>
+				<visible>!SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,plugin.video.the.trailers)</visible>
 				<control type="group">
 					<visible>[Container.Content(movies) | Container.Content(tvshows)] + [!Skin.HasSetting(view.list.fanart) | SubString(Container.FolderPath,plugin://)] | Container.Content(actors) | Container.Content(seasons)| SubString(Container.FolderPath,plugin.video.rtmpGUIplus</visible>
 					<control type="image">
