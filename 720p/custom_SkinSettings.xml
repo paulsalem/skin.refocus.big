@@ -197,6 +197,27 @@
 				<textcolor>Color2</textcolor>
 				<include>button_Settings</include>
 			</control>
+			<!--extra fanart-->
+			<control type="radiobutton" id="602">
+				<label>$LOCALIZE[32036]</label>
+				<onclick>Skin.ToggleSetting(fanart.extra)</onclick>
+				<selected>Skin.HasSetting(fanart.extra)</selected>
+				<include>button_Settings</include>
+			</control>
+			<!--animate backgrounds-->
+			<control type="radiobutton" id="603">
+				<label>$LOCALIZE[32037]</label>
+				<onclick>Skin.ToggleSetting(fanart.animate)</onclick>
+				<selected>Skin.HasSetting(fanart.animate)</selected>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="604">
+				<label>$LOCALIZE[32038]</label>
+				<onclick>Skin.ToggleSetting(fanart.animateslow)</onclick>
+				<selected>Skin.HasSetting(fanart.animateslow)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(fanart.animate)</visible>
+			</control>
 			<!--visualization fanart-->
 			<control type="radiobutton" id="606">
 				<label>$LOCALIZE[31120]</label>

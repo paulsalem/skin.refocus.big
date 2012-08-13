@@ -1,6 +1,12 @@
 ﻿<window type="dialog" id="142">
 	<defaultcontrol>7000</defaultcontrol>
 	<controls>
+
+	<!--<include>clock</include>-->
+		<control type="group">
+			<visible>!Skin.HasSetting(videoosd.xperience1080)</visible>
+			<include>clock</include>
+		</control>
 	
 	<!--TRIGGER-->
 		
@@ -101,7 +107,7 @@
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible> VideoPlayer.Content(episodes) + [StringCompare(Control.GetLabel(1159),empty)) + StringCompare(Control.GetLabel(11599),empty))]</visible>
+				<visible> VideoPlayer.Content(episodes) + [StringCompare(Control.GetLabel(1159),empty) + StringCompare(Control.GetLabel(11599),empty)]</visible>
 			</control>
 		</control>
 
@@ -126,7 +132,7 @@
 				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/poster.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes)</visible>
+				<visible>StringCompare(Control.GetLabel(1459),empty) + Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes)</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>15</posx>
@@ -136,7 +142,7 @@
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible> VideoPlayer.Content(episodes) + [StringCompare(Control.GetLabel(1459),empty)) + StringCompare(Control.GetLabel(14599),empty))]</visible>
+				<visible> VideoPlayer.Content(episodes) + [StringCompare(Control.GetLabel(1459),empty) + StringCompare(Control.GetLabel(14599),empty)]</visible>
 			</control>
 		</control>
 		
@@ -195,7 +201,7 @@
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible> VideoPlayer.Content(movies) + !SubString(Player.FolderPath,http) +  [StringCompare(Control.GetLabel(1259),empty)) + StringCompare(Control.GetLabel(12599),empty))]</visible>
+				<visible> VideoPlayer.Content(movies) + !SubString(Player.FolderPath,http) +  [StringCompare(Control.GetLabel(1259),empty) + StringCompare(Control.GetLabel(12599),empty)]</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>15</posx>
@@ -220,14 +226,14 @@
 				<visible>Skin.HasSetting(videoosd.realaska)</visible>
 			</control>
 			<control type="image" id="1">
-				<posx>10</posx>
-				<posy>0</posy>
-				<width>290</width>
-				<height>170</height>
-				<texture>$INFO[VideoPlayer.Cover]</texture>
-				<aspectratio align="center">keep</aspectratio>
+				<posx>15</posx>
+				<posy>442</posy>
+				<width>280</width>
+				<height>340</height>
+				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="right">keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(livetv)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(livetv) | VideoPlayer.Content(files)]</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>1206</posx>
@@ -245,7 +251,7 @@
 				<posy>520</posy>
 				<control type="label" id="1">
 					<width>970</width>
-					<label>$VAR[osd.Title]</label>
+					<label>$VAR[osd.Title.Info]</label>
 					<textcolor>Color1</textcolor>
 					<font>osdTitle</font>
 					<visible>Skin.HasSetting(videoosd.realaska)</visible>
@@ -363,7 +369,6 @@
 			</control>
 		
 		<control type="group">
-			<include>clock</include>
 			<include>osd_Info</include>
 			<include>transition_OSD</include>
 			<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>

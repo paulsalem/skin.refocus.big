@@ -49,7 +49,7 @@
 				<control type="group">
 					<posx>655</posx>
 					<posy>68</posy>
-					<visible>[[Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(view.list.fanart)] | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(episodes) | SubString(Container.FolderPath,plugin.video.hulu) | SubString(Container.FolderPath,plugin.video.the.trailers)</visible>
+					<visible>[[Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(view.list.fanart)] | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(episodes) | SubString(Container.FolderPath,plugin.video.hulu) | SubString(Container.FolderPath,plugin.video.LiveTV)</visible>
 					<control type="image">
 						<include>frame_Landscape-List</include>
 						<visible>!IsEmpty(Container.FolderName) + !Container.Content(files)</visible>
@@ -155,12 +155,49 @@
 					<control type="image">
 						<width>580</width>
 						<height>625</height>
-						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
 						<bordertexture border="31" width="400" height="315">frames/frame_Square.png</bordertexture>
 						<bordersize>22</bordersize>
 						<aspectratio align="right" aligny="top">keep</aspectratio>
 						<fadetime>fadetime_Thumb</fadetime>
 						<visible>!IsEmpty(ListItem.Thumb) + !substring(Container.FolderPath,plugin://) + !IsEmpty(Container.FolderPath)</visible>
+					</control>
+					<control type="image">
+						<posx>-54</posx>
+						<posy>526</posy>
+						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
+						<include>overlay_UnWatched</include>
+						<visible>!SubString(Container.FolderPath,special://videoplaylists) + !Skin.HasSetting(watched.alternative)</visible>
+					</control>
+					<control type="image">
+						<posx>-54</posx>
+						<posy>526</posy>
+						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
+						<include>overlay_UnWatchedAlt</include>
+						<visible>!SubString(Container.FolderPath,special://videoplaylists) + Skin.HasSetting(watched.alternative)</visible>
+					</control>
+					<control type="image">
+						<posx>-54</posx>
+						<posy>526</posy>
+						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
+						<include>overlay_Resumable-list</include>
+					</control>
+				</control>
+			</control>
+			<!---addons--->
+			<control type="group">
+				<visible>SubString(Container.FolderPath,plugin.video.LiveTV)</visible>
+				<control type="group">
+					<posx>655</posx>
+					<posy>80</posy>
+					<control type="image">
+						<width>580</width>
+						<height>625</height>
+						<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+						<bordersize>22</bordersize>
+						<aspectratio align="right" aligny="top">keep</aspectratio>
+						<fadetime>fadetime_Thumb</fadetime>
+						<visible>SubString(Container.FolderPath,plugin://)</visible>
 					</control>
 					<control type="image">
 						<posx>-54</posx>

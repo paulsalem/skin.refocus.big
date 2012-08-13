@@ -10,10 +10,22 @@
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<visible>Skin.HasSetting(fanart.global) + !IsEmpty(ListItem.Property(Fanart_Image)) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.global)] + !ControlGroup(6000).HasFocus</visible>
+			<visible>Skin.HasSetting(fanart.animate) + [!Skin.HasSetting(fanart.extra) | IsEmpty(ListItem.Path,,extrafanart) | !IsEmpty(ListItem.Property(Fanart_Image))] + Skin.HasSetting(fanart.global) + !IsEmpty(ListItem.Property(Fanart_Image)) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.global)] + !ControlGroup(6000).HasFocus</visible>
 			<include>transition_Fanart</include>
 			<fadetime>fadetime_Fanart</fadetime>
 			<include>menu_BackgroundHide</include>
+			<include>AnimateBackgrounds</include>
+		</control>
+		<control type="multiimage">
+			<include>screen_Dimensions</include>
+			<imagepath background="true">$INFO[ListItem.Path,,extrafanart]</imagepath>
+			<aspectratio align="center">scale</aspectratio>
+			<timeperimage>1500</timeperimage>
+			<fadetime>900</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<include>AnimateBackgrounds</include>
+			<visible>[!Control.IsVisible(53) + !Window.isActive(2003)] + Skin.HasSetting(fanart.extra) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Path,,extrafanart)</visible>
 		</control>
 		<!--playing video background-->
 		<control type="group">

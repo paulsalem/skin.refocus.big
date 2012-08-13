@@ -940,7 +940,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>info_toast_side</font>
-		<textcolor>Color1</textcolor>
+		<textcolor>Color9</textcolor>
 		<include>transition_Toast</include>
 		<!--
 		<animation type="Conditional" condition="Player.Muted + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)]">
@@ -1445,6 +1445,15 @@
 				<aspectratio align="right">keep</aspectratio>
 				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
 			</control>
+			<control type="image" id="1253">
+				<posx>21</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
+				<texture fallback="empty">$INFO[Player.FolderPath]../poster.jpg</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			</control>
 			<control type ="image" id="111">
 				<posx>25</posx>
 				<posy>1</posy>
@@ -1452,7 +1461,7 @@
 				<height>280</height>
 				<texture fallback="empty">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>VideoPlayer.Content(movies) + StringCompare(Control.GetLabel(1252),empty)</visible>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + [StringCompare(Control.GetLabel(1252),empty) + StringCompare(Control.GetLabel(1253),empty]</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>14</posx>
