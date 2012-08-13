@@ -270,7 +270,7 @@
 				<posy>340</posy>
 				<width>280</width>
 				<height>340</height>
-				<texture fallback="empty">$INFO[Player.FolderPath]/poster.jpg</texture>
+				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/poster.jpg</texture>
 				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/poster.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
@@ -281,7 +281,7 @@
 				<posy>340</posy>
 				<width>280</width>
 				<height>340</height>
-				<texture fallback="empty">$INFO[Player.FolderPath]../poster.jpg</texture>
+				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../poster.jpg</texture>
 				<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../poster.jpg</texture>
 				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/poster.jpg</texture>				
 				<aspectratio>keep</aspectratio>
@@ -405,8 +405,8 @@
 				<posy>520</posy>
 				<control type="label" id="1">
 					<width>870</width>
-					<label>$VAR[osd.Title.Info]</label>
-					<textcolor>Color1</textcolor>
+					<label>$VAR[osd.Title.Black]</label>
+					<textcolor>ColorOSD4</textcolor>
 					<font>osdTitle</font>
 					<visible>Skin.HasSetting(videoosd.realaska)</visible>
 				</control>
@@ -422,7 +422,7 @@
 					<posy>54</posy>
 					<width>750</width>
 					<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Artist,]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</label>
-					<textcolor>Color3</textcolor>
+					<textcolor>ColorOSD4</textcolor>
 					<font>smallerCapsBIG</font>
 					<include>info_Sub</include>
 					<visible>Skin.HasSetting(videoosd.realaska) + Player.HasAudio</visible>
@@ -434,7 +434,7 @@
 					<posy>54</posy>
 					<width>850</width>
 					<label>$LOCALIZE[209]: $INFO[VideoPlayer.Offset(1).Artist,]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[VideoPlayer.PlaylistPosition,]$INFO[VideoPlayer.PlaylistLength,/])</label>
-					<textcolor>Color3</textcolor>
+					<textcolor>ColorOSD4</textcolor>
 					<font>smallerCapsBIG</font>
 					<include>info_Sub</include>
 					<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(musicvideos)</visible>
@@ -466,7 +466,7 @@
 						<height>55</height>
 						<width>950</width>
 						<label>$VAR[player_Plot.Condition]</label>
-						<textcolor>Color3</textcolor>
+						<textcolor>ColorOSD4</textcolor>
 						<include>description_OSD</include>
 						<visible>Skin.HasSetting(videoosd.realaska) + Skin.HasSetting(osd.progressbarrealaska)</visible>
 					</control>
@@ -474,7 +474,7 @@
 						<height>110</height>
 						<width>950</width>
 						<label>$VAR[player_Plot.Condition]</label>
-						<textcolor>Color3</textcolor>
+						<textcolor>ColorOSD4</textcolor>
 						<include>description_OSD</include>
 						<visible>Skin.HasSetting(videoosd.realaska) + !Skin.HasSetting(osd.progressbarrealaska)</visible>
 					</control>

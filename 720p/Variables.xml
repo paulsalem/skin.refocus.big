@@ -325,6 +325,12 @@
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TVShowTitle,,: ][COLOR=Color3]$INFO[VideoPlayer.Title][/COLOR]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">$INFO[VideoPlayer.Title]</value>
 	</variable>
+	<variable name="osd.Title.Black">
+		<value condition="Window.IsActive(visualisation) | Window.IsActive(slideshow)">$INFO[MusicPlayer.Title]</value>
+		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.Title]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TVShowTitle,,: ][COLOR=ColorOSD4]$INFO[VideoPlayer.Title][/COLOR]</value>
+		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">$INFO[VideoPlayer.Title]</value>
+	</variable>
 	<variable name="osd.Info">
 		<value condition="Window.IsActive(visualisation) | Window.IsActive(slideshow)">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, • ]$INFO[MusicPlayer.Year, • ]</value>
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre,, • ]$INFO[VideoPlayer.Year]</value>

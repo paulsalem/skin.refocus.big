@@ -10,6 +10,11 @@
 	<color name="Focused">FF111111</color>
 	<color name="Disabled">ff9a9a9a</color>
 	<color name="Selected">ff16871e</color>
+
+	<!-- xperience1080-->
+	<color name="ColorOSD1">ffffffff</color>
+	<color name="ColorOSD2">ff6aa6cb</color>
+	<color name="ColorOSD4">ffffffFF</color>
 	
 	<color name="column1">ffffffff</color>
 	<color name="column2">ff2d5a83</color>

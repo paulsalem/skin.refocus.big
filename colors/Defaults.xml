@@ -12,6 +12,8 @@
 	<!-- xperience1080-->
 	<color name="ColorOSD1">ffffffff</color>
 	<color name="ColorOSD2">ff6aa6cb</color>
+	<color name="ColorOSD4">FF000000</color>
+
 	
 	<color name="Focused">FF111111</color>
 	<color name="Disabled">ff9a9a9a</color>
