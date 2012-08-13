@@ -326,24 +326,24 @@
 				<visible>Window.IsActive(fullscreenvideo)</visible>
 			</control>
 			<control type="label">
-				<posx>25r</posx>
+				<posx>28r</posx>
 				<description>Chapters</description>
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<font>finishtime</font>
-				<posy>70</posy>
+				<posy>80</posy>
 				<include>toast_Bottom_Player</include>
 				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
 			</control>
 			<control type="label">
-				<posx>25r</posx>
+				<posx>28r</posx>
 				<description>Chapters</description>
 				<label>[B]$INFO[Player.ChapterName][/B]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<font>finishtime</font>
-				<posy>90</posy>
+				<posy>115</posy>
 				<include>toast_Bottom_Player</include>
 				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
 			</control>
@@ -376,6 +376,7 @@
 			</control>
 			<control type="label">
 				<posx>25r</posx>
+				<posy>29</posy>
 				<label>$LOCALIZE[31068] $INFO[Player.FinishTime]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -384,7 +385,7 @@
 			</control>
 			<control type="label">
 				<posx>25r</posx>
-				<posy>45</posy>
+				<posy>47</posy>
 				<description>Chapters</description>
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
 				<textcolor>Color8</textcolor>
@@ -394,7 +395,7 @@
 			</control>
 			<control type="label">
 				<posx>25r</posx>
-				<posy>64</posy>
+				<posy>66</posy>
 				<description>Chapters</description>
 				<label>[B]$INFO[Player.ChapterName][/B]</label>
 				<textcolor>Color8</textcolor>
