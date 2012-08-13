@@ -14,7 +14,7 @@
 			<include>transition_Fanart</include>
 			<fadetime>fadetime_Fanart</fadetime>
 			<include>menu_BackgroundHide</include>
-			<include>AnimateBackgrounds</include>
+			
 		</control>
 		<control type="multiimage">
 			<include>screen_Dimensions</include>
