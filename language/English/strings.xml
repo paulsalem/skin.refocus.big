@@ -366,5 +366,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32040">Gray glow</string>
 <string id="32041">Black glow</string>
 
+<!--menuSelect-->
+<string id="32042">Use reAlaska Select Pointer on Home Menu</string>
 
 </strings>

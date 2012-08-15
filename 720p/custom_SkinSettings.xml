@@ -177,6 +177,13 @@
 				<visible>Skin.HasSetting(home.search)</visible>
 				<include>button_Settings</include>
 			</control>
+			<!--MenuSelect>-->
+			<control type="radiobutton" id="112">
+				<label>$LOCALIZE[32042]</label>
+				<onclick>Skin.ToggleSetting(home.menuselect.realaska)</onclick>
+				<selected>Skin.HasSetting(home.menuselect.realaska)</selected>
+				<include>button_Settings</include>
+			</control>
 		</control>
 <!---ARTWORK------>
 		<control type="grouplist" id="600">

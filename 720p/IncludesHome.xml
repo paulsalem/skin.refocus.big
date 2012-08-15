@@ -19,10 +19,20 @@
 				<width>375</width>
 				<height>200</height>
 				<aspectratio align="left">stretch</aspectratio>
-				<texture border="1">home/menuSelect.png</texture>
+				<texture border="1">home/menuSelectOriginal.png</texture>
 				<include>home_ListScroll</include>
 				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5)">Conditional</animation>
-				<visible>!Control.HasFocus(888)</visible>
+				<visible>!Control.HasFocus(888) + !Skin.HasSetting(home.menuselect.realaska)</visible>
+			</control>
+			<control type="image">
+				<posy>0</posy>
+				<width>375</width>
+				<height>200</height>
+				<aspectratio align="left">stretch</aspectratio>
+				<texture border="1">home/menuSelectReAlaska.png</texture>
+				<include>home_ListScroll</include>
+				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5)">Conditional</animation>
+				<visible>!Control.HasFocus(888) + Skin.HasSetting(home.menuselect.realaska)</visible>
 			</control>
 			<!--
 			<control type="image">
