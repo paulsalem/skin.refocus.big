@@ -32,7 +32,7 @@
 				<width>screen_Width</width>
 				<height>475</height>
 				<aspectratio align="center">stretch</aspectratio>
-				<texture border="29">frames/frame_Gallery_mod.png</texture>
+				<texture border="29">frames/frame_Gallery.png</texture>
 			</control>
 		</control>
 		<!--container--->

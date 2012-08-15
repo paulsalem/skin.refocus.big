@@ -6,6 +6,7 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(videoosd.xperience1080)</visible>
 			<include>clock</include>
+			<include>OverlayTop</include>
 		</control>
 	
 	<!--TRIGGER-->

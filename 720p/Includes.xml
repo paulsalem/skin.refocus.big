@@ -941,7 +941,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>info_toast_side</font>
-		<textcolor>Color9</textcolor>
+		<textcolor>Color1</textcolor>
 		<include>transition_Toast</include>
 		<!--
 		<animation type="Conditional" condition="Player.Muted + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)]">
@@ -1321,6 +1321,7 @@
 				</control>
 			</control>
 		</control>
+		
 	</include>
 <!--XperienceOSD Info-->
 <include name="osd_InfoXperience">
@@ -2169,6 +2170,127 @@
         <align>right</align>
         <scroll>false</scroll>
     </include>
+
+<!--Overlay on OSD Top-->
+
+	<include name="OverlayTop">
+        	<control type="group">
+			<posy>300</posy>
+			<visible>[Skin.HasSetting(videoosd.realaska) + !Skin.HasSetting(videoosd.xperience1080)] + Skin.HasSetting(videoosd.glow)+ [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)] + ![Window.IsActive(2901)]</visible>
+			<control type="image">
+				<height>200</height>
+				<include>screenwidth</include>
+				<texture>osd/infoOverlayTop.png</texture>
+				<include>transition_OSD2</include>
+				<visible>![Skin.HasSetting(videoosd.glow.gray) | Skin.HasSetting(videoosd.glow.black)]</visible>
+			</control>
+			<control type="image">
+				<height>200</height>
+				<include>screenwidth</include>
+				<texture>osd/infoOverlayTop_gray.png</texture>
+				<include>transition_OSD2</include>
+				<visible>Skin.HasSetting(videoosd.glow.gray)</visible>
+			</control>
+			<control type="image">
+				<height>200</height>
+				<include>screenwidth</include>
+				<texture>osd/infoOverlayTop_black.png</texture>
+				<include>transition_OSD2</include>
+				<visible>Skin.HasSetting(videoosd.glow.black)</visible>
+			</control>
+		</control>
+
+		<control type="group">
+			<posy>369</posy>
+			<visible>[Skin.HasSetting(videoosd.realaska) + !Skin.HasSetting(videoosd.xperience1080)] + Skin.HasSetting(videoosd.glow) + [VideoPlayer.Content(files)] + ![Window.IsActive(2901)]</visible>
+			<control type="image">
+				<height>200</height>
+				<include>screenwidth</include>
+				<texture>osd/infoOverlayTop.png</texture>
+				<include>transition_OSD2</include>
+				<visible>![Skin.HasSetting(videoosd.glow.gray) | Skin.HasSetting(videoosd.glow.black)]</visible>
+			</control>
+			<control type="image">
+				<height>200</height>
+				<include>screenwidth</include>
+				<texture>osd/infoOverlayTop_gray.png</texture>
+				<include>transition_OSD2</include>
+				<visible>Skin.HasSetting(videoosd.glow.gray)</visible>
+			</control>
+			<control type="image">
+				<height>200</height>
+				<include>screenwidth</include>
+				<texture>osd/infoOverlayTop_black.png</texture>
+				<include>transition_OSD2</include>
+				<visible>Skin.HasSetting(videoosd.glow.black)</visible>
+			</control>
+
+		</control>
+		
+
+	<control type="group">
+	<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Skin.HasSetting(videoosd.glow) + Window.IsActive(fullscreeninfo)</visible>
+		<control type="image">
+			<include>transition_OSD</include>
+			<include>screenwidth</include>
+			<height>70</height>
+			<posy>407</posy>
+			<texture border="0,0,0,15">osd/infoOverlayTop.png</texture>
+			<visible>![Skin.HasSetting(videoosd.glow.gray) | Skin.HasSetting(videoosd.glow.black)]</visible>
+		</control>	
+		<control type="image">
+			<include>transition_OSD</include>
+			<include>screenwidth</include>
+			<height>70</height>
+			<posy>407</posy>
+			<texture border="0,0,0,15">osd/infoOverlayTop_gray.png</texture>
+			<visible>Skin.HasSetting(videoosd.glow.gray)</visible>
+		</control>	
+		<control type="image">
+			<include>transition_OSD</include>
+			<include>screenwidth</include>
+			<height>70</height>
+			<posy>407</posy>
+			<texture border="0,0,0,15">osd/infoOverlayTop_black.png</texture>
+			<visible>Skin.HasSetting(videoosd.glow.black)</visible>
+		</control>	
+	</control>
+
+	<control type="group">
+	<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Skin.HasSetting(videoosd.glow) + !Window.IsActive(fullscreeninfo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd)]</visible>
+		<animation type="WindowOpen">
+				<effect type="slide" start="0,64" end="0,0" tween="Cubic" center="auto" easing="Out" time="250" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="0,64" tween="Cubic" center="auto" easing="Out" time="250" />
+			</animation>		
+		<control type="image">
+			<include>screenwidth</include>
+			<height>70</height>
+			<posy>607</posy>
+			<texture border="0,0,0,15">osd/infoOverlayTop.png</texture>
+			<visible>![Skin.HasSetting(videoosd.glow.gray) | Skin.HasSetting(videoosd.glow.black)]</visible>
+		</control>	
+		<control type="image">
+			<include>transition_OSD</include>
+			<include>screenwidth</include>
+			<height>70</height>
+			<posy>607</posy>
+			<texture border="0,0,0,15">osd/infoOverlayTop_gray.png</texture>
+			<visible>Skin.HasSetting(videoosd.glow.gray)</visible>
+		</control>	
+		<control type="image">
+			<include>transition_OSD</include>
+			<include>screenwidth</include>
+			<height>70</height>
+			<posy>607</posy>
+			<texture border="0,0,0,15">osd/infoOverlayTop_black.png</texture>
+			<visible>Skin.HasSetting(videoosd.glow.black)</visible>
+		</control>	
+	</control>
+
+</include>
+
 
 	
 

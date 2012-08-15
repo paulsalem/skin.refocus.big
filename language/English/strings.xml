@@ -347,7 +347,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32031">Show Chapters Information on Paused OSD</string>
 
 <!--Chapters-->
-<string id="32032">Show Media Name on xperience1080 OSD</string>
+<string id="32032">Show Media Nameson xperience1080 OSD</string>
 
 <!--Opacity-->
 <string id="32033">Apply Opacity only to Media Views</string>
@@ -360,6 +360,11 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32036">Use Extra Fanart on Media Views</string>
 <string id="32037">Animate Backgrounds</string>
 <string id="32038">Slow animation</string>
+
+<!--OSD Overlay-->
+<string id="32039">Display a glow on top of OSD</string>
+<string id="32040">Gray glow</string>
+<string id="32041">Black glow</string>
 
 
 </strings>
