@@ -135,9 +135,9 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="thumb_Square.Condition">
-		<value condition="Container.Content(albums) + IsEmpty(ListItem.Title)">thumbs/album.png</value>
-		<value condition="Container.Content(artists) + IsEmpty(ListItem.Title)">thumbs/artist.png</value>
-		<value condition="Container.Content(songs) + IsEmpty(ListItem.Title)">thumbs/album.png</value>
+		<value condition="Container.Content(albums) + IsEmpty(ListItem.Thumb)">thumbs/album.png</value>
+		<value condition="Container.Content(artists) + IsEmpty(ListItem.Thumb)">thumbs/artist.png</value>
+		<value condition="Container.Content(songs) + IsEmpty(ListItem.Thumb)">thumbs/album.png</value>
 		<value condition="[Container.Content(files) | Container.Content(addons)] + IsEmpty(ListItem.Thumb)">thumbs/addon.png</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
