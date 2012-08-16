@@ -331,7 +331,7 @@
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<font>finishtime</font>
+				<font>info_toast_top</font>
 				<posy>80</posy>
 				<include>toast_Bottom_Player</include>
 				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
@@ -342,7 +342,7 @@
 				<label>[B]$INFO[Player.ChapterName][/B]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<font>finishtime</font>
+				<font>info_toast_top</font>
 				<posy>115</posy>
 				<include>toast_Bottom_Player</include>
 				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
@@ -409,23 +409,23 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(home.timesmall)</visible>
 			<control type="label">
-				<posx>25r</posx>
+				<posx>28r</posx>
 				<description>Chapters</description>
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<font>finishtime</font>
+				<font>info_toast_top</font>
 				<posy>50</posy>
 				<include>toast_Bottom_Player</include>
 				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
 			</control>
 			<control type="label">
-				<posx>25r</posx>
+				<posx>28r</posx>
 				<description>Chapters</description>
 				<label>[B]$INFO[Player.ChapterName][/B]</label>
 				<textcolor>Color8</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<font>finishtime</font>
+				<font>info_toast_top</font>
 				<posy>90</posy>
 				<include>toast_Bottom_Player</include>
 				<visible>Player.ChapterCount + Skin.HasSetting(videoosd.showchapters)</visible>
@@ -1445,7 +1445,7 @@
 				<height>280</height>
 				<texture fallback="empty">$INFO[Player.FolderPath]/poster.jpg</texture>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]+ !Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="1253">
 				<posx>21</posx>
@@ -1454,7 +1454,25 @@
 				<height>280</height>
 				<texture fallback="empty">$INFO[Player.FolderPath]../poster.jpg</texture>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type="image" id="1262">
+				<posx>21</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
+				<texture fallback="empty">$INFO[Player.FolderPath]/folder.jpg</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type="image" id="1263">
+				<posx>21</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
+				<texture fallback="empty">$INFO[Player.FolderPath]../folder.jpg</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type ="image" id="111">
 				<posx>25</posx>
@@ -1463,7 +1481,16 @@
 				<height>280</height>
 				<texture fallback="empty">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + [StringCompare(Control.GetLabel(1252),empty) + StringCompare(Control.GetLabel(1253),empty]</visible>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + [StringCompare(Control.GetLabel(1252),empty) + StringCompare(Control.GetLabel(1253),empty] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type ="image" id="112">
+				<posx>25</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
+				<texture fallback="empty">$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + [StringCompare(Control.GetLabel(1262),empty) + StringCompare(Control.GetLabel(1263),empty] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>14</posx>

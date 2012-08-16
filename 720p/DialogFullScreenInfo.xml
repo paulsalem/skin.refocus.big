@@ -12,7 +12,7 @@
 	<!--TRIGGER-->
 		
 		<!-- reAlaska OSD -->
-		
+		<control type="group">
 		<control type="button" id="2000">
 			<label>SHOULD NOT SEE ME</label>
 			<onup>53</onup>
@@ -115,25 +115,46 @@
 		<!---TV Shows Poster-->
 		<control type ="group">
 			<visible>Skin.HasSetting(videoosd.showposter) + Skin.HasSetting(videoosd.realaska)</visible>
-			<control type="image" id="1459">
-				<posx>15</posx>
-				<posy>340</posy>
-				<width>280</width>
-				<height>340</height>
-				<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../poster.jpg</texture>
-				<aspectratio>keep</aspectratio>
-				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes)</visible>
-			</control>
+			
 			<control type="image" id="14599">
 				<posx>15</posx>
 				<posy>340</posy>
 				<width>280</width>
 				<height>340</height>
-				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/poster.jpg</texture>
+				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/poster.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>StringCompare(Control.GetLabel(1459),empty) + Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes) + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type="image" id="1459">
+				<posx>15</posx>
+				<posy>340</posy>
+				<width>280</width>
+				<height>340</height>
+				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../poster.jpg</texture>
+				<aspectratio>keep</aspectratio>
+				<include>transition_OSD</include>
+				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes) + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type="image" id="14699">
+				<posx>15</posx>
+				<posy>340</posy>
+				<width>280</width>
+				<height>340</height>
+				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/folder.jpg</texture>
+				<aspectratio>keep</aspectratio>
+				<include>transition_OSD</include>
+				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type="image" id="1469">
+				<posx>15</posx>
+				<posy>340</posy>
+				<width>280</width>
+				<height>340</height>
+				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../folder.jpg</texture>
+				<aspectratio>keep</aspectratio>
+				<include>transition_OSD</include>
+				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>15</posx>
@@ -143,7 +164,17 @@
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible> VideoPlayer.Content(episodes) + [StringCompare(Control.GetLabel(1459),empty) + StringCompare(Control.GetLabel(14599),empty)]</visible>
+				<visible> VideoPlayer.Content(episodes) + [StringCompare(Control.GetLabel(1459),empty) + StringCompare(Control.GetLabel(14599),empty)] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type="image" id="1">
+				<posx>15</posx>
+				<posy>340</posy>
+				<width>280</width>
+				<height>340</height>
+				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<include>transition_OSD</include>
+				<visible> VideoPlayer.Content(episodes) + [StringCompare(Control.GetLabel(1469),empty) + StringCompare(Control.GetLabel(14699),empty)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 		</control>
 		
@@ -182,7 +213,7 @@
 				<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../poster.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="12599">
 				<posx>15</posx>
@@ -192,7 +223,27 @@
 				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/poster.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type="image" id="1269">
+				<posx>15</posx>
+				<posy>340</posy>
+				<width>280</width>
+				<height>340</height>
+				<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../folder.jpg</texture>
+				<aspectratio>keep</aspectratio>
+				<include>transition_OSD</include>
+				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type="image" id="12699">
+				<posx>15</posx>
+				<posy>340</posy>
+				<width>280</width>
+				<height>340</height>
+				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/folder.jpg</texture>
+				<aspectratio>keep</aspectratio>
+				<include>transition_OSD</include>
+				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="12600">
 				<posx>15</posx>
@@ -202,7 +253,17 @@
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible> VideoPlayer.Content(movies) + !SubString(Player.FolderPath,http) +  [StringCompare(Control.GetLabel(1259),empty) + StringCompare(Control.GetLabel(12599),empty)]</visible>
+				<visible> VideoPlayer.Content(movies) + !SubString(Player.FolderPath,http) +  [StringCompare(Control.GetLabel(1259),empty) + StringCompare(Control.GetLabel(12599),empty)] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type="image" id="12601">
+				<posx>15</posx>
+				<posy>340</posy>
+				<width>280</width>
+				<height>340</height>
+				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<include>transition_OSD</include>
+				<visible> VideoPlayer.Content(movies) + !SubString(Player.FolderPath,http) +  [StringCompare(Control.GetLabel(1269),empty) + StringCompare(Control.GetLabel(12699),empty)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>15</posx>
@@ -331,7 +392,7 @@
 				<control type="group" id="1">
 					<posy>120</posy>
 					<animation effect="slide" start="0,0" end="0,-44" time="0" condition="Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">Conditional</animation>
-					<visible>Skin.HasSetting(osd.progressbarrealaska)</visible>
+					<visible>Skin.HasSetting(osd.progressbarrealaska) + Skin.HasSetting(videoosd.realaska)</visible>
 					<control type="progress" id="1">
 						<posy>10</posy>
 						<width>950</width>
@@ -368,7 +429,7 @@
 					</control>
 				</control>
 			</control>
-		
+		</control>
 		<control type="group">
 			<include>osd_Info</include>
 			<include>transition_OSD</include>

@@ -483,15 +483,24 @@
 				<selected>Skin.HasSetting(videoosd.showchapters)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!--Chapters-->
+			<!--Posters-->
 			<control type="radiobutton" id="758">
 				<label>$LOCALIZE[32035]</label>
 				<onclick>Skin.ToggleSetting(videoosd.showposter)</onclick>
+				<onclick>Skin.Reset(videoosd.showfolderjpg)</onclick>
 				<selected>Skin.HasSetting(videoosd.showposter)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!--Glow-->
+			<!--folder.jpg-->
 			<control type="radiobutton" id="759">
+				<label>$LOCALIZE[32043]</label>
+				<onclick>Skin.ToggleSetting(videoosd.showfolderjpg)</onclick>
+				<selected>Skin.HasSetting(videoosd.showfolderjpg)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(videoosd.showposter)</visible>
+			</control>
+			<!--Glow-->
+			<control type="radiobutton" id="760">
 				<label>$LOCALIZE[32039]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.gray)</onclick>
@@ -501,7 +510,7 @@
 				<visible>!Skin.HasSetting(videoosd.xperience1080)</visible>
 			</control>
 			<!--Glow-->
-			<control type="radiobutton" id="760">
+			<control type="radiobutton" id="761">
 				<label>$LOCALIZE[32040]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow.gray)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.black)</onclick>
@@ -510,7 +519,7 @@
 				<include>button_Settings</include>
 			</control>
 			<!--Glow-->
-			<control type="radiobutton" id="761">
+			<control type="radiobutton" id="762">
 				<label>$LOCALIZE[32041]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow.black)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.gray)</onclick>

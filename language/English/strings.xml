@@ -369,4 +369,7 @@ Please consider supporting the development of XBMC by making a donation.
 <!--menuSelect-->
 <string id="32042">Use reAlaska Select Pointer on Home Menu</string>
 
+<!--osd-->
+<string id="32043">Use folder.jpg on OSD</string>
+
 </strings>
