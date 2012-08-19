@@ -218,7 +218,7 @@
 				<texture>$INFO[Player.FolderPath]../clearart.png</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes)]</visible>
 			</control>
 			<control type="image" id="11599">
 				<posx>10</posx>
@@ -228,7 +228,7 @@
 				<texture>$INFO[Player.FolderPath]/clearart.png</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes)]</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>10</posx>
