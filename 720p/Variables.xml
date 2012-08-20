@@ -123,8 +123,8 @@
 		<value condition="IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(ListItem.Title) + Container.Content(artists)">thumbs/artist_landscape.png</value>
 		<value condition="Container.Content(musicvideos) + IsEmpty(ListItem.Title)">thumbs/music_landscape.jpg</value>
 		<value condition="Container.Content(episodes) + IsEmpty(ListItem.Title)">thumbs/tvshow_landscape.jpg</value>
-		<value condition="Window.IsActive(pictures) + IsEmpty(ListItem.Title)">thumbs/picture_landscape.jpg</value>
-		<value condition="Container.Content(files) + IsEmpty(ListItem.Title)">thumbs/video_landscape.png</value>
+		<value condition="Window.IsActive(pictures) + IsEmpty(ListItem.Thumb)">thumbs/picture_landscape.jpg</value>
+		<value condition="Container.Content(files) + IsEmpty(ListItem.Thumb)">thumbs/video_landscape.png</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Path]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>

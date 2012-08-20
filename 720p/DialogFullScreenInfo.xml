@@ -11,8 +11,9 @@
 	
 	<!--TRIGGER-->
 		
+		
 		<!-- reAlaska OSD -->
-		<control type="group">
+		
 		<control type="button" id="2000">
 			<label>SHOULD NOT SEE ME</label>
 			<onup>53</onup>
@@ -31,7 +32,13 @@
 			<width>500</width>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
-		<control type="group">
+	
+			
+	<!--		<include>osd_Info</include>
+			<include>transition_OSD</include>-->
+
+
+<control type="group">
 			<posy>300</posy>
 			<visible>[Skin.HasSetting(videoosd.realaska)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)] + ![Window.IsActive(2901)]</visible>
 			<control type="image">
@@ -51,16 +58,12 @@
 				<include>transition_OSD2</include>
 			</control>
 		</control>
-	
 			
 	<!--		<include>osd_Info</include>
 			<include>transition_OSD</include>-->
+			<control type="group">
 
-
-			
-			<animation effect="slide" start="0,0" end="0,42" time="0" condition="Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">Conditional</animation>
-			<visible>Skin.HasSetting(videoosd.realaska) + [Window.IsVisible(fullscreenvideo) | Window.IsActive(visualisation)] + ![[Window.IsActive(seekbar) + Skin.HasSetting(osd.progressbar)]  | [Window.IsActive(visualisationpresetlist) | Window.IsActive(videoosd) | Window.IsVisible(bookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsActive(script-XBMC_Lyrics-main.xml)]]</visible>
-			
+			<animation effect="slide" start="0,0" end="0,42" time="0" condition="[VideoPlayer.Content(livetv) | VideoPlayer.Content(files)]">Conditional</animation>
 			
 			<control type="image" id="1">
 			<posy>500</posy>
@@ -72,10 +75,12 @@
 			<control type="image" id="1">
 			<posy>500</posy>
 				<width>1280</width>
-				<height>220</height>
+				<height>200</height>
 				<texture border="24">infoOverlay.png</texture>
 				<visible>[Skin.HasSetting(videoosd.realaska)] + [Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 			</control>
+
+		</control>
 
 		<!---TV Shows Clearart-->
 		<control type ="group">
@@ -88,7 +93,7 @@
 				<texture>$INFO[Player.FolderPath]../clearart.png</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes)]</visible>
 			</control>
 			<control type="image" id="11599">
 				<posx>10</posx>
@@ -98,7 +103,7 @@
 				<texture>$INFO[Player.FolderPath]/clearart.png</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes)]</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>10</posx>
@@ -114,7 +119,7 @@
 
 		<!---TV Shows Poster-->
 		<control type ="group">
-			<visible>Skin.HasSetting(videoosd.showposter) + Skin.HasSetting(videoosd.realaska)</visible>
+			<visible>[Skin.HasSetting(videoosd.showposter) | VideoPlayer.Content(files)] + Skin.HasSetting(videoosd.realaska)</visible>
 			
 			<control type="image" id="14599">
 				<posx>15</posx>
@@ -124,7 +129,7 @@
 				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/poster.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes) + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(files)] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="1459">
 				<posx>15</posx>
@@ -134,7 +139,7 @@
 				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../poster.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes) + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(files)] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="14699">
 				<posx>15</posx>
@@ -144,7 +149,7 @@
 				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/folder.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(files)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="1469">
 				<posx>15</posx>
@@ -154,27 +159,27 @@
 				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../folder.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(episodes) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(files)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>15</posx>
-				<posy>340</posy>
+				<posy>442</posy>
 				<width>280</width>
 				<height>340</height>
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible> VideoPlayer.Content(episodes) + [StringCompare(Control.GetLabel(1459),empty) + StringCompare(Control.GetLabel(14599),empty)] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+				<visible> [VideoPlayer.Content(episodes) | VideoPlayer.Content(files)] + [StringCompare(Control.GetLabel(1459),empty) + StringCompare(Control.GetLabel(14599),empty)] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>15</posx>
-				<posy>340</posy>
+				<posy>442</posy>
 				<width>280</width>
 				<height>340</height>
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible> VideoPlayer.Content(episodes) + [StringCompare(Control.GetLabel(1469),empty) + StringCompare(Control.GetLabel(14699),empty)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
+				<visible> [VideoPlayer.Content(episodes) | VideoPlayer.Content(files)] + [StringCompare(Control.GetLabel(1469),empty) + StringCompare(Control.GetLabel(14699),empty)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 		</control>
 		
@@ -192,7 +197,7 @@
 				<visible> VideoPlayer.Content(movies) + !SubString(Player.FolderPath,http)</visible>
 			</control>
 			<control type="image" id="1">
-				<posx>15</posx>
+				<posx>0</posx>
 				<posy>442</posy>
 				<width>280</width>
 				<height>340</height>
@@ -226,7 +231,7 @@
 				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="1269">
-				<posx>0</posx>
+				<posx>15</posx>
 				<posy>360</posy>
 				<width>280</width>
 				<height>340</height>
@@ -236,7 +241,7 @@
 				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="12699">
-				<posx>0</posx>
+				<posx>15</posx>
 				<posy>360</posy>
 				<width>280</width>
 				<height>340</height>
@@ -246,7 +251,7 @@
 				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="12600">
-				<posx>0</posx>
+				<posx>15</posx>
 				<posy>360</posy>
 				<width>280</width>
 				<height>340</height>
@@ -266,8 +271,8 @@
 				<visible> VideoPlayer.Content(movies) + !SubString(Player.FolderPath,http) +  [StringCompare(Control.GetLabel(1269),empty) + StringCompare(Control.GetLabel(12699),empty)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type="image" id="1">
-				<posx>15</posx>
-				<posy>442</posy>
+				<posx>0</posx>
+				<posy>462</posy>
 				<width>280</width>
 				<height>340</height>
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
@@ -295,9 +300,12 @@
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>transition_OSD</include>
-				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(livetv) | VideoPlayer.Content(files)]</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(livetv)</visible>
 			</control>
 			<control type="image" id="1">
+				
+			<animation effect="slide" start="0,0" end="0,42" time="0" condition="[VideoPlayer.Content(livetv) | VideoPlayer.Content(files)]">Conditional</animation>
+			
 				<posx>1206</posx>
 				<posy>510</posy>
 				<width>48</width>
@@ -309,18 +317,21 @@
 
 			<!--info-->
 			<control type="group" id="1">
+				
+			<animation effect="slide" start="0,0" end="0,42" time="0" condition="[VideoPlayer.Content(livetv) | VideoPlayer.Content(files)]">Conditional</animation>
+			
 				<posx>310</posx>
 				<posy>520</posy>
 				<control type="label" id="1">
-					<width>970</width>
-					<label>$VAR[osd.Title.Info]</label>
+					<width>870</width>
+					<label>$VAR[osd.Title.Black]</label>
 					<textcolor>ColorOSD4</textcolor>
 					<font>osdTitle</font>
 					<visible>Skin.HasSetting(videoosd.realaska)</visible>
 				</control>
 				<control type="label" id="1">
 					<posy>27</posy>
-					<width>850</width>
+					<width>750</width>
 					<label>$VAR[osd.Info]</label>
 					<textcolor>Color2</textcolor>
 					<include>info_Sub</include>
@@ -328,9 +339,9 @@
 				</control>
 				<control type="label" id="1">
 					<posy>54</posy>
-					<width>850</width>
+					<width>750</width>
 					<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Artist,]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</label>
-					<textcolor>Color3</textcolor>
+					<textcolor>ColorOSD4</textcolor>
 					<font>smallerCapsBIG</font>
 					<include>info_Sub</include>
 					<visible>Skin.HasSetting(videoosd.realaska) + Player.HasAudio</visible>
@@ -342,7 +353,7 @@
 					<posy>54</posy>
 					<width>850</width>
 					<label>$LOCALIZE[209]: $INFO[VideoPlayer.Offset(1).Artist,]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[VideoPlayer.PlaylistPosition,]$INFO[VideoPlayer.PlaylistLength,/])</label>
-					<textcolor>Color3</textcolor>
+					<textcolor>ColorOSD4</textcolor>
 					<font>smallerCapsBIG</font>
 					<include>info_Sub</include>
 					<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(musicvideos)</visible>
@@ -392,7 +403,7 @@
 				<control type="group" id="1">
 					<posy>120</posy>
 					<animation effect="slide" start="0,0" end="0,-44" time="0" condition="Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">Conditional</animation>
-					<visible>Skin.HasSetting(osd.progressbarrealaska) + Skin.HasSetting(videoosd.realaska)</visible>
+					<visible>Skin.HasSetting(osd.progressbarrealaska)</visible>
 					<control type="progress" id="1">
 						<posy>10</posy>
 						<width>950</width>
@@ -429,7 +440,9 @@
 					</control>
 				</control>
 			</control>
-		</control>
+				
+				
+				
 		<control type="group">
 			<include>osd_Info</include>
 			<include>transition_OSD</include>

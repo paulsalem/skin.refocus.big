@@ -488,6 +488,7 @@
 				<label>$LOCALIZE[32035]</label>
 				<onclick>Skin.ToggleSetting(videoosd.showposter)</onclick>
 				<onclick>Skin.Reset(videoosd.showfolderjpg)</onclick>
+				<onclick>PlayerControl(stop)</onclick>
 				<selected>Skin.HasSetting(videoosd.showposter)</selected>
 				<include>button_Settings</include>
 			</control>
@@ -495,6 +496,7 @@
 			<control type="radiobutton" id="759">
 				<label>$LOCALIZE[32043]</label>
 				<onclick>Skin.ToggleSetting(videoosd.showfolderjpg)</onclick>
+				<onclick>PlayerControl(stop)</onclick>
 				<selected>Skin.HasSetting(videoosd.showfolderjpg)</selected>
 				<include>button_Settings</include>
 				<visible>Skin.HasSetting(videoosd.showposter)</visible>
