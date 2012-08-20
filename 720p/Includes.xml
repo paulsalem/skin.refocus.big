@@ -2202,7 +2202,7 @@
 
 	<include name="OverlayTop">
         	<control type="group">
-			<posy>300</posy>
+			<posy>301</posy>
 			<visible>[Skin.HasSetting(videoosd.realaska) + !Skin.HasSetting(videoosd.xperience1080)] + Skin.HasSetting(videoosd.glow)+ [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)] + ![Window.IsActive(2901)]</visible>
 			<control type="image">
 				<height>200</height>
@@ -2228,7 +2228,7 @@
 		</control>
 
 		<control type="group">
-			<posy>369</posy>
+			<posy>370</posy>
 			<visible>[Skin.HasSetting(videoosd.realaska) + !Skin.HasSetting(videoosd.xperience1080)] + Skin.HasSetting(videoosd.glow) + [VideoPlayer.Content(files)] + ![Window.IsActive(2901)]</visible>
 			<control type="image">
 				<height>200</height>
