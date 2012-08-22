@@ -1378,7 +1378,7 @@
 				<posy>80</posy>
 				<width>268</width>
 				<height>150</height>
-				<texture fallback="empty">$INFO[Player.FolderPath]/clearart.png</texture>
+				<texture fallback="empty">$INFO[Player.FolderPath]clearart.png</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
 			</control>
@@ -1443,7 +1443,7 @@
 				<posy>1</posy>
 				<width>215</width>
 				<height>280</height>
-				<texture fallback="empty">$INFO[Player.FolderPath]/poster.jpg</texture>
+				<texture fallback="empty">$INFO[Player.FolderPath]poster.jpg</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]+ !Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
@@ -1461,7 +1461,7 @@
 				<posy>1</posy>
 				<width>215</width>
 				<height>280</height>
-				<texture fallback="empty">$INFO[Player.FolderPath]/folder.jpg</texture>
+				<texture fallback="empty">$INFO[Player.FolderPath]folder.jpg</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>

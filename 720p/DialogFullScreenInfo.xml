@@ -100,7 +100,7 @@
 				<posy>555</posy>
 				<width>290</width>
 				<height>170</height>
-				<texture>$INFO[Player.FolderPath]/clearart.png</texture>
+				<texture>$INFO[Player.FolderPath]clearart.png</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
 				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes)]</visible>
@@ -126,7 +126,7 @@
 				<posy>340</posy>
 				<width>280</width>
 				<height>340</height>
-				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/poster.jpg</texture>
+				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]poster.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
 				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(files)] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
@@ -146,7 +146,7 @@
 				<posy>340</posy>
 				<width>280</width>
 				<height>340</height>
-				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/folder.jpg</texture>
+				<texture fallback="empty" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]folder.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
 				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(files)] + Skin.HasSetting(videoosd.showfolderjpg)</visible>
@@ -225,7 +225,7 @@
 				<posy>360</posy>
 				<width>280</width>
 				<height>340</height>
-				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/poster.jpg</texture>
+				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]poster.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
 				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
@@ -245,7 +245,7 @@
 				<posy>360</posy>
 				<width>280</width>
 				<height>340</height>
-				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]/folder.jpg</texture>
+				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]folder.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
 				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
