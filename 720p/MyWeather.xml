@@ -34,6 +34,7 @@
 				<posy>20</posy>
 				<label>$INFO[Window.Property(WeatherProvider)]</label>
 				<textcolor>Color1</textcolor>
+				<shadowcolor>black</shadowcolor>
 				<include>windowTitle</include>
 			</control>
 			<control type="label">
@@ -43,6 +44,7 @@
 				<label>$INFO[Window.Property(Location)]</label>
 				<font>smallerCaps</font>
 				<textcolor>Color1</textcolor>
+				<shadowcolor>black</shadowcolor>
 			</control>
 			<include>nav_Indicator</include>
 			<control type="group">
