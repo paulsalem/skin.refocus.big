@@ -2198,6 +2198,16 @@
         <scroll>false</scroll>
     </include>
 
+
+	<include name="OSDFwRwLabelMinimal">
+        <posx>1083</posx>
+        <font>description</font>
+	<textcolor>Color8</textcolor>
+	<shadowcolor>black</shadowcolor>
+        <align>right</align>
+        <scroll>false</scroll>
+    </include>
+
 <!--Overlay on OSD Top-->
 
 	<include name="OverlayTop">

@@ -371,5 +371,6 @@ Please consider supporting the development of XBMC by making a donation.
 
 <!--osd-->
 <string id="32043">Use folder.jpg on OSD</string>
+<string id="32044">Use minimal OSD</string>
 
 </strings>
