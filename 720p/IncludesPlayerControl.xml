@@ -5,8 +5,8 @@
 			<control type="group" id="600">
 				<posx>514</posx>
 				<posy>313</posy>
-				<visible allowhiddenfocus="true">Window.IsActive(fullscreenvideo) + ControlGroup(600).HasFocus</visible>
-				<include>toggle_PlayerMenu</include>
+        <visible allowhiddenfocus="true">Window.IsActive(musicosd) + ControlGroup(600).HasFocus</visible>
+ 				<include>toggle_PlayerMenu</include>
 				<control type="image">
 					<width>252</width>
 					<height>267</height>
