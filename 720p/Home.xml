@@ -7,21 +7,7 @@
 
 	<controls>
 	<!-- global background --->
-		<control type="largeimage">
-			<include>screen_Dimensions</include>
-			<texture background="true">backgrounds/background.png</texture>
-			<aspectratio>scale</aspectratio>
-			<animation type="WindowOpen" condition="Window.Previous(2999)">
-				<effect type="fade" start="0" end="100" time="600" delay="0" />
-			</animation>
-			<animation type="WindowOpen" condition="!Window.Previous(2999)">
-				<effect type="fade" start="0" end="100" time="200" delay="0" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="200" delay="0" />
-			</animation>
-			<visible>![Player.HasVideo + !Skin.HasSetting(home.backgroundvideo)] | [Skin.HasSetting(slideshow.fanart) + ![Library.HasContent(movies) + Library.HasContent(tvshows)]]</visible>
-		</control>
+		
 	<!-- slideshows--->
 		<include>home_Slideshows</include>
 	<!-- background video --->
@@ -53,7 +39,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.weather.singleimage) + !Skin.HasSetting(fanart.weather) + Container(9000).HasFocus(17)</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.weather.singleimage) + !Skin.HasSetting(fanart.weather) + Container(9000).HasFocus(17)</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -64,36 +50,63 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.weather.singlepaths) + !Skin.HasSetting(fanart.weather) + Container(9000).HasFocus(17)</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.weather.singlepaths) + !Skin.HasSetting(fanart.weather) + Container(9000).HasFocus(17)</visible>
 		</control>
 		<!-- videos fanart --->
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture>$INFO[Skin.String(fanart.video.image)]</texture>
 			<aspectratio>scale</aspectratio>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="600" delay="0" />
+			</animation>
+			<animation type="WindowOpen" condition="!Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="200" delay="0" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="200" delay="0" />
+			</animation>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.video.image) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.video.image) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)]</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
 			<aspectratio>stretch</aspectratio>
 			<imagepath background="true">$INFO[Skin.String(fanart.video.path)]</imagepath>
 			<timeperimage>slideshow_Timer</timeperimage>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="600" delay="0" />
+			</animation>
+			<animation type="WindowOpen" condition="!Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="200" delay="0" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="200" delay="0" />
+			</animation>
 			<fadetime>200</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.video) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.video) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)]</visible>
 		</control>
 		<!-- movies fanart --->
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture>$INFO[Skin.String(fanart.movies.image)]</texture>
 			<aspectratio>scale</aspectratio>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="600" delay="0" />
+			</animation>
+			<animation type="WindowOpen" condition="!Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="200" delay="0" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="200" delay="0" />
+			</animation>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.movies.image) + [Container(9000).HasFocus(3) | Container(9000).HasFocus(4)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.movies.image) + [Container(9000).HasFocus(3) | Container(9000).HasFocus(4)]</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -101,10 +114,19 @@
 			<imagepath background="true">$INFO[Skin.String(fanart.movies.path)]</imagepath>
 			<timeperimage>slideshow_Timer</timeperimage>
 			<fadetime>200</fadetime>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="600" delay="0" />
+			</animation>
+			<animation type="WindowOpen" condition="!Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="200" delay="0" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="200" delay="0" />
+			</animation>
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.movies) + [Container(9000).HasFocus(3) | Container(9000).HasFocus(4)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.movies) + [Container(9000).HasFocus(3) | Container(9000).HasFocus(4)]</visible>
 		</control>
 		<!-- tvshows fanart --->
 		<control type="image">
@@ -113,7 +135,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.tvshows.image) + [Container(9000).HasFocus(5) | Container(9000).HasFocus(6)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.tvshows.image) + [Container(9000).HasFocus(5) | Container(9000).HasFocus(6)]</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -124,7 +146,7 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.tvshows) + [Container(9000).HasFocus(5) | Container(9000).HasFocus(6)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.tvshows) + [Container(9000).HasFocus(5) | Container(9000).HasFocus(6)]</visible>
 		</control>
 		<!-- pvr fanart --->
 		<control type="image">
@@ -133,7 +155,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.pvr.image) + [Container(9000).HasFocus(7) | Container(9000).HasFocus(8)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.pvr.image) + [Container(9000).HasFocus(7) | Container(9000).HasFocus(8)]</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -144,7 +166,7 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.pvr) + [Container(9000).HasFocus(7) | Container(9000).HasFocus(8)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.pvr) + [Container(9000).HasFocus(7) | Container(9000).HasFocus(8)]</visible>
 		</control>
 		<!-- music fanart --->
 		<control type="image">
@@ -153,7 +175,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.music.image) + [Container(9000).HasFocus(9) | Container(9000).HasFocus(10)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.music.image) + [Container(9000).HasFocus(9) | Container(9000).HasFocus(10)]</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -164,7 +186,7 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(music.pvr) + [Container(9000).HasFocus(9) | Container(9000).HasFocus(10)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(music.pvr) + [Container(9000).HasFocus(9) | Container(9000).HasFocus(10)]</visible>
 		</control>
 		<!-- pictures fanart --->
 		<control type="image">
@@ -173,7 +195,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.pictures.image) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(12)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.pictures.image) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(12)]</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -184,7 +206,7 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.pictures) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(12)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.pictures) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(12)]</visible>
 		</control>
 		<!-- addons fanart --->
 		<control type="image">
@@ -193,7 +215,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.addons.image) + [Container(9000).HasFocus(13) | Container(9000).HasFocus(14)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.addons.image) + [Container(9000).HasFocus(13) | Container(9000).HasFocus(14)]</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -204,7 +226,7 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.addons) + [Container(9000).HasFocus(13) | Container(9000).HasFocus(14)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.addons) + [Container(9000).HasFocus(13) | Container(9000).HasFocus(14)]</visible>
 		</control>
 		<!-- system fanart --->
 		<control type="image">
@@ -213,7 +235,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.system.image) + [Container(9000).HasFocus(15) | Container(9000).HasFocus(16)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.system.image) + [Container(9000).HasFocus(15) | Container(9000).HasFocus(16)]</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -224,7 +246,7 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.system) + [Container(9000).HasFocus(15) | Container(9000).HasFocus(16)]</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Player.HasVideo + !Skin.HasSetting(fanart.system) + [Container(9000).HasFocus(15) | Container(9000).HasFocus(16)]</visible>
 		</control>
 		<!-- favourites fanart --->
 		<control type="image">
@@ -233,7 +255,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.favourites.image) + Container(9000).HasFocus(18)</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.favourites.image) + Container(9000).HasFocus(18)</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -244,7 +266,7 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.favourites) + Container(9000).HasFocus(18)</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.favourites) + Container(9000).HasFocus(18)</visible>
 		</control>
 		<!-- disc fanart --->
 		<control type="image">
@@ -253,7 +275,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.disc.image) + Container(9000).HasFocus(19)</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.disc.image) + Container(9000).HasFocus(19)</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -264,7 +286,7 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(fanart.disc) + Container(9000).HasFocus(19)</visible>
+			<visible allowhiddenfocus="true">!Player.HasVideo + !Skin.HasSetting(fanart.disc) + Container(9000).HasFocus(19)</visible>
 		</control>
 	<!-- now playing fanart --->
 		<control type="image">
