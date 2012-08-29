@@ -90,6 +90,101 @@
 			</focusedlayout>
 		</control>
 	</include>
+	<!---WIDE------> 
+	<include name="view_IconWide">
+		<control type="panel" id="5711">
+			<viewtype label="417">bigicon</viewtype>
+			<posx>45</posx>
+			<posy>110</posy>
+			<width>1240</width>
+			<height>560</height>
+			<onleft>6000</onleft>
+			<onright>85</onright>
+			<onup>575</onup>
+			<ondown>575</ondown>
+			<pagecontrol>85</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
+			<include>transition_Container</include>
+			<include>infoDialogHide</include>
+			<include>toggle_Menu</include>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + [SubString(Container.FolderPath,videodb) | SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,special://profile/playlists/video/) | SubString(Container.FolderPath,special://skin/playlists)]</visible>
+			<itemlayout height="280" width="400">
+				<control type="image">
+					<width>390</width>
+					<height>238</height>
+					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+					<bordertexture border="40">frames/frame_Square.png</bordertexture>
+					<bordersize>22</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<visible>Container.Content(movies) | SubString(Container.FolderPath,plugin://plugin.video.xbmcflicks) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				</control>
+				<control type="group">
+					<posx>139</posx>
+					<posy>213</posy>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>139</posx>
+					<posy>213</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+			</itemlayout>											
+			<focusedlayout height="280" width="400">
+				<control type="image">
+					<posx>12</posx>
+					<posy>12</posy>
+					<width>366</width>
+					<height>214</height>
+					<texture border="10">frames/frame_Square-border.png</texture>
+				</control>
+				<control type="image">
+					<width>390</width>
+					<height>238</height>
+					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+					<bordersize>22</bordersize>
+					<aspectratio align="center">scale</aspectratio>
+					<visible>Container.Content(movies) | SubString(Container.FolderPath,plugin://plugin.video.xbmcflicks) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				</control>
+				<control type="group">
+					<posx>139</posx>
+					<posy>213</posy>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+					<include>focus_ThumbPoster</include>
+					<control type="image">
+						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>139</posx>
+					<posy>213</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<include>focus_ThumbPoster</include>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
 	
 <!---POSTERSMALL------>
 	<include name="view_IconPosterSmall">
@@ -148,8 +243,7 @@
 					<width>134</width>
 					<height>185</height>
 					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
-					<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
-					<bordersize>6</bordersize>
+					<bordersize>22</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 					<include>focus_ThumbPosterInfo</include>
 				</control>

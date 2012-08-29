@@ -1,7 +1,7 @@
 ﻿<window id="25">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>47,50,51,52,521,522,53,531,54,541,5411,54111,57,571,574,575,576,592</views>
+	<views>47,50,51,52,521,522,53,531,54,541,5411,54111,57,571,5711,574,575,576,592</views>
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="Library.HasContent(TVShows) + System.HasAddon(script.tvtunes) + Skin.HasSetting(tvtunes.addon)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>	
 	<onload condition="Library.HasContent(Movies) + System.HasAddon(script.moviesets) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.moviesets,containerId=7000)</onload>
@@ -19,6 +19,7 @@
 		<include>view_SlideMusic</include>
 		<include>view_SlideSquare</include>
 		<include>view_IconSquare3</include>
+		<include>view_IconWide</include>
 		<include>view_MovieSets</include>
 		<include condition="Skin.HasSetting(banners.enable)">view_Banner</include>
 		<include condition="Skin.HasSetting(banners.enable)">view_BannerWide</include>
@@ -572,7 +573,7 @@
 			<include>toggle_Menu</include>
 			<!---large grid--->
 			<control type="group">
-				<visible>Control.IsVisible(57) | Control.IsVisible(573)</visible>
+				<visible>Control.IsVisible(57) | Control.IsVisible(5711) | Control.IsVisible(573)</visible>
 				<!---flags--->
 				<control type="image">
 					<posx>235r</posx>
@@ -702,6 +703,7 @@
 			</control>
 		</control>
 		<include>view_IconPoster</include>
+		<include>view_IconWide</include>
 		<include>view_IconPosterSmall</include>
 
 <!--GALLERY------>
