@@ -141,7 +141,7 @@
 						<include>overlay_Resumable</include>
 					</control>
 				</control>
-			</itemlayout>
+			</itemlayout>											
 			<focusedlayout height="280" width="400">
 				<control type="image">
 					<posx>12</posx>
