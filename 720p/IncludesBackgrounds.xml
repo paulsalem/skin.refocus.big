@@ -190,13 +190,13 @@
 	<include name="home_Slideshows">
 		<control type="multiimage" id="1">
 			<imagepath>special://profile/Thumbnails/Video/Fanart/</imagepath>
-			<visible>!Skin.HasSetting(slideshow.fanart) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.home)] + !ControlGroup(2100).HasFocus</visible>
+			<visible>Skin.HasSetting(slideshow.fanart) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.home)] + !ControlGroup(2100).HasFocus</visible>
 			<include>home_Slideshow</include>
 			<include>screen_Dimensions</include>
 		</control>
 		<control type="multiimage" id="1">
-			<info>Skin.String(slideshow.custom)</info>
-			<visible>Skin.HasSetting(slideshow.fanart) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.home)]</visible>
+			<info>Skin.String(slideshow.custom.path)</info>
+			<visible>Skin.HasSetting(slideshow.custom2) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.home)]</visible>
 			<include>home_Slideshow</include>
 			<include>screen_Dimensions</include>
 		</control>
