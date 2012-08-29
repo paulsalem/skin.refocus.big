@@ -970,7 +970,7 @@
 			<include>transition_Container</include>
 			<include>toggle_Menu</include>
 			<include>infoDialogHide</include>
-			<visible>Control.IsVisible(50) + Container.Content(addons) | [substring(container.folderpath,plugin://) + !Container.Content(movies)] | substring(container.folderpath,addons://repos/)]</visible>
+			<visible>Control.IsVisible(50) + Container.Content(addons) | [substring(container.folderpath,plugin://) + !Container.Content(movies)] | substring(container.folderpath,addons://repos/)] + !SubString(Container.FolderPath,plugin.video.tvalacarta)</visible>
 			<control type="image">
 				<width>512</width>
 				<height>256</height>

@@ -19,7 +19,6 @@
 		<include>view_SlideMusic</include>
 		<include>view_SlideSquare</include>
 		<include>view_IconSquare3</include>
-		<include>view_IconWide</include>
 		<include>view_MovieSets</include>
 		<include condition="Skin.HasSetting(banners.enable)">view_Banner</include>
 		<include condition="Skin.HasSetting(banners.enable)">view_BannerWide</include>
@@ -36,6 +35,7 @@
 			<width>500</width>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
+
 	<!---LIST------>
 		<include>view_List</include>
 		<control type="group">
@@ -186,7 +186,7 @@
 			</control>
 			<!---addons--->
 			<control type="group">
-				<visible>SubString(Container.FolderPath,plugin.video.LiveTV)</visible>
+				<visible>SubString(Container.FolderPath,plugin.video.LiveTV) | SubString(Container.FolderPath,plugin.video.tvalacarta)</visible>
 				<control type="group">
 					<posx>655</posx>
 					<posy>80</posy>
