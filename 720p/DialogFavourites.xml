@@ -19,49 +19,78 @@
 		</control>
 		<control type="group">
 			<posx>19</posx>
-			<posy>75</posy>
+			<posy>70</posy>
 			<control type="image">
 				<width>563</width>
 				<include>dialog_Separator</include>
 			</control>
 			<control type="list" id="450">
+				<posx>10</posx>
+				<posy>10</posy>
 				<width>563</width>
-				<height>320</height>
+				<height>340</height>
 				<onup>450</onup>
 				<ondown>450</ondown>
 				<onright>-</onright>
 				<scrolltime tween="Cubic" easing="Out">scrolltime_Dialog</scrolltime>
-				<itemlayout height="40">
-					<control type="image">
-						<width>563</width>
-						<include>dialog_CommonList</include>
-					</control>
-					<control type="label">
-						<width>543</width>
-						<info>ListItem.Label</info>
-						<include>dialog_CommonListItem</include>
-					</control>
-				</itemlayout>
-				<focusedlayout height="40">
-					<control type="image">
-						<width>563</width>
-						<include>dialog_CommonList</include>
-						<visible>!Control.HasFocus(450)</visible>
-					</control>
-					<control type="image">
-						<width>563</width>
-						<height>40</height>
-						<include>dialog_CommonListFocus</include>
-						<visible>Control.HasFocus(450)</visible>
-					</control>
-					<control type="label">
-						<posx>15</posx>
-						<width>543</width>
-						<info>ListItem.Label</info>
-						<include>dialog_CommonListItemFocus</include>
-					</control>
-				</focusedlayout>
+				<itemlayout height="57">
+						<control type="image">
+							<width>55</width>
+							<height>55</height>
+							<info>ListItem.Icon</info>
+							<include>dialog_CommonList</include>
+						</control>
+						<control type="label">
+							<posx>64</posx>
+							<width>241</width>
+							<height>35</height>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<include>dialog_CommonListItem</include>
+						</control>
+					</itemlayout>
+				<focusedlayout height="57">
+						<control type="image">
+							<width>310</width>
+							<height>55</height>
+							<visible>Control.HasFocus(450)</visible>
+							<include>dialog_CommonListFocus</include>
+						</control>
+						<control type="image">
+							<width>310</width>
+							<height>55</height>
+							<visible>!Control.HasFocus(450)</visible>
+							<include>dialog_CommonList</include>
+						</control>
+						<control type="group">
+							<include>ListViewFocusAnim</include>
+							<control type="image">
+								<width>55</width>
+								<height>55</height>
+								<info>ListItem.Icon</info>
+								<include>dialog_CommonList</include>
+							</control>
+							<control type="label">
+								<posx>64</posx>
+								<width>241</width>
+								<height>35</height>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+								<include>dialog_CommonListItemFocus</include>
+							</control>
+						</control>
+					</focusedlayout>
 			</control>
+		</control>
+		<control type="image">
+			<description>Thumbnail</description>
+			<posx>347</posx>
+			<posy>79</posy>
+			<width>226</width>
+			<height>295</height>
+			<info>ListItem.Icon</info>
+			<aspectratio align="center">keep</aspectratio>
+			<fadetime>IconCrossfadeTime</fadetime>
 		</control>
 		<control type="label">
 			<posx>34</posx>
