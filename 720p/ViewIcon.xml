@@ -113,15 +113,15 @@
 				<control type="image">
 					<width>390</width>
 					<height>238</height>
-					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+					<texture background="true">$VAR[thumb_Portrait.Wide]</texture>
 					<bordertexture border="40">frames/frame_Square_clear.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<visible>Container.Content(movies) | SubString(Container.FolderPath,plugin://plugin.video.xbmcflicks) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 				</control>
 				<control type="group">
-					<posx>139</posx>
-					<posy>213</posy>
+					<posx>336</posx>
+					<posy>184</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
@@ -131,8 +131,8 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>139</posx>
-					<posy>213</posy>
+					<posx>336</posx>
+					<posy>184</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatchedAlt</include>
@@ -153,16 +153,15 @@
 				<control type="image">
 					<width>390</width>
 					<height>238</height>
-					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+					<texture background="true">$VAR[thumb_Portrait.Wide]</texture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">scale</aspectratio>
 					<visible>Container.Content(movies) | SubString(Container.FolderPath,plugin://plugin.video.xbmcflicks) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 				</control>
 				<control type="group">
-					<posx>139</posx>
-					<posy>213</posy>
+					<posx>336</posx>
+					<posy>184</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
-					<include>focus_ThumbPoster</include>
 					<control type="image">
 						<include>overlay_UnWatched</include>
 					</control>
@@ -171,10 +170,9 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>139</posx>
-					<posy>213</posy>
+					<posx>336</posx>
+					<posy>184</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<include>focus_ThumbPoster</include>
 					<control type="image">
 						<include>overlay_UnWatchedAlt</include>
 					</control>

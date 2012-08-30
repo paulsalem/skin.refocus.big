@@ -134,6 +134,18 @@
 		<value condition="IsEmpty(ListItem.Title) + Container.Content(actors)">thumbs/actor_portrait.jpg</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
+	<variable name="thumb_Portrait.Wide">
+		<value condition="IsEmpty(ListItem.Title) + Container.Content(movies)">thumbs/movie_landscape.jpg</value>
+		<value condition="IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)]">thumbs/tvshow_landscape.jpg</value>
+		<value condition="IsEmpty(ListItem.Title) + Container.Content(actors)">thumbs/actor_portrait.jpg</value>
+		<value condition="IsEmpty(ListItem.Title) + Container.Content(addons)">thumbs/addon.png</value>
+		<value condition="!IsEmpty(ListItem.Title) + Container.Content(movies) + !SubString(Container.FolderPath,plugin + !IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
+		<value condition="!IsEmpty(ListItem.Title) + Container.Content(tvshows)">$INFO[ListItem.Property(Fanart_Image)]</value>
+		<value condition="!IsEmpty(ListItem.Title) + Container.Content(movies) + IsEmpty(ListItem.Property(Fanart_Image))">thumbs/movie_landscape.jpg</value>
+		<value condition="!IsEmpty(ListItem.Title) + Container.Content(tvshows) + IsEmpty(ListItem.Property(Fanart_Image))">thumbs/tvshow_landscape.jpg</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+	
 	<variable name="thumb_Square.Condition">
 		<value condition="Container.Content(albums) + IsEmpty(ListItem.Thumb)">thumbs/album.png</value>
 		<value condition="Container.Content(artists) + IsEmpty(ListItem.Thumb)">thumbs/artist.png</value>
