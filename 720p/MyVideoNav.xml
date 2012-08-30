@@ -1,7 +1,7 @@
 ﻿<window id="25">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>47,50,51,52,521,522,53,531,54,541,5411,54111,57,571,5711,574,575,576,592</views>
+	<views>47,50,501,51,52,521,522,53,531,54,541,5411,54111,57,571,5711,574,575,576,592</views>
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="Library.HasContent(TVShows) + System.HasAddon(script.tvtunes) + Skin.HasSetting(tvtunes.addon)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>	
 	<onload condition="Library.HasContent(Movies) + System.HasAddon(script.moviesets) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.moviesets,containerId=7000)</onload>
@@ -38,11 +38,12 @@
 
 	<!---LIST------>
 		<include>view_List</include>
+		<include>view_List_1Row</include>
 		<control type="group">
 			<include>toggle_Menu</include>
 			<include>infoDialogHide</include>
 			<include>transition_Container</include>
-			<visible>Control.IsVisible(50)</visible>
+			<visible>Control.IsVisible(50) | Control.IsVisible(501)</visible>
 		<!---landscape--->
 			<control type="group">
 				<visible>!SubString(Container.Folderpath,plugin://)</visible>

@@ -380,4 +380,7 @@ Please consider supporting the development of XBMC by making a donation.
 <!--thumbnails wide-->
 <string id="32047">Wide Thumbnails</string>
 
+<!--list 1row-->
+<string id="32048">List Single Row</string>
+
 </strings>
