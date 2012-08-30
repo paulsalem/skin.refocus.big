@@ -35,8 +35,8 @@
 				<scrolltime tween="Cubic" easing="Out">scrolltime_Dialog</scrolltime>
 				<itemlayout height="57">
 						<control type="image">
-							<width>55</width>
-							<height>55</height>
+							<width>53</width>
+							<height>53</height>
 							<info>ListItem.Icon</info>
 							<include>dialog_CommonList</include>
 						</control>
@@ -48,25 +48,30 @@
 							<info>ListItem.Label</info>
 							<include>dialog_CommonListItem</include>
 						</control>
+						<control type="image">
+							<posy>55</posy>
+							<width>302</width>
+							<include>dialog_Separator</include>
+						</control>
 					</itemlayout>
 				<focusedlayout height="57">
 						<control type="image">
 							<width>310</width>
-							<height>55</height>
+							<height>53</height>
 							<visible>Control.HasFocus(450)</visible>
 							<include>dialog_CommonListFocus</include>
 						</control>
 						<control type="image">
 							<width>310</width>
-							<height>55</height>
+							<height>53</height>
 							<visible>!Control.HasFocus(450)</visible>
 							<include>dialog_CommonList</include>
 						</control>
 						<control type="group">
 							<include>ListViewFocusAnim</include>
 							<control type="image">
-								<width>55</width>
-								<height>55</height>
+								<width>53</width>
+								<height>53</height>
 								<info>ListItem.Icon</info>
 								<include>dialog_CommonList</include>
 							</control>
@@ -91,6 +96,12 @@
 			<info>ListItem.Icon</info>
 			<aspectratio align="center">keep</aspectratio>
 			<fadetime>IconCrossfadeTime</fadetime>
+		</control>
+		<control type="image">
+			<posx>345</posx>
+			<posy>79</posy>
+			<height>320</height>
+			<include>dialog_Separator-y</include>
 		</control>
 		<control type="label">
 			<posx>34</posx>
