@@ -85,6 +85,22 @@
 			<effect type="zoom" tween="Quadratic" start="140" end="100" center="225,120" easing="Out" time="200" />
 		</animation>
 	</include>
+    <include name="focus_Landscape">
+		<animation type="focus">
+			<effect type="zoom" tween="Quadratic" start="100" end="140" center="130,130" easing="Out" time="200"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="Quadratic" start="140" end="100" center="130,130" easing="Out" time="200" />
+		</animation>
+	</include>
+        <include name="focus_FanartPortrait">
+		<animation type="focus">
+			<effect type="zoom" tween="Quadratic" start="100" end="140" center="90,170" easing="Out" time="200"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="Quadratic" start="140" end="100" center="90,170" easing="Out" time="200" />
+		</animation>
+	</include>
 	<include name="focus_SlideLoginUser">
 		<animation type="focus">
 			<effect type="slide" tween="Quadratic" start="0,0" end="0,30" center="225,120" easing="Out" time="200"/>

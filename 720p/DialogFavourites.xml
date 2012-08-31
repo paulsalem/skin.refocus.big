@@ -91,7 +91,7 @@
 		</control>
 		<control type="image">
 			<description>Thumbnail</description>
-			<posx>347</posx>
+			<posx>350</posx>
 			<posy>79</posy>
 			<width>226</width>
 			<height>295</height>

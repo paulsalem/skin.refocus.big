@@ -1,0 +1,162 @@
+<includes>
+<!---INFO------>
+	<include name="info_LandscapeThumb">
+		<control type="group">
+			<include>toggle_Menu</include>
+			<include>transition_Info</include>
+			<include>infoDialogHide</include>
+			<visible>[Control.IsVisible(550) | Control.IsVisible(551)] + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<!---flags--->
+			<control type="image" id="99199">
+				<posx>40</posx>
+				<posy>640</posy>
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture fallback="empty">$VAR[flag_Studio]</texture>
+			</control>
+			<control type="image" id="99299">
+				<posx>40</posx>
+				<posy>640</posy>
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
+				<visible>StringCompare(Control.GetLabel(99199),empty)</visible>
+			</control>
+			<include>flags_Slide-media</include>
+			<!-- logo -->
+			<control type="image">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>250</width>
+				<height>97</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+			</control>
+			<!---info--->	
+			<control type="group">
+				<visible>!Container.Content(addons)</visible>
+				<posy>640</posy>
+				<control type="label">
+                    <width>1280</width>
+					<label>$VAR[global_Title]</label>
+					<font>titleSpecial</font>
+                    <align>center</align>
+					<include>info_Title</include>
+				</control>
+				<control type="label">
+					<posy>34</posy>
+					<width>1280</width>
+					<label>$VAR[global_Info]</label>
+					<font>titleSmallest</font>
+                    <align>center</align>
+					<include>info_Sub</include>
+					<!--<visible>!SubString(Container.FolderPath,plugin)</visible>-->
+				</control>
+			</control>
+		</control>
+	</include>
+   
+<!---LANDSCAPE------>
+	<include name="view_LandscapeThumb">
+		<control type="wraplist" id="550">
+			<viewtype label="WideSlide">biginfo</viewtype>
+			<posx>-110</posx>
+			<posy>430</posy>
+			<width>2200</width>
+			<height>330</height>
+			<onleft>521</onleft>
+			<onright>521</onright>
+			<onup>6000</onup>
+			<ondown>72</ondown>
+			<focusposition>2</focusposition>
+			<pagecontrol>72</pagecontrol>
+			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
+			<preloaditems>2</preloaditems>
+			<orientation>horizontal</orientation>
+			<include>transition_Container</include>
+			<include>infoDialogHide</include>
+			<include>toggle_Menu</include>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !SubString(Container.FolderPath,plugin.video.hulu)</visible>
+			<include condition="Window.IsVisible(videolibrary)">LandscapeVideo</include>
+		</control>	
+		<!---window menu shade-->
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture>home/menuBackground.png</texture>
+			<include>fadeinout</include>
+			<visible>Control.IsVisible(550) + ControlGroup(6000).HasFocus()</visible>
+		</control>
+    </include>
+	<include name="LandscapeVideo">
+		<itemlayout width="285" height="220">
+			<control type="group">
+				<control type="image">
+					<width>324</width>
+					<height>201</height>
+					<texture background="true">$VAR[view_Landscape.Thumb]</texture>
+					<bordertexture border="31">frames/frame_Square.png</bordertexture>
+					<bordersize>22</bordersize>
+				</control>
+				<control type="group">
+					<posx>270</posx>
+					<posy>147</posy>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>270</posx>
+					<posy>147</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout width="285" height="220">
+			<control type="group">
+				<include>focus_Landscape</include>
+				<control type="image">
+					<width>324</width>
+					<height>201</height>
+					<texture background="true">$VAR[view_Landscape.Thumb]</texture>
+					<bordertexture border="27">frames/frame_Square.png</bordertexture>
+					<bordersize>22</bordersize>
+				</control>
+				<control type="group">
+					<posx>270</posx>
+					<posy>147</posy>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatched</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+				<control type="group">
+					<posx>270</posx>
+					<posy>147</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<include>overlay_UnWatchedAlt</include>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+					</control>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+ </includes>

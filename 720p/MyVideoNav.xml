@@ -1,7 +1,7 @@
 ﻿<window id="25">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>47,50,501,51,52,521,522,53,531,54,541,5411,54111,57,571,5711,574,575,576,592</views>
+	<views>47,50,501,51,52,521,522,53,531,54,541,5411,54111,550,551,57,571,5711,574,575,576,592</views>
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="Library.HasContent(TVShows) + System.HasAddon(script.tvtunes) + Skin.HasSetting(tvtunes.addon)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>	
 	<onload condition="Library.HasContent(Movies) + System.HasAddon(script.moviesets) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.moviesets,containerId=7000)</onload>
@@ -13,7 +13,7 @@
 		<include>PageControls</include>
 		<include>nav_Indicator</include>
 		<include>view_GalleryFull</include>
-                <include>view_Fanart</include>
+        <include>view_Fanart</include>
 		<include>view_ThumbEpisode</include>
 		<include>view_IconSquare</include>
 		<include>view_SlideMusic</include>
@@ -566,6 +566,11 @@
 		<include>info_Slide</include>
 		<include>info_SlideAddons</include>
 
+<!---LANDSCAPE--->
+        <include>view_LandscapeThumb</include>
+        <include>info_LandscapeThumb</include>
+        <include>view_PortraitFanart</include>
+        <include>info_PortraitFanart</include>
 <!---THUMBNAILS------>
 		<control type="group">
 			<include>transition_Container</include>

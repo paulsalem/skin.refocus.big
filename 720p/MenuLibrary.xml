@@ -223,6 +223,38 @@
 						<include>button_Menu</include>
 					</control>
 				</control>
+				<!--FANART: use posters-->
+				<control type="group">
+					<width>220</width>
+					<height>42</height>
+					<visible>Control.IsVisible(550) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !SubString(Container.FolderPath,plugin://)</visible>
+					<control type="button" id="90">
+						<label>$LOCALIZE[31061]</label>
+						<onup>31</onup>
+						<ondown>1</ondown>
+						<onright>50</onright>
+						<onclick>Container.SetViewMode(551)</onclick>
+						<onclick>SetFocus(551)</onclick>
+						<onclick>Skin.ToggleSetting(view.fanart.poster)</onclick>
+						<include>button_Menu</include>
+					</control>
+				</control>
+				<!--FANART: use fanart-->
+				<control type="group">
+					<width>220</width>
+					<height>42</height>
+					<visible>Control.IsVisible(551) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !SubString(Container.FolderPath,plugin://)</visible>
+					<control type="button" id="90">
+						<label>$LOCALIZE[31039]</label>
+						<onup>31</onup>
+						<ondown>1</ondown>
+						<onright>50</onright>
+						<onclick>Container.SetViewMode(550)</onclick>
+						<onclick>Skin.ToggleSetting(view.fanart.poster)</onclick>
+						<onclick>SetFocus(550)</onclick>
+						<include>button_Menu</include>
+					</control>
+				</control>
 				<!--SLIDE: artist landscape-->
 				<control type="group">
 					<width>220</width>
@@ -411,7 +443,7 @@
 						<onclick>SetFocus(50)</onclick>
 						<onright>30</onright>
 						<onback>30</onback>
-						<onup>415</onup>
+						<onup>416</onup>
 						<ondown>402</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -428,8 +460,8 @@
 						<onclick>SetFocus(501)</onclick>
 						<onright>30</onright>
 						<onback>30</onback>
-						<onup>414</onup>
-						<ondown>402</ondown>
+						<onup>401</onup>
+						<ondown>403</ondown>
 						<include>button_Menu</include>
 					</control>
 				</control>
@@ -445,7 +477,7 @@
 						<onclick>SetFocus(51)</onclick>
 						<onright>30</onright>
 						<onback>30</onback>
-						<onup>401</onup>
+						<onup>402</onup>
 						<ondown>404</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -463,7 +495,7 @@
 						<onclick>SetFocus(52)</onclick>
 						<onright>30</onright>
 						<onback>30</onback>
-						<onup>402</onup>
+						<onup>403</onup>
 						<ondown>405</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -479,7 +511,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(521)</onclick>
 						<onright>30</onright>
-						<onup>403</onup>
+						<onup>404</onup>
 						<ondown>406</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -495,7 +527,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(522)</onclick>
 						<onright>30</onright>
-						<onup>403</onup>
+						<onup>404</onup>
 						<ondown>406</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -511,7 +543,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(57)</onclick>
 						<onright>30</onright>
-						<onup>404</onup>
+						<onup>405</onup>
 						<ondown>407</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -527,7 +559,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(5711)</onclick>
 						<onright>30</onright>
-						<onup>405</onup>
+						<onup>406</onup>
 						<ondown>408</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -543,7 +575,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(573)</onclick>
 						<onright>30</onright>
-						<onup>406</onup>
+						<onup>407</onup>
 						<ondown>409</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -559,7 +591,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(574)</onclick>
 						<onright>30</onright>
-						<onup>407</onup>
+						<onup>408</onup>
 						<ondown>410</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -575,7 +607,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(541)</onclick>
 						<onright>30</onright>
-						<onup>408</onup>
+						<onup>409</onup>
 						<ondown>411</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -591,7 +623,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(5411)</onclick>
 						<onright>30</onright>
-						<onup>409</onup>
+						<onup>410</onup>
 						<ondown>412</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -607,7 +639,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(54111)</onclick>
 						<onright>30</onright>
-						<onup>410</onup>
+						<onup>411</onup>
 						<ondown>413</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -623,7 +655,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(54)</onclick>
 						<onright>30</onright>
-						<onup>411</onup>
+						<onup>412</onup>
 						<ondown>414</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -639,7 +671,7 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(53)</onclick>
 						<onright>30</onright>
-						<onup>412</onup>
+						<onup>413</onup>
 						<ondown>415</ondown>
 						<include>button_Menu</include>
 					</control>
@@ -655,7 +687,23 @@
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(47)</onclick>
 						<onright>30</onright>
-						<onup>413</onup>
+						<onup>414</onup>
+						<ondown>416</ondown>
+						<include>button_Menu</include>
+					</control>
+				</control>
+				<!--landscape_thumb-->
+                <control type="group">
+					<width>220</width>
+					<height>42</height>
+					<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | Container.Content(episodes)] + !substring(container.folderpath,plugin://)</visible>
+					<control type="button" id="416">
+						<label>Fanart</label>
+						<onclick>Container.SetViewMode(550)</onclick>
+						<onclick>SetFocus(1)</onclick>
+						<onclick>SetFocus(550)</onclick>
+						<onright>30</onright>
+						<onup>415</onup>
 						<ondown>401</ondown>
 						<include>button_Menu</include>
 					</control>
