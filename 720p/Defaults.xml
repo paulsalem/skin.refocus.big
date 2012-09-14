@@ -96,7 +96,7 @@
 	<default type="progress">
 		<texturebg border="10">dialogs/progressBackground.png</texturebg>
 		<lefttexture>-</lefttexture>
-		<midtexture border="10.5">dialogs/progressSlider.png</midtexture>
+		<midtexture border="10.5">dialogs/progressSliderReAlaska.png</midtexture>
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>

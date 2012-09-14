@@ -96,8 +96,8 @@
 				<control type="image">
 					<width>324</width>
 					<height>201</height>
-					<texture background="true">$VAR[view_Landscape.Thumb]</texture>
-					<bordertexture border="31">frames/frame_Square.png</bordertexture>
+					<texture background="true" fallback="thumbs/movie_landscape.jpg">$VAR[view_Landscape.Thumb]</texture>
+					<bordertexture border="31">frames/frame_Square_clear.png</bordertexture>
 					<bordersize>22</bordersize>
 				</control>
 				<control type="group">
@@ -130,8 +130,8 @@
 				<control type="image">
 					<width>324</width>
 					<height>201</height>
-					<texture background="true">$VAR[view_Landscape.Thumb]</texture>
-					<bordertexture border="27">frames/frame_Square.png</bordertexture>
+					<texture background="true" fallback="thumbs/movie_landscape.jpg">$VAR[view_Landscape.Thumb]</texture>
+					<bordertexture border="27">frames/frame_Square_clear.png</bordertexture>
 					<bordersize>22</bordersize>
 				</control>
 				<control type="group">

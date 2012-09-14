@@ -422,7 +422,7 @@
 					<posy>13</posy>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 					<!--tv channels-->
-					<control type="button" id="700">
+					<control type="button" id="1">
 						<posx>13</posx>
 						<width>48</width>
 						<height>48</height>
@@ -431,12 +431,12 @@
 						<texturenofocus>osd/osd-button-guide.png</texturenofocus>
 						<onup>600</onup>
 						<ondown>-</ondown>
-						<onleft>705</onleft>
-						<onright>701</onright>
+						<onleft>6</onleft>
+						<onright>2</onright>
 						<onclick>Dialog.Close(VideoOSD,true)</onclick>
 						<onclick>XBMC.ActivateWindow(PVROSDChannels)</onclick>
 					</control>
-					<control type="togglebutton" id="701">
+					<control type="togglebutton" id="2">
 						<posx>68</posx>
 						<width>48</width>
 						<height>48</height>
@@ -447,11 +447,11 @@
 						<alttexturenofocus>osd/osd-button-play.png</alttexturenofocus>
 						<onup>600</onup>
 						<ondown>-</ondown>
-						<onleft>700</onleft>
-						<onright>702</onright>
+						<onleft>1</onleft>
+						<onright>3</onright>
 						<onclick>PlayerControl(Play)</onclick>
 					</control>
-					<control type="button" id="702">
+					<control type="button" id="3">
 						<posx>123</posx>
 						<posy>0</posy>
 						<width>48</width>
@@ -459,13 +459,13 @@
 						<font>-</font>
 						<texturefocus>osd/osd-button-stop-focus.png</texturefocus>
 						<texturenofocus>osd/osd-button-stop.png</texturenofocus>
-						<onleft>701</onleft>
-						<onright>703</onright>
+						<onleft>2</onleft>
+						<onright>4</onright>
 						<onup>600</onup>
 						<ondown>-</ondown>
 						<onclick>PlayerControl(Stop)</onclick>
 					</control>
-					<control type="button" id="703">
+					<control type="button" id="4">
 						<posx>178</posx>
 						<posy>0</posy>
 						<width>48</width>
@@ -473,13 +473,13 @@
 						<font>-</font>
 						<texturefocus>osd/osd-button-channelup-focus.png</texturefocus>
 						<texturenofocus>osd/osd-button-channelup.png</texturenofocus>
-						<onleft>702</onleft>
-						<onright>704</onright>
+						<onleft>3</onleft>
+						<onright>5</onright>
 						<onup>600</onup>
 						<ondown>-</ondown>
 						<onclick>PlayerControl(Previous)</onclick>
 					</control>
-					<control type="button" id="704">
+					<control type="button" id="5">
 						<posx>233</posx>
 						<posy>0</posy>
 						<width>48</width>
@@ -487,13 +487,13 @@
 						<font>-</font>
 						<texturefocus>osd/osd-button-channeldown-focus.png</texturefocus>
 						<texturenofocus>osd/osd-button-channeldown.png</texturenofocus>
-						<onleft>703</onleft>
-						<onright>705</onright>
+						<onleft>4</onleft>
+						<onright>6</onright>
 						<onup>600</onup>
 						<ondown>-</ondown>
 						<onclick>PlayerControl(Next)</onclick>
 					</control>
-					<control type="togglebutton" id="705">
+					<control type="togglebutton" id="6">
 						<posx>288</posx>
 						<posy>0</posy>
 						<width>48</width>
@@ -504,8 +504,8 @@
 						<usealttexture>Player.Recording</usealttexture>
 						<alttexturefocus>osd/osd-button-recording-focus.png</alttexturefocus>
 						<alttexturenofocus>osd/osd-button-recording.png</alttexturenofocus>
-						<onleft>704</onleft>
-						<onright>700</onright>
+						<onleft>5</onleft>
+						<onright>1</onright>
 						<onup>600</onup>
 						<ondown>-</ondown>
 						<onclick>PlayerControl(Record)</onclick>

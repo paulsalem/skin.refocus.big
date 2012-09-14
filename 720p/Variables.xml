@@ -137,12 +137,13 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="view_Landscape.Thumb">
-        <value condition="Container.Content(movies)">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</value>
-        <value condition="Container.Content(seasons)">$INFO[ListItem.Path,,season]$INFO[ListItem.Season,,-landscape.jpg]</value>
-        <value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Icon]</value>
-        <value condition="Container.Content(tvshows)">$INFO[ListItem.Path,,landscape.jpg]</value>
-        <value>$INFO[ListItem.property(fanart_image)]</value>
-    </variable>
+		<value condition="Container.Content(movies)">$INFO[ListItem.Path,,landscape.jpg]</value>
+		<value condition="Container.Content(movies)">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</value>
+		<value condition="Container.Content(seasons)">$INFO[ListItem.Path]$INFO[ListItem.Season,season,-landscape.jpg]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Icon]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Path,,landscape.jpg]</value>
+		<value>$INFO[ListItem.property(fanart_image)]</value>
+	</variable>
 	<variable name="thumb_Portrait.Condition">
 		<value condition="IsEmpty(ListItem.Title) + Container.Content(movies)">thumbs/movie_portrait.jpg</value>
 		<value condition="IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)]">thumbs/tvshow_portrait.jpg</value>
@@ -166,7 +167,7 @@
 		<value condition="Container.Content(artists) + IsEmpty(ListItem.Thumb)">thumbs/artist.png</value>
 		<value condition="Container.Content(songs) + IsEmpty(ListItem.Thumb)">thumbs/album.png</value>
 		<value condition="[Container.Content(files) | Container.Content(addons)] + IsEmpty(ListItem.Thumb)">thumbs/addon.png</value>
-		<value>$INFO[ListItem.Icon]</value>
+		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
 	<variable name="view_Banner.Thumb">
 		<value condition="!Skin.HasSetting(banners.local)">$INFO[ListItem.Icon]</value>
@@ -190,6 +191,14 @@
 		<value condition="!IntegerGreaterThan(Container(52).ListItem.Property(Rating),4)">rating/nf-rating2.png</value>
 		<value condition="!IntegerGreaterThan(Container(52).ListItem.Property(Rating),6)">rating/nf-rating3.png</value>
 		<value condition="!IntegerGreaterThan(Container(52).ListItem.Property(Rating),8)">rating/nf-rating4.png</value>
+		<value>rating/nf-rating5.png</value>
+	</variable>
+	<variable name="custom_Rating_Home.Info">
+		<value condition="!IntegerGreaterThan(Container(8002).ListItem.Property(Rating),1)">rating/nf-rating0.png</value>
+		<value condition="!IntegerGreaterThan(Container(8002).ListItem.Property(Rating),2)">rating/nf-rating1.png</value>
+		<value condition="!IntegerGreaterThan(Container(8002).ListItem.Property(Rating),4)">rating/nf-rating2.png</value>
+		<value condition="!IntegerGreaterThan(Container(8002).ListItem.Property(Rating),6)">rating/nf-rating3.png</value>
+		<value condition="!IntegerGreaterThan(Container(8002).ListItem.Property(Rating),8)">rating/nf-rating4.png</value>
 		<value>rating/nf-rating5.png</value>
 	</variable>
 	<variable name="art_Logo.Condition">

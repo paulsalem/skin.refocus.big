@@ -81,36 +81,13 @@
 						<onclick>SendClick(2003,12)</onclick>
 						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 					</item>
-					<!--banner-->
+						<!--artwork downloader-->
 					<item id="4">
-						<label>$LOCALIZE[31945]</label>
-						<onclick>Close</onclick>
-						<onclick>XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, medianame=$INFO[ListItem.TVShowTitle],banner)</onclick>
-						<visible>Container.Content(tvshows)</visible>
-						<enable>System.HasAddon(script.artwork.downloader)</enable>
-					</item>
-					<!--logo-->
-					<item id="5">
-						<label>$LOCALIZE[31946]</label>
-						<onclick>Close</onclick>
-						<onclick>XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, medianame=$INFO[ListItem.TVShowTitle],clearlogo)</onclick>
-						<visible>Container.Content(tvshows)</visible>
-						<enable>System.HasAddon(script.artwork.downloader)</enable>
-					</item>
-					<!--extrafanart-->
-					<item id="6">
-						<label>$LOCALIZE[31131]</label>
-						<onclick>Close</onclick>
-						<onclick>XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, medianame=$INFO[ListItem.TVShowTitle],extrafanart)</onclick>
-						<visible>Container.Content(tvshows)</visible>
-						<enable>System.HasAddon(script.artwork.downloader)</enable>
-					</item>
-					<item id="7">
-						<label>$LOCALIZE[31131]</label>
-						<onclick>Close</onclick>
-						<onclick>XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=movie, medianame=$INFO[ListItem.Title],mediapath=$INFO[ListItem.Path],extrafanart)</onclick>
-						<visible>Container.Content(movies)</visible>
-						<enable>System.HasAddon(script.artwork.downloader)</enable>
+						<description>Get Artwork</description>
+						<label>$LOCALIZE[31950]</label>
+						<onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, medianame=$ESCINFO[ListItem.TVShowTitle])</onclick>
+						<onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, medianame=$ESCINFO[ListItem.Title],mediapath=$ESCINFO[ListItem.Path])</onclick>
+						<visible>[Container.Content(tvshows)|Container.Content(movies)]+system.hasaddon(script.artwork.downloader)</visible>
 					</item>
 					<!--metadata.actors-refresh-->
 					<item id="8">

@@ -163,25 +163,86 @@
 				<selected>Skin.HasSetting(home.stats)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!--search-->
+			<!--search CURRENTLY REMOVED
 			<control type="radiobutton" id="110">
 				<label>$LOCALIZE[31933]</label>
 				<onclick>Skin.ToggleSetting(home.search)</onclick>
 				<selected>Skin.HasSetting(home.search)</selected>
+				<visible>!Skin.HasSetting(home.widgets)</visible>
 				<include>button_Settings</include>
 			</control>
 			<control type="radiobutton" id="111">
 				<label>- $LOCALIZE[31934]</label>
 				<onclick>Skin.ToggleSetting(search.addon)</onclick>
 				<selected>Skin.HasSetting(search.addon)</selected>
-				<visible>Skin.HasSetting(home.search)</visible>
+				<visible>Skin.HasSetting(home.search) + !Skin.HasSetting(home.widgets)</visible>
 				<include>button_Settings</include>
-			</control>
-			<!--MenuSelect>-->
+			</control>-->
+			<!--MenuSelect-->
 			<control type="radiobutton" id="112">
 				<label>$LOCALIZE[32042]</label>
 				<onclick>Skin.ToggleSetting(home.menuselect.realaska)</onclick>
 				<selected>Skin.HasSetting(home.menuselect.realaska)</selected>
+				<include>button_Settings</include>
+			</control>
+			<!--widgets-->
+			<control type="label" id="113">
+				<label>$LOCALIZE[32060]</label>
+				<font>category</font>
+				<textcolor>Color2</textcolor>
+				<include>button_Settings</include>
+			</control>
+			<!--Home Widgets-->
+			<control type="radiobutton" id="114">
+				<label>$LOCALIZE[32049]</label>
+				<onclick>Skin.ToggleSetting(home.widgets)</onclick>
+				<selected>Skin.HasSetting(home.widgets)</selected>
+				<include>button_Settings</include>
+			</control>
+			<!--Home Widgets-->
+			<control type="radiobutton" id="115">
+				<label>$LOCALIZE[32025]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.lightopacity)</onclick>
+				<onclick>Skin.ToggleSetting(home.widgets.medopacity)</onclick>
+				<selected>Skin.HasSetting(home.widgets.lightopacity)</selected>
+				<visible>Skin.HasSetting(home.widgets)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Home Widgets-->
+			<control type="radiobutton" id="116">
+				<label>$LOCALIZE[32026]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.medopacity)</onclick>
+				<onclick>Skin.ToggleSetting(home.widgets.lightopacity)</onclick>
+				<selected>!Skin.HasSetting(home.widgets.medopacity)</selected>
+				<visible>Skin.HasSetting(home.widgets)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Home Widgets-->
+			<control type="radiobutton" id="117">
+				<label>$LOCALIZE[32050]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.watchlist)</onclick>
+				<onclick>Skin.Reset(home.widgets.watchlistrecent)</onclick>
+				<onclick>Skin.Reset(home.widgets.watchlistposters)</onclick>
+				<selected>Skin.HasSetting(home.widgets.watchlist)</selected>
+				<visible>Skin.HasSetting(home.widgets)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Home Widgets-->
+			<control type="radiobutton" id="118">
+				<label>$LOCALIZE[32059]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.watchlistposters)</onclick>
+				<selected>Skin.HasSetting(home.widgets.watchlistposters)</selected>
+				<visible>Skin.HasSetting(home.widgets) + [Skin.HasSetting(home.widgets.watchlist) | Skin.HasSetting(home.widgets.watchlistrecent)]</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Home Widgets-->
+			<control type="radiobutton" id="119">
+				<label>$LOCALIZE[32056]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.watchlistrecent)</onclick>
+				<onclick>Skin.Reset(home.widgets.watchlist)</onclick>
+				<onclick>Skin.Reset(home.widgets.watchlistposters)</onclick>
+				<selected>Skin.HasSetting(home.widgets.watchlistrecent)</selected>
+				<visible>Skin.HasSetting(home.widgets)</visible>
 				<include>button_Settings</include>
 			</control>
 		</control>
@@ -558,13 +619,14 @@
 				<selected>Skin.HasSetting(watchlist.disable)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!--search-->
+			<!--search CURRENTLY REMOVED
 			<control type="radiobutton" id="802">
 				<label>$LOCALIZE[31934]</label>
 				<onclick>Skin.ToggleSetting(search.addon)</onclick>
 				<selected>Skin.HasSetting(search.addon)</selected>
+				<visible>!Skin.HasSetting(home.widgets)</visible>
 				<include>button_Settings</include>
-			</control>
+			</control>-->
 			<!--artistslideshow-->
 			<control type="radiobutton" id="803">
 				<label>$LOCALIZE[32001]</label>
@@ -664,35 +726,94 @@
 				<include>button_Settings</include>
 			</control>
 			<control type="radiobutton" id="909">
+				<label>$LOCALIZE[32062]</label>
+				<onclick>Skin.ToggleSetting(background.opacity.enabled)</onclick>
+				<onclick>Skin.SetString(background.opacity,100)</onclick>
+				<selected>Skin.HasSetting(background.opacity.enabled)</selected>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="910">
 				<label>$LOCALIZE[32033]</label>
 				<onclick>Skin.ToggleSetting(background.opacitymediaonly)</onclick>
 				<selected>Skin.HasSetting(background.opacitymediaonly)</selected>
 				<include>button_Settings</include>
-				<visible>Skin.HasSetting(background.opacitylight) | Skin.HasSetting(background.opacitymedium) | Skin.HasSetting(background.opacityheavy)</visible>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
 			</control>
-			<control type="radiobutton" id="910">
-				<label>$LOCALIZE[32025]</label>
-				<onclick>Skin.ToggleSetting(background.opacitylight)</onclick>
-				<onclick>Skin.Reset(background.opacitymedium)</onclick>
-				<onclick>Skin.Reset(background.opacityheavy)</onclick>
-				<selected>Skin.HasSetting(background.opacitylight)</selected>
+			<control type="label" id="911">
+				<label>$LOCALIZE[32061]: ([COLOR=Color2]$INFO[Skin.String(background.opacity)]%[/COLOR])</label>
+				<font>normal</font>
 				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
 			</control>
-			<control type="radiobutton" id="911">
-				<label>$LOCALIZE[32026]</label>
-				<onclick>Skin.ToggleSetting(background.opacitymedium)</onclick>
-				<onclick>Skin.Reset(background.opacitylight)</onclick>
-				<onclick>Skin.Reset(background.opacityheavy)</onclick>
-				<selected>Skin.HasSetting(background.opacitymedium)</selected>
+			<control type="button" id="912">
+				<label>- 100%</label>
+				<onclick>Skin.SetString(background.opacity,100)</onclick>
+				<selected>Skin.HasSetting(background.opacity)</selected>
 				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
 			</control>
-			<control type="radiobutton" id="912">
-				<label>$LOCALIZE[32027]</label>
-				<onclick>Skin.ToggleSetting(background.opacityheavy)</onclick>
-				<onclick>Skin.Reset(background.opacitylight)</onclick>
-				<onclick>Skin.Reset(background.opacitymedium)</onclick>
-				<selected>Skin.HasSetting(background.opacityheavy)</selected>
+			<control type="button" id="913">
+				<label>- 90%</label>
+				<onclick>Skin.SetString(background.opacity,90)</onclick>
+				<selected>Skin.HasSetting(background.opacity)</selected>
 				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
+			</control>
+			<control type="button" id="914">
+				<label>- 80%</label>
+				<onclick>Skin.SetString(background.opacity,80)</onclick>
+				<selected>Skin.HasSetting(background.opacity)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
+			</control>
+			<control type="button" id="915">
+				<label>- 70%</label>
+				<onclick>Skin.SetString(background.opacity,70)</onclick>
+				<selected>Skin.HasSetting(background.opacity)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
+			</control>
+			<control type="button" id="916">
+				<label>- 60%</label>
+				<onclick>Skin.SetString(background.opacity,60)</onclick>
+				<selected>Skin.HasSetting(background.opacity)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
+			</control>
+			<control type="button" id="917">
+				<label>- 50%</label>
+				<onclick>Skin.SetString(background.opacity,50)</onclick>
+				<selected>Skin.HasSetting(background.opacity)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
+			</control>
+			<control type="button" id="918">
+				<label>- 40%</label>
+				<onclick>Skin.SetString(background.opacity,40)</onclick>
+				<selected>Skin.HasSetting(background.opacity)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
+			</control>
+			<control type="button" id="919">
+				<label>- 30%</label>
+				<onclick>Skin.SetString(background.opacity,30)</onclick>
+				<selected>Skin.HasSetting(background.opacity)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
+			</control>
+			<control type="button" id="920">
+				<label>- 20%</label>
+				<onclick>Skin.SetString(background.opacity,20)</onclick>
+				<selected>Skin.HasSetting(background.opacity)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
+			</control>
+			<control type="button" id="921">
+				<label>- 10%</label>
+				<onclick>Skin.SetString(background.opacity,10)</onclick>
+				<selected>Skin.HasSetting(background.opacity)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(background.opacity.enabled)</visible>
 			</control>
 		</control>
 <!---SKIN CREDITS------>					
