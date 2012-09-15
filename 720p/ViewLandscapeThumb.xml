@@ -96,6 +96,13 @@
 				<control type="image">
 					<width>324</width>
 					<height>201</height>
+					<texture background="true">$INFO[ListItem.property(fanart_image)]</texture>
+					<bordertexture border="31">frames/frame_Square.png</bordertexture>
+					<bordersize>22</bordersize>
+				</control>
+                <control type="image">
+					<width>324</width>
+					<height>201</height>
 					<texture background="true">$VAR[view_Landscape.Thumb]</texture>
 					<bordertexture border="31">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
@@ -128,6 +135,13 @@
 			<control type="group">
 				<include>focus_Landscape</include>
 				<control type="image">
+					<width>324</width>
+					<height>201</height>
+					<texture background="true">$INFO[ListItem.property(fanart_image)]</texture>
+					<bordertexture border="27">frames/frame_Square.png</bordertexture>
+					<bordersize>22</bordersize>
+				</control>
+                <control type="image">
 					<width>324</width>
 					<height>201</height>
 					<texture background="true">$VAR[view_Landscape.Thumb]</texture>
