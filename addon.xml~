@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+	<addon id="skin.refocus.big" version="0.82" name="reFocus Big" provider-name="Jeroen Modded by Salem">
+	<requires>
+		<import addon="xbmc.gui" version="3.00"/>
+		<import addon="script.artwork.downloader" version="1.0.7"/>
+		<import addon="script.randomitems" version="3.1.1"/>
+		<import addon="script.tv.show.next.aired" version="4.1.12"/>
+		<import addon="script.watchlist" version="0.1.8"/>
+		<import addon="script.globalsearch" version="0.2.5"/>
+	</requires>
+	<extension point="xbmc.gui.skin" defaultthemename="realaskadark.xbt" effectslowdown="1.00" debugging="true">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>reFocus by Jeroen modded by Paul Salem</summary>
+		<summary lang="nl">reFocus door Jeroen</summary>
+		<summary lang="es">reFocus, hecho por Jeroen y modificado por Paul Salem</summary>
+		<summary lang="pl">reFocus autorstwa Jeroena</summary>
+		<summary lang="de">reFocus, von Jeroen</summary>
+		<description>reFocus mod with an added option for big and realaka fonts as well as several script support additions and new themes.  </description>
+		<description lang="nl">reFocus is een complete herziening van de originele Focus skin welke werd uitgebracht in 2008. En ook al zijn er grote visuele verschillen, het heeft nog het zelfde uitgangspunt. En dat is het bieden van een strakke, minimalistische gebruikerservaring, waarbij jouw media in het middelpunt staat.</description>
+		<description lang="es">reFocus mod con soporte opcional de fuenes de gran tamaño así como integración total de los reAlaska mods y soporte para una mayor cantidad de scripts y temas.</description>
+		<description lang="pl">reFocus to całkowite przeobrażenie poprzedniej skóry Focus, wydanej w 2008 roku. Pomimo wielu róźnić w podejściu do prezentacji materiałów, nowa skóra oparta jest o tę samą filozofię co jej poprzedniczka, która zakłada lekkość, minimalizm i płynność, stawiając Twoje media w centrum doznań.</description>
+		<description lang="de">reFocus ist ein komplettes redesign des Focus Skins, der 2008 veröffentlicht wurde. Und trotzdem dieser Skin sich optisch sehr vom Original unterscheidet, sind beide mit der selbe Philosophie erstellt worden: Eine glatte, minimalistische Oberfläche zu entwickeln, die deine Medien in den Mittelpunkt des Erlebnisses setzt.</description>
+		<disclaimer>mouse usage not supported</disclaimer>
+		<disclaimer lang="nl">muis bediening wordt niet ondersteund</disclaimer>
+		<disclaimer lang="es"></disclaimer>
+		<disclaimer lang="pl"></disclaimer>
+		<disclaimer lang="de"></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>

@@ -158,8 +158,16 @@
 						<include>dialog_Radio</include>
 						<visible>Skin.HasSetting(fanart.global)</visible>
 					</control>
-					<!--slideshows-->
+					<!--vignette home-->
 					<control type="radiobutton" id="204">
+						<width>557</width>
+						<label>$LOCALIZE[32057]</label>
+						<onclick>Skin.ToggleSetting(home.vignette)</onclick>
+						<selected>Skin.HasSetting(home.vignette)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--slideshows-->
+					<control type="radiobutton" id="205">
 						<width>557</width>
 						<label>$LOCALIZE[31936]</label>
 						<onclick>Skin.ToggleSetting(slideshow.fanart)</onclick>
@@ -167,7 +175,7 @@
 						<selected>Skin.HasSetting(slideshow.fanart)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<control type="radiobutton" id="205">
+					<control type="radiobutton" id="206">
 						<width>557</width>
 						<label>$LOCALIZE[32046]</label>
 						<onclick>Skin.ToggleSetting(slideshow.custom2)</onclick>
@@ -175,7 +183,7 @@
 						<selected>Skin.HasSetting(slideshow.custom2)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<control type="button" id="206">
+					<control type="button" id="207">
 						<width>557</width>
 						<label>$LOCALIZE[31937]</label>
 						<onclick>Skin.SetPath(slideshow.custom.path)</onclick>
@@ -184,11 +192,39 @@
 						<visible>Skin.HasSetting(slideshow.custom2)</visible>
 					</control>
 					<!--background video-->
-					<control type="radiobutton" id="207">
+					<control type="radiobutton" id="208">
 						<width>557</width>
 						<label>$LOCALIZE[31028]</label>
 						<onclick>Skin.ToggleSetting(home.backgroundvideo)</onclick>
 						<selected>!Skin.HasSetting(home.backgroundvideo)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--reset wallpapers-->
+					<control type="button" id="209">
+						<width>557</width>
+						<label>$LOCALIZE[32058]</label>
+						<onclick>Skin.Reset(fanart.video.path)</onclick>
+						<onclick>Skin.Reset(fanart.video.image)</onclick>
+						<onclick>Skin.Reset(fanart.movies.path)</onclick>
+						<onclick>Skin.Reset(fanart.movies.image)</onclick>
+						<onclick>Skin.Reset(fanart.tvshows.path)</onclick>
+						<onclick>Skin.Reset(fanart.tvshows.image)</onclick>
+						<onclick>Skin.Reset(fanart.pvr.path)</onclick>
+						<onclick>Skin.Reset(fanart.pvr.image)</onclick>
+						<onclick>Skin.Reset(fanart.music.path)</onclick>
+						<onclick>Skin.Reset(fanart.music.image)</onclick>
+						<onclick>Skin.Reset(fanart.pictures.path)</onclick>
+						<onclick>Skin.Reset(fanart.pictures.image)</onclick>
+						<onclick>Skin.Reset(fanart.addons.path)</onclick>
+						<onclick>Skin.Reset(fanart.addons.image)</onclick>
+						<onclick>Skin.Reset(fanart.system.path)</onclick>
+						<onclick>Skin.Reset(fanart.system.image)</onclick>
+						<onclick>Skin.Reset(fanart.favourites.path)</onclick>
+						<onclick>Skin.Reset(fanart.favourites.image)</onclick>
+						<onclick>Skin.Reset(fanart.disc.path)</onclick>
+						<onclick>Skin.Reset(fanart.disc.image)</onclick>
+						<onclick>Skin.Reset(fanart.weather.image)</onclick>
+						<onclick>Skin.Reset(fanart.weather.singlepath)</onclick>
 						<include>dialog_Radio</include>
 					</control>
 				</control>
@@ -230,7 +266,6 @@
 						<label>$LOCALIZE[32005]</label>
 						<onclick>Skin.Reset(fanart.video.path)</onclick>
 						<onclick>Skin.Reset(fanart.video.image)</onclick>
-
 						<include>dialog_Radio</include>
 					</control>
 				</control>

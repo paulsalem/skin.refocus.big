@@ -6,8 +6,8 @@
 			<height>700</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
-			<onright>888</onright>
-			<onleft>6000</onleft>
+			<onright>8004</onright>
+			<onleft>RunAddon(script.globalsearch)</onleft>
 			<orientation>vertical</orientation>
 			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
 			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>	
@@ -133,11 +133,19 @@
 				<!--weather-->
 				<item id="17">
 					<!--<label>$LOCALIZE[8]</label>-->
+					<label>$LOCALIZE[8]</label>
+					<onclick>ActivateWindow(weather)</onclick>
+					
+					<visible>!Skin.HasSetting(homemenu.weather) + Weather.IsFetched + [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009)] | [Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)]</visible>
+				</item>				
+				<item id="17">
+					<!--<label>$LOCALIZE[8]</label>-->
 					<label>$INFO[Weather.Temperature]$INFO[Window(Weather).Property(Location), in ,]</label>
 					<onclick>ActivateWindow(weather)</onclick>
 					
-					<visible>!Skin.HasSetting(homemenu.weather) + Weather.IsFetched</visible>
+					<visible>!Skin.HasSetting(homemenu.weather) + Weather.IsFetched + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009)] + [!Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)]</visible>
 				</item>
+				
 				<!--favourites-->
 				<item id="18">
 					<label>$LOCALIZE[1036]</label>
@@ -151,15 +159,21 @@
 					<visible>System.HasMediadvd + !Skin.HasSetting(homemenu.disc) + !Player.HasAudio +!Player.HasVideo</visible>
 				</item>
 				<item id="21">
-					<label>$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Title]</label>
+					<label>31051</label>
 					<onclick>ActivateWindow(musicplaylist)</onclick>
 					<!--<label2>$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Title]</label2>-->
-					<visible>Player.HasAudio + !Skin.HasSetting(homemenu.playing)</visible>
+					<visible>Player.HasAudio</visible>
 				</item>
 				<item id="22">
+					<label>31051</label>
+					<onclick>ActivateWindow(videoplaylist)</onclick>
+					<visible>Player.HasVideo + Skin.HasSetting(home.backgroundvideo)]</visible>
+					<!--<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>-->
+				</item>
+				<item id="23">
 					<label>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label>
 					<onclick>ActivateWindow(videoplaylist)</onclick>
-					<visible>Player.HasVideo + !Skin.HasSetting(homemenu.playing)</visible>
+					<visible>Player.HasVideo + !Skin.HasSetting(home.backgroundvideo)]</visible>
 					<!--<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>-->
 				</item>
 			</content>

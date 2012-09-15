@@ -12,7 +12,7 @@
 			<control type="image">
 				<width>48</width>
 				<height>48</height>
-				<texture>busy/busy.png</texture>
+				<texture>busy/busyoriginal.png</texture>
 				<aspectratio>keep</aspectratio>
 				<animation effect="rotate" start="360" end="0" center="24,24" time="1200" loop="true" condition="true">conditional</animation>
 			</control>

@@ -166,10 +166,11 @@
 <!---MUSIC SUBMENU------>
 			<control type="list" id="1130">
 				<posx>-800</posx>
-				<width>900</width>
+				<width>410</width>
 				<height>800</height>
 				<onback>9000</onback>
 				<onleft>9000</onleft>
+				<onright>8004</onright>
 				<onup>1130</onup>
 				<ondown>1130</ondown>
 				<orientation>vertical</orientation>
@@ -277,10 +278,11 @@
 <!---ADDONS SUBMENU------>
 			<control type="list" id="1150">
 				<posx>-800</posx>
-				<width>900</width>
+				<width>410</width>
 				<height>800</height>
 				<onback>9000</onback>
 				<onleft>9000</onleft>
+				<onright>8004</onright>
 				<onup>1150</onup>
 				<ondown>1150</ondown>
 				<orientation>vertical</orientation>
@@ -473,9 +475,10 @@
 <!---MOVIES SUBMENU------>
 			<control type="list" id="1200">
 				<posx>-800</posx>
-				<width>900</width>
+				<width>410</width>
 				<height>800</height>
 				<onback>9000</onback>
+				<onright>8004</onright>
 				<onleft>9000</onleft>
 				<onup>1200</onup>
 				<ondown>1200</ondown>
@@ -558,10 +561,11 @@
 <!---TVSHOWS SUBMENU------>
 			<control type="list" id="1210">
 				<posx>-800</posx>
-				<width>900</width>
+				<width>410</width>
 				<height>800</height>
 				<onback>9000</onback>
 				<onleft>9000</onleft>
+				<onright>8004</onright>
 				<onup>1210</onup>
 				<ondown>1210</ondown>
 				<orientation>vertical</orientation>

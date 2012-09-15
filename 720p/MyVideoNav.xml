@@ -13,7 +13,7 @@
 		<include>PageControls</include>
 		<include>nav_Indicator</include>
 		<include>view_GalleryFull</include>
-        <include>view_Fanart</include>
+		<include>view_Fanart</include>
 		<include>view_ThumbEpisode</include>
 		<include>view_IconSquare</include>
 		<include>view_SlideMusic</include>

@@ -24,12 +24,14 @@
 	<include file="ViewSlide.xml" />
 	<include file="ViewBanner.xml" />
 	<include file="ViewGallery.xml" />
-    <include file="ViewFanart.xml" />
-    <include file="ViewLandscapeThumb.xml" />
-    <include file="ViewPortraitFanart.xml" />
+	<include file="ViewFanart.xml" />
+	<include file="ViewLandscapeThumb.xml" />
+	<include file="ViewPortraitFanart.xml" />
 	<include file="ViewsTV.xml" />
 	<include file="ViewMovieSets.xml" /><!-- Added this view 'Movie Sets View' -->
 	<include file="custom_MovieSetsInfo.xml" />
+	<include file="IncludesHomeWidgets.xml" />
+
 
 <!---CONSTANTS------>
 	<constant name="screen_Width">1280</constant>

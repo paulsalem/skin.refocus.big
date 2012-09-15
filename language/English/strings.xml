@@ -212,6 +212,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31948">Information</string>
 <string id="31949">-</string>
 <string id="31950">Get Artwork</string>
+
 <string id="31951">-</string>
 <string id="31952">-</string>
 <string id="31953">Trailers</string>
@@ -347,7 +348,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32031">Show Chapters Information on Paused OSD</string>
 
 <!--Chapters-->
-<string id="32032">Show Media Nameson xperience1080 OSD</string>
+<string id="32032">Show Media Name on xperience1080 OSD</string>
 
 <!--Opacity-->
 <string id="32033">Apply Opacity only to Media Views</string>
@@ -368,5 +369,37 @@ Please consider supporting the development of XBMC by making a donation.
 
 <!--menuSelect-->
 <string id="32042">Use reAlaska Select Pointer on Home Menu</string>
+
+<!--osd-->
+<string id="32043">Use folder.jpg on OSD</string>
+<string id="32044">Use minimal OSD</string>
+
+<!--wallpapers-->
+<string id="32045">Use original wallpaper</string>
+<string id="32046">Use Custom Slideshow</string>
+
+<!--thumbnails wide-->
+<string id="32047">Wide Thumbnails</string>
+
+<!--list 1row-->
+<string id="32048">List Single Row</string>
+
+<!--home menu-->
+<string id="32049">Enable Widgets on Home Menu</string>
+<string id="32050">Use Watchlist Items</string>
+<string id="32051">Latest Episodes</string>
+<string id="32052">Currently Watching</string>
+<string id="32053">Latest Movies</string>
+<string id="32054">Latest Albums</string>
+<string id="32055">Random Addons</string>
+<string id="32056">Use both Watchlist and Recent Items</string>
+<string id="32057">Enable Vignette Overlay on Home Menu</string>
+<string id="32058">Reset Wallpapers</string>
+<string id="32059">Use Posters on Watchlist Items</string>
+<string id="32060">Widgets</string>
+
+<!--Opacity-->
+<string id="32061">Set Opacity Level</string>
+<string id="32062">Enable Opacity</string>
 
 </strings>
