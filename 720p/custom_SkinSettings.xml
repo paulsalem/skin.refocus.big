@@ -734,13 +734,13 @@
 				<selected>Skin.HasSetting(global.kiosk)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!--intro-->
+			<!--intro
 			<control type="radiobutton" id="906">
 				<label>$LOCALIZE[31058]</label>
 				<onclick>Skin.ToggleSetting(intro.enable)</onclick>
 				<selected>!Skin.HasSetting(intro.enable)</selected>
 				<include>button_Settings</include>
-			</control>
+			</control>-->
 			<!--opacity-->
 			<control type="label" id="908">
 				<label>$LOCALIZE[32024]</label>
