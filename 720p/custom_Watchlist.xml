@@ -1,8 +1,8 @@
 ﻿<window id="63">
 	<defaultcontrol always="true">52</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<onload condition="System.HasAddon(script.watchlist) + IsEmpty(Window(Home).Property(WatchList_Running))">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=25)</onload>
-	<onload>RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=25)</onload>
+	<onload condition="System.HasAddon(script.watchlist) + IsEmpty(Window(Home).Property(WatchList_Running))">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=10)</onload>
+	<onload condition="Skin.HasSetting(watchlist.refresh)">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=10)</onload>-->
 		
 	<controls>
 	<!---fanart------>

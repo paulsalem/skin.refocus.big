@@ -245,6 +245,22 @@
 				<visible>Skin.HasSetting(home.widgets)</visible>
 				<include>button_Settings</include>
 			</control>
+			<!--Home Widgets-->
+			<control type="radiobutton" id="120">
+				<label>$LOCALIZE[32100]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.nofanart)</onclick>
+				<selected>Skin.HasSetting(home.widgets.nofanart)</selected>
+				<visible>Skin.HasSetting(home.widgets)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Home Widgets-->
+			<control type="radiobutton" id="121">
+				<label>$LOCALIZE[32070]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.noanimations)</onclick>
+				<selected>Skin.HasSetting(home.widgets.noanimations)</selected>
+				<visible>Skin.HasSetting(home.widgets)</visible>
+				<include>button_Settings</include>
+			</control>
 		</control>
 <!---ARTWORK------>
 		<control type="grouplist" id="600">
@@ -617,6 +633,13 @@
 				<label>$LOCALIZE[31082]</label>
 				<onclick>Skin.ToggleSetting(watchlist.disable)</onclick>
 				<selected>Skin.HasSetting(watchlist.disable)</selected>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="802">
+				<label>$LOCALIZE[32090]</label>
+				<onclick>Skin.ToggleSetting(watchlist.refresh)</onclick>
+				<selected>Skin.HasSetting(watchlist.refresh)</selected>
+				<visible>!Skin.HasSetting(watchlist.disable)</visible>
 				<include>button_Settings</include>
 			</control>
 			<!--search CURRENTLY REMOVED

@@ -402,4 +402,19 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32061">Set Opacity Level</string>
 <string id="32062">Enable Opacity</string>
 
+<!--Search-->
+<string id="32063">Remove search word from Home Menu</string>
+
+<!--Animations-->
+<string id="32070">Remove Animations on Widgets</string>
+
+<!--Addons-->
+<string id="32090">Run Watchlist script on every home/watchlist screens refresh</string>
+
+<!--Widgets-->
+<string id="32100">Disable fanart on Widgets</string>
+
+
+
+
 </strings>

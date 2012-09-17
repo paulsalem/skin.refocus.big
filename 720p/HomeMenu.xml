@@ -143,7 +143,7 @@
 					<label>$INFO[Weather.Temperature]$INFO[Window(Weather).Property(Location), in ,]</label>
 					<onclick>ActivateWindow(weather)</onclick>
 					
-					<visible>!Skin.HasSetting(homemenu.weather) + Weather.IsFetched + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009)] + [!Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)]</visible>
+					<visible>!Skin.HasSetting(homemenu.weather) + Weather.IsFetched + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009)] + [[!Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)] | !Skin.HasSetting(home.widgets)]</visible>
 				</item>
 				
 				<!--favourites-->
