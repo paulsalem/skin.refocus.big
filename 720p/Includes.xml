@@ -291,6 +291,7 @@
 			</control>
 			<control type="label">
 				<posx>25r</posx>
+				<posy>28</posy>
 				<label>$INFO[System.Date(DDD)] $INFO[System.Date(d)] $INFO[System.Date(MMM)]</label>
 				<include>toast_Bottom</include>
 				<visible>Skin.HasSetting(home.date)</visible>
