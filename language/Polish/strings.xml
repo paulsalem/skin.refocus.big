@@ -55,7 +55,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31028">Wyświetlaj odtwarzane wideo w tle</string>
   <string id="31029">Wyświetlaj wizualizacje w tle</string>
   <string id="31030">Główne menu</string>
-  <string id="31031">Dostosuj Główne menu</string>
+  <string id="31031">Ustawienia Głównego menu</string>
   <string id="31032">-</string>
   <string id="31033">Inteligentna playlista</string>
   <string id="31034">-</string>
@@ -182,7 +182,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31926">[COLOR=Color2]Nowe[/COLOR] Filmy</string>
   <string id="31927">-</string>
   <string id="31928">Timer</string>
-  <string id="31929">Przyciemnij brzegi</string>
+  <string id="31929">Przyciemnij brzegi ekranów</string>
   <string id="31930">Wybierz widok</string>
   <string id="31931">[COLOR=Color2]Nowe[/COLOR] Teledyski</string>
   <string id="31932">[COLOR=Color2]Nowe[/COLOR] Albumy</string>
@@ -190,7 +190,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31934">Użyj wtyczki GlobalSearch</string>
   <string id="31935">-</string>
   <string id="31936">Użyj pokazu slajdów fanartu</string>
-  <string id="31937">Ustaw własny pokaz slajdów</string>
+  <string id="31937">Ustaw folder pokazu slajdów</string>
   <string id="31938">Włącz tę sekcję</string>
   <string id="31939">-</string>
   <string id="31940">-</string>
@@ -254,7 +254,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31999">Użyj oryginalnego zegara</string>
   <string id="32000">Backspace kieruje do Ekranu głównego</string>
   <string id="32001">Użyj wtyczki Artistslideshow</string>
-  <string id="32002">Dostosuj tło</string>
+  <string id="32002">Ustawienia tła</string>
   <string id="32003">Wybierz obrazek tła</string>
   <string id="32004">Wybierz folder tła</string>
   <string id="32005">Wyczyść</string>
@@ -265,7 +265,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="32010">Pobierz TV Tunes</string>
   <string id="32011">Losowy Gatunek</string>
   <string id="32012">Losowy Film</string>
-  <string id="32013">Użyj Ulubionych zamiast Smart Playlists</string>
+  <string id="32013">Użyj Ulubionych zamiast Inteligentnych Playlist</string>
   <string id="32014">Ulubione</string>
   <string id="32015">Szukaj w YouTube</string>
   <string id="32016">Odtwórz losowy Film</string>
@@ -284,9 +284,9 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="32029">Użyj powiększenia w pokazie slajdów artystów</string>
   <string id="32030">OSD</string>
   <string id="32031">Wyświetlaj informację o rozdziałach w czasie pauzy</string>
-  <string id="32032">Wyświetlaj tytuł mediów na OSD xperience 1080</string>
+  <string id="32032">Wyświetlaj tytuł mediów w xperience 1080</string>
   <string id="32033">Zastosuj przeźroczystość tylko na ekranach mediów</string>
-  <string id="32034">Wyświetlaj pasek postępu na OSD xperience 1080</string>
+  <string id="32034">Wyświetlaj pasek postępu w xperience 1080</string>
   <string id="32035">Użyj plakatu w OSD zamiast Clearartu</string>
   <string id="32036">Użyj Extra Fanart w widokach mediów</string>
   <string id="32037">Włącz animację tła</string>
@@ -296,7 +296,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="32041">Użyj czarnej poświaty</string>
   <string id="32042">Użyj wskaźnika reAlaska na Ekranie głównym</string>
   <string id="32043">Użyj folder.jpg w OSD zamiast plakatu</string>
-  <string id="32044">Zminimalizuj OSD</string>
+  <string id="32044">Wyświetlaj minimalny OSD</string>
   <string id="32045">Użyj oryginalnej tapety</string>
   <string id="32046">Użyj własnego pokazu slajdów</string>
   <string id="32047">Szerokie Miniaturki</string>
@@ -310,7 +310,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="32055">Losowe Wtyczki</string>
   <string id="32056">Wyświetl oba: Watchlist i Ostatnio dodane</string>
   <string id="32057">Przyciemnij brzegi Ekranu głównego</string>
-  <string id="32058">Zresetuj tapety</string>
+  <string id="32058">Przywróć ustawienia domyślne tapet</string>
   <string id="32059">Wyświetl plakaty zamiast miniatur na liście Watchlist</string>
   <string id="32060">Widgety</string>
   <string id="32061">Ustaw stopień pokrycia</string>
