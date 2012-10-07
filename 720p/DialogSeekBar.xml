@@ -1,4 +1,4 @@
-<window id="115">
+﻿<window id="115">
 	<defaultcontrol>23</defaultcontrol>
 	<visible>![Window.IsActive(142)] + !Player.HasAudio + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] + ![Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 	<controls>
@@ -124,9 +124,9 @@
 					<animation effect="fade" start="0" end="100" time="400" tween="sine" easing="inout">Visible</animation>
 				        <animation effect="fade" start="100" end="0" time="400" tween="sine" easing="inout">Hidden</animation>					
 					<control type="progress" id="1">
-						<posx>90</posx>
+						<posx>61</posx>
 						<posy>5</posy>
-						<width>743</width>
+						<width>790</width>
 						<height>18</height>
 						<texturebg border="10">dialogs/progressBackground.png</texturebg>
 						<lefttexture>-</lefttexture>
@@ -137,19 +137,18 @@
 						<visible>Player.Paused + ![Window.IsActive(videoosd) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding]</visible>						
 					</control>
 					<control type="label" id="1">
-						<posx>87</posx>
+						<posx>5</posx>
 						<width>1000</width>
 						<label>$INFO[Player.Time]</label>
-						<align>right</align>
 						<font>description</font>
 						<textcolor>Color8</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="label" id="1">
-						<posx>838</posx>
+						<posx>914</posx>
 						<width>1000</width>
 						<label>$INFO[Player.TimeRemaining]</label>
-						<align>left</align>
+						<align>right</align>
 						<textcolor>Color8</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -217,15 +216,6 @@
 							<align>right</align>
 							<scroll>false</scroll>
 						</control>
-						<control type="image">
-							<description>Finish flag</description>
-							<posx>1152</posx>
-							<posy>-10</posy>
-							<width>50</width>
-							<height>50</height>
-							<texture >osd/fullscreen/finish.png</texture>
-						</control>
-					
 					</control>
 					<control type="group">
 						<visible>Player.Forwarding | Player.Rewinding</visible>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
 <string id="31000">
 [COLOR=Color2][B][UPPERCASE]Skin Designer and Developer[/UPPERCASE][/B][/COLOR]
@@ -138,7 +138,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31114">: On</string>
 <string id="31115"></string>
 <string id="31116">Items</string>
-<string id="31117">By</string><!--TRANSLATORS: example usage = "sorted by date/name/episode"-->
+<string id="31117">By</string><!--TRANSLATORS: example usage = "sorted by date/name/episode"--->
 <string id="31118">-</string>
 <string id="31119">Other</string>
 <string id="31120">Use Fanart in Now Playing Screen</string>

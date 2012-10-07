@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Language file translated with Team XBMC Translator-->
-<!--Translator: paweu-->
-<!--Date of translation: 09/18/2012-->
+<!--Translator: Rafał Wójcik-->
+<!--Email: rafal.wojcik@gmail.com-->
+<!--Date of translation: 02/14/2012-->
 <!--$Revision$-->
 <strings>
   <string id="31000">
@@ -15,7 +16,6 @@ Społeczności XBMC za ich pomoc, skóry, wtyczki, skrypty i aplikacje, dzięki 
 [B][COLOR=Color2]Wersja polska[/COLOR][/B]
 Rafał Wójcik
 Podziękowania za pomoc dla xzbit
-Refocus BIG: Paweł Gawroński
 
 [B][COLOR=Color2]Dostępność[/COLOR][/B]
 Skórę reFocus możesz pobierać ze strony [B]code.google.com/p/xbmc-focus/[/B]
@@ -30,8 +30,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31003">Slajdy</string>
   <string id="31004">Panel</string>
   <string id="31006">-</string>
-  <string id="31007">
-  </string>
+  <string id="31007"></string>
   <string id="31008">-</string>
   <string id="31009">-</string>
   <string id="31010">-</string>
@@ -55,7 +54,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31028">Wyświetlaj odtwarzane wideo w tle</string>
   <string id="31029">Wyświetlaj wizualizacje w tle</string>
   <string id="31030">Główne menu</string>
-  <string id="31031">Ustawienia Głównego menu</string>
+  <string id="31031">Dostosuj Główne menu</string>
   <string id="31032">-</string>
   <string id="31033">Inteligentna playlista</string>
   <string id="31034">-</string>
@@ -84,9 +83,9 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31058">Wyłącz animację startową</string>
   <string id="31059">Użyj ikony</string>
   <string id="31060">Włącz płynne przewijanie</string>
-  <string id="31061">Użyj plakatów</string>
-  <string id="31062">Włącz pełny ekran</string>
-  <string id="31063">Włącz pasek</string>
+  <string id="31061">Użyj plakaty</string>
+  <string id="31062">Na pełnym ekranie</string>
+  <string id="31063">W pasku</string>
   <string id="31064">Baner</string>
   <string id="31065">Logo</string>
   <string id="31066">Włącz widoki Baner i Panel</string>
@@ -104,9 +103,8 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31079">Przeglądaj wszystkie seriale w bibliotece</string>
   <string id="31080">25 ostatnio dodanych filmów</string>
   <string id="31081">25 ostatnio dodanych odcinków</string>
-  <string id="31082">Nie używaj wtyczki Watchlist</string>
   <string id="31085">Timery</string>
-  <string id="31086">Watchlist</string>
+  <string id="31086">Obserwowane</string>
   <string id="31087">sezon</string>
   <string id="31088">odcinek</string>
   <string id="31089">Wszystkie</string>
@@ -119,8 +117,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31096">Nowe albumy</string>
   <string id="31097">Aktualnie oglądane</string>
   <string id="31098">Rekomendowane filmy</string>
-  <string id="31099">Włącz wyświetlanie Fanart jako tło</string>
-  <string id="31100">Min</string>
+  <string id="31099">Włącz globalne tło fanartów</string>
   <string id="31101">Temperatura</string>
   <string id="31102">Witaj</string>
   <string id="31103">-</string>
@@ -135,10 +132,9 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31112">Włączone</string>
   <string id="31113">: Nie</string>
   <string id="31114">: Tak</string>
-  <string id="31115">
-  </string>
+  <string id="31115"></string>
   <string id="31116">Pozycje</string>
-  <string id="31117">wg</string>
+  <string id="31117">Po</string>
   <string id="31118">-</string>
   <string id="31119">Inne</string>
   <string id="31120">Użyj Fanartu na ekranie Teraz odtwarzane</string>
@@ -147,23 +143,22 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31123">Wyjśćie</string>
   <string id="31124">Ekran główny</string>
   <string id="31125">Foldery</string>
-  <string id="31126">Wyświetl wizualizację z Fanartem w tle</string>
+  <string id="31126">Przyciemnij tło</string>
   <string id="31127">Grafika</string>
   <string id="31128">Pokaż pasek statusu (wyłącza rss)</string>
   <string id="31129">Pobierz banery</string>
   <string id="31130">Pobierz logotypy</string>
   <string id="31131">Pobierz dodatkowy fanart</string>
-  <string id="31132">Użyj Extra Fanart w widoku galerii</string>
+  <string id="31132">użyj dodatkowy fanart w widoku galerii</string>
   <string id="31900">Pokaż wszystko</string>
   <string id="31901">Tryb plików</string>
   <string id="31902">Dostępne grupy</string>
   <string id="31903">Ukryte kanały</string>
   <string id="31904">Kanały w grupach</string>
-  <string id="31905">Grupuj</string>
   <string id="31906">-</string>
   <string id="31907">Pokaż czas</string>
   <string id="31908">-</string>
-  <string id="31909">O</string>
+  <string id="31909">O reFocus</string>
   <string id="31910">Średnio wysoka</string>
   <string id="31911">Średnio niska</string>
   <string id="31912">Umiarkowanie wysoka</string>
@@ -182,7 +177,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31926">[COLOR=Color2]Nowe[/COLOR] Filmy</string>
   <string id="31927">-</string>
   <string id="31928">Timer</string>
-  <string id="31929">Przyciemnij brzegi ekranów</string>
+  <string id="31929">Włącz ciemną winietę</string>
   <string id="31930">Wybierz widok</string>
   <string id="31931">[COLOR=Color2]Nowe[/COLOR] Teledyski</string>
   <string id="31932">[COLOR=Color2]Nowe[/COLOR] Albumy</string>
@@ -190,7 +185,7 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31934">Użyj wtyczki GlobalSearch</string>
   <string id="31935">-</string>
   <string id="31936">Użyj pokazu slajdów fanartu</string>
-  <string id="31937">Ustaw folder pokazu slajdów</string>
+  <string id="31937">Ustaw własny pokaz slajdów</string>
   <string id="31938">Włącz tę sekcję</string>
   <string id="31939">-</string>
   <string id="31940">-</string>
@@ -203,7 +198,6 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31947">Teraz odtwarzane</string>
   <string id="31948">Informacje</string>
   <string id="31949">-</string>
-  <string id="31950">Pobierz obrazy</string>
   <string id="31951">-</string>
   <string id="31952">-</string>
   <string id="31953">Zwiastuny</string>
@@ -240,83 +234,8 @@ Rozważ możliwość wsparcia finansowego twórców XBMC.
   <string id="31984">Usuń grupę</string>
   <string id="31985">TV</string>
   <string id="31986">Kanały</string>
-  <string id="31987">Program TV</string>
+  <string id="31987">EPG</string>
   <string id="31988">Odtwórz ponownie</string>
   <string id="31990">Nagrania</string>
   <string id="31991">Zastosuj</string>
-  <string id="31992">Program</string>
-  <string id="31993">Serie Filmów</string>
-  <string id="31994">Wyświetlaj datę</string>
-  <string id="31995">Wyświetlaj Logotypy artystów w Muzyce</string>
-  <string id="31996">Ustaw folder Muzyki</string>
-  <string id="31997">Użyj OSD reAlaska</string>
-  <string id="31998">Użyj paska postępu OSD reAlaska</string>
-  <string id="31999">Użyj oryginalnego zegara</string>
-  <string id="32000">Backspace kieruje do Ekranu głównego</string>
-  <string id="32001">Użyj wtyczki Artistslideshow</string>
-  <string id="32002">Ustawienia tła</string>
-  <string id="32003">Wybierz obrazek tła</string>
-  <string id="32004">Wybierz folder tła</string>
-  <string id="32005">Wyczyść</string>
-  <string id="32006">Wyświetl Fanart pogody w oparciu o aktualne warunki</string>
-  <string id="32007">Ustaw folder Fanartu pogody w podziale na kody warunków</string>
-  <string id="32008">Ogólne</string>
-  <string id="32009">Użyj wtyczki TV Tunes</string>
-  <string id="32010">Pobierz TV Tunes</string>
-  <string id="32011">Losowy Gatunek</string>
-  <string id="32012">Losowy Film</string>
-  <string id="32013">Użyj Ulubionych zamiast Inteligentnych Playlist</string>
-  <string id="32014">Ulubione</string>
-  <string id="32015">Szukaj w YouTube</string>
-  <string id="32016">Odtwórz losowy Film</string>
-  <string id="32017">Odtwórz losowy Gatunek</string>
-  <string id="32018">Wyświetlaj datę na białym tle na Ekranie głównym</string>
-  <string id="32019">Banery w dwóch kolumnach</string>
-  <string id="32020">Włącz Logotypy Stacji TV</string>
-  <string id="32021">Lista banerów</string>
-  <string id="32022">Zakończono</string>
-  <string id="32023">Użyj OSD xperience 1080</string>
-  <string id="32024">Ustawienia przezroczystości tła</string>
-  <string id="32025">Słabe pokrycie</string>
-  <string id="32026">Średnie pokrycie</string>
-  <string id="32027">Silne pokrycie</string>
-  <string id="32028">Użyj Alternatywnych oznaczeń ogladanych</string>
-  <string id="32029">Użyj powiększenia w pokazie slajdów artystów</string>
-  <string id="32030">OSD</string>
-  <string id="32031">Wyświetlaj informację o rozdziałach w czasie pauzy</string>
-  <string id="32032">Wyświetlaj tytuł mediów w xperience 1080</string>
-  <string id="32033">Zastosuj przeźroczystość tylko na ekranach mediów</string>
-  <string id="32034">Wyświetlaj pasek postępu w xperience 1080</string>
-  <string id="32035">Użyj plakatu w OSD zamiast Clearartu</string>
-  <string id="32036">Użyj Extra Fanart w widokach mediów</string>
-  <string id="32037">Włącz animację tła</string>
-  <string id="32038">Powolna animacja</string>
-  <string id="32039">Wyświetl poświatę nad OSD</string>
-  <string id="32040">Użyj szarej poświaty</string>
-  <string id="32041">Użyj czarnej poświaty</string>
-  <string id="32042">Użyj wskaźnika reAlaska na Ekranie głównym</string>
-  <string id="32043">Użyj folder.jpg w OSD zamiast plakatu</string>
-  <string id="32044">Wyświetlaj minimalny OSD</string>
-  <string id="32045">Użyj oryginalnej tapety</string>
-  <string id="32046">Użyj własnego pokazu slajdów</string>
-  <string id="32047">Szerokie Miniaturki</string>
-  <string id="32048">Lista - pojedynczy wiersz</string>
-  <string id="32049">Włącz listy na Ekranie głównym</string>
-  <string id="32050">Wyświetl Watchlist zamiast Ostatnio dodane</string>
-  <string id="32051">Ostatnio dodane Odcinki</string>
-  <string id="32052">Teraz oglądane</string>
-  <string id="32053">Ostatnio dodane Filmy</string>
-  <string id="32054">Ostatnio dodane Albumy</string>
-  <string id="32055">Losowe Wtyczki</string>
-  <string id="32056">Wyświetl oba: Watchlist i Ostatnio dodane</string>
-  <string id="32057">Przyciemnij brzegi Ekranu głównego</string>
-  <string id="32058">Przywróć ustawienia domyślne tapet</string>
-  <string id="32059">Wyświetl plakaty zamiast miniatur na liście Watchlist</string>
-  <string id="32060">Widgety</string>
-  <string id="32061">Ustaw stopień pokrycia</string>
-  <string id="32062">Włącz przezroczystość</string>
-  <string id="32063">Usuń wyraz "szukaj" z Ekranu głównego</string>
-  <string id="32070">Nie animuj Widgetów</string>
-  <string id="32090">Odświeżaj listę Watchlist za każdym razem</string>
-  <string id="32100">Nie używaj fanartu w Widgetach</string>
 </strings>
