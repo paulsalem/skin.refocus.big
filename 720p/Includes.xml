@@ -747,7 +747,7 @@
 	<include name="overlay_UnWatchedAlt">
 		<width>32</width>
 		<height>32</height>
-		<texture>$INFO[ListItem.Overlay]</texture>
+		<info>ListItem.Overlay</info>
 		<aspectratio align="right">keep</aspectratio>
 		<visible>[Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
 	</include>
