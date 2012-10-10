@@ -1927,7 +1927,7 @@
 <include name="OSDWeatherClock">
         <control type="group">
             <animation effect="slide" end="-100" time="300" tween="sine" easing="inout" condition="Player.Muted | substring(Player.Volume,-60.0)">Conditional</animation>
-            <!--<animation effect="slide" end="-213" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>-->
+            <animation effect="slide" end="-213" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,668" time="400" tween="sine" easing="inout" condition="Skin.HasSetting(VideoOSD.OnTop) + Window.IsActive(fullscreenvideo)">Conditional</animation>
             <include>OSDHideShowAnimation</include>
             <visible>Skin.HasSetting(videoosd.xperience1080)</visible>

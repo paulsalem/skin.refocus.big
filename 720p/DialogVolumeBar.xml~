@@ -3,7 +3,7 @@
 	<coordinates>
 		<system>1</system>
 		<posx>490</posx>
-		<posy>41</posy>
+		<posy>37</posy>
 	</coordinates>
 	<include>fadeinout</include>
 	<controls>
