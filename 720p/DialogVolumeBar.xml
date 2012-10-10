@@ -3,10 +3,12 @@
 	<coordinates>
 		<system>1</system>
 		<posx>490</posx>
-		<posy>5</posy>
+		<posy>41</posy>
 	</coordinates>
 	<include>fadeinout</include>
 	<controls>
+	<control type="group"> 
+		<!-- <visible>![Window.IsActive(fullscreenvideo) + Skin.HasSetting(videoosd.xperience1080)]</visible>-->
 		<control type="image">
 			<width>300</width>
 			<height>120</height>
@@ -28,5 +30,48 @@
 			<height>18</height>
 			<info>Player.Volume</info>
 		</control>
+	</control>
+
+<!-- <control type="group">  
+            <animation type="WindowOpen">
+                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+                <effect type="slide" start="50" end="0" time="300" tween="sine" easing="inout" />
+            </animation>
+            <animation type="WindowClose">
+                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
+                <effect type="slide" start="0" end="50" time="200" tween="sine" easing="inout" />
+            </animation>
+            <animation effect="slide" end="-100" time="300" tween="sine" easing="inout" condition="Player.Muted | substring(Player.Volume,-60.0)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="0,886" time="400" tween="sine" easing="inout" condition="Skin.HasSetting(VideoOSD.OnTop)">Conditional</animation>
+            <visible>Window.IsActive(fullscreenvideo) + Skin.HasSetting(videoosd.xperience1080)</visible>
+		<control type="image">
+                <posx>1070</posx>
+                <posy>0</posy>
+                <width>305</width>
+                <height>194</height>
+                <texture>overlays/volume/back-vf.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+                <description>Volume image</description>
+                <posx>1230</posx>
+                <posy>47</posy>
+                <width>100</width>
+                <height>100</height>
+                <texture>overlays/volume/volume-vf.png</texture>
+            </control>
+            <control type="label">
+                <description>Volume label</description>
+                <posx>1242</posx>
+                <posy>76</posy>
+                <width>150</width>
+                <height>34</height>
+                <label>$INFO[Player.Volume]</label>
+           
+                <textcolor>aawhite</textcolor>
+                <align>right</align>
+                <scroll>No</scroll>
+            </control>
+        </control>-->
 	</controls>
 </window>
