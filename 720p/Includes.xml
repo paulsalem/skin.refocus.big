@@ -747,7 +747,7 @@
 	<include name="overlay_UnWatchedAlt">
 		<width>32</width>
 		<height>32</height>
-		<info>ListItem.Overlay</info>
+		<texture>$INFO[ListItem.Overlay]</texture>
 		<aspectratio align="right">keep</aspectratio>
 		<visible>[Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
 	</include>
@@ -1199,6 +1199,17 @@
 				<aspectratio align="center">keep</aspectratio>
 				<visible>VideoPlayer.Content(livetv)</visible>
 			</control>
+			
+			
+			<control type="image" id="1">
+				<posx>1172</posx>
+				<posy>27</posy>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/video/HD/nf-HD.png</texture>
+				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540) + Skin.HasSetting(rating.rt)</visible>
+			</control>
 			<control type="image" id="1">
 				<posx>1206</posx>
 				<posy>27</posy>
@@ -1206,8 +1217,10 @@
 				<height>48</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture>flags/video/HD/nf-HD.png</texture>
-				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
+				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540) + [!Skin.HasSetting(rating.rt) | !VideoPlayer.Content(movies)]</visible>
 			</control>
+			
+			
 			<!---info--->
 			<control type="group" id="1">
 				<posx>160</posx>
@@ -1268,6 +1281,8 @@
 					<aspectratio align="right">keep</aspectratio>
 					<texture>flags/codec/$INFO[MusicPlayer.Codec,,.png]</texture>
 				</control>
+				
+				
 				<control type="image" id="1">
 					<posx>965</posx>
 					<posy>30</posy>
@@ -1275,7 +1290,55 @@
 					<height>22</height>
 					<texture>$INFO[Player.StarRating,rating/nf-,]</texture>
 					<aspectratio align="right">keep</aspectratio>
+					
+					
+					<visible>!Skin.HasSetting(rating.rt) | !VideoPlayer.Content(movies)</visible>
+					
+					
 				</control>
+				
+				
+				<!--rotten tomatoes-->
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<posx>1015</posx>
+					<posy>34</posy>
+					<visible>Skin.HasSetting(rating.rt) + VideoPlayer.Content(movies)</visible>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>67</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Critics.Percentage]%</label>
+						<font>date</font>
+					</control>
+				</control>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<posx>1015</posx>
+					<posy>70</posy>
+					<visible>Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + VideoPlayer.Content(movies)</visible>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Audience.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>67</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Audience.Percentage]%</label>
+						<font>date</font>
+					</control>
+				</control>
+				
+				
 				<!---plot------>
 				<control type="group" id="1">
 					<posy>55</posy>
@@ -1441,6 +1504,8 @@
 				<aspectratio align="center">keep</aspectratio>
 				<visible>VideoPlayer.Content(livetv) | VideoPlayer.Content(files)</visible>
 			</control>
+			
+			
 			<control type="image" id="1">
 				<posx>1206</posx>
 				<posy>5</posy>
@@ -1448,8 +1513,19 @@
 				<height>48</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture>flags/video/HD/nf-HD-OSD.png</texture>
-				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
+				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540) + [!Skin.HasSetting(rating.rt) | !VideoPlayer.Content(movies)]</visible>
 			</control>
+			<control type="image" id="1">
+				<posx>1177</posx>
+				<posy>5</posy>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/video/HD/nf-HD-OSD.png</texture>
+				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540) + Skin.HasSetting(rating.rt)</visible>
+			</control>
+			
+			
 		</control>
 		<control type ="group">
 			<visible>Skin.HasSetting(videoosd.showposter)</visible>
@@ -1524,6 +1600,8 @@
 				<aspectratio align="center">keep</aspectratio>
 				<visible>VideoPlayer.Content(livetv) | VideoPlayer.Content(files)</visible>
 			</control>
+			
+			
 			<control type="image" id="1">
 				<posx>1206</posx>
 				<posy>5</posy>
@@ -1531,8 +1609,19 @@
 				<height>48</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture>flags/video/HD/nf-HD-OSD.png</texture>
-				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
+				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540) + [!Skin.HasSetting(rating.rt) | !VideoPlayer.Content(movies)]</visible>
 			</control>
+			<control type="image" id="1">
+				<posx>1177</posx>
+				<posy>5</posy>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/video/HD/nf-HD-OSD.png</texture>
+				<visible>IntegerGreaterThan(VideoPlayer.VideoResolution,540) + Skin.HasSetting(rating.rt)</visible>
+			</control>
+			
+			
 		</control>
 
 		<!---info--->
@@ -1597,6 +1686,8 @@
 				<aspectratio align="right">keep</aspectratio>
 				<texture>flags/codecw/$INFO[MusicPlayer.Codec,,.png]</texture>
 			</control>
+			
+			
 			<control type="image" id="1">
 				<posx>845</posx>
 				<posy>35</posy>
@@ -1604,14 +1695,62 @@
 				<height>22</height>
 				<texture>$INFO[Player.StarRating,ratingw/nf-,]</texture>
 				<aspectratio align="right">keep</aspectratio>
+				<visible>!Skin.HasSetting(rating.rt) | !VideoPlayer.Content(movies)</visible>
 			</control>
+			
+			
+			<!--rotten tomatoes-->
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<posx>895</posx>
+				<posy>39</posy>
+				<visible>Skin.HasSetting(rating.rt) + VideoPlayer.Content(movies)</visible>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+					<aspectratio align="center">keep</aspectratio>
+				</control>
+				<control type="label">
+					<width>67</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<label>$VAR[Ratings.Critics.Percentage]%</label>
+					<font>date</font>
+				</control>
+			</control>
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<posx>895</posx>
+				<posy>75</posy>
+				<visible>Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + VideoPlayer.Content(movies)</visible>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture background="false">rottentomatoes/$VAR[Ratings.Audience.Icon].png</texture>
+					<aspectratio align="center">keep</aspectratio>
+				</control>
+				<control type="label">
+					<width>67</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<label>$VAR[Ratings.Audience.Percentage]%</label>
+					<font>date</font>
+				</control>
+			</control>
+			
+			
 			<!---plot------>
 			<control type="group" id="1">
 				<posy>65</posy>
 				<visible>Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 				<control type="textbox" id="1">
 					<height>129</height>
-					<width>950</width>
+					
+					
+					<width>850</width>
+					
+					
 					<label>$VAR[player_Plot.Condition]</label>
 					<textcolor>Color9</textcolor>
 					<font>descriptionbig</font>
@@ -1620,7 +1759,11 @@
 				</control>
 				<control type="textbox" id="1">
 					<height>170</height>
-					<width>950</width>
+					
+					
+					<width>850</width>
+					
+					
 					<label>$VAR[player_Plot.Condition]</label>
 					<textcolor>Color9</textcolor>
 					<font>descriptionbig</font>
@@ -1927,7 +2070,7 @@
 <include name="OSDWeatherClock">
         <control type="group">
             <animation effect="slide" end="-100" time="300" tween="sine" easing="inout" condition="Player.Muted | substring(Player.Volume,-60.0)">Conditional</animation>
-            <!--<animation effect="slide" end="-213" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>-->
+            <animation effect="slide" end="-213" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,668" time="400" tween="sine" easing="inout" condition="Skin.HasSetting(VideoOSD.OnTop) + Window.IsActive(fullscreenvideo)">Conditional</animation>
             <include>OSDHideShowAnimation</include>
             <visible>Skin.HasSetting(videoosd.xperience1080)</visible>

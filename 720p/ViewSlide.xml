@@ -7,23 +7,27 @@
 			<include>infoDialogHide</include>
 			<visible>Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522)</visible>
 			<!---flags--->
+			
+			
 			<control type="image" id="99199">
-				<posx>60</posx>
+				<posx>50</posx>
 				<posy>459</posy>
-				<width>128</width>
-				<height>64</height>
+				<width>161</width>
+				<height>109</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>
 			<control type="image" id="99299">
-				<posx>60</posx>
+				<posx>50</posx>
 				<posy>459</posy>
-				<width>128</width>
-				<height>64</height>
+				<width>161</width>
+				<height>109</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<visible>StringCompare(Control.GetLabel(99199),empty)</visible>
 			</control>
+			
+			
 			<include>flags_Slide-media</include>
 			<!-- logo -->
 			<control type="image">
@@ -383,23 +387,27 @@
 				<include>focus_SlideWide</include>
 			</control>
 			<!-- flags -->
+			
+			
 			<control type="image" id="55455">
-				<posx>60</posx>
+				<posx>50</posx>
 				<posy>459</posy>
-				<width>128</width>
-				<height>64</height>
+				<width>161</width>
+				<height>109</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>
 			<control type="image" id="55555">
-				<posx>60</posx>
+				<posx>50</posx>
 				<posy>459</posy>
-				<width>128</width>
-				<height>64</height>
+				<width>161</width>
+				<height>109</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<visible>StringCompare(Control.GetLabel(55455),empty)</visible>
 			</control>
+			
+			
 			<!-- logo -->
 			<control type="image">
 				<posx>20</posx>

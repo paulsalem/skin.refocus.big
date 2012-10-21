@@ -496,23 +496,27 @@
 			<include>infoDialogHide</include>
 			<visible>Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522)</visible>
 			<!---flags--->
+			
+			
 			<control type="image" id="88788">
-				<posx>60</posx>
+				<posx>50</posx>
 				<posy>459</posy>
-				<width>128</width>
-				<height>64</height>
+				<width>161</width>
+				<height>109</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>
 			<control type="image" id="88988">
-				<posx>60</posx>
+				<posx>50</posx>
 				<posy>459</posy>
-				<width>128</width>
-				<height>64</height>
+				<width>161</width>
+				<height>109</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<visible>StringCompare(Control.GetLabel(88788),empty)</visible>
 			</control>
+			
+			
 			<include>flags_Slide-media</include>
 			<!---info--->	
 			<control type="group">
@@ -580,6 +584,8 @@
 			<control type="group">
 				<visible>Control.IsVisible(57) | Control.IsVisible(5711) | Control.IsVisible(573)</visible>
 				<!---flags--->
+				
+				
 				<control type="image">
 					<posx>235r</posx>
 					<posy>632</posy>
@@ -587,8 +593,53 @@
 					<height>48</height>
 					<texture>$INFO[ListItem.StarRating]</texture>
 					<aspectratio align="center">keep</aspectratio>
-					<visible>IntegerGreaterThan(ListItem.Rating,0)</visible>
+					<visible>IntegerGreaterThan(ListItem.Rating,0) + [!Skin.HasSetting(rating.rt) | !Container.Content(movies)]</visible>
 				</control>
+				
+				
+				<!--rotten tomatoes-->
+				<control type="grouplist">
+					<posx>390r</posx>
+					<posy>640</posy>
+					<orientation>horizontal</orientation>
+					<control type="image">
+						<width>57</width>
+						<height>57</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+					</control>
+					<control type="label">
+						<width min="30" max="75">auto</width>
+						<height>57</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Critics.Percentage]%</label>
+						<font>dialog1</font>
+						<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+					</control>
+					<control type="label">
+						<width>10</width>
+						<height>57</height>
+						<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+					</control>
+					<control type="image">
+						<width>57</width>
+						<height>57</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Audience.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + !IsEmpty(Listitem.Genre)</visible>
+					</control>
+					<control type="label">
+						<width min="30" max="75">auto</width>
+						<height>57</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Audience.Percentage]%</label>
+						<font>dialog1</font>
+						<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + !IsEmpty(Listitem.Genre)</visible>
+					</control>
+				</control>
+				
+				
 				<control type="image" id="99199">
 					<posx>235r</posx>
 					<posy>637</posy>
@@ -638,17 +689,25 @@
 				<posy>115</posy>
 				<itemgap>0</itemgap>
 				<visible>Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+
+				
 				<control type="label">
 					<width>435</width>
 					<label>$INFO[ListItem.Label]</label>
 					<include>info_Title</include>
+					<scroll>true</scroll>
+					<scrollsuffix> - </scrollsuffix>
 				</control>
 				<control type="label">
 					<width>435</width>
 					<label>$INFO[ListItem.Genre]</label>
 					<include>info_Sub</include>
 					<visible>Container.Content(movies)</visible>
+					<scroll>true</scroll>
+					<scrollsuffix> - </scrollsuffix>
 				</control>
+				
+				
 				<control type="label">
 					<width>435</width>
 					<label>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</label>
@@ -667,13 +726,61 @@
 					<include>info_Sub</include>
 					<visible>Container.Content(tvshows) + !IsEmpty(ListItem.TVShowTitle)</visible>
 				</control>
+				
+				
 				<control type="image">
 					<width>128</width>
 					<height>48</height>
 					<info>ListItem.StarRating</info>
 					<aspectratio align="center">keep</aspectratio>
-					<visible>IntegerGreaterThan(ListItem.Rating,0)</visible>
+					<visible>IntegerGreaterThan(ListItem.Rating,0) + [!Skin.HasSetting(rating.rt) | !Container.Content(movies)]</visible>
 				</control>
+				
+				
+				<!--rotten tomatoes-->
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<height>60</height>
+					<posy>10</posy>
+					<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+					<control type="image">
+						<width>48</width>
+						<height>60</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+					</control>
+					<control type="label">
+						<width min="30" max="75">auto</width>
+						<height>60</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Critics.Percentage]%</label>
+						<font>dialog1</font>
+						<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+					</control>
+					<control type="label">
+						<width>10</width>
+						<height>57</height>
+						<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+					</control>
+					<control type="image">
+						<width>48</width>
+						<height>60</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Audience.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + !IsEmpty(Listitem.Genre)</visible>
+					</control>
+					<control type="label">
+						<width min="30" max="75">auto</width>
+						<height>60</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Audience.Percentage]%</label>
+						<font>dialog1</font>
+						<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + !IsEmpty(Listitem.Genre)</visible>
+					</control>
+				</control>
+				
+				
 				<control type="label">
 					<width>435</width>
 					<label>-</label>
@@ -688,24 +795,28 @@
 					<visible>!SubString(ListItem.Icon,default)</visible>
 				</control>
 			</control>
+			
+			
 			<control type="image" id="12345678">
 				<posx>780</posx>
-				<posy>610</posy>
-				<width>128</width>
-				<height>64</height>
+				<posy>565</posy>
+				<width>161</width>
+				<height>109</height>
 				<aspectratio align="left">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 				<visible>Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 			</control>
 			<control type="image" id="123456789">
 				<posx>780</posx>
-				<posy>610</posy>
-				<width>128</width>
-				<height>64</height>
+				<posy>565</posy>
+				<width>161</width>
+				<height>109</height>
 				<aspectratio align="left">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<visible>StringCompare(Control.GetLabel(12345678),empty) + Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 			</control>
+			
+			
 		</control>
 		<include>view_IconPoster</include>
 		<include>view_IconWide</include>
@@ -718,34 +829,44 @@
 			<include>toggle_Menu</include>
 			<include>transition_Info</include>
 			<!---flags--->
+			
+			
 			<control type="image" id="99">
-				<posx>105</posx>
-				<posy>590</posy>
-				<width>128</width>
-				<height>64</height>
+				<posx>85</posx>
+				<posy>570</posy>
+				<width>161</width>
+				<height>109</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>-->
 			<control type="image" id="999">
-				<posx>105</posx>
-				<posy>590</posy>
-				<width>128</width>
-				<height>64</height>
+				<posx>85</posx>
+				<posy>570</posy>
+				<width>161</width>
+				<height>109</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<visible>StringCompare(Control.GetLabel(99),empty)</visible>
 			</control>
+			
+			
 			<!---strip bottom--->
 			<control type="group">
 				<posx>265</posx>
 				<posy>585</posy>
 				<control type="group">
+				
+				
 					<control type="label">
 						<label>$VAR[gallery_Header]</label>
 						<font>listBig</font>
-						<width>940</width>
+						<width>830</width>
 						<include>info_TitleSmall</include>
+						<scroll>true</scroll>
+						<scrollsuffix> - </scrollsuffix>
 					</control>
+					
+					
 					<control type="group">
 						<visible>Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
 						<control type="label">
@@ -780,6 +901,49 @@
 					</control>
 				</control>
 			</control>
+			
+			
+			<!--rotten tomatoes-->
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<posx>1120</posx>
+				<posy>585</posy>
+				<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(ListItem.Genre)</visible>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+					<aspectratio align="center">keep</aspectratio>
+				</control>
+				<control type="label">
+					<width>67</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<label>$VAR[Ratings.Critics.Percentage]%</label>
+					<font>date</font>
+				</control>
+			</control>
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<posx>1120</posx>
+				<posy>620</posy>
+				<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + !IsEmpty(Listitem.Genre)</visible>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture background="false">rottentomatoes/$VAR[Ratings.Audience.Icon].png</texture>
+					<aspectratio align="center">keep</aspectratio>
+				</control>
+				<control type="label">
+					<width>67</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<label>$VAR[Ratings.Audience.Percentage]%</label>
+					<font>date</font>
+				</control>
+			</control>
+			
+			
 		</control>
 		<include>view_Gallery</include>
 		<!---fullscreen/expanded---
@@ -876,17 +1040,27 @@
 				<height>220</height>
 				<texture border="0,0,0,15">osd/infoOverlay.png</texture>
 			</control>
+			
+			
 			<control type="image">
-				<posy>3</posy>
-				<posx>35</posx>
-				<width>132</width>
-				<height>185</height>
+				<posy>-112</posy>
+				<posx>0</posx>
+				<width>228</width>
+				<height>316</height>
 				<align>left</align>
 				<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>						
+				<bordertexture border="40">frames/frame_Square.png</bordertexture>
+				<bordersize>22</bordersize>
+				<aspectratio align="center">stretch</aspectratio>
+			</control>
+			
+			
 			<control type="group">
-				<posx>200</posx>
+			
+			
+				<posx>230</posx>
+				
+				
 				<posy>13</posy>
 				<control type="label">
 					<label>$INFO[ListItem.Title]</label>
@@ -914,27 +1088,81 @@
 					<textcolor>Color2</textcolor>
 					<visible>Container.Content(tvshows) + !SubString(ListItem.Icon,default)</visible>
 				</control>
+				
+				
 				<control type="image">
-					<posx>920</posx>
+					<posx>890</posx>
 					<posy>44</posy>
 					<width>128</width>
 					<height>22</height>
 					<texture>$INFO[ListItem.StarRating,rating/nf-,]</texture>
 					<colordiffuse>Color1</colordiffuse>
 					<aspectratio align="right">keep</aspectratio>
-					<visible>!SubString(ListItem.Icon,default)</visible>
-				</control>				
+					<visible>!SubString(ListItem.Icon,default) + [!Skin.HasSetting(rating.rt) | !Container.Content(movies)]</visible>
+				</control>
+				
+				
+				<!--rotten tomatoes-->
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<posx>940</posx>
+					<posy>44</posy>
+					<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>67</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Critics.Percentage]%</label>
+						<font>date</font>
+					</control>
+				</control>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<posx>940</posx>
+					<posy>80</posy>
+					<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + !IsEmpty(Listitem.Genre)</visible>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Audience.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>67</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Audience.Percentage]%</label>
+						<font>date</font>
+					</control>
+				</control>
+				
+				
+
 				<control type="textbox" id="1">
 					<posy>70</posy>
 					<height>87</height>
-					<width>1045</width>
+					
+					
+					<width>920</width>
+					
+					
 					<label>$VAR[global_Plot.Condition]</label>
 					<textcolor>Color1</textcolor>
 						<font>descriptionbig</font>
 					<include>description_OSD</include>
 				</control>
  				<control type="image">
-					<posx>995</posx>
+				
+				
+					<posx>940</posx>
+					
+					
 					<posy>-5</posy>
 					<width>55</width>
 					<height>55</height>
@@ -951,7 +1179,9 @@
 					    <height>39</height>
 					    <texture>$INFO[Listitem.VideoResolution,flags/video/resolution/,.png]</texture>
 				    </control>
-			    </control>	-->			
+			    </control>	-->	
+				
+				
 			    <control type="group">
 				    <posx>1047</posx>
 				    <posy>146</posy>

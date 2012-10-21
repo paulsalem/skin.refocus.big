@@ -23,6 +23,20 @@
 					<include>thumb_Portrait-List</include>
 					<visible>!Control.HasFocus(50) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 				</control>
+				
+				
+				<control type="image">
+					<width>414</width>
+					<height>617</height>
+					<texture background="true">osd/osd-button-play.png</texture>
+					<aspectratio align="center">center</aspectratio>
+					<include>thumb_Portrait-List</include>
+					<animation effect="fade" start="0" end="60" time="300" condition="Control.HasFocus(8001)">Conditional</animation>
+					<animation effect="fade" start="60" end="0" time="300">Hidden</animation>
+					<visible>!Control.HasFocus(50) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + Control.HasFocus(8001)</visible>
+				</control>
+				
+				
 				<control type="image">
 					<width>414</width>
 					<height>617</height>
@@ -50,61 +64,159 @@
 					<visible>Container.Content(musicvideos)</visible>
 				</control>
 			</control>
+			
+			
+			<!--rotten tomatoes-->
+			<control type="grouplist">
+				<orientation>vertical</orientation>
+				<posx>1130</posx>
+				<posy>195</posy>
+				<itemgap>0</itemgap>
+				<visible>Container.Content(movies) + Skin.HasSetting(rating.rt)</visible>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<width>150</width>
+					<height>55</height>
+					<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+					<control type="image">
+						<width>55</width>
+						<height>55</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>100</width>
+						<height>55</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Critics.Percentage]%</label>
+						<font>titleSpecial</font>
+					</control>
+				</control>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<width>150</width>
+					<height>55</height>
+					<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + !IsEmpty(Listitem.Genre)</visible>
+					<control type="image">
+						<width>55</width>
+						<height>55</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Audience.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>100</width>
+						<height>55</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Audience.Percentage]%</label>
+						<font>titleSpecial</font>
+					</control>
+				</control>
+			</control>
+			
+			
+			<!-- Studio logo in upper right corner -->
+			<control type="image">
+				<posx>1110</posx>
+				<posy>75</posy>
+				<width>161</width>
+				<height>109</height>
+				<texture>$VAR[flag_Studio]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+			</control>
+			
+			
 			<!--header-->
 			<control type="grouplist">
 				<posx>500</posx>
-				<posy>70</posy>
+				
+				
+				<posy>55</posy>
+				
+				
 				<itemgap>0</itemgap>
+				
+				
 				<control type="label">
 					<height>57</height>
-					<width>700</width>
+					<width>600</width>
 					<aligny>top</aligny>
 					<label>$INFO[ListItem.Title]</label>
 					<font>titleInfoDialog</font>
+					<scroll>true</scroll>
+					<scrollsuffix> - </scrollsuffix>
 				</control>
+				
+				
+				<control type="group">
+					<height>35</height>
+					<width>600</width>
+					<visible>!StringCompare(ListItem.Title,ListItem.OriginalTitle)</visible>
+					<control type="label">
+						<height>35</height>
+						<width>600</width>
+						<label>$INFO[ListItem.OriginalTitle]</label>
+						<font>titleAlt</font>
+						<aligny>top</aligny>
+						<posx>15</posx>
+						<posy>-8</posy>
+						<textcolor>Color2</textcolor>
+						<scroll>true</scroll>
+						<scrollsuffix> - </scrollsuffix>
+					</control>
+				</control>
+				
+				
 				<control type="label">
 					<label>$VAR[videoInfo.Header]</label>
 					<font>info_sub</font>
 					<height>40</height>
+					<width>600</width>
 					<aligny>top</aligny>
 					<textcolor>Color2</textcolor>
+					<include>autoscroll-line</include>
+					<scrollsuffix> - </scrollsuffix>
 				</control>
+				
+				
 				<!--info container-->
 				<control type="grouplist" id="1000">
 					<orientation>vertical</orientation>
 					<height>320</height>
 					<itemgap>0</itemgap>
+					
+					
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>24</height>
 						<visible>!IsEmpty(ListItem.Genre) + [Container.Content(tvshows) | Container.Content(musicvideos) | [Container.Content(movies) + [!SubString(Container.FolderPath,plugin) |SubString(Container.FolderPath,plugin.video.apple)]]]</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[515] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
 						<visible>Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.Label))</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[31076] [COLOR=Color1]$INFO[Window(Home).Property(NextAired.NextDate)][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 				<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 						</control>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[31075] [COLOR=Color1]$INFO[Window(Home).Property(NextAired.LatestDate)][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						<visible>IsEmpty(Window(Home).Property(NextAired.NextDate)) + !StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)</visible>
 						</control>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[31077] [COLOR=Color1]$INFO[Window(Home).Property(NextAired.Status)][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
@@ -112,115 +224,117 @@
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
 						<visible>!IsEmpty(ListItem.Date) + Container.Content(episodes)</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[20416] [COLOR=Color1]$INFO[ListItem.Date][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
 						<visible>!IsEmpty(ListItem.Duration)</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[180] [COLOR=Color1]$INFO[ListItem.Duration] $LOCALIZE[12391][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
 						<visible>!IsEmpty(ListItem.Writer)</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[20417] [COLOR=Color1]$INFO[ListItem.Writer][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
 						<visible>!IsEmpty(ListItem.Director)</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[20339] [COLOR=Color1]$INFO[ListItem.Director][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
 						<visible>!IsEmpty(ListItem.Studio)</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[572] [COLOR=Color1]$INFO[ListItem.Studio][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
 						<visible>Container.Content(tvshows)</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[31089] [COLOR=Color1]$INFO[ListItem.Episode] $LOCALIZE[20360][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
 						<visible>Container.Content(tvshows)</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[16101] [COLOR=Color1]$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
-						<visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
+						<visible>!IsEmpty(ListItem.RatingAndVotes) + [!Skin.HasSetting(rating.rt) | !Container.Content(movies)]</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[563] [COLOR=Color1]$INFO[ListItem.RatingAndVotes][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
 						<visible>!IsEmpty(ListItem.MPAA)</visible>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>$LOCALIZE[31017] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
 					<control type="group">
-						<width>700</width>
+						<width>600</width>
 						<height>22</height>
 						<control type="label">
-							<width>700</width>
+							<width>600</width>
 							<label>[COLOR=Color2]$LOCALIZE[573][/COLOR] $INFO[ListItem.Path]</label>
 							<textcolor>Color1</textcolor>
 							<include>label_InfoDialog</include>
 							<include>autoscroll-line</include>
 						</control>
 					</control>
+					
+					
 				</control>
 				<!--spacer-->
 				<control type="label">
@@ -477,7 +591,11 @@
 			<!--flags-->
 			<control type="group">
 				<posx>500</posx>
-				<posy>600</posy>
+				
+				
+				<posy>605</posy>
+				
+				
 				<include>flags_Type-info</include>
 			</control>
 		</control>

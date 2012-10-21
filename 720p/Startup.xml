@@ -1,14 +1,10 @@
 ﻿<window>
 	<defaultcontrol always="true">11</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-		 <onload condition="Stringcompare(Skin.String(startupcount),2)">Skin.SetString(startupcount,3)</onload>
-    <onload condition="Stringcompare(Skin.String(startupcount),1)">Skin.SetString(startupcount,2)</onload>
-    <onload condition="IsEmpty(Skin.String(startupcount))">Skin.SetString(startupcount,1)</onload>
-	 <onload condition="Library.HasContent(tvshows)">XBMC.RunScript(script.tv.show.next.aired,silent=True)</onload>
-	 <onload condition="System.HasAddon(plugin.image.mypicsdb)">XBMC.RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onload>
-	 <onload>AlarmClock(GotToHome,SetFocus(9000),00:04,silent)</onload>
-    <onload>ClearProperty(FocusOnSubmenu,home)</onload>
-    <onunload>CancelAlarm(GotToHome,true)</onunload>
+		<onload condition="System.HasAddon(script.randomitems)">XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True&amp;alarm=60)</onload>
+		<onload condition="!Skin.HasSetting(watchlist.disable)">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;limit=10)</onload>
+		<onload condition="!Skin.HasSetting(watchlist.disable)">SetProperty(Watchlist_Running,True)</onload>
+	
 	<animation type="WindowClose" reversible="false">
 		<effect type="fade" start="100" end="0" time="800" />
 	</animation>
@@ -16,22 +12,47 @@
 		<effect type="fade" start="0" end="100" delay="1000" time="800" />
 	</animation>
 	<controls>
-		<control type="button" id="9000">
-            <onfocus>ReplaceWindow(Home)</onfocus>
-            <include>HiddenObject</include>
-        </control>
+		<control type="button" id="11">
+			<onfocus condition="!System.HasAddon(script.watchlist)">SetFocus(12)</onfocus>
+			<onfocus condition="System.HasAddon(script.watchlist)">SetFocus(11)</onfocus>
+			<visible>IsEmpty(Window(Home).Property(WatchList_Running)) + !System.IdleTime(10)</visible>
+			<onleft>ReplaceWindow(Home)</onleft>
+			<onup>ReplaceWindow(Home)</onup>
+			<ondown>ReplaceWindow(Home)</ondown>
+			<onright>ReplaceWindow(Home)</onright>
+			<onclick>ReplaceWindow(Home)</onclick>
+			<animation effect="fade" start="0" end="100" time="0" delay="1000">Focus</animation>
+			<include>HiddenObject</include>
+		</control>
+		<control type="button" id="11">
+			<include>HiddenObject</include>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<onleft>ReplaceWindow(Home)</onleft>
+			<onup>ReplaceWindow(Home)</onup>
+			<ondown>ReplaceWindow(Home)</ondown>
+			<onright>ReplaceWindow(Home)</onright>
+			<onclick>ReplaceWindow(Home)</onclick>
+			<visible>!IsEmpty(Window(Home).Property(WatchList_Running)) | System.IdleTime(10)</visible>
+			<animation effect="fade" start="0" end="100" time="0" delay="1000">Focus</animation>
+ 		</control>
+		<control type="button" id="12">
+			<include>HiddenObject</include>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<animation effect="fade" start="0" end="100" time="0" delay="4000">Focus</animation>
+		</control>
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true">backgrounds/background.png</texture>
 		</control>
-			<control type="image">
-				<posx>475</posx>
-				<posy>320</posy>
-				<width>320</width>
-				<height>65</height>
-				<texture>logos/refocuslogo.png</texture>
-				<aspectratio>keep</aspectratio>
-				<animation effect="fade" start="70" time="1500" condition="true" pulse="true">Conditional</animation>
-			</control>
+		<control type="image">
+			<posx>610</posx>
+			<posy>320</posy>
+			<width>74</width>
+			<height>74</height>
+			<texture>busy/busyoriginal.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="rotate" start="360" end="0" center="auto" time="2500" loop="true" condition="true">conditional</animation>
+			<animation effect="fade" start="70" time="1500" condition="true" pulse="true">Conditional</animation>
+		</control>
 	</controls>
 </window>

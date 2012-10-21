@@ -25,13 +25,54 @@
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<visible>StringCompare(Control.GetLabel(99199),empty)</visible>
 			</control>
+			
+			
             <control type="image">
                 <posx>132</posx>
 				<width>128</width>
 				<height>32</height>
 				<info>ListItem.StarRating</info>
 				<aspectratio align="center">keep</aspectratio>
+				<visible>!Skin.HasSetting(rating.rt) | !Container.Content(movies)</visible>
 			</control>
+			
+			
+			<!--rotten tomatoes-->
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<posx>132</posx>
+				<visible>Skin.HasSetting(rating.rt) + Container.Content(movies) + !IsEmpty(Listitem.Genre)</visible>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+					<aspectratio align="center">keep</aspectratio>
+				</control>
+				<control type="label">
+					<width min="30" max="75">auto</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<label>$VAR[Ratings.Critics.Percentage]%</label>
+					<font>date</font>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture background="false">rottentomatoes/$VAR[Ratings.Audience.Icon].png</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + Container.Content(movies) + !IsEmpty(Listitem.Genre)</visible>
+				</control>
+				<control type="label">
+					<width min="30" max="75">auto</width>
+					<height>40</height>
+					<aligny>center</aligny>
+					<label>$VAR[Ratings.Audience.Percentage]%</label>
+					<font>date</font>
+					<visible>Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + Container.Content(movies) + !IsEmpty(Listitem.Genre)</visible>
+				</control>
+			</control>
+				
+				
 			<control type="image">
 				<posx>1125</posx>
 				<posy>-10</posy>
