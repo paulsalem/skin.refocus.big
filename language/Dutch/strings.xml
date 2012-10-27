@@ -80,10 +80,10 @@ Steun alstublieft de ontwikkeling van XBMC met een donatie.
 <string id="31061">Gebruik posters</string>
 <string id="31062">Toon volledig scherm</string>
 <string id="31063">Toon strook</string>
-<string id="31064">Vaandel</string>
+<string id="31064">Banner</string>
 <string id="31065">Logo</string>
-<string id="31066">Vaandelweergave inschakelen voor TV series</string>
-<string id="31067">Gebruik lokaal opgeslagen vaandels</string>
+<string id="31066">Banner-weergave inschakelen voor TV series</string>
+<string id="31067">Gebruik lokaal opgeslagen banners</string>
 
 <string id="31068">Eindtijd:</string>
 <string id="31069">-</string>
@@ -115,7 +115,7 @@ Steun alstublieft de ontwikkeling van XBMC met een donatie.
 <string id="31090">Live TV</string>
 <string id="31091">Gerelateerde films</string>
 <string id="31092">-</string>
-<string id="31093">Vaandels</string>
+<string id="31093">Banners</string>
 <string id="31094">Nieuwe afleveringen</string>
 <string id="31095">Nieuwe films</string>
 <string id="31096">Nieuwe albums</string>
@@ -152,7 +152,7 @@ Steun alstublieft de ontwikkeling van XBMC met een donatie.
 <string id="31126">Meng visualisatie en fanart</string>
 <string id="31127">Artwork</string>
 <string id="31128">Toon status balk (rss feed uit)</string>
-<string id="31129">Download vaandels</string>
+<string id="31129">Download banners</string>
 <string id="31130">Download logo's</string>
 <string id="31131">Download extra fanart (Artwork Downloader)</string>
 <string id="31132">Gebruik extra fanart in gallerijweergave</string>
@@ -206,7 +206,7 @@ Steun alstublieft de ontwikkeling van XBMC met een donatie.
 <string id="31942">Informatie verversen</string>
 <string id="31943">Poster</string>
 <string id="31944">Fanart</string>
-<string id="31945">Vaandel</string>
+<string id="31945">Banner</string>
 <string id="31946">Logo</string>
 <string id="31947">Huidige Afspeellijst</string>
 <string id="31948">Informatie</string>
@@ -312,13 +312,13 @@ Steun alstublieft de ontwikkeling van XBMC met een donatie.
 <string id="32018">Geef de datum in het wit weer in het hoofdmenu</string>
 
 <!--double row banner view-->
-<string id="32019">Vaandels (2 kolommen)</string>
+<string id="32019">Banners (2 kolommen)</string>
 
 <!--tv netowork logos-->
 <string id="32020">TV-zender logo's inschakelen</string>
 
 <!--poster banner view-->
-<string id="32021">Vaandels en posters</string>
+<string id="32021">Banners en posters</string>
 
 <!--tv show status-->
 <string id="32022">Geëindigd</string>
@@ -348,9 +348,67 @@ Steun alstublieft de ontwikkeling van XBMC met een donatie.
 <string id="32032">Geef medianaam weer bij Xperience1080 OSD</string>
 
 <!--Opacity-->
-<string id="32033">Pas transparatie alleen toe bij mediaschermen</string>
+<string id="32033">Pas transparantie alleen toe bij mediaschermen</string>
 
 <!--OSD-->
 <string id="32034">Geef Voortgang weer op de statusbalk bij Xperience1080 OSD</string>
+<string id="32035">Toon altijd Poster op OSD</string>
+
+<!--Fanart-->
+<string id="32036">Gebruik Extra Fanart bij Media Views</string>
+<string id="32037">Geanimeerde achtergrond</string>
+<string id="32038">Langzame animatie</string>
+
+<!--OSD Overlay-->
+<string id="32039">Toon gloed boven OSD</string>
+<string id="32040">Grijze gloed</string>
+<string id="32041">Zwarte gloed</string>
+
+<!--menuSelect-->
+<string id="32042">Gebruik reAlaska Select Pointer in Home Menu</string>
+
+<!--osd-->
+<string id="32043">Gebruik folder.jpg voor OSD</string>
+<string id="32044">Minimalistisch OSD</string>
+
+<!--wallpapers-->
+<string id="32045">Toon originele achtergrond</string>
+<string id="32046">Gebruik Custom Slideshow</string>
+
+<!--thumbnails wide-->
+<string id="32047">Brede Thumbnails</string>
+
+<!--list 1row-->
+<string id="32048">Lijst Enkele Rij</string>
+
+<!--home menu-->
+<string id="32049">Widgets op het Home Menu inschakelen</string>
+<string id="32050">Gebruik Watchlist Items</string>
+<string id="32051">Laatste Afleveringen</string>
+<string id="32052">Recent Bekeken</string>
+<string id="32053">Laatste Films</string>
+<string id="32054">Laatste Albums</string>
+<string id="32055">Willekeurige Addons</string>
+<string id="32056">Gebruik Watchlist en Recent Items beide</string>
+<string id="32057">Vignette Overlay voor Home Menu inschakelen</string>
+<string id="32058">Reset achtergronden</string>
+<string id="32059">Toon Posters bij Watchlist Items</string>
+<string id="32060">Widgets</string>
+
+<!--Opacity-->
+<string id="32061">Transparantie instellen</string>
+<string id="32062">Transparantie aan</string>
+
+<!--Search-->
+<string id="32063">Verwijder het woord 'zoeken' uit het Home Menu</string>
+
+<!--Animations-->
+<string id="32070">Animaties bij Widgets uitschakelen</string>
+
+<!--Addons-->
+<string id="32090">Watchlist script uitvoeren tijdens elke home/watchlist refresh</string>
+
+<!--Widgets-->
+<string id="32100">Fanart bij Widgets uitschakelen</string>
 
 </strings>
