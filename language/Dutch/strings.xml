@@ -411,5 +411,9 @@ Steun alstublieft de ontwikkeling van XBMC met een donatie.
 <!--Widgets-->
 <string id="32100">Fanart in Widgets uitschakelen</string>
 
+<!--OSD Settings-->
+<string id="32200">Algemene Instellingen</string>
+<string id="32201">Alternatieve OSD</string>
+
 
 </strings>
