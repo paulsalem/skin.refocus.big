@@ -514,62 +514,29 @@
 			<itemgap>0</itemgap>
 			<visible>Skin.String(SkinSettings,OSD)</visible>
 			<include>transition_Container</include>
-			<!--realaska video osd-->
-			<control type="radiobutton" id="751">
-				<label>$LOCALIZE[31997]</label>
-				<onclick>Skin.ToggleSetting(videoosd.realaska)</onclick>
-				<onclick>Skin.Reset(videoosd.xperience1080)</onclick>
-				<selected>Skin.HasSetting(videoosd.realaska)</selected>
+			<!--General Settings-->
+			<control type="label" id="751">
+				<label>$LOCALIZE[32200]</label>
+				<font>category</font>
+				<textcolor>Color2</textcolor>
 				<include>button_Settings</include>
 			</control>
+			<!--progressbar-->
 			<control type="radiobutton" id="752">
-				<label>$LOCALIZE[31998]</label>
-				<onclick>Skin.ToggleSetting(osd.progressbarrealaska)</onclick>
-				<selected>Skin.HasSetting(osd.progressbarrealaska)</selected>
-				<include>button_Settings</include>
-				<visible>Skin.HasSetting(videoosd.realaska)</visible>
-			</control>
-			<!--xperience1080 video osd-->
-			<control type="radiobutton" id="753">
-				<label>$LOCALIZE[32023]</label>
-				<onclick>Skin.ToggleSetting(videoosd.xperience1080)</onclick>
-				<onclick>Skin.Reset(videoosd.realaska)</onclick>
-				<selected>Skin.HasSetting(videoosd.xperience1080)</selected>
-				<include>button_Settings</include>
-			</control>
-			<!--xperience1080 video osd-->
-			<control type="radiobutton" id="754">
-				<label>$LOCALIZE[32032]</label>
-				<onclick>Skin.ToggleSetting(videoosd.xperience1080MediaName)</onclick>
-				<selected>Skin.HasSetting(videoosd.xperience1080MediaName)</selected>
-				<visible>Skin.HasSetting(videoosd.xperience1080)</visible>
-				<include>button_Settings</include>
-			</control>
-			<!--xperience1080 video osd-->
-			<control type="radiobutton" id="755">
-				<label>$LOCALIZE[32034]</label>
-				<onclick>Skin.ToggleSetting(videoosd.xperience1080progressbottom)</onclick>
-				<selected>Skin.HasSetting(videoosd.xperience1080progressbottom)</selected>
-				<visible>Skin.HasSetting(videoosd.xperience1080)</visible>
-				<include>button_Settings</include>
-			</control>
-			<!--xperience1080 video osd-->
-			<control type="radiobutton" id="756">
-				<label>$LOCALIZE[32044]</label>
-				<onclick>Skin.ToggleSetting(videoosd.xperience1080minimal)</onclick>
-				<selected>Skin.HasSetting(videoosd.xperience1080minimal)</selected>
-				<visible>Skin.HasSetting(videoosd.xperience1080)</visible>
+				<label>$LOCALIZE[31917]</label>
+				<onclick>Skin.ToggleSetting(osd.progressbar)</onclick>
+				<selected>Skin.HasSetting(osd.progressbar)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!--Chapters-->
-			<control type="radiobutton" id="757">
+			<control type="radiobutton" id="753">
 				<label>$LOCALIZE[32031]</label>
 				<onclick>Skin.ToggleSetting(videoosd.showchapters)</onclick>
 				<selected>Skin.HasSetting(videoosd.showchapters)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!--Posters-->
-			<control type="radiobutton" id="758">
+			<control type="radiobutton" id="754">
 				<label>$LOCALIZE[32035]</label>
 				<onclick>Skin.ToggleSetting(videoosd.showposter)</onclick>
 				<onclick>Skin.Reset(videoosd.showfolderjpg)</onclick>
@@ -578,7 +545,7 @@
 				<include>button_Settings</include>
 			</control>
 			<!--folder.jpg-->
-			<control type="radiobutton" id="759">
+			<control type="radiobutton" id="755">
 				<label>$LOCALIZE[32043]</label>
 				<onclick>Skin.ToggleSetting(videoosd.showfolderjpg)</onclick>
 				<onclick>PlayerControl(stop)</onclick>
@@ -587,7 +554,7 @@
 				<visible>Skin.HasSetting(videoosd.showposter)</visible>
 			</control>
 			<!--Glow-->
-			<control type="radiobutton" id="760">
+			<control type="radiobutton" id="756">
 				<label>$LOCALIZE[32039]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.gray)</onclick>
@@ -596,8 +563,7 @@
 				<include>button_Settings</include>
 				<visible>!Skin.HasSetting(videoosd.xperience1080)</visible>
 			</control>
-			<!--Glow-->
-			<control type="radiobutton" id="761">
+			<control type="radiobutton" id="757">
 				<label>$LOCALIZE[32040]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow.gray)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.black)</onclick>
@@ -605,13 +571,66 @@
 				<visible>Skin.HasSetting(videoosd.glow) + !Skin.HasSetting(videoosd.xperience1080)</visible>
 				<include>button_Settings</include>
 			</control>
-			<!--Glow-->
-			<control type="radiobutton" id="762">
+			<control type="radiobutton" id="758">
 				<label>$LOCALIZE[32041]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow.black)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.gray)</onclick>
 				<selected>Skin.HasSetting(videoosd.glow.black)</selected>
 				<visible>Skin.HasSetting(videoosd.glow) + !Skin.HasSetting(videoosd.xperience1080)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Alternative OSD Settings-->
+			<control type="label" id="760">
+				<label>$LOCALIZE[32201]</label>
+				<font>category</font>
+				<textcolor>Color2</textcolor>
+				<include>button_Settings</include>
+			</control>
+			<!--realaska video osd-->
+			<control type="radiobutton" id="761">
+				<label>$LOCALIZE[31997]</label>
+				<onclick>Skin.ToggleSetting(videoosd.realaska)</onclick>
+				<onclick>Skin.Reset(videoosd.xperience1080)</onclick>
+				<selected>Skin.HasSetting(videoosd.realaska)</selected>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="762">
+				<label>$LOCALIZE[31998]</label>
+				<onclick>Skin.ToggleSetting(osd.progressbarrealaska)</onclick>
+				<selected>Skin.HasSetting(osd.progressbarrealaska)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(videoosd.realaska)</visible>
+			</control>
+			<!--xperience1080 video osd-->
+			<control type="radiobutton" id="763">
+				<label>$LOCALIZE[32023]</label>
+				<onclick>Skin.ToggleSetting(videoosd.xperience1080)</onclick>
+				<onclick>Skin.Reset(videoosd.realaska)</onclick>
+				<selected>Skin.HasSetting(videoosd.xperience1080)</selected>
+				<include>button_Settings</include>
+			</control>
+			<!--xperience1080 video osd-->
+			<control type="radiobutton" id="764">
+				<label>$LOCALIZE[32032]</label>
+				<onclick>Skin.ToggleSetting(videoosd.xperience1080MediaName)</onclick>
+				<selected>Skin.HasSetting(videoosd.xperience1080MediaName)</selected>
+				<visible>Skin.HasSetting(videoosd.xperience1080)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--xperience1080 video osd-->
+			<control type="radiobutton" id="765">
+				<label>$LOCALIZE[32034]</label>
+				<onclick>Skin.ToggleSetting(videoosd.xperience1080progressbottom)</onclick>
+				<selected>Skin.HasSetting(videoosd.xperience1080progressbottom)</selected>
+				<visible>Skin.HasSetting(videoosd.xperience1080)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--xperience1080 video osd-->
+			<control type="radiobutton" id="766">
+				<label>$LOCALIZE[32044]</label>
+				<onclick>Skin.ToggleSetting(videoosd.xperience1080minimal)</onclick>
+				<selected>Skin.HasSetting(videoosd.xperience1080minimal)</selected>
+				<visible>Skin.HasSetting(videoosd.xperience1080)</visible>
 				<include>button_Settings</include>
 			</control>
 		</control>
@@ -711,13 +730,6 @@
 				<label>$LOCALIZE[31060]</label>
 				<onclick>Skin.ToggleSetting(smoothscrolling.enable)</onclick>
 				<selected>Skin.HasSetting(smoothscrolling.enable)</selected>
-				<include>button_Settings</include>
-			</control>
-			<!--progressbar-->
-			<control type="radiobutton" id="903">
-				<label>$LOCALIZE[31917]</label>
-				<onclick>Skin.ToggleSetting(osd.progressbar)</onclick>
-				<selected>Skin.HasSetting(osd.progressbar)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!--keyboard-->
