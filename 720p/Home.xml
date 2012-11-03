@@ -440,7 +440,7 @@
 					<effect type="fade" tween="Quadratic" easing="Out" start="0" end="100" time="1250"/>
 					<effect type="slide" tween="Quadratic" easing="Out" start="250" end="-10" time="3000"/>
 				</animation>
-				<visible>![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)] + !Window.IsActive(virtualkeyboard) + !Window.IsActive(favourites) + ![Control.HasFocus(1110) | Control.HasFocus(1120) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160) | Control.HasFocus(1170) | Control.HasFocus(1180) | Control.HasFocus(1200) | Control.HasFocus(1210)] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
+				<visible>![Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(infodialog)] + !Window.IsActive(virtualkeyboard) + !Window.IsActive(favourites) + ![Control.HasFocus(1110) | Control.HasFocus(1120) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160) | Control.HasFocus(1170) | Control.HasFocus(1180) | Control.HasFocus(1200) | Control.HasFocus(1210)] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
 			</control>
 			<control type="label">
 				<posx>55</posx>
@@ -456,7 +456,7 @@
 					<effect type="fade" tween="Quadratic" easing="Out" start="0" end="55" time="3000"/>
 					<effect type="fade" tween="Quadratic" easing="Out" start="55" end="0" time="7700" delay="3000"/>
 				</animation>					
-				<visible>!Skin.HasSetting(home.widgets.noanimations) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)] + !Window.IsActive(virtualkeyboard) + !Window.IsActive(favourites) + ![Control.HasFocus(1110) | Control.HasFocus(1120) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160) | Control.HasFocus(1170) | Control.HasFocus(1180) | Control.HasFocus(1200) | Control.HasFocus(1210)] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
+				<visible>!Skin.HasSetting(home.widgets.noanimations) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(infodialog)] + !Window.IsActive(virtualkeyboard) + !Window.IsActive(favourites) + ![Control.HasFocus(1110) | Control.HasFocus(1120) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160) | Control.HasFocus(1170) | Control.HasFocus(1180) | Control.HasFocus(1200) | Control.HasFocus(1210)] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
 			</control>	
 		</control>
 	<!--toast overlay-->
@@ -464,20 +464,20 @@
 			<include>screen_Dimensions</include>
 			<texture border="16">overlays/vignette.png</texture>
 			<include>transition_Toast</include>
-			<visible>Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)</visible>
+			<visible>Window.IsActive(extendedprogressdialog) | Window.IsActive(infodialog)</visible>
 		</control>
 	<!--time-->
 		<control type="group">
 			<include>home_Clock</include>
 			<include>fadeinout</include>
 			<include>toggle_ToastMute</include>
-			<visible>!Skin.HasSetting(home.timesmall) + Skin.HasSetting(home.time) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)]</visible>
+			<visible>!Skin.HasSetting(home.timesmall) + Skin.HasSetting(home.time) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(infodialog)]</visible>
 		</control>	
 		<control type="group">
 			<include>home_Clock_Small</include>
 			<include>fadeinout</include>
 			<include>toggle_ToastMute</include>
-			<visible>Skin.HasSetting(home.timesmall) + Skin.HasSetting(home.time) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)]</visible>
+			<visible>Skin.HasSetting(home.timesmall) + Skin.HasSetting(home.time) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(infodialog)]</visible>
 		</control>
 	<!--menu-->
 		<include>HomeMenu</include>

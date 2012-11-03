@@ -51,7 +51,7 @@
 			<include>nav_Indicator</include>
 			<control type="group">
 				<include>toggle_ToastMute</include>
-				<visible>![Player.HasMedia + !Skin.HasSetting(overlay.enable)] + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)]</visible>
+				<visible>![Player.HasMedia + !Skin.HasSetting(overlay.enable)] + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(infodialog)]</visible>
 				<control type="label">
 					<posx>25r</posx>
 					<label>$VAR[global_Clock.Formats]</label>

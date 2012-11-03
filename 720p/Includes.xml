@@ -192,7 +192,7 @@
 	<include name="clock_views">
 		<control type="group">
 			<include>toggle_ToastMute</include>
-			<visible>[Control.IsVisible(5411) | Control.IsVisible(54111)] + !Skin.HasSetting(home.timesmall) + ![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
+			<visible>[Control.IsVisible(5411) | Control.IsVisible(54111)] + !Skin.HasSetting(home.timesmall) + ![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] + !Control.IsVisible(56) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
@@ -207,7 +207,7 @@
 	<include name="home_Clock">
 		<control type="group">
 			<include>toggle_ToastMute</include>
-			<visible>![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
+			<visible>![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] + !Control.IsVisible(56) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
@@ -239,7 +239,7 @@
 	<include name="home_Clock_Small">
 		<control type="group">
 			<include>toggle_ToastMute</include>
-			<visible>![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) | Window.IsActive(weather) | Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
+			<visible>![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] + !Control.IsVisible(56) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(infodialog) | Window.IsActive(weather) | Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
@@ -265,7 +265,7 @@
 	<include name="global_Clock">
 		<control type="group">
 			<include>toggle_ToastMute</include>
-			<visible>![Control.IsVisible(5411) | Control.IsVisible(54111)] + Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + [![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
+			<visible>![Control.IsVisible(5411) | Control.IsVisible(54111)] + Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + [![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)] + !Control.IsVisible(56) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
@@ -283,7 +283,7 @@
 		</control>
 		<control type="group">
 			<include>toggle_ToastMute</include>
-			<visible>Skin.HasSetting(home.time) + Skin.HasSetting(home.timesmall) + [![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)] + !Control.IsVisible(56) + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
+			<visible>Skin.HasSetting(home.time) + Skin.HasSetting(home.timesmall) + [![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)] + !Control.IsVisible(56) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
@@ -959,10 +959,10 @@
 		<textcolor>Color1</textcolor>
 		<include>transition_Toast</include>
 		<!--
-		<animation type="Conditional" condition="Player.Muted + ![Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(infodialog)]">
+		<animation type="Conditional" condition="Player.Muted + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(infodialog)]">
 			<effect type="slide" time="0" start="0" end="-60" />
 		</animation>
-		<animation type="Conditional" condition="Player.Muted + [Window.IsActive(videoscan) | Window.IsActive(musicscan)]">
+		<animation type="Conditional" condition="Player.Muted + [Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan)]">
 			<effect type="slide" time="0" start="0" end="-60" />
 		</animation>
 		-->

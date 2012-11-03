@@ -6,7 +6,7 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<visible>Player.HasVideo + !Skin.HasSetting(overlay.enable) + ![Window.IsActive(infodialog) | Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(home) | Window.IsActive(fullscreenvideo) | Window.IsActive(614)]</visible>
+			<visible>Player.HasVideo + !Skin.HasSetting(overlay.enable) + ![Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(home) | Window.IsActive(fullscreenvideo) | Window.IsActive(614)]</visible>
 			<include>toggle_ToastMute</include>
 			<control type="label" id="200">
 				<posx>180r</posx>
