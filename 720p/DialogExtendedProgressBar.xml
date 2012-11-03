@@ -1,4 +1,4 @@
-﻿<window id="112">
+<window>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
@@ -6,24 +6,31 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<visible>![Window.IsActive(startup) | Window.IsActive(fullscreenvideo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC_Lyrics-main.xml)]</visible>
 			<include>toggle_ToastMute</include>
-			<control type="fadelabel" id="401">
+			<control type="fadelabel" id="30">
 				<posx>530r</posx>
 				<width>400</width>
 				<include>toast_Top</include>
 			</control>
-			<control type="fadelabel" id="402">
+			<control type="fadelabel" id="31">
 				<posx>530r</posx>
 				<width>400</width>
 				<include>toast_Bottom</include>
 			</control>
-			<control type="label" id="1">
+			<control type="label" id="33">
 				<posx>120r</posx>
-				<label>$INFO[Control.GetLabel(403),,%]</label>
+				<label>$INFO[Control.GetLabel(32),,%]</label>
 				<include>toast_Side</include>
 			</control>
 			<control type="progress" id="403">
+				<texturebg>-</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>-</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>false</visible>
+			</control>
+			<control type="progress" id="32">
 				<texturebg>-</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture>-</midtexture>
