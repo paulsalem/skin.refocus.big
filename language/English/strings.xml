@@ -406,7 +406,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32063">Remove search word from Home Menu</string>
 
 <!--Animations-->
-<string id="32070">Remove Animations on Widgets</string>
+<string id="32070">Remove Extra Animations on Home Menu</string>
 
 <!--Addons-->
 <string id="32090">Run Watchlist script on every home/watchlist screens refresh</string>
