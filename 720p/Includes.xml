@@ -1872,7 +1872,7 @@
 		<include>transition_WindowTitle</include>
 		<animation effect="slide" end="0,-3" condition="Skin.HasSetting(numitems.enable)">Conditional</animation>
 		<animation effect="slide" end="25" condition="Skin.HasSetting(indicator.enable) + Control.IsVisible(6100)">Conditional</animation>
-		<visible>!Control.IsVisible(5411) + !Control.IsVisible(54111) + !Window.IsActive(busydialog) + ![Control.IsVisible(9900) | Control.IsVisible(531) | Control.IsVisible(550) | Control.IsVisible(551) | Window.IsActive(3000) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
+		<visible>!Control.IsVisible(5411) + !Control.IsVisible(54111) + !Window.IsActive(busydialog) + ![Control.IsVisible(9900) | Control.IsVisible(531) | Control.IsVisible(550) | Control.IsVisible(551) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
 	</include>
 	<include name="windowTitle_Video">
 		<control type="label">

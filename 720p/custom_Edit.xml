@@ -69,17 +69,11 @@
 						<onclick>SendClick(2003,6)</onclick>
 						<visible>!Window.IsActive(3000)</visible>
 					</item>
-					<!--thumbnail-->
+					<!--art-->
 					<item id="2">
 						<label>$LOCALIZE[31943]</label>
 						<onclick>SendClick(2003,10)</onclick>
 						<visible>!Window.IsActive(3000)</visible>
-					</item>
-					<!--fanart-->
-					<item id="3">
-						<label>$LOCALIZE[31944]</label>
-						<onclick>SendClick(2003,12)</onclick>
-						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 					</item>
 						<!--artwork downloader-->
 					<item id="4">

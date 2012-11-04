@@ -204,7 +204,7 @@ Please consider supporting the development of XBMC by making a donation.
 
 
 <string id="31942">Refresh Information</string>
-<string id="31943">Change Thumbnail</string>
+<string id="31943">Change Artwork</string>
 <string id="31944">Change Fanart</string>
 <string id="31945">Download Banner</string>
 <string id="31946">Download Logo</string>
@@ -414,9 +414,6 @@ Please consider supporting the development of XBMC by making a donation.
 <!--Widgets-->
 <string id="32100">Disable fanart on Widgets</string>
 
-<!--OSD Settings-->
-<string id="32200">General Settings</string>
-<string id="32201">Alternative OSD</string>
 
 
 

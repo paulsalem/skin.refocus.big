@@ -436,8 +436,17 @@
 						<selected>Skin.HasSetting(moviesmenu.inprogress)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<!--trailers-->
+					<!--sets-->
 					<control type="radiobutton" id="207">
+						<label>$LOCALIZE[20434]</label>
+						<width>557</width>
+						<onclick>Skin.ToggleSetting(moviesmenu.sets)</onclick>
+						<selected>Skin.HasSetting(moviesmenu.sets)</selected>
+						<include>dialog_Radio</include>
+						<enable>Library.HasContent(MovieSets)</enable>
+					</control>
+					<!--trailers-->
+					<control type="radiobutton" id="208">
 						<label>$LOCALIZE[31953]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.trailers)</onclick>
@@ -446,7 +455,7 @@
 						<enable>System.HasAddon(plugin.video.the.trailers)</enable>
 					</control>
 					<!--genres-->
-					<control type="radiobutton" id="208">
+					<control type="radiobutton" id="209">
 						<label>$LOCALIZE[135]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.genres)</onclick>
@@ -454,7 +463,7 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--years-->
-					<control type="radiobutton" id="209">
+					<control type="radiobutton" id="210">
 						<label>$LOCALIZE[652]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.years)</onclick>
@@ -462,7 +471,7 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--actors-->
-					<control type="radiobutton" id="210">
+					<control type="radiobutton" id="211">
 						<label>$LOCALIZE[344]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.actors)</onclick>
@@ -470,7 +479,7 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--movie sets-->
-					<control type="radiobutton" id="211">
+					<control type="radiobutton" id="212">
 						<label>$LOCALIZE[31993]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.moviesets)</onclick>
@@ -478,7 +487,7 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--random genre-->
-					<control type="radiobutton" id="212">
+					<control type="radiobutton" id="213">
 						<label>$LOCALIZE[32011]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.randomgenre)</onclick>
@@ -487,7 +496,7 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--random movie-->
-					<control type="radiobutton" id="213">
+					<control type="radiobutton" id="214">
 						<label>$LOCALIZE[32012]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.randommovie)</onclick>
