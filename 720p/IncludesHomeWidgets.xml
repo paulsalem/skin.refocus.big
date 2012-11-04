@@ -616,7 +616,7 @@
 					</focusedlayout>
 					<content>
 						 <item id="73">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.poster)]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TvShowTitle)]</label2>
@@ -635,7 +635,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.1.Title))</visible>
 							</item>
 							<item id="74">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.poster)]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.2.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.2.TvShowTitle)]</label2>
@@ -654,7 +654,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.2.Title))</visible>
 							</item>
 							<item id="75">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.poster)]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.3.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.3.TvShowTitle)]</label2>
@@ -673,7 +673,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.3.Title))</visible>
 							</item>
 							<item id="76">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.poster)]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.4.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.4.TvShowTitle)]</label2>
@@ -692,7 +692,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.4.Title))</visible>
 							</item>
 							<item id="77">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.poster)]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.5.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.5.TvShowTitle)]</label2>
@@ -711,7 +711,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.5.Title))</visible>
 							</item>
 							<item id="78">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.poster)]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.6.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.6.TvShowTitle)]</label2>
@@ -730,7 +730,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.6.Title))</visible>
 							</item>
 							<item id="79">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.poster)]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.7.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.TvShowTitle)]</label2>
@@ -749,7 +749,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.7.Title))</visible>
 							</item>
 							<item id="80">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.poster)]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.8.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.TvShowTitle)]</label2>
@@ -768,7 +768,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.8.Title))</visible>
 							</item>
 							<item id="81">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.poster)]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.9.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.9.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.9.TvShowTitle)]</label2>
@@ -787,7 +787,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.9.Title))</visible>
 							</item>
 							<item id="82">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.poster)]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.10.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.10.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.10.TvShowTitle)]</label2>
@@ -1195,7 +1195,7 @@
 					</focusedlayout>
 					<content>
 						 <item id="73">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TvShowTitle)]</label2>
@@ -1213,7 +1213,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.1.Title))</visible>
 							</item>
 							<item id="74">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.2.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.2.TvShowTitle)]</label2>
@@ -1231,7 +1231,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.2.Title))</visible>
 							</item>
 							<item id="75">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.3.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.3.TvShowTitle)]</label2>
@@ -1249,7 +1249,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.3.Title))</visible>
 							</item>
 							<item id="76">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.4.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.4.TvShowTitle)]</label2>
@@ -1267,7 +1267,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.4.Title))</visible>
 							</item>
 							<item id="77">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.5.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.5.TvShowTitle)]</label2>
@@ -1285,7 +1285,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.5.Title))</visible>
 							</item>
 							<item id="78">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.6.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.6.TvShowTitle)]</label2>
@@ -1303,7 +1303,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.6.Title))</visible>
 							</item>
 							<item id="79">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.7.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.TvShowTitle)]</label2>
@@ -1321,7 +1321,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.7.Title))</visible>
 							</item>
 							<item id="80">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.8.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.TvShowTitle)]</label2>
@@ -1339,7 +1339,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.8.Title))</visible>
 							</item>
 							<item id="81">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(thumb))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.9.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.9.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.9.TvShowTitle)]</label2>
@@ -1357,7 +1357,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.9.Title))</visible>
 							</item>
 							<item id="82">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(thumb))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.10.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.10.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.10.TvShowTitle)]</label2>
@@ -1603,7 +1603,7 @@
 					</focusedlayout>
 					<content>
 						 <item id="73">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.poster))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TvShowTitle)]</label2>
@@ -1621,7 +1621,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.1.Title))</visible>
 							</item>
 							<item id="74">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.poster))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.2.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.2.TvShowTitle)]</label2>
@@ -1639,7 +1639,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.2.Title))</visible>
 							</item>
 							<item id="75">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.poster))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.3.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.3.TvShowTitle)]</label2>
@@ -1657,7 +1657,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.3.Title))</visible>
 							</item>
 							<item id="76">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.poster))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.4.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.4.TvShowTitle)]</label2>
@@ -1675,7 +1675,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.4.Title))</visible>
 							</item>
 							<item id="77">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.poster))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.5.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.5.TvShowTitle)]</label2>
@@ -1693,7 +1693,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.5.Title))</visible>
 							</item>
 							<item id="78">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.poster))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.6.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.6.TvShowTitle)]</label2>
@@ -1711,7 +1711,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.6.Title))</visible>
 							</item>
 							<item id="79">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.poster))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.7.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.TvShowTitle)]</label2>
@@ -1729,7 +1729,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.7.Title))</visible>
 							</item>
 							<item id="80">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.poster))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.8.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.TvShowTitle)]</label2>
@@ -1747,7 +1747,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.8.Title))</visible>
 							</item>
 							<item id="81">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.poster))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.9.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.9.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.9.TvShowTitle)]</label2>
@@ -1765,7 +1765,7 @@
 								<visible>!IsEmpty(Window.Property(RecommendedEpisode.9.Title))</visible>
 							</item>
 							<item id="82">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.TvshowThumb)]</icon>
+								<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.poster))]</icon>
 								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.10.SeasonThumb)]</thumb>
 								<label>$INFO[Window(Home).Property(RecommendedEpisode.10.Title)]</label>
 								<label2>$INFO[Window(Home).Property(RecommendedEpisode.10.TvShowTitle)]</label2>
