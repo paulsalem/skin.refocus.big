@@ -78,10 +78,10 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>532</posx>
-						<posy>295</posy>
+						<posx>500</posx>
+						<posy>263</posy>
 						<control type="image">
-							<include>overlay_UnWatchedAlt</include>
+							<info>ListItem.Overlay</info>
 							<visible>!Container.Content(files) + Skin.HasSetting(watched.alternative)</visible>
 						</control>
 						<control type="image">
@@ -113,7 +113,7 @@
 			<control type="group">
 				<posx>750</posx>
 				<posy>65</posy>
-				<visible>!SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,plugin.video.the.trailers)</visible>
+				<!--<visible>!SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,plugin.video.the.trailers)</visible>-->
 				<control type="group">
 					<visible>[Container.Content(movies) | Container.Content(tvshows)] + [!Skin.HasSetting(view.list.fanart) | SubString(Container.FolderPath,plugin://)] | Container.Content(actors) | Container.Content(seasons) | Container.Content(sets)</visible>
 					<control type="image">
@@ -135,10 +135,10 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>397</posx>
-						<posy>591</posy>
+						<posx>365</posx>
+						<posy>559</posy>
 						<control type="image">
-							<include>overlay_UnWatchedAlt</include>
+							<info>ListItem.Overlay</info>
 							<visible>Skin.HasSetting(watched.alternative)</visible>
 						</control>
 						<control type="image">
@@ -187,7 +187,7 @@
 			</control>
 			<!---addons--->
 			<control type="group">
-				<visible>SubString(Container.FolderPath,plugin.video.LiveTV) | SubString(Container.FolderPath,plugin.video.tvalacarta)</visible>
+				<visible>SubString(Container.FolderPath,plugin.video.LiveTV)</visible>
 				<control type="group">
 					<posx>655</posx>
 					<posy>80</posy>
@@ -576,9 +576,9 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>toggle_Menu</include>
-			<!---large grid--->
+			<!---large grid---> 
 			<control type="group">
-				<visible>Control.IsVisible(57) | Control.IsVisible(5711) | Control.IsVisible(573)</visible>
+				<visible>Control.IsVisible(57) | Control.IsVisible(573)</visible>
 				<!---flags--->
 				<control type="image">
 					<posx>235r</posx>
@@ -926,7 +926,7 @@
 				</control>				
 				<control type="textbox" id="1">
 					<posy>70</posy>
-					<height>87</height>
+					<height>97</height>
 					<width>1045</width>
 					<label>$VAR[global_Plot.Condition]</label>
 					<textcolor>Color1</textcolor>
@@ -961,10 +961,10 @@
 				    </control>
 			    </control>
 				<control type="group">
-				    <posx>1047</posx>
-				    <posy>146</posy>
+				    <posx>1021</posx>
+				    <posy>115</posy>
 				    <control type="image">
-					<include>overlay_UnWatchedAlt</include>
+					<info>ListItem.Overlay</info>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 				    </control>
 			    </control>
