@@ -10,7 +10,7 @@
     <import addon="script.globalsearch" version="0.2.5"/>
 	<import addon="script.randomandlastitems" version="1.2.4"/>
 	<import addon="script.playalbum" version="0.0.6"/>    
-    <import addon="service.skin.widgets" version="0.0.2"/>
+    <import addon="service.skin.widgets" version="0.0.9"/>
   </requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xb" effectslowdown="1.00" debugging="false">
 		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
