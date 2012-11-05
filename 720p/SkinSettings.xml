@@ -331,13 +331,13 @@
 				<selected>Skin.HasSetting(banners.enable)</selected>
 				<include>button_Settings</include>
 			</control>
-			<control type="radiobutton" id="612">
+			<!--<control type="radiobutton" id="612">
 				<label>- $LOCALIZE[31067]</label>
 				<onclick>Skin.ToggleSetting(banners.local)</onclick>
 				<selected>Skin.HasSetting(banners.local)</selected>
 				<include>button_Settings</include>
 				<visible>Skin.HasSetting(banners.enable)</visible>
-			</control>
+			</control>-->
 			<control type="button" id="613">
 				<label>- $LOCALIZE[31129]</label>
 				<onclick>XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, silent=true,banner)</onclick>
@@ -367,12 +367,33 @@
 				<include>button_Settings</include>
 			</control>
 			<control type="radiobutton" id="617">
+				<label>$LOCALIZE[32103]</label>
+				<onclick>Skin.ToggleSetting(removelogos.enable)</onclick>
+				<selected>Skin.HasSetting(removelogos.enable)</selected>
+				<include>button_Settings</include>
+			</control>
+			
+			
+			<!--studio and network logos
+			<control type="radiobutton" id="617">
+				<label>$LOCALIZE[32101]</label>
+				<onclick>Skin.ToggleSetting(studionetwork.enable)</onclick>
+				<selected>!Skin.HasSetting(studionetwork.enable)</selected>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="618">
+				<label>$LOCALIZE[32102]</label>
+				<onclick>Skin.ToggleSetting(studionetworkosd.enable)</onclick>
+				<selected>!Skin.HasSetting(studionetworkosd.enable)</selected>
+				<include>button_Settings</include>-->
+			
+			<control type="radiobutton" id="619">
 				<label>$LOCALIZE[31132]</label>
 				<onclick>Skin.ToggleSetting(gallery.extrafanart)</onclick>
 				<include>button_Settings</include>
 				<selected>Skin.HasSetting(gallery.extrafanart)</selected>
 			</control>
-			<control type="button" id="618">
+			<control type="button" id="620">
 				<label>- $LOCALIZE[31131]</label>
 				<onclick>XBMC.runscript(script.artwork.downloader, mode=custom, extrafanart)</onclick>
 				<include>button_Settings</include>
@@ -380,14 +401,14 @@
 				<enable>System.HasAddon(script.artwork.downloader)</enable>
 			</control>
 			<!-- artist logos -->
-			<control type="radiobutton" id="619">
+			<control type="radiobutton" id="621">
 				<label>$LOCALIZE[31995]</label>
 				<onclick>Skin.ToggleSetting(artistlogo.enable)</onclick>
 				<selected>Skin.HasSetting(artistlogo.enable)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!-- set path music folder -->
-			<control type="button" id="620">
+			<control type="button" id="622">
 				<label>$LOCALIZE[31996]</label>
 				<onclick>Skin.SetPath(artistlogo.path)</onclick>
 				<label2>[COLOR=Color2]$INFO[Skin.String(artistlogo.path)][/COLOR]</label2>
@@ -458,6 +479,7 @@
 				<selected>Skin.HasSetting(watched.alternative)</selected>
 				<include>button_Settings</include>
 			</control>
+			<!-->
 			<control type="radiobutton" id="708">
 				<label>$LOCALIZE[31922]</label>
 				<onclick>Skin.ToggleSetting(overlay.movies)</onclick>
@@ -492,7 +514,7 @@
 				<selected>Skin.HasSetting(overlay.resumable)</selected>
 				<include>button_Settings</include>
 				<visible>!Skin.HasSetting(watched.alternative)</visible>
-			</control>
+			</control>-->
 			<!--background video-->
 			<control type="radiobutton" id="713">
 				<label>$LOCALIZE[31028]</label>
@@ -615,7 +637,7 @@
 				<include>button_Settings</include>
 			</control>
 		</control>
-<!---ADDONS------>
+<!--ADDONS-->
 		<control type="grouplist" id="800">
 			<posx>340</posx>
 			<posy>93</posy>
@@ -628,7 +650,7 @@
 			<itemgap>0</itemgap>
 			<visible>Skin.String(SkinSettings,Addons)</visible>
 			<include>transition_Container</include>
-			<!--watchlist-->
+			<!--watchlist
 			<control type="radiobutton" id="801">
 				<label>$LOCALIZE[31082]</label>
 				<onclick>Skin.ToggleSetting(watchlist.disable)</onclick>
@@ -641,7 +663,7 @@
 				<selected>Skin.HasSetting(watchlist.refresh)</selected>
 				<visible>!Skin.HasSetting(watchlist.disable)</visible>
 				<include>button_Settings</include>
-			</control>
+			</control>-->
 			<!--search CURRENTLY REMOVED
 			<control type="radiobutton" id="802">
 				<label>$LOCALIZE[31934]</label>
