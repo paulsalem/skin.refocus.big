@@ -24,7 +24,7 @@
 					<posy>0</posy>
 					<width>590</width>
 					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordersize>9</bordersize>
 					<visible>!Skin.HasSetting(banners.local)</visible>
@@ -34,7 +34,7 @@
 					<posy>0</posy>
 					<width>590</width>
 					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.path]banner.jpg</texture>
+					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<bordersize>9</bordersize>
 					<aspectratio>stretch</aspectratio>
 					<visible>Skin.HasSetting(banners.local)</visible>
@@ -46,9 +46,9 @@
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
-					<posx>549</posx>
-					<posy>87</posy>
-					<include>overlay_UnWatchedAlt</include>
+					<posx>518</posx>
+					<posy>56</posy>
+					<info>ListItem.Overlay</info>
 					<visible>Skin.HasSetting(watched.alternative)</visible>				
 				</control>				
 			</itemlayout>															
@@ -67,7 +67,7 @@
 					<posy>0</posy>
 					<width>590</width>
 					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordersize>9</bordersize>
 					<visible>!Skin.HasSetting(banners.local)</visible>
@@ -77,7 +77,7 @@
 					<posy>0</posy>
 					<width>590</width>
 					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.path]banner.jpg</texture>
+					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordersize>9</bordersize>
 					<visible>Skin.HasSetting(banners.local)</visible>
@@ -89,9 +89,9 @@
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
-					<posx>549</posx>
-					<posy>87</posy>
-					<include>overlay_UnWatchedAlt</include>
+					<posx>518</posx>
+					<posy>56</posy>
+					<info>ListItem.Overlay</info>
 					<visible>Skin.HasSetting(watched.alternative)</visible>				
 				</control>						
 			</focusedlayout>
@@ -176,7 +176,7 @@
 					<posy>0</posy>
 					<width>590</width>
 					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordersize>9</bordersize>
 					<visible>!Skin.HasSetting(banners.local)</visible>
@@ -186,7 +186,7 @@
 					<posy>0</posy>
 					<width>590</width>
 					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.path]banner.jpg</texture>
+					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<bordersize>9</bordersize>
 					<aspectratio>stretch</aspectratio>
 					<visible>Skin.HasSetting(banners.local)</visible>
@@ -198,9 +198,9 @@
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
-					<posx>549</posx>
-					<posy>89</posy>
-					<include>overlay_UnWatchedAlt</include>
+					<posx>518</posx>
+					<posy>56</posy>
+					<info>ListItem.Overlay</info>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 				</control>				
 			</itemlayout>															
@@ -219,7 +219,7 @@
 					<posy>0</posy>
 					<width>590</width>
 					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordersize>9</bordersize>
 					<visible>!Skin.HasSetting(banners.local)</visible>
@@ -229,7 +229,7 @@
 					<posy>0</posy>
 					<width>590</width>
 					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.path]banner.jpg</texture>
+					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordersize>9</bordersize>
 					<visible>Skin.HasSetting(banners.local)</visible>
@@ -241,9 +241,9 @@
 					<visible>!Skin.HasSetting(watched.alternative)</visible>		
 				</control>
 				<control type="image">
-					<posx>549</posx>
-					<posy>89</posy>
-					<include>overlay_UnWatchedAlt</include>
+					<posx>518</posx>
+					<posy>56</posy>
+					<info>ListItem.Overlay</info>
 					<visible>Skin.HasSetting(watched.alternative)</visible>		
 				</control>			
 			</focusedlayout>
@@ -319,7 +319,7 @@
 			<posy>350</posy>
 			<width>264</width>
 			<height>359</height>
-			<texture>$INFO[ListItem.path]poster.jpg</texture>
+			<texture>$INFO[ListItem.Art(poster)]</texture>
 			<aspectratio align="center">keep</aspectratio>
 			<include>toggle_Menu</include>
 			<include>transition_Container</include>
@@ -433,12 +433,12 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>789</posx>
-					<posy>134</posy>
+					<posx>756</posx>
+					<posy>100</posy>
 					<include>focus_Banner</include>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatchedAlt</include>
+						<info>ListItem.Overlay</info>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -555,7 +555,7 @@
 					<posy>23</posy>
 					<width>172</width>
 					<height>248</height>
-					<texture diffuse="frames/frame_Portrait-mask.png" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="frames/frame_Portrait-mask.png" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio scalediffuse="false" align="left">stretch</aspectratio>
 					<include>focus_Banner</include>
 				</control>
@@ -699,9 +699,9 @@
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
-					<posx>592</posx>
-					<posy>89</posy>
-					<include>overlay_UnWatchedAlt</include>
+					<posx>560</posx>
+					<posy>56</posy>
+					<info>ListItem.Overlay</info>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 				</control>
 			</itemlayout>
@@ -730,9 +730,9 @@
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
-					<posx>592</posx>
-					<posy>89</posy>
-					<include>overlay_UnWatchedAlt</include>
+					<posx>560</posx>
+					<posy>56</posy>
+					<info>ListItem.Overlay</info>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 				</control>
 			</focusedlayout>
@@ -780,7 +780,7 @@
 			</control>
 			<control type="textbox" id="4">
 				<width>500</width>
-				<height>355</height>
+				<height>345</height>
 				<label>$VAR[global_Plot.Condition]</label>
 				<include>description_Small</include>
 			</control>

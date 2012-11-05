@@ -87,12 +87,12 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>718</posx>
-				<posy>392</posy>
+				<posx>685</posx>
+				<posy>360</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
 				<control type="image">
-					<include>overlay_UnWatchedAlt</include>
+					<info>ListItem.Overlay</info>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
@@ -141,11 +141,11 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>718</posx>
-				<posy>392</posy>
+				<posx>686</posx>
+				<posy>359</posy>
 				<visible>Skin.HasSetting(watched.alternative) + !Control.HasFocus(8000)</visible>
 				<control type="image">
-					<include>overlay_UnWatchedAlt</include>
+					<info>ListItem.Overlay</info>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>

@@ -3,7 +3,7 @@
 		<control type="list" id="50">
 			<viewtype label="535">list</viewtype> 	
 			<posy>90</posy>
-			<width>625</width>
+			<width>640</width>
 			<height>612</height>
 			<onup>50</onup>
 			<ondown>50</ondown>
@@ -25,7 +25,7 @@
 	</include>
 
 	<include name="List_Video">
-		 <itemlayout condition="IsEmpty(Container.FolderPath) | StringCompare(Container.FolderPath,sources://video/) | [Container.Content(seasons) + SubString(Container.FolderPath,plugin://)] | SubString(Container.Folderpath,library://video/movies/) | SubString(Container.Folderpath,library://video/tvshows/)" width="625" height="40">
+		 <itemlayout condition="IsEmpty(Container.FolderPath) | StringCompare(Container.FolderPath,sources://video/) | [Container.Content(seasons) + SubString(Container.FolderPath,plugin://)]" width="625" height="40">
 			<control type="label">
 				<posx>40</posx>
 				<width>500</width>
@@ -93,7 +93,7 @@
 				<!--<visible>!SubString(Container.FolderPath,plugin://)</visible>-->
 			</control>
 			<control type="image">
-				<posx>570</posx>
+				<posx>491</posx>
 				<posy>35</posy>
 				<width>32</width>
 				<height>32</height>
@@ -108,7 +108,18 @@
 				<width>32</width>
 				<height>32</height>
 				
-					<include>overlay_UnWatchedAlt</include>
+					<info>ListItem.Overlay</info>
+				
+				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
+			</control>
+			<control type="image">
+				<posx>575</posx>
+				<posy>5</posy>
+				
+				
+					<info>ListItem.Overlay</info>
 				
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
@@ -160,7 +171,7 @@
 				<!--<visible>!SubString(Container.FolderPath,plugin://)</visible>-->
 			</control>
 			<control type="image">
-				<posx>570</posx>
+				<posx>491</posx>
 				<posy>35</posy>
 				<width>32</width>
 				<height>32</height>
@@ -169,12 +180,11 @@
 				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
 			</control>
 			<control type="image">
-				<posx>590</posx>
-				<posy>37</posy>
-				<width>32</width>
-				<height>32</height>
-				<width>32</width>
-				<texture>$INFO[ListItem.Overlay]</texture>
+				<posx>575</posx>
+				<posy>5</posy>
+				
+				
+					<info>ListItem.Overlay</info>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 			</control>
@@ -216,48 +226,7 @@
 	</include>
 
 	<include name="List_Video_1Row">
-		 <itemlayout condition="IsEmpty(Container.FolderPath) | StringCompare(Container.FolderPath,sources://video/) | SubString(Container.FolderPath,library://) | [Container.Content(seasons) + SubString(Container.FolderPath,plugin://)]" width="625" height="40">
-			<control type="label">
-				<posx>40</posx>
-				<width>500</width>
-				<label>$INFO[ListItem.Label]</label>
-				<include>list_Label-single</include>
-			</control>
-			<control type="image">
-				<posx>588</posx>
-				<posy>14</posy>
-				<width>18</width>
-				<height>18</height>
-				<texture>$INFO[ListItem.Overlay]</texture>
-				<visible>Window.IsVisible(Videos) + SubString(Container.Folderpath,sources) + !SubString(Container.FolderPath,plugin://)</visible>
-			</control>
-		</itemlayout>
-		<focusedlayout condition="IsEmpty(Container.FolderPath) | StringCompare(Container.FolderPath,sources://video/) | SubString(Container.FolderPath,library://) | [Container.Content(seasons) + SubString(Container.FolderPath,plugin://)]" width="625" height="40">
-			<control type="image">
-				<posy>-28</posy>
-				<width>650</width>
-				<height>100</height>
-				<texture border="0,30,0,30">views/list-focus.png</texture>
-				<include>focus_ListScrollAlt</include>
-				<visible>!ControlGroup(6000).HasFocus</visible>
-			</control>
-			<control type="label">
-				<posx>40</posx>
-				<width>500</width>
-				<label>$INFO[ListItem.Label]</label>
-				<textcolor>Focused</textcolor>
-				<include>list_Label-single</include>
-			</control>
-			<control type="image">
-				<posx>588</posx>
-				<posy>14</posy>
-				<width>18</width>
-				<height>18</height>
-				<texture>$INFO[ListItem.Overlay]</texture>
-				<visible>Window.IsVisible(Videos) + SubString(Container.Folderpath,sources) + !SubString(Container.FolderPath,plugin://)</visible>
-			</control>
-		</focusedlayout>
-		
+		 
 		<itemlayout condition="[[Container.Content(movies) | Container.Content(tvshows) | [Container.Content(seasons) + !SubString(Container.FolderPath,plugin://)] | Container.Content(episodes) | Container.Content(musicvideos)]] |  Container.Content(addons) | [Container.Content(files) + !SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus" width="625" height="40">		
 			<control type="label">
 				<posx>40</posx>
@@ -277,12 +246,11 @@
 			</control>
 			
 			<control type="image">
-				<posx>595</posx>
-				<posy>50</posy>
+				<posx>590</posx>
+				<posy>16</posy>
 				<width>32</width>
 				<height>32</height>
-				
-					<include>overlay_UnWatchedAlt</include>
+					<info>ListItem.Overlay</info>
 				
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
@@ -327,14 +295,14 @@
 			</control>
 			
 			<control type="image">
-				<posx>595</posx>
-				<posy>50</posy>
+				<posx>590</posx>
+				<posy>16</posy>
 				<width>32</width>
 				<height>32</height>
-				<width>32</width>
+				
 				<texture>$INFO[ListItem.Overlay]</texture>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>Skin.HasSetting(watched.alternative)</visible>
+
 			</control>
 			<control type="image">
 				<posx>475</posx>
@@ -832,9 +800,9 @@
 			</control>
 			<control type="textbox" id="4">
 				<posx>260</posx>
-				<posy>70</posy>
+				<posy>63</posy>
 				<width>930</width>
-				<height>59</height>
+				<height>70</height>
 				<label>$VAR[global_Plot.Condition]</label>
 				<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
 					<font>descriptionbig</font>
@@ -851,11 +819,11 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>209</posx>
-				<posy>108</posy>
+				<posx>177</posx>
+				<posy>74</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<include>overlay_UnWatchedAlt</include>
+					<info>ListItem.Overlay</info>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
@@ -907,9 +875,9 @@
 			</control>
 			<control type="textbox" id="4">
 				<posx>260</posx>
-				<posy>70</posy>
+				<posy>63</posy>
 				<width>930</width>
-				<height>59</height>
+				<height>70</height>
 				<label>$VAR[global_Plot.Condition]</label>
 				<include>autoscroll-plot</include>
 				<font>descriptionbig</font>
@@ -927,11 +895,11 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>209</posx>
-				<posy>108</posy>
+				<posx>177</posx>
+				<posy>74</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<include>overlay_UnWatchedAlt</include>
+					<info>ListItem.Overlay</info>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
@@ -1005,7 +973,7 @@
 				<posy>106</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<include>overlay_UnWatchedAlt</include>
+					<info>ListItem.Overlay</info>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
@@ -1101,7 +1069,7 @@
 				<posy>108</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<include>overlay_UnWatchedAlt</include>
+					<info>ListItem.Overlay</info>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>

@@ -175,7 +175,7 @@
 					<posy>186</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatchedAlt</include>
+						<info>ListItem.Overlay</info>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>

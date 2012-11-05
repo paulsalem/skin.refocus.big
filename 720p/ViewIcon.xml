@@ -41,11 +41,11 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>139</posx>
-					<posy>213</posy>
+					<posx>110</posx>
+					<posy>182</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatchedAlt</include>
+						<info>ListItem.Overlay</info>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -76,12 +76,12 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>139</posx>
-					<posy>213</posy>
+					<posx>110</posx>
+					<posy>182</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<include>focus_ThumbPoster</include>
 					<control type="image">
-						<include>overlay_UnWatchedAlt</include>
+						<info>ListItem.Overlay</info>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -119,6 +119,13 @@
 					<aspectratio align="center">scale</aspectratio>
 					<visible>Container.Content(movies) | SubString(Container.FolderPath,plugin://plugin.video.xbmcflicks) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>225</posy>
+					<label>$VAR[global_Title]</label>
+					<width>1100</width>
+					<include>info_Title</include>
+					</control>
 				<control type="group">
 					<posx>336</posx>
 					<posy>184</posy>
@@ -131,11 +138,11 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>336</posx>
-					<posy>184</posy>
+					<posx>304</posx>
+					<posy>153</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatchedAlt</include>
+						<info>ListItem.Overlay</info>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
@@ -158,6 +165,13 @@
 					<aspectratio align="center">scale</aspectratio>
 					<visible>Container.Content(movies) | SubString(Container.FolderPath,plugin://plugin.video.xbmcflicks) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>225</posy>
+					<label>$VAR[global_Title]</label>
+					<width>1100</width>
+					<include>info_Title</include>
+					</control>
 				<control type="group">
 					<posx>336</posx>
 					<posy>184</posy>
@@ -170,11 +184,11 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>336</posx>
-					<posy>184</posy>
+					<posx>304</posx>
+					<posy>153</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatchedAlt</include>
+						<info>ListItem.Overlay</info>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
