@@ -197,7 +197,7 @@
 				</control>
 				<control type="group">
 					<posx>143</posx>
-					<posy>232</posy>
+					<posy>231</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
@@ -232,7 +232,7 @@
 				</control>
 				<control type="group">
 					<posx>143</posx>
-					<posy>232</posy>>
+					<posy>231</posy>>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
@@ -302,8 +302,8 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>396</posx>
-					<posy>218</posy>
+					<posx>363</posx>
+					<posy>185</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
@@ -346,8 +346,8 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>396</posx>
-					<posy>218</posy>
+					<posx>363</posx>
+					<posy>185</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
