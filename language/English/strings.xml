@@ -106,7 +106,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31082">Disable Watchlist Add-on</string>
 
 <string id="31085">Timers</string>
-<string id="31086">Watchlist</string>
+<string id="31086">Recent</string>
 <string id="31087">season</string>
 <string id="31088">episode</string>
 <string id="31089">Total</string>
@@ -318,7 +318,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32019">Two Column Banners</string>
 
 <!--tv netowork logos-->
-<string id="32020">enable TV Network Logos</string>
+<string id="32020">Enable TV Network Logo on Full Gallery View</string>
 
 <!--poster banner view-->
 <string id="32021">Banners Poster</string>
@@ -336,7 +336,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32027">Heavy Opacity</string>
 
 <!--alternate watched icons-->
-<string id="32028">Alternative Watched Overlays</string>
+<string id="32028">Big Watched Overlays</string>
 
 <!--enable zoom on artistslideshow-->
 <string id="32029">Enable Zoom on Artist Slideshow</string>
@@ -386,16 +386,16 @@ Please consider supporting the development of XBMC by making a donation.
 
 <!--home menu-->
 <string id="32049">Enable Widgets on Home Menu</string>
-<string id="32050">Use Watchlist Items</string>
-<string id="32051">Latest Episodes</string>
-<string id="32052">Currently Watching</string>
-<string id="32053">Latest Movies</string>
-<string id="32054">Latest Albums</string>
-<string id="32055">Random Addons</string>
-<string id="32056">Use both Watchlist and Recent Items</string>
+<string id="32050">Use Recommended Items</string>
+<string id="32051">Recent</string>
+<string id="32052">Recommended</string>
+<string id="32053">Recent</string>
+<string id="32054">Recent</string>
+<string id="32055">Random</string>
+<string id="32056">Use both Recommended and Recent Items</string>
 <string id="32057">Enable Vignette Overlay on Home Menu</string>
 <string id="32058">Reset Wallpapers</string>
-<string id="32059">Use Posters on Watchlist Items</string>
+<string id="32059">Use Posters on Recommended Items</string>
 <string id="32060">Widgets</string>
 
 <!--Opacity-->
@@ -414,7 +414,11 @@ Please consider supporting the development of XBMC by making a donation.
 <!--Widgets-->
 <string id="32100">Disable fanart on Widgets</string>
 
-
+<!-->
+<!--studio network logos
+<string id="32101">Enable Network and Studio Logos on Views</string>
+<string id="32102">Enable Network and Studio Logos on Video OSD</string>-->
+<string id="32103">Remove Network/Studios Logos on Views</string>-->
 
 
 </strings>
