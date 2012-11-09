@@ -123,7 +123,7 @@
 					<posx>25</posx>
 					<posy>225</posy>
 					<label>$VAR[global_Title]</label>
-					<width>1100</width>
+					<width>340</width>
 					<include>info_Title</include>
 					</control>
 				<control type="group">
@@ -169,7 +169,7 @@
 					<posx>25</posx>
 					<posy>225</posy>
 					<label>$VAR[global_Title]</label>
-					<width>1100</width>
+					<width>340</width>
 					<include>info_Title</include>
 					</control>
 				<control type="group">
