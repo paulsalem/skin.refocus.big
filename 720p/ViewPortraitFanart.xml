@@ -1,16 +1,16 @@
 <includes>
-<!---INFO------>
+	<!-- INFO -->
 	<include name="info_PortraitFanart">
 		<control type="group">
 			<include>toggle_Menu</include>
 			<include>transition_Info</include>
 			<include>infoDialogHide</include>
 			<visible>[Control.IsVisible(550) | Control.IsVisible(551)] + Container.Content(movies)</visible>
-			<!---flags--->
-            <posy>640</posy>
+			<!--flags-->
+			<posy>640</posy>
 			<control type="image" id="99199">
 				<posx>10</posx>
-                <posy>-15</posy>
+				<posy>-15</posy>
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="left">keep</aspectratio>
@@ -18,15 +18,15 @@
 			</control>
 			<control type="image" id="99299">
 				<posx>10</posx>
-                <posy>-15</posy>
+				<posy>-15</posy>
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="left">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<visible>StringCompare(Control.GetLabel(99199),empty)</visible>
 			</control>
-            <control type="image">
-                <posx>132</posx>
+			<control type="image">
+				<posx>132</posx>
 				<width>128</width>
 				<height>32</height>
 				<info>ListItem.StarRating</info>
@@ -42,7 +42,7 @@
 				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
 			</control>
 			<control type="image">
-                <posx>1220</posx>
+				<posx>1220</posx>
 				<width>53</width>
 				<height>34</height>
 				<aspectratio align="center">keep</aspectratio>
@@ -58,31 +58,31 @@
 				<aspectratio align="center">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Path]logo.png</texture>
 			</control>
-			<!---info--->	
+			<!--info-->	
 			<control type="group">
 				<visible>!Container.Content(addons)</visible>
 				<control type="label">
-				<posx>270</posx>                    
-				<width>730</width>
+					<posx>270</posx>
+					<width>730</width>
 					<label>$VAR[global_Title]</label>
 					<font>titleSpecial</font>
-                    <align>center</align>
-                    <include>info_Title</include>
+					<align>center</align>
+					<include>info_Title</include>
 				</control>
 				<control type="label">
 					<posy>39</posy>
 					<width>1280</width>
 					<label>$VAR[global_Info]</label>
 					<font>titleSmallest</font>
-                    <align>center</align>
+					<align>center</align>
 					<include>info_Sub</include>
 					<!--<visible>!SubString(Container.FolderPath,plugin)</visible>-->
 				</control>
 			</control>
 		</control>
 	</include>
-    <!---PORTRAIT--->
-    <include name="view_PortraitFanart">
+	<!-- PORTRAIT -->
+	<include name="view_PortraitFanart">
 		<control type="wraplist" id="551">
 			<viewtype label="WideSlide">biginfo</viewtype>
 			<posx>-150</posx>
@@ -104,7 +104,7 @@
 			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !SubString(Container.FolderPath,plugin.video.hulu)</visible>
 			<include condition="Window.IsVisible(videolibrary)">PortraitFanart</include>
 		</control>	
-		<!---window menu shade-->
+		<!--window menu shade-->
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<aspectratio align="left">stretch</aspectratio>
@@ -112,7 +112,7 @@
 			<include>fadeinout</include>
 			<visible>Control.IsVisible(551) + ControlGroup(6000).HasFocus()</visible>
 		</control>
-    </include>
+	</include>
 	<include name="PortraitFanart">
 		<itemlayout width="140" height="260">
 			<control type="group">
@@ -121,7 +121,7 @@
 					<height>240</height>
 					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
 					<bordertexture border="31">frames/frame_Square.png</bordertexture>
-                    <aspectratio align="center">stretch</aspectratio>
+					<aspectratio align="center">stretch</aspectratio>
 					<bordersize>22</bordersize>
 				</control>
 				<control type="group">
@@ -156,7 +156,7 @@
 					<height>240</height>
 					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
 					<bordertexture border="27">frames/frame_Square.png</bordertexture>
-                    <aspectratio align="center">stretch</aspectratio>
+					<aspectratio align="center">stretch</aspectratio>
 					<bordersize>22</bordersize>
 				</control>
 				<control type="group">

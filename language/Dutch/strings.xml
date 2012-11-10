@@ -140,7 +140,7 @@ Steun alstublieft de ontwikkeling van XBMC met een donatie.
 <string id="31114">Willekeurig: aan</string>
 <string id="31115">-</string>
 <string id="31116">items</string>
-<string id="31117">op</string><!--TRANSLATORS: example usage = "sorted by date/name/episode"--->
+<string id="31117">op</string>
 <string id="31118">-</string>
 <string id="31119">Andere</string>
 <string id="31120">Gebruik fanart in visualisatie scherm</string>
@@ -414,6 +414,5 @@ Steun alstublieft de ontwikkeling van XBMC met een donatie.
 <!--OSD Settings-->
 <string id="32200">Algemene Instellingen</string>
 <string id="32201">Alternatieve OSD</string>
-
 
 </strings>

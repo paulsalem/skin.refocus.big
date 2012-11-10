@@ -1,4 +1,5 @@
 ﻿<includes>
+	<!-- LIST -->
 	<include name="view_List">
 		<control type="list" id="50">
 			<viewtype label="535">list</viewtype> 	
@@ -23,7 +24,6 @@
 			<include condition="Window.IsVisible(pictures) | Window.IsVisible(programs) | Window.IsVisible(addonbrowser)">List_Files</include>
 		</control>
 	</include>
-
 	<include name="List_Video">
 		 <itemlayout condition="IsEmpty(Container.FolderPath) | StringCompare(Container.FolderPath,sources://video/) | [Container.Content(seasons) + SubString(Container.FolderPath,plugin://)]" width="625" height="40">
 			<control type="label">
@@ -66,7 +66,6 @@
 				<visible>Window.IsVisible(Videos) + SubString(Container.Folderpath,sources) + !SubString(Container.FolderPath,plugin://)</visible>
 			</control>
 		</focusedlayout>
-		
 		<itemlayout condition="[[Container.Content(movies) | Container.Content(tvshows) | [Container.Content(seasons) + !SubString(Container.FolderPath,plugin://)] | Container.Content(episodes) | Container.Content(musicvideos)]] | Container.Content(addons) | [Container.Content(files) + !SubString(Container.FolderPath,plugin://)] | SubString(Container.FolderName,$LOCALIZE[575])" width="625" height="67">
 			<control type="label">
 				<posx>40</posx>
@@ -104,12 +103,10 @@
 			</control>
 			<control type="image">
 				<posx>590</posx>
-				<posy>37</posy>
+				<posy>36</posy>
 				<width>32</width>
 				<height>32</height>
-				
-					<info>ListItem.Overlay</info>
-				
+				<info>ListItem.Overlay</info>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>!Skin.HasSetting(watched.alternative)</visible>
@@ -117,10 +114,7 @@
 			<control type="image">
 				<posx>575</posx>
 				<posy>5</posy>
-				
-				
-					<info>ListItem.Overlay</info>
-				
+				<info>ListItem.Overlay</info>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
@@ -180,11 +174,18 @@
 				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
 			</control>
 			<control type="image">
+				<posx>590</posx>
+				<posy>39</posy>
+				<width>32</width>
+				<height>32</height>
+				<info>ListItem.Overlay</info>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
+			</control>
+			<control type="image">
 				<posx>575</posx>
 				<posy>5</posy>
-				
-				
-					<info>ListItem.Overlay</info>
+				<info>ListItem.Overlay</info>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 			</control>
@@ -200,6 +201,8 @@
 			</control>
 		</focusedlayout>
 	</include>
+	
+	<!-- LIST SINGLE ROW -->
 	<include name="view_List_1Row">
 		<control type="list" id="501">
 			<viewtype label="535">list</viewtype> 	
@@ -224,9 +227,7 @@
 			<include condition="Window.IsVisible(pictures) | Window.IsVisible(programs) | Window.IsVisible(addonbrowser)">List_Files</include>
 		</control>
 	</include>
-
 	<include name="List_Video_1Row">
-		 
 		<itemlayout condition="[[Container.Content(movies) | Container.Content(tvshows) | [Container.Content(seasons) + !SubString(Container.FolderPath,plugin://)] | Container.Content(episodes) | Container.Content(musicvideos)]] |  Container.Content(addons) | [Container.Content(files) + !SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus" width="625" height="40">		
 			<control type="label">
 				<posx>40</posx>
@@ -244,14 +245,20 @@
 				<include>list_Label</include>
 				<visible>Container.Content(files)</visible>
 			</control>
-			
 			<control type="image">
-				<posx>590</posx>
-				<posy>16</posy>
+				<posx>592</posx>
+				<posy>11</posy>
 				<width>32</width>
 				<height>32</height>
-					<info>ListItem.Overlay</info>
-				
+				<info>ListItem.Overlay</info>
+				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
+			</control>
+			<control type="image">
+				<posx>585</posx>
+				<posy>6</posy>
+				<info>ListItem.Overlay</info>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
@@ -293,16 +300,21 @@
 				<include>list_Label-focus</include>
 				<visible>Container.Content(files)</visible>
 			</control>
-			
 			<control type="image">
-				<posx>590</posx>
-				<posy>16</posy>
+				<posx>592</posx>
+				<posy>13</posy>
 				<width>32</width>
 				<height>32</height>
-				
-				<texture>$INFO[ListItem.Overlay]</texture>
+				<info>ListItem.Overlay</info>
 				<aspectratio align="right">keep</aspectratio>
-
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
+			</control>
+			<control type="image">
+				<posx>585</posx>
+				<posy>6</posy>
+				<info>ListItem.Overlay</info>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>Skin.HasSetting(watched.alternative)</visible>
 			</control>
 			<control type="image">
 				<posx>475</posx>
@@ -316,7 +328,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-
 	<!--music-->
 	<include name="List_Music">
 		<itemlayout condition="IsEmpty(Container.FolderPath) | ![stringcompare(Container.FolderPath,addons://sources/audio/) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]" width="625" height="40">
@@ -440,7 +451,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-
 	<!--video playlist-->
 	<include name="List_VideoPlaylist">
 		<itemlayout width="625" height="67">
@@ -523,7 +533,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-
 	<!--music playlist-->
 	<include name="List_MusicPlaylist">
 		<itemlayout width="625" height="67">
@@ -607,7 +616,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-
 	<!--files-->
 	<include name="List_Files">
 		<itemlayout condition="!Container.HasFiles" width="625" height="40">
@@ -715,14 +723,14 @@
 			</control>
 		</focusedlayout>
 	</include>
-
-<!--- BIG LIST ---------->
+	
+	<!-- BIG LIST -->
 	<include name="view_BigList">
 		<control type="group">
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>toggle_Menu</include>
-			<!---selector--->
+			<!--selector-->
 			<control type="image">
 				<posx>29</posx>
 				<posy>237</posy>
@@ -741,7 +749,7 @@
 				<animation effect="slide" start="0,0" end="0,8" time="0" condition="Skin.HasSetting(numitems.enable)">Conditional</animation>
 				<visible>Window.IsVisible(musiclibrary) + Control.IsVisible(51)</visible>
 			</control>
-			<!--container--->
+			<!--container-->
 			<control type="fixedlist" id="51">
 				<viewtype label="537">biglist</viewtype> 
 				<posx>30</posx>
@@ -805,11 +813,11 @@
 				<height>70</height>
 				<label>$VAR[global_Plot.Condition]</label>
 				<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
-					<font>descriptionbig</font>
+				<font>descriptionbig</font>
 			</control>
 			<control type="group">
 				<posx>209</posx>
-				<posy>106</posy>
+				<posy>108</posy>
 				<visible>!Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<include>overlay_UnWatched</include>
@@ -885,7 +893,7 @@
 			</control>
 			<control type="group">
 				<posx>209</posx>
-				<posy>106</posy>
+				<posy>108</posy>
 				<visible>!Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<include>overlay_UnWatched</include>
@@ -966,7 +974,7 @@
 				<height>60</height>
 				<label>$VAR[global_Plot.Condition]</label>
 				<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
-					<font>descriptionbig</font>
+				<font>descriptionbig</font>
 			</control>
 			<control type="group">
 				<posx>62</posx>
@@ -1097,7 +1105,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-
 	<include name="BigList_Music">
 		<itemlayout condition="Container.Content(albums) | Container.Content(songs)"width="625" height="150">
 			<control type="image">

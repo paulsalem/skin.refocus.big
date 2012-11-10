@@ -1,7 +1,7 @@
-﻿﻿<includes>
-<!---STRIP LAYOUT------>	
+﻿<includes>
+	<!-- STRIP LAYOUT -->	
 	<include name="view_Gallery">
-		<!---strip top------>
+		<!--strip top-->
 		<control type="group">
 			<include>transition_Container</include>
 			<include>toggle_Menu</include>
@@ -26,7 +26,7 @@
 					</control>
 				</control>
 			</control>
-			<!---frame--->																	
+			<!--frame-->																	
 			<control type="image">
 				<posy>108</posy>
 				<width>screen_Width</width>
@@ -35,7 +35,7 @@
 				<texture border="29">frames/frame_Gallery_mod2.png</texture>
 			</control>
 		</control>
-		<!--container--->
+		<!--container-->
 		<control type="wraplist" id="53">
 			<viewtype label="Gallery">wrap</viewtype>
 			<posx>-485</posx>
@@ -58,7 +58,7 @@
 			<visible>[Container.Content(movies) | Container.Content(tvshows) | Window.IsActive(pictures)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]</visible>
 		</control>
 	</include>
-	<!---container contents--->
+	<!--container contents-->
 	<include name="GalleryVideo">
 		<itemlayout height="800" width="749">
 			<control type="image">
@@ -76,7 +76,7 @@
 			</control>
 			<control type="group">
 				<posx>718</posx>
-				<posy>390</posy>
+				<posy>392</posy>
 				<visible>!Skin.HasSetting(watched.alternative)</visible>
 				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
 				<control type="image">
@@ -131,7 +131,7 @@
 			</control>
 			<control type="group">
 				<posx>718</posx>
-				<posy>390</posy>
+				<posy>392</posy>
 				<visible>!Skin.HasSetting(watched.alternative) + !Control.HasFocus(8000)</visible>
 				<control type="image">
 					<include>overlay_UnWatched</include>
@@ -174,8 +174,8 @@
 			</control>
 		</focusedlayout>
 	</include>
-
-<!---FULLSCREEN LAYOUT------>
+	
+	<!-- FULLSCREEN LAYOUT -->
 	<include name="view_GalleryFull">																																																																
 		<control type="wraplist" id="531">
 			<viewtype label="Gallery">bigwrap</viewtype>
@@ -194,7 +194,7 @@
 			<include condition="Window.IsVisible(pictures)">GalleryFullPictures</include>		
 			<visible>[Container.Content(movies) | Container.Content(tvshows) | Window.IsActive(pictures)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]</visible>
 		</control>
-		<!---window menu shade-->
+		<!--window menu shade-->
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<aspectratio align="left">stretch</aspectratio>
@@ -202,7 +202,7 @@
 			<include>fadeinout</include>
 			<visible>Control.IsVisible(531) + ControlGroup(6000).HasFocus()</visible>
 		</control>
-		<!---scroll indicators------->
+		<!--scroll indicators-->
 		<control type="group">
 			<posy>336</posy>
 			<include>fadeinout</include>
@@ -223,7 +223,7 @@
 			</control>
 		</control>
 	</include>
-	<!---container contents--->
+	<!--container contents-->
 	<include name="GalleryFullVideo">
 		<itemlayout height="screen_Height" width="screen_Width">
 			<control type="image">

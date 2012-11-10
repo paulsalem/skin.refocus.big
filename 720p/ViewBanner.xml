@@ -1,5 +1,5 @@
 <includes>
-<!---DOUBLE ROW------>
+<!-- DOUBLE ROW -->
 <include name="view_BannerDoubleRow">
 		<control type="panel" id="5411">	
 			<posx>40</posx>
@@ -50,10 +50,10 @@
 					<posy>56</posy>
 					<info>ListItem.Overlay</info>
 					<visible>Skin.HasSetting(watched.alternative)</visible>				
-				</control>				
-			</itemlayout>															
+				</control>
+			</itemlayout>
 			<focusedlayout height="137" width="600">
-			    <control type="image">
+				<control type="image">
 					<posx>-10</posx>
 					<posy>-9</posy>
 					<width>610</width>
@@ -96,7 +96,7 @@
 				</control>						
 			</focusedlayout>
 		</control>
-			<!---container info--->
+		<!--container info-->
 		<control type="grouplist">
 			<posx>30</posx>
 			<posy>600</posy>
@@ -138,7 +138,7 @@
 				<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 			</control>
 		</control>
-		 <control type ="image">
+		<control type ="image">
 			<posx>1040</posx>
 			<posy>520</posy>
 			<width>215</width>
@@ -151,8 +151,8 @@
 			<visible>Control.IsVisible(5411) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 		</control>
 	</include>
-	<!---banner poster------>
-<include name="view_BannerPoster">
+	<!--banner poster-->
+	<include name="view_BannerPoster">
 		<control type="panel" id="54111">	
 			<posx>40</posx>
 			<posy>60</posy>
@@ -202,10 +202,10 @@
 					<posy>56</posy>
 					<info>ListItem.Overlay</info>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
-				</control>				
-			</itemlayout>															
+				</control>
+			</itemlayout>
 			<focusedlayout height="137" width="600">
-			    <control type="image">
+				<control type="image">
 					<posx>-10</posx>
 					<posy>-9</posy>
 					<width>610</width>
@@ -248,7 +248,7 @@
 				</control>			
 			</focusedlayout>
 		</control>
-			<!---container info--->
+		<!--container info-->
 		<control type="grouplist">
 			<posx>340</posx>
 			<posy>350</posy>
@@ -302,7 +302,7 @@
 				<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 			</control>
 		</control>
-		 <control type ="image">
+		<control type ="image">
 			<posx>1040</posx>
 			<posy>520</posy>
 			<width>215</width>
@@ -356,8 +356,8 @@
 			<include>autoscroll-plot</include>
 			<visible>Control.IsVisible(54111) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)] + !StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)</visible>
 		</control>
-	</include>
-	<include name="view_Banner">
+		</include>
+		<include name="view_Banner">
 		<control type="fixedlist" id="54">
 			<viewtype label="535">bigwide</viewtype>
 			<posx>225</posx>
@@ -472,7 +472,6 @@
 					<include>focus_Banner</include>
 					<visible>![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
 				</control>
-				
 				<control type="label">
 					<posx>34</posx>
 					<posy>234</posy>
@@ -514,7 +513,6 @@
 					<visible>StringCompare(Control.GetLabel(92529),empty)</visible> 
 				</control>
 			</focusedlayout>
-			
 			<itemlayout condition="Container.Content(movies)" width="560" height="65">
 				<control type="label">
 					<posx>55</posx>
@@ -661,7 +659,7 @@
 		</control>-->
 	</include>
 
-<!---BANNERS------>
+	<!-- BANNERS -->
 	<include name="view_BannerWide">
 		<control type="panel" id="541">
 			<viewtype label="537">wide</viewtype> 	
@@ -737,7 +735,7 @@
 				</control>
 			</focusedlayout>
 		</control>
-		<!---container info--->
+		<!--container info-->
 		<control type="grouplist">
 			<posx>695</posx>
 			<posy>100</posy>

@@ -420,5 +420,8 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32102">Enable Network and Studio Logos on Video OSD</string>-->
 <string id="32103">Remove Network/Studios Logos on Views</string>-->
 
+<!--OSD Settings-->
+<string id="32200">General Settings</string>
+<string id="32201">Alternative OSD</string>
 
 </strings>

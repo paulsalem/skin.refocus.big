@@ -1,5 +1,5 @@
 ﻿<includes>
-	<!---POSTER------> 
+	<!-- POSTER --> 
 	<include name="view_IconPoster">
 		<control type="panel" id="57">
 			<viewtype label="417">bigicon</viewtype>	
@@ -31,7 +31,7 @@
 				</control>
 				<control type="group">
 					<posx>139</posx>
-					<posy>213</posy>
+					<posy>214</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
@@ -65,7 +65,7 @@
 				</control>
 				<control type="group">
 					<posx>139</posx>
-					<posy>213</posy>
+					<posy>214</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<include>focus_ThumbPoster</include>
 					<control type="image">
@@ -90,7 +90,8 @@
 			</focusedlayout>
 		</control>
 	</include>
-	<!---WIDE------> 
+	
+	<!-- WIDE --> 
 	<include name="view_IconWide">
 		<control type="panel" id="5711">
 			<viewtype label="417">bigicon</viewtype>
@@ -128,7 +129,7 @@
 					</control>
 				<control type="group">
 					<posx>336</posx>
-					<posy>184</posy>
+					<posy>185</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
@@ -174,7 +175,7 @@
 					</control>
 				<control type="group">
 					<posx>336</posx>
-					<posy>184</posy>
+					<posy>185</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<include>overlay_UnWatched</include>
@@ -198,7 +199,7 @@
 		</control>
 	</include>
 	
-<!---POSTERSMALL------>
+	<!-- POSTERSMALL -->
 	<include name="view_IconPosterSmall">
 		<control type="panel" id="571">
 			<viewtype label="31009">icon</viewtype>	
@@ -286,8 +287,8 @@
 			</focusedlayout>
 		</control>
 	</include>
-
-<!---WIDE------>
+	
+	<!-- WIDE -->
 	<include name="view_IconFiles">
 		<control type="panel" id="573">
 			<viewtype label="Thumbnails">bigicon</viewtype>
@@ -329,8 +330,8 @@
 			</focusedlayout>
 		</control>
 	</include>
-
-<!---SQUARE ADD-ONS------>
+	
+	<!-- SQUARE ADD-ONS -->
 	<include name="view_IconSquare">
 		<control type="group">
 			<include>transition_Container</include>
@@ -422,8 +423,8 @@
 			</control>
 		</control>
 	</include>
-
-<!---BIGWIDE------>
+	
+	<!-- BIGWIDE -->
 	<include name="view_ThumbEpisode">
 		<control type="panel" id="575">
 			<viewtype label="Thumbnails">bigicon</viewtype>
@@ -584,8 +585,8 @@
 			</focusedlayout>
 		</control>
 	</include>
-
-<!---SQUARE (ALBUMS)------>
+	
+	<!-- SQUARE (ALBUMS) -->
 	<include name="view_IconSquare2">
 		<control type="panel" id="572">
 			<viewtype label="Thumbnails">icons</viewtype>
@@ -629,8 +630,7 @@
 		</control>
 	</include>
 	
-
-<!---SQUARE (ADDONS)------>
+	<!-- SQUARE (ADDONS) -->
 	<include name="view_IconSquare3">
 		<control type="panel" id="576">
 			<viewtype label="Thumbnails">icons</viewtype>
