@@ -1,1 +1,21 @@
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+#############
+## Komodo
+#############
+*.komodoproject
+.komodotools/
+
+#############
+# Project
+#############
+
 /debuggrid720.png
