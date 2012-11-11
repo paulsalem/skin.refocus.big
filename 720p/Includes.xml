@@ -744,12 +744,10 @@
 	</include>
 	<!--watchedOverlayAlt-->
 	<include name="overlay_UnWatchedAlt">
-		
 		<width>32</width>
 		<height>32</height>
 		<info>ListItem.Overlay</info>
 		<aspectratio align="right">keep</aspectratio>
-		
 	</include>
 	<!--
 	<include name="overlay_UnWatched">
