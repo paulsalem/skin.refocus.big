@@ -142,7 +142,7 @@
 			</control>
 			<control type="group">
 				<posx>686</posx>
-				<posy>359</posy>
+				<posy>360</posy>
 				<visible>Skin.HasSetting(watched.alternative) + !Control.HasFocus(8000)</visible>
 				<control type="image">
 					<info>ListItem.Overlay</info>

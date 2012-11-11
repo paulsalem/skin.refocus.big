@@ -41,8 +41,8 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>110</posx>
-					<posy>182</posy>
+					<posx>107</posx>
+					<posy>184</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
@@ -76,8 +76,8 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>110</posx>
-					<posy>182</posy>
+					<posx>107</posx>
+					<posy>184</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<include>focus_ThumbPoster</include>
 					<control type="image">
@@ -140,7 +140,7 @@
 				</control>
 				<control type="group">
 					<posx>304</posx>
-					<posy>153</posy>
+					<posy>155</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
@@ -186,7 +186,7 @@
 				</control>
 				<control type="group">
 					<posx>304</posx>
-					<posy>153</posy>
+					<posy>155</posy>
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>

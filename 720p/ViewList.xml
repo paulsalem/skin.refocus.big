@@ -113,7 +113,7 @@
 			</control>
 			<control type="image">
 				<posx>575</posx>
-				<posy>5</posy>
+				<posy>6</posy>
 				<info>ListItem.Overlay</info>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
@@ -184,7 +184,7 @@
 			</control>
 			<control type="image">
 				<posx>575</posx>
-				<posy>5</posy>
+				<posy>8</posy>
 				<info>ListItem.Overlay</info>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
@@ -253,15 +253,7 @@
 				<info>ListItem.Overlay</info>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
-			</control>
-			<control type="image">
-				<posx>585</posx>
-				<posy>6</posy>
-				<info>ListItem.Overlay</info>
-				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
-				<aspectratio align="right">keep</aspectratio>
-				<visible>Skin.HasSetting(watched.alternative)</visible>
+				<visible>Skin.HasSetting(watched.alternative) | !Skin.HasSetting(watched.alternative)</visible>
 			</control>
 			<control type="image">
 				<posx>475</posx>
@@ -307,14 +299,7 @@
 				<height>32</height>
 				<info>ListItem.Overlay</info>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
-			</control>
-			<control type="image">
-				<posx>585</posx>
-				<posy>6</posy>
-				<info>ListItem.Overlay</info>
-				<aspectratio align="right">keep</aspectratio>
-				<visible>Skin.HasSetting(watched.alternative)</visible>
+				<visible>Skin.HasSetting(watched.alternative) | !Skin.HasSetting(watched.alternative)</visible>
 			</control>
 			<control type="image">
 				<posx>475</posx>
@@ -828,7 +813,7 @@
 			</control>
 			<control type="group">
 				<posx>177</posx>
-				<posy>74</posy>
+				<posy>76</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<info>ListItem.Overlay</info>
@@ -904,7 +889,7 @@
 			</control>
 			<control type="group">
 				<posx>177</posx>
-				<posy>74</posy>
+				<posy>77</posy>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<info>ListItem.Overlay</info>
