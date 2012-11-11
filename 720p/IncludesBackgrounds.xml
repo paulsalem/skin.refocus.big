@@ -25,7 +25,7 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>AnimateBackgrounds</include>
-			<visible>[!Control.IsVisible(53) + !Window.isActive(2003) + !SubString(Container.FolderPath,plugin://)] + Skin.HasSetting(fanart.extra) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Path,,extrafanart)</visible>
+			<visible>[!Control.IsVisible(53) + !Window.isActive(2003) + !SubString(Container.FolderPath,plugin://)] + Skin.HasSetting(fanart.extra) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Path,,extrafanart) + Skin.HasSetting(fanart.global)</visible>
 		</control>
 		<!--playing video background-->
 		<control type="group">
