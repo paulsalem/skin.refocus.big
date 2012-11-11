@@ -98,6 +98,13 @@
 						<property name="focused">settings/icons/fo-settings_music.png</property>
 						<onclick>ActivateWindow(MyMusicSettings)</onclick>
 					</item>
+					<item id="4">
+						<label>$LOCALIZE[166]</label>
+						<label2>$LOCALIZE[31124] · $LOCALIZE[31015] · $LOCALIZE[31016]</label2>
+						<icon>settings/icons/nf-settings_skin.png</icon>
+						<property name="focused">settings/icons/fo-settings_skin.png</property>
+						<onclick>ActivateWindow(skinsettings)</onclick>
+					</item>
 					<item id="5">
 						<label>$LOCALIZE[1]</label>
 						<label2>$LOCALIZE[108] · exif · $LOCALIZE[31014]</label2>
@@ -107,7 +114,7 @@
 					</item>
 					<item id="6">
 						<label>$LOCALIZE[14036]</label>
-						<label2>$LOCALIZE[705] · $LOCALIZE[798]</label2>
+						<label2>UPnP · $LOCALIZE[33101] · Zeroconf · AirPlay</label2>
 						<icon>settings/icons/nf-settings_network.png</icon>
 						<property name="focused">settings/icons/fo-settings_network.png</property>
 						<onclick>ActivateWindow(ServiceSettings)</onclick>
