@@ -111,7 +111,7 @@
 					<visible>Skin.HasSetting(home.widgets.watchlist) + Skin.HasSetting(home.widgets.watchlistposters)</visible>
 				</control> 
 				<control type="label">
-					<description>Title</description>
+					<description>Title Recent</description>
 					<posx>195</posx>
 					<posy>241</posy>
 					<height>20</height>
@@ -123,7 +123,22 @@
 					<include>info_Title</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlistposters)</visible>
+					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlistposters) + !Skin.HasSetting(home.widgets.watchlist</visible>
+				</control>
+				<control type="label">
+					<description>Title Recommended</description>
+					<posx>195</posx>
+					<posy>241</posy>
+					<height>20</height>
+					<width>800</width>
+					<label>$INFO[Container(8001).ListItem(0).Label][COLOR=Color3]$INFO[Container(8001).ListItem.Property(Title),: ][/COLOR]</label>						
+					<align>left</align>
+					<font>titleSpecial2</font>
+					<shadowcolor>black</shadowcolor>
+					<include>info_Title</include>
+					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
+					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
+					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlistposters) + Skin.HasSetting(home.widgets.watchlist</visible>
 				</control>
 				<control type="label">
 					<description>Title Posters</description>
@@ -131,7 +146,7 @@
 					<posy>280</posy>
 					<height>20</height>
 					<width>800</width>
-					<label>$INFO[Container(8001).ListItem.Label]</label>						
+					<label>$INFO[Container(8001).ListItem(0).Label][COLOR=Color3]$INFO[Container(8001).ListItem.Property(Title),: ][/COLOR]</label>						
 					<align>left</align>
 					<font>titleSpecial2</font>
 					<shadowcolor>black</shadowcolor>
@@ -146,7 +161,7 @@
 					<posy>271</posy>
 					<height>20</height>
 					<width>800</width>
-					<label>$INFO[Container(8001).ListItem.Property(EpisodeNumber)]</label>
+					<label>$INFO[Container(8001).ListItem.Property(SeasonEpisode)]</label>
 					<align>left</align>
 					<font>titleSmallest</font>
 					<shadowcolor>black</shadowcolor>
@@ -161,7 +176,7 @@
 					<posy>271</posy>
 					<height>20</height>
 					<width>800</width>
-					<label>$INFO[Container(8001).ListItem.Property(Season),$LOCALIZE[31087] , - ]$INFO[Container(8001).ListItem.Property(Episode),$LOCALIZE[31088] ]</label>
+					<label>$INFO[Container(8001).ListItem.Property(Node)]$INFO[Container(8001).ListItem(3).Label2]</label>
 					<align>left</align>
 					<font>titleSmallest</font>
 					<shadowcolor>black</shadowcolor>
@@ -176,7 +191,7 @@
 					<posy>305</posy>
 					<height>20</height>
 					<width>800</width>
-					<label>$INFO[Container(8001).ListItem.Property(Season),$LOCALIZE[31087] , - ]$INFO[Container(8001).ListItem.Property(Episode),$LOCALIZE[31088] ]</label>
+					<label>$INFO[Container(8001).ListItem.Property(Node)]$INFO[Container(8001).ListItem(3).Label2]</label>
 					<align>left</align>
 					<font>titleSmallest</font>
 					<shadowcolor>black</shadowcolor>
@@ -244,6 +259,18 @@
 							<bordertexture border="-5">frames/frame_Landscape.png</bordertexture>
 							<bordersize>5</bordersize>
 							<aspectratio>stretch</aspectratio>
+							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>2</posy>
+							<width>300</width>
+							<height>168</height>
+							<texture background="true">$INFO[ListItem.Property(EpisodeThumb)]</texture>
+							<bordertexture border="-5">frames/frame_Landscape.png</bordertexture>
+							<bordersize>5</bordersize>
+							<aspectratio>stretch</aspectratio>
+							<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="311" height="261">
@@ -259,310 +286,25 @@
 							<bordersize>5</bordersize>
 							<animation reversible="false" effect="zoom" start="20,15,300,168" end="12,6,320,192" time="200">focus</animation>
 							<animation reversible="false" effect="zoom" end="20,15,300,168" start="12,6,320,192" time="200">unfocus</animation>
+						<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>2</posy>
+							<width>300</width>
+							<height>168</height>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(EpisodeThumb)]</texture>
+							<bordertexture border="-5">frames/frame_Landscape.png</bordertexture>
+							<bordersize>5</bordersize>
+							<animation reversible="false" effect="zoom" start="20,15,300,168" end="12,6,320,192" time="200">focus</animation>
+							<animation reversible="false" effect="zoom" end="20,15,300,168" start="12,6,320,192" time="200">unfocus</animation>
+						<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
 						</control>
 					</focusedlayout>
-					<content>
-						<item id="1">
-							<label>$INFO[Window(Home).Property(RecentEpisode.1.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.1.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.1.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.1.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.1.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
-							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
-						</item>
-						<item id="2">
-							<label>$INFO[Window(Home).Property(RecentEpisode.2.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.2.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.2.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.2.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.2.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.2.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.2.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
-							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
-						</item>
-						<item id="3">
-							<label>$INFO[Window(Home).Property(RecentEpisode.3.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.3.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.3.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.3.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.3.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.3.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.3.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.fanart))]</property>
-							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
-						</item>
-						<item id="4">
-							<label>$INFO[Window(Home).Property(RecentEpisode.4.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.4.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.4.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.4.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.4.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.4.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.4.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.fanart))]</property>
-							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
-						</item>
-						<item id="5">
-							<label>$INFO[Window(Home).Property(RecentEpisode.5.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.5.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.5.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.5.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.5.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.5.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.5.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.fanart))]</property>
-							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
-						</item>
-						<item id="6">
-							<label>$INFO[Window(Home).Property(RecentEpisode.6.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.6.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.6.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.6.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.6.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.6.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.6.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.fanart))]</property>
-							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
-						</item>
-						<item id="7">
-							<label>$INFO[Window(Home).Property(RecentEpisode.7.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.7.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.7.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.7.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.7.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.7.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.7.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.fanart))]</property>
-							 <visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
-						</item>
-						<item id="8">
-							<label>$INFO[Window(Home).Property(RecentEpisode.8.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.8.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.8.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.8.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.8.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.8.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.8.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.fanart))]</property>
-							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
-						</item>
-						<item id="9">
-							<label>$INFO[Window(Home).Property(RecentEpisode.9.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.9.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.9.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.9.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.9.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.9.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.9.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.9.Art(tvshow.fanart))]</property>
-							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
-						</item>
-						<item id="10">
-							<label>$INFO[Window(Home).Property(RecentEpisode.10.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.10.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.10.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.10.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.10.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.10.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.10.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.10.Art(tvshow.fanart))]</property>
-							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
-						</item>
-						 <item id="73">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.1.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.1.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.1.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.1.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.1.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.1.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.1.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.1.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.1.Title))</visible>
-							</item>
-							<item id="74">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.2.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.2.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.2.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.2.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.2.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.2.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.2.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.2.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.2.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.2.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.2.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.2.Title))</visible>
-							</item>
-							<item id="75">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.3.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.3.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.3.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.3.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.3.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.3.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.3.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.3.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.3.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.3.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.3.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.3.Title))</visible>
-							</item>
-							<item id="76">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.4.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.4.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.4.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.4.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.4.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.4.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.4.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.4.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.4.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.4.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.4.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.4.Title))</visible>
-							</item>
-							<item id="77">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.5.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.5.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.5.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.5.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.5.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.5.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.5.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.5.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.5.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.5.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.5.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.5.Title))</visible>
-							</item>
-							<item id="78">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.6.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.6.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.6.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.6.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.6.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.6.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.6.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.6.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.6.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.6.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.6.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.6.Title))</visible>
-							</item>
-							<item id="79">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.7.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.7.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.7.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.7.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.7.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.7.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.7.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.7.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.7.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.7.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.7.Title))</visible>
-							</item>
-							<item id="80">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.8.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.8.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.8.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.8.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.8.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.8.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.8.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.8.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.8.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.8.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.8.Title))</visible>
-							</item>
-							<item id="81">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.9.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.9.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.9.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.9.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.9.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.9.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.9.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.9.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.9.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.9.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.9.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.9.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.9.Title))</visible>
-							</item>
-							<item id="82">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.10.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.10.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.10.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.10.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.10.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.10.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.10.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.10.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.10.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.10.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.10.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.10.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.10.Title))</visible>
-							</item>
-					</content>
+					<include condition="!Skin.HasSetting(home.widgets.watchlist)">RecentTVShows</include>
+					<include condition="Skin.HasSetting(home.widgets.watchlist)">watchlist_Shows</include>
 				</control>
 				<control type="fixedlist" id="8001">
 					<posx>217</posx>
@@ -590,7 +332,7 @@
 							<posy>2</posy>
 							<width>205</width>
 							<height>284</height>
-							<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<texture background="true">$INFO[ListItem.thumb]</texture>
 							<bordertexture border="40">frames/frame_Square.png</bordertexture>
 							<bordersize>22</bordersize>
 							<aspectratio align="center">stretch</aspectratio>
@@ -614,198 +356,7 @@
 							<visible>!StringCompare(Control.GetLabel(889),empty)</visible>	
 						</control>
 					</focusedlayout>
-					<content>
-						 <item id="73">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.poster)]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.1.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.1.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.1.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.1.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.1.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.1.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.1.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.1.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.1.Title))</visible>
-							</item>
-							<item id="74">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.poster)]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.2.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.2.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.2.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.2.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.2.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.2.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.2.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.2.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.2.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.2.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.2.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.2.Title))</visible>
-							</item>
-							<item id="75">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.poster)]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.3.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.3.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.3.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.3.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.3.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.3.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.3.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.3.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.3.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.3.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.3.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.3.Title))</visible>
-							</item>
-							<item id="76">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.poster)]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.4.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.4.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.4.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.4.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.4.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.4.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.4.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.4.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.4.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.4.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.4.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.4.Title))</visible>
-							</item>
-							<item id="77">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.poster)]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.5.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.5.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.5.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.5.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.5.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.5.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.5.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.5.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.5.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.5.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.5.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.5.Title))</visible>
-							</item>
-							<item id="78">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.poster)]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.6.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.6.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.6.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.6.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.6.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.6.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.6.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.6.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.6.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.6.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.6.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.6.Title))</visible>
-							</item>
-							<item id="79">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.poster)]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.7.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.7.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.7.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.7.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.7.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.7.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.7.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.7.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.7.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.7.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.7.Title))</visible>
-							</item>
-							<item id="80">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.poster)]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.8.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.8.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.8.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.8.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.8.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.8.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.8.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.8.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.8.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.8.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.8.Title))</visible>
-							</item>
-							<item id="81">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.poster)]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.9.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.9.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.9.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.9.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.9.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.9.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.9.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.9.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.9.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.9.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.9.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.9.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.9.Title))</visible>
-							</item>
-							<item id="82">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.poster)]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.10.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.10.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.10.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.10.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.10.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.10.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.10.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.10.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.10.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.10.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.10.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.10.File)]</property>
-								<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.10.Title))</visible>
-							</item>
-					</content>
+					<include>watchlist_Shows</include>
 				</control>
 			</control>
 
@@ -909,7 +460,7 @@
 					<posy>574</posy>
 					<height>20</height>
 					<width>800</width>
-					<label>$INFO[Container(8009).ListItem.Label2][COLOR=Color3]$INFO[Container(8009).ListItem.Label,: ][/COLOR]</label>						
+					<label>$INFO[Container(8009).ListItem(0).Label][COLOR=Color3]$INFO[Container(8009).ListItem.Property(Title),: ][/COLOR]</label>						
 					<align>left</align>
 					<font>titleSpecial2</font>
 					<shadowcolor>black</shadowcolor>
@@ -925,7 +476,7 @@
 					<posy>581</posy>
 					<height>20</height>
 					<width>800</width>
-					<label>$INFO[Container(8009).ListItem.Label2][COLOR=Color3]$INFO[Container(8009).ListItem.Label,: ][/COLOR]</label>						
+					<label>$INFO[Container(8009).ListItem(0).Label][COLOR=Color3]$INFO[Container(8009).ListItem.Property(Title),: ][/COLOR]</label>						
 					<align>left</align>
 					<font>titleSpecial2</font>
 					<shadowcolor>black</shadowcolor>
@@ -940,7 +491,7 @@
 					<posy>277</posy>
 					<height>20</height>
 					<width>800</width>
-					<label>$INFO[Container(8008).ListItem.Property(EpisodeNumber)]</label>
+					<label>$INFO[Container(8008).ListItem.Property(SeasonEpisode)]</label>
 					<align>left</align>
 					<font>titleSmallest</font>
 					<shadowcolor>black</shadowcolor>
@@ -955,7 +506,7 @@
 					<posy>242</posy>
 					<height>20</height>
 					<width>800</width>
-					<label>$INFO[Container(8008).ListItem.Property(EpisodeNumber)]</label>
+					<label>$INFO[Container(8008).ListItem.Property(SeasonEpisode)]</label>
 					<align>left</align>
 					<font>titleSmallest</font>
 					<shadowcolor>black</shadowcolor>
@@ -970,7 +521,7 @@
 					<posy>602</posy>
 					<height>20</height>
 					<width>800</width>
-					<label>$INFO[Container(8009).ListItem.Property(Season),$LOCALIZE[31087] , - ]$INFO[Container(8009).ListItem.Property(Episode),$LOCALIZE[31088] ]</label>
+					<label>$INFO[Container(8009).ListItem.Property(Node)]$INFO[Container(8009).ListItem(3).Label2]</label>
 					<align>left</align>
 					<font>titleSmallest</font>
 					<shadowcolor>black</shadowcolor>
@@ -985,7 +536,7 @@
 					<posy>609</posy>
 					<height>20</height>
 					<width>800</width>
-					<label>$INFO[Container(8009).ListItem.Property(Season),$LOCALIZE[31087] , - ]$INFO[Container(8009).ListItem.Property(Episode),$LOCALIZE[31088] ]</label>
+					<label>$INFO[Container(8009).ListItem.Property(Node)]$INFO[Container(8009).ListItem(3).Label2]</label>
 					<align>left</align>
 					<font>titleSmallest</font>
 					<shadowcolor>black</shadowcolor>
@@ -1042,108 +593,7 @@
 							<animation reversible="false" effect="zoom" end="20,15,300,168" start="12,6,320,192" time="200">unfocus</animation>
 						</control>
 					</focusedlayout>
-					<content>
-						<item id="1">
-							<label>$INFO[Window(Home).Property(RecentEpisode.1.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.1.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.1.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.poster)]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.1.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="2">
-							<label>$INFO[Window(Home).Property(RecentEpisode.2.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.2.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.2.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.2.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.2.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.2.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.2.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="3">
-							<label>$INFO[Window(Home).Property(RecentEpisode.3.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.3.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.3.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.3.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.3.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.3.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.3.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="4">
-							<label>$INFO[Window(Home).Property(RecentEpisode.4.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.4.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.4.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.4.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.4.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.4.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.4.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="5">
-							<label>$INFO[Window(Home).Property(RecentEpisode.5.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.5.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.5.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.5.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.5.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.5.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.5.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="6">
-							<label>$INFO[Window(Home).Property(RecentEpisode.6.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.6.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.6.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.6.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.6.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.6.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.6.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="7">
-							<label>$INFO[Window(Home).Property(RecentEpisode.7.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.7.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.7.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.7.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.7.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.7.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.7.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="8">
-							<label>$INFO[Window(Home).Property(RecentEpisode.8.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.8.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.8.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.8.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.8.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.8.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.8.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="9">
-							<label>$INFO[Window(Home).Property(RecentEpisode.9.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.9.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.9.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.9.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.9.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.9.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.9.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.9.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="10">
-							<label>$INFO[Window(Home).Property(RecentEpisode.10.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.10.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.10.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.10.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.10.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.10.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.10.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.10.Art(tvshow.fanart))]</property>
-						</item>
-					</content>
+					<include>RecentTVShows</include>
 				</control>
 				<control type="fixedlist" id="8009">
 					<posx>200</posx>
@@ -1175,6 +625,18 @@
 							<bordertexture border="-5">frames/frame_Landscape.png</bordertexture>
 							<bordersize>5</bordersize>
 							<aspectratio>stretch</aspectratio>
+							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>2</posy>
+							<width>300</width>
+							<height>168</height>
+							<texture background="true">$INFO[ListItem.Property(EpisodeThumb)]</texture>
+							<bordertexture border="-5">frames/frame_Landscape.png</bordertexture>
+							<bordersize>5</bordersize>
+							<aspectratio>stretch</aspectratio>
+							<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="311" height="261">
@@ -1191,190 +653,24 @@
 							<bordersize>5</bordersize>
 							<animation reversible="false" effect="zoom" start="20,15,300,168" end="12,6,320,192" time="200">focus</animation>
 							<animation reversible="false" effect="zoom" end="20,15,300,168" start="12,6,320,192" time="200">unfocus</animation>
+							<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>2</posy>
+							<width>300</width>
+							<height>168</height>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(EpisodeThumb)]</texture>
+							<bordertexture border="-5">frames/frame_Landscape.png</bordertexture>
+							<bordersize>5</bordersize>
+							<animation reversible="false" effect="zoom" start="20,15,300,168" end="12,6,320,192" time="200">focus</animation>
+							<animation reversible="false" effect="zoom" end="20,15,300,168" start="12,6,320,192" time="200">unfocus</animation>
+							<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
 						</control>
 					</focusedlayout>
-					<content>
-						 <item id="73">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.1.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.1.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.1.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.1.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.1.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.1.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.1.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.1.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.1.Title))</visible>
-							</item>
-							<item id="74">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.2.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.2.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.2.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.2.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.2.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.2.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.2.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.2.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.2.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.2.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.2.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.2.Title))</visible>
-							</item>
-							<item id="75">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.3.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.3.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.3.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.3.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.3.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.3.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.3.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.3.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.3.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.3.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.3.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.3.Title))</visible>
-							</item>
-							<item id="76">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.4.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.4.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.4.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.4.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.4.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.4.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.4.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.4.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.4.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.4.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.4.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.4.Title))</visible>
-							</item>
-							<item id="77">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.5.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.5.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.5.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.5.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.5.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.5.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.5.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.5.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.5.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.5.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.5.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.5.Title))</visible>
-							</item>
-							<item id="78">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.6.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.6.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.6.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.6.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.6.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.6.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.6.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.6.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.6.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.6.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.6.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.6.Title))</visible>
-							</item>
-							<item id="79">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.7.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.7.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.7.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.7.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.7.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.7.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.7.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.7.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.7.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.7.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.7.Title))</visible>
-							</item>
-							<item id="80">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.8.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.8.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.8.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.8.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.8.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.8.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.8.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.8.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.8.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.8.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.8.Title))</visible>
-							</item>
-							<item id="81">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.9.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.9.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.9.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.9.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.9.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.9.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.9.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.9.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.9.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.9.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.9.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.9.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.9.Title))</visible>
-							</item>
-							<item id="82">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(thumb))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.10.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.10.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.10.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.10.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.10.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.10.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.10.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.10.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.10.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.10.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.10.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.10.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.10.Title))</visible>
-							</item>
-					</content>
+					<include>watchlist_Shows</include>
 				</control>
 				<control type="fixedlist" id="8008">
 					<posx>200</posx>
@@ -1424,108 +720,7 @@
 							<animation reversible="false" effect="zoom" end="20,15,300,168" start="12,6,320,192" time="200">unfocus</animation>
 						</control>
 					</focusedlayout>
-					<content>
-						<item id="1">
-							<label>$INFO[Window(Home).Property(RecentEpisode.1.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.1.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.1.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.1.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.1.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="2">
-							<label>$INFO[Window(Home).Property(RecentEpisode.2.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.2.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.2.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.2.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.2.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.2.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.2.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="3">
-							<label>$INFO[Window(Home).Property(RecentEpisode.3.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.3.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.3.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.3.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.3.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.3.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.3.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="4">
-							<label>$INFO[Window(Home).Property(RecentEpisode.4.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.4.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.4.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.4.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.4.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.4.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.4.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="5">
-							<label>$INFO[Window(Home).Property(RecentEpisode.5.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.5.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.5.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.5.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.5.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.5.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.5.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="6">
-							<label>$INFO[Window(Home).Property(RecentEpisode.6.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.6.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.6.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.6.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.6.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.6.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.6.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="7">
-							<label>$INFO[Window(Home).Property(RecentEpisode.7.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.7.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.7.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.7.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.7.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.7.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.7.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="8">
-							<label>$INFO[Window(Home).Property(RecentEpisode.8.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.8.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.8.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.8.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.8.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.8.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.8.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="9">
-							<label>$INFO[Window(Home).Property(RecentEpisode.9.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.9.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.9.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.9.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.9.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.9.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.9.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.9.Art(tvshow.fanart))]</property>
-						</item>
-						<item id="10">
-							<label>$INFO[Window(Home).Property(RecentEpisode.10.Title)]</label>
-							<label2>$INFO[Window(Home).Property(RecentEpisode.10.TVshowTitle)]</label2>
-							<onclick>$INFO[Window(Home).Property(RecentEpisode.10.Play)]</onclick>
-							<icon>$INFO[Window(Home).Property(RecentEpisode.10.Art(thumb))]</icon>
-							<thumb>$INFO[Window(Home).Property(RecentEpisode.10.EpisodeNo)]</thumb>
-							<property name="EpisodeSeason">$INFO[Window(Home).Property(RecentEpisode.10.Season)]</property>
-							<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.10.EpisodeNo)]</property>
-							<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.10.Art(tvshow.fanart))]</property>
-						</item>
-					</content>
+					<include>RecentTVShows</include>
 				</control>
 				<control type="fixedlist" id="8009">
 					<posx>200</posx>
@@ -1601,188 +796,7 @@
 							<visible>!StringCompare(Control.GetLabel(889),empty)</visible>							
 						</control>
 					</focusedlayout>
-					<content>
-						 <item id="73">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.poster))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.1.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.1.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.1.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.1.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.1.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.1.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.1.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.1.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.1.Title))</visible>
-							</item>
-							<item id="74">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.poster))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.2.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.2.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.2.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.2.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.2.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.2.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.2.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.2.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.2.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.2.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.2.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.2.Title))</visible>
-							</item>
-							<item id="75">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.poster))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.3.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.3.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.3.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.3.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.3.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.3.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.3.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.3.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.3.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.3.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.3.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.3.Title))</visible>
-							</item>
-							<item id="76">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.poster))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.4.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.4.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.4.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.4.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.4.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.4.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.4.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.4.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.4.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.4.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.4.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.4.Title))</visible>
-							</item>
-							<item id="77">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.poster))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.5.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.5.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.5.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.5.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.5.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.5.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.5.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.5.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.5.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.5.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.5.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.5.Title))</visible>
-							</item>
-							<item id="78">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.poster))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.6.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.6.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.6.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.6.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.6.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.6.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.6.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.6.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.6.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.6.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.6.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.6.Title))</visible>
-							</item>
-							<item id="79">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.poster))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.7.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.7.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.7.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.7.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.7.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.7.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.7.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.7.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.7.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.7.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.7.Title))</visible>
-							</item>
-							<item id="80">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.poster))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.8.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.8.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.8.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.8.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.8.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.8.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.8.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.8.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.8.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.8.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.8.Title))</visible>
-							</item>
-							<item id="81">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.poster))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.9.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.9.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.9.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.9.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.9.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.9.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.9.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.9.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.9.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.9.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.9.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.9.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.9.Title))</visible>
-							</item>
-							<item id="82">
-								<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.poster))]</icon>
-								<thumb>$INFO[Window(Home).Property(RecommendedEpisode.10.SeasonThumb)]</thumb>
-								<label>$INFO[Window(Home).Property(RecommendedEpisode.10.Title)]</label>
-								<label2>$INFO[Window(Home).Property(RecommendedEpisode.10.TVshowTitle)]</label2>
-								<onclick>$INFO[Window(Home).Property(RecommendedEpisode.10.Play)]</onclick>
-								<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.10.Rating)]</property>
-								<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.10.Plot)]</property>
-								<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.10.Logo)]</property>
-								<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</property>
-								<property name="EpisodeNo">$INFO[Window(Home).Property(RecommendedEpisode.10.EpisodeNo)]</property>
-								<property name="EpThumb">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(thumb))]</property>
-								<property name="IsResumable">$INFO[Window(Home).Property(RecommendedEpisode.10.IsResumable)]</property>
-								<property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.10.Episode)]</property>
-								<property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.10.Season)]</property>
-								<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.10.File)]</property>
-								<visible>!IsEmpty(Window.Property(RecommendedEpisode.10.Title))</visible>
-							</item>
-					</content>
+					<include>watchlist_Shows</include>
 				</control>
 			</control>
 
