@@ -104,12 +104,10 @@
 			</control>
 			<control type="image">
 				<posx>590</posx>
-				<posy>37</posy>
+				<posy>35</posy>
 				<width>32</width>
 				<height>32</height>
-				
-					<info>ListItem.Overlay</info>
-				
+				<info>ListItem.Overlay</info>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>!Skin.HasSetting(watched.alternative)</visible>
@@ -117,10 +115,7 @@
 			<control type="image">
 				<posx>575</posx>
 				<posy>5</posy>
-				
-				
-					<info>ListItem.Overlay</info>
-				
+				<info>ListItem.Overlay</info>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
@@ -180,11 +175,18 @@
 				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
 			</control>
 			<control type="image">
+				<posx>590</posx>
+				<posy>37</posy>
+				<width>32</width>
+				<height>32</height>
+				<info>ListItem.Overlay</info>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
+			</control>
+			<control type="image">
 				<posx>575</posx>
 				<posy>5</posy>
-				
-				
-					<info>ListItem.Overlay</info>
+				<info>ListItem.Overlay</info>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 			</control>
@@ -200,6 +202,8 @@
 			</control>
 		</focusedlayout>
 	</include>
+	
+	<!-- LIST SINGLE ROW -->
 	<include name="view_List_1Row">
 		<control type="list" id="501">
 			<viewtype label="535">list</viewtype> 	
@@ -224,9 +228,7 @@
 			<include condition="Window.IsVisible(pictures) | Window.IsVisible(programs) | Window.IsVisible(addonbrowser)">List_Files</include>
 		</control>
 	</include>
-
 	<include name="List_Video_1Row">
-		 
 		<itemlayout condition="[[Container.Content(movies) | Container.Content(tvshows) | [Container.Content(seasons) + !SubString(Container.FolderPath,plugin://)] | Container.Content(episodes) | Container.Content(musicvideos)]] |  Container.Content(addons) | [Container.Content(files) + !SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus" width="625" height="40">		
 			<control type="label">
 				<posx>40</posx>
@@ -244,17 +246,15 @@
 				<include>list_Label</include>
 				<visible>Container.Content(files)</visible>
 			</control>
-			
 			<control type="image">
 				<posx>590</posx>
-				<posy>16</posy>
+				<posy>10</posy>
 				<width>32</width>
 				<height>32</height>
-					<info>ListItem.Overlay</info>
-				
+				<info>ListItem.Overlay</info>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>Skin.HasSetting(watched.alternative)</visible>
+				<visible>Skin.HasSetting(watched.alternative) | !Skin.HasSetting(watched.alternative)</visible>
 			</control>
 			<control type="image">
 				<posx>475</posx>
@@ -293,16 +293,14 @@
 				<include>list_Label-focus</include>
 				<visible>Container.Content(files)</visible>
 			</control>
-			
 			<control type="image">
 				<posx>590</posx>
-				<posy>16</posy>
+				<posy>12</posy>
 				<width>32</width>
 				<height>32</height>
-				
 				<texture>$INFO[ListItem.Overlay]</texture>
 				<aspectratio align="right">keep</aspectratio>
-
+				<visible>Skin.HasSetting(watched.alternative) | !Skin.HasSetting(watched.alternative)</visible>
 			</control>
 			<control type="image">
 				<posx>475</posx>

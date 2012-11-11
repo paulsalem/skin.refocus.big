@@ -30,7 +30,7 @@
 					<!--<visible>Container.Content(movies) | SubString(Container.FolderPath,plugin://plugin.video.xbmcflicks) | Container.Content(tvshows) | Container.Content(seasons)</visible>-->
 				</control>
 				<control type="group">
-					<posx>139</posx>
+					<posx>140</posx>
 					<posy>213</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
@@ -64,7 +64,7 @@
 					<!--<visible>Container.Content(movies) | SubString(Container.FolderPath,plugin://plugin.video.xbmcflicks) | Container.Content(tvshows) | Container.Content(seasons)</visible>-->
 				</control>
 				<control type="group">
-					<posx>139</posx>
+					<posx>140</posx>
 					<posy>213</posy>
 					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<include>focus_ThumbPoster</include>
