@@ -411,9 +411,13 @@ Steun alstublieft de ontwikkeling van XBMC met een donatie.
 <!--Widgets-->
 <string id="32100">Fanart in Widgets uitschakelen</string>
 
+<!--studio network logos
+<string id="32101">Toon Network en Studio Logos bij mediaschermen</string>
+<string id="32102">Toon Network en Studio Logos bij Video OSD</string>-->
+<string id="32103">Network/Studios Logos Uitschakelen</string>
+
 <!--OSD Settings-->
 <string id="32200">Algemene Instellingen</string>
 <string id="32201">Alternatieve OSD</string>
-
 
 </strings>
