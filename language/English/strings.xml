@@ -414,11 +414,13 @@ Please consider supporting the development of XBMC by making a donation.
 <!--Widgets-->
 <string id="32100">Disable fanart on Widgets</string>
 
-<!-->
 <!--studio network logos
 <string id="32101">Enable Network and Studio Logos on Views</string>
 <string id="32102">Enable Network and Studio Logos on Video OSD</string>-->
-<string id="32103">Remove Network/Studios Logos on Views</string>-->
+<string id="32103">Remove Network/Studios Logos on Views</string>
 
+<!--OSD Settings-->
+<string id="32200">General OSD Settings</string>
+<string id="32201">Alternative OSD</string>
 
 </strings>
