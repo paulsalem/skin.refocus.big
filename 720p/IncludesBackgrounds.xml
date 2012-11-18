@@ -22,8 +22,9 @@
 			<aspectratio align="center">scale</aspectratio>
 			<timeperimage>1500</timeperimage>
 			<fadetime>900</fadetime>
-			<randomize>true</randomize>
+			<randomize>false</randomize>
 			<loop>yes</loop>
+			<pauseatend>2000</pauseatend>
 			<include>AnimateBackgrounds</include>
 			<visible>[!Control.IsVisible(53) + !Window.isActive(2003) + !SubString(Container.FolderPath,plugin://)] + Skin.HasSetting(fanart.extra) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Path,,extrafanart) + Skin.HasSetting(fanart.global)</visible>
 		</control>
@@ -126,7 +127,7 @@
 					<aspectratio>stretch</aspectratio>
 					<include>screen_Dimensions</include>
 					<texture background="true">backgrounds/background.png</texture>
-					<visible>[![Container.Content(movies) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Window.IsActive(63) | Container.Content(studios) | Container.Content(directors)] + Skin.HasSetting(background.opacity.enabled)] + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006) + !Window.IsActive(weather) + [!Control.IsVisible(550) + !Control.IsVisible(551)] | Window.IsActive(2003)</visible>
+					<visible>[!Skin.HasSetting(fanart.global)] | [[![Container.Content(movies) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Window.IsActive(63) | Container.Content(studios) | Container.Content(directors)] + Skin.HasSetting(background.opacity.enabled)] + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006) + !Window.IsActive(weather) + [!Control.IsVisible(550) + !Control.IsVisible(551)] | Window.IsActive(2003)]</visible>
 					<include>transition_BG</include>
 				</control>
 				<!--vignette default opacity-->
@@ -206,7 +207,7 @@
 					<include>screen_Dimensions</include>
 					<texture background="true">backgrounds/background.png</texture>
 					<colordiffuse>$VAR[global_background.Opacity]</colordiffuse>
-					<visible>[![Container.Content(movies) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Window.IsActive(63) | Container.Content(studios) | Container.Content(directors)] + Skin.HasSetting(background.opacity.enabled)] + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006) + !Window.IsActive(weather) + [!Control.IsVisible(550) + !Control.IsVisible(551)] | Window.IsActive(2003)</visible>
+					<visible>[!Skin.HasSetting(fanart.global)] | [[![Container.Content(movies) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Window.IsActive(63) | Container.Content(studios) | Container.Content(directors)] + Skin.HasSetting(background.opacity.enabled)] + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006) + !Window.IsActive(weather) + [!Control.IsVisible(550) + !Control.IsVisible(551)] | Window.IsActive(2003)]</visible>
 					<include>transition_BG</include>
 				</control>
 				<!--vignette default opacity-->
