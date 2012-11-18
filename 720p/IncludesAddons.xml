@@ -134,8 +134,12 @@
 				<thumb>thumbs/tvshow_portrait.jpg</thumb>
 				<property name="ShowThumb">thumbs/tvshow_portrait.jpg</property>
 				<property name="Fanart">backgrounds/tvshows.jpg</property>
+				<property name="Latest1">$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.poster))]</property>
+				<property name="Latest2">$INFO[Window(Home).Property(RandomEpisode.2.Art(tvshow.poster)]</property>
+				<property name="Latest3">$INFO[Window(Home).Property(RandomEpisode.3.Art(tvshow.poster)]</property>
+				<property name="Latest4">$INFO[Window(Home).Property(RandomEpisode.4.Art(tvshow.poster))]</property>
+				<visible>Window.IsActive(63)</visible>
 				<onclick>ActivateWindow(videolibrary,tvshowtitles,return)</onclick>
-				<visible>Control.HasFocus(52)</visible>
 			</item>
 			<item id="2">
 				<label>$LOCALIZE[31094]</label>
@@ -143,12 +147,12 @@
 				<thumb>thumbs/tvshow_portrait.jpg</thumb>
 				<property name="ShowThumb">thumbs/tvshow_portrait.jpg</property>
 				<property name="Fanart">backgrounds/tvshows.jpg</property>
-				<property name="Latest1">$INFO[Window(Home).Property(RecommendedEpisode.1.TVShowThumb)]</property>
-				<property name="Latest2">$INFO[Window(Home).Property(RecommendedEpisode.2.TVShowThumb)]</property>
-				<property name="Latest3">$INFO[Window(Home).Property(RecommendedEpisode.3.TVShowThumb)]</property>
-				<property name="Latest4">$INFO[Window(Home).Property(RecommendedEpisode.4.TVShowThumb)]</property>
+				<property name="Latest1">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.poster))]</property>
+				<property name="Latest2">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.poster)]</property>
+				<property name="Latest3">$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.poster)]</property>
+				<property name="Latest4">$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.poster))]</property>
+				<visible>Window.IsActive(63)</visible>
 				<onclick>ActivateWindow(videolibrary,recentlyaddedepisodes,return)</onclick>
-				<visible>Control.HasFocus(52)</visible>
 			</item>
 			<item id="3">
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.1.TVShowTitle)]</label>
@@ -171,7 +175,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.2.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.2.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.2.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.2.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.2.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
@@ -187,7 +192,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.3.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.3.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.3.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.3.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.3.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
@@ -203,7 +209,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.4.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.4.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.4.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.4.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.4.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
@@ -219,7 +226,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.5.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.5.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.5.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.5.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.5.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
@@ -235,7 +243,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.6.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.6.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.6.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.6.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.6.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
@@ -251,8 +260,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.7.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.7.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.7.Thumb)]</property>
-				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.SeasonThumb)]</thumb>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</property><thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.7.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.7.Plot)]</property>
@@ -267,7 +276,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.8.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.8.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.8.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.8.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
@@ -283,7 +293,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.9.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.9.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.9.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.9.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.9.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.9.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</property>
@@ -299,7 +310,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.10.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.10.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.10.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.10.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.10.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.10.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</property>
@@ -315,7 +327,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.11.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.11.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.11.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.11.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.11.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.11.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.11.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.11.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.11.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.11.Art(tvshow.fanart))]</property>
@@ -331,7 +344,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.12.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.12.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.12.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.12.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.12.Thumb)]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.12.Art(thumb))]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.12.Art(tvshow.poster))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.12.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.12.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.12.Art(tvshow.fanart))]</property>
@@ -347,7 +361,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.13.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.13.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.13.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.13.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.13.Thumb)]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.13.Art(thumb))]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.13.Art(tvshow.poster))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.13.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.13.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.13.Art(tvshow.fanart))]</property>
@@ -363,7 +378,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.14.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.14.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.14.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.14.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.14.Thumb)]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.14.Art(thumb))]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.14.Art(tvshow.poster))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.14.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.14.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.14.Art(tvshow.fanart))]</property>
@@ -379,7 +395,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.15.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.15.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.15.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.15.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.15.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.15.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.15.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.15.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.15.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.15.Art(tvshow.fanart))]</property>
@@ -395,7 +412,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.16.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.16.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.16.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.16.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.16.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.16.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.16.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.16.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.16.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.16.Art(tvshow.fanart))]</property>
@@ -411,7 +429,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.17.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.17.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.17.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.17.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.17.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.17.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.17.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.17.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.17.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.17.Art(tvshow.fanart))]</property>
@@ -427,7 +446,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.18.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.18.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.18.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.18.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.18.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.18.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.18.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.18.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.18.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.18.Art(tvshow.fanart))]</property>
@@ -443,7 +463,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.19.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.19.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.19.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.19.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.19.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.19.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.19.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.19.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.19.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.19.Art(tvshow.fanart))]</property>
@@ -459,7 +480,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.20.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.20.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.20.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.20.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.20.Thumb)]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.20.Art(tvshow.poster))]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.20.Art(thumb))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.20.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.20.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.20.Art(tvshow.fanart))]</property>
@@ -475,7 +497,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.21.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.21.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.21.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.21.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.21.Thumb)]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.21.Art(thumb))]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.21.Art(tvshow.poster))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.21.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.21.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.21.Art(tvshow.fanart))]</property>
@@ -491,7 +514,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.22.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.22.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.22.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.22.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.22.Thumb)]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.22.Art(thumb))]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.22.Art(tvshow.poster))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.22.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.22.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.22.Art(tvshow.fanart))]</property>
@@ -507,7 +531,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.23TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.23.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.23.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.23.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.23.Thumb)]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.23.Art(thumb))]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.23.Art(tvshow.poster))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.23.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.23.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.23.Art(tvshow.fanart))]</property>
@@ -523,7 +548,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.24.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.24.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.24.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.24.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.24.Thumb)]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.24.Art(thumb))]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.24.Art(tvshow.poster))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.24.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.24.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.24.Art(tvshow.fanart))]</property>
@@ -539,7 +565,8 @@
 				<label>$INFO[Window(Home).Property(RecommendedEpisode.25.TVShowTitle)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.25.Season),$LOCALIZE[31087] , - ]$INFO[Window(Home).Property(RecommendedEpisode.25.Episode),$LOCALIZE[31088] ]</label2>
 				<icon fallback="thumbs/tvshow_portrait.jpg">$INFO[Window(Home).Property(RecommendedEpisode.25.Art(tvshow.poster))]</icon>
-				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.25.Thumb)]</property>
+				<property name="EpisodeThumb">$INFO[Window(Home).Property(RecommendedEpisode.25.Art(thumb))]</property>
+				<property name="ShowThumb">$INFO[Window(Home).Property(RecommendedEpisode.25.Art(tvshow.poster))]</property>
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.25.SeasonThumb)]</thumb>
 				<property name="Title">$INFO[Window(Home).Property(RecommendedEpisode.25.Title)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.25.Art(tvshow.fanart))]</property>
@@ -559,11 +586,12 @@
 				<label>$LOCALIZE[593]</label>
 				<property name="Node">$LOCALIZE[31078]</property>
 				<thumb>thumbs/movie_portrait.jpg</thumb>
-				<property name="Latest1">$INFO[Window(Home).Property(RandomMovie.1.Thumb)]</property>
-				<property name="Latest2">$INFO[Window(Home).Property(RandomMovie.2.Thumb)]</property>
-				<property name="Latest3">$INFO[Window(Home).Property(RandomMovie.3.Thumb)]</property>
-				<property name="Latest4">$INFO[Window(Home).Property(RandomMovie.4.Thumb)]</property>
+				<property name="Latest1">$INFO[Window(Home).Property(RandomMovie.1.Art(poster))]</property>
+				<property name="Latest2">$INFO[Window(Home).Property(RandomMovie.2.Art(poster))]</property>
+				<property name="Latest3">$INFO[Window(Home).Property(RandomMovie.3.Art(poster))]</property>
+				<property name="Latest4">$INFO[Window(Home).Property(RandomMovie.4.Art(poster))]</property>
 				<property name="Fanart">backgrounds/movies.jpg</property>
+				<visible>Window.IsActive(63)</visible>
 				<onclick>ActivateWindow(videolibrary,movietitles,return)</onclick>
 			</item>
 			<item id="2">
@@ -571,10 +599,11 @@
 				<property name="Node">$LOCALIZE[31080]</property>
 				<property name="Fanart">backgrounds/movies.jpg</property>
 				<thumb>thumbs/movie_portrait.jpg</thumb>
-				<property name="Latest1">$INFO[Window(Home).Property(LatestMovie.1.Thumb)]</property>
-				<property name="Latest2">$INFO[Window(Home).Property(LatestMovie.2.Thumb)]</property>
-				<property name="Latest3">$INFO[Window(Home).Property(LatestMovie.3.Thumb)]</property>
-				<property name="Latest4">$INFO[Window(Home).Property(LatestMovie.4.Thumb)]</property>
+				<property name="Latest1">$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</property>
+				<property name="Latest2">$INFO[Window(Home).Property(RecentMovie.2.Art(poster))]</property>
+				<property name="Latest3">$INFO[Window(Home).Property(RecentMovie.3.Art(poster))]</property>
+				<property name="Latest4">$INFO[Window(Home).Property(RecentMovie.4.Art(poster))]</property>
+				<visible>Window.IsActive(63)</visible>
 				<onclick>ActivateWindow(videolibrary,recentlyaddedmovies,return)</onclick>
 			</item>
 			<item id="3">
@@ -586,7 +615,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.1.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.1.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.1.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.1.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.1.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.1.Title))</visible>
 			</item>
@@ -599,7 +628,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.2.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.2.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.2.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.2.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.2.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.2.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.2.Title))</visible>
 			</item>
@@ -612,7 +641,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.3.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.3.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.3.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.3.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.3.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.3.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.3.Title))</visible>
 			</item>
@@ -625,7 +654,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.4.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.4.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.4.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.4.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.4.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.4.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.4.Title))</visible>
 			</item>
@@ -638,7 +667,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.5.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.5.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.5.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.5.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.5.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.5.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.5.Title))</visible>
 			</item>
@@ -651,7 +680,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.6.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.6.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.6.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.6.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.6.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.6.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.6.Title))</visible>
 			</item>
@@ -664,7 +693,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.7.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.7.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.7.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.7.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.7.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.7.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.7.Title))</visible>
 			</item>
@@ -677,7 +706,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.8.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.8.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.8.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.8.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.8.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.8.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.8.Title))</visible>
 			</item>
@@ -690,7 +719,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.9.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.9.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.9.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.9.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.9.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.9.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.9.Title))</visible>
 			</item>
@@ -703,7 +732,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.10.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.10.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.10.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.10.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.10.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.10.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.10.Title))</visible>
 			</item>
@@ -716,7 +745,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.11.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.11.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.11.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.11.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.11.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.11.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.11.Title))</visible>
 			</item>
@@ -729,7 +758,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.12.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.12.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.12.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.12.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.12.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.12.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.12.Title))</visible>
 			</item>
@@ -742,7 +771,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.13.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.13.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.13.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.13.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.13.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.13.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.13.Title))</visible>
 			</item>
@@ -755,7 +784,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.14.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.14.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.14.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.14.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.14.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.14.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.14.Title))</visible>
 			</item>
@@ -768,7 +797,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.15.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.15.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.15.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.15.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.15.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.15.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.15.Title))</visible>
 			</item>
@@ -781,7 +810,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.16.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.16.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.16.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.16.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.16.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.16.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.16.Title))</visible>
 			</item>
@@ -794,7 +823,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.17.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.17.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.17.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.17.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.17.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.17.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.17.Title))</visible>
 			</item>
@@ -807,7 +836,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.18.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.18.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.18.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.18.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.18.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.18.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.18.Title))</visible>
 			</item>
@@ -820,7 +849,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.19.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.19.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.19.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.19.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.19.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.19.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.19.Title))</visible>
 			</item>
@@ -833,7 +862,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.20.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.20.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.20.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.20.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.20.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.20.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.20.Title))</visible>
 			</item>
@@ -846,7 +875,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.21.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.21.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.21.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.21.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.21.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.21.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.21.Title))</visible>
 			</item>
@@ -859,7 +888,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.23.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.23.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.23.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.23.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.23.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.23.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.23.Title))</visible>
 			</item>
@@ -872,7 +901,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.23.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.23.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.23.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.23.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.23.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.23.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.23.Title))</visible>
 			</item>
@@ -885,7 +914,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.24.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.24.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.24.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.24.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.24.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.24.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.24.Title))</visible>
 			</item>
@@ -898,7 +927,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.25.Rating)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.25.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.25.Art(tvshow.fanart))]</property>
-				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.25.Thumb)]</icon>
+				<icon fallback="thumbs/movie_portrait.jpg">$INFO[Window(Home).Property(RecommendedMovie.25.Art(poster))]</icon>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.25.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.25.Title))</visible>
 			</item>
@@ -1018,7 +1047,321 @@
 			</item>
 		</content>
 	</include>
-
+	
+	<include name="RecentMovies">
+		<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentMovie.1.Year)]</label2>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.1.Runtime)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.1.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</icon>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentMovie.1.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.1.Runtime)]</property>
+			</item>
+			<item id="2">
+				<label>$INFO[Window(Home).Property(RecentMovie.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentMovie.2.Year)]</label2>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.2.Runtime)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.2.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.2.Art(poster))]</icon>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentMovie.2.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.2.Runtime)]</property>
+			</item>
+			<item id="3">
+				<label>$INFO[Window(Home).Property(RecentMovie.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentMovie.3.Year)]</label2>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.3.Runtime)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.3.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.3.Art(poster))]</icon>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentMovie.3.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.3.Runtime)]</property>
+			</item>
+			<item id="4">
+				<label>$INFO[Window(Home).Property(RecentMovie.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentMovie.4.Year)]</label2>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.4.Runtime)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.4.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.4.Art(poster))]</icon>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentMovie.4.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.4.Runtime)]</property>
+			</item>
+			<item id="5">
+				<label>$INFO[Window(Home).Property(RecentMovie.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentMovie.5.Year)]</label2>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.5.Runtime)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.5.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.5.Art(poster))]</icon>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.5.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentMovie.5.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.5.Runtime)]</property>o l
+			</item>
+			<item id="6">
+				<label>$INFO[Window(Home).Property(RecentMovie.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentMovie.6.Year)]</label2>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.6.Runtime)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.6.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.6.Art(poster))]</icon>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.6.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentMovie.6.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.6.Runtime)]</property>
+			</item>
+			<item id="7">
+				<label>$INFO[Window(Home).Property(RecentMovie.7.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentMovie.7.Year)]</label2>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.7.Runtime)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.7.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.7.Art(poster))]</icon>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.7.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentMovie.7.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.7.Runtime)]</property>
+			</item>
+			<item id="8">
+				<label>$INFO[Window(Home).Property(RecentMovie.8.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentMovie.8.Year)]</label2>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.8.Runtime)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.8.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.8.Art(poster))]</icon>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.8.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentMovie.8.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.8.Runtime)]</property>
+			</item>
+			<item id="9">
+				<label>$INFO[Window(Home).Property(RecentMovie.9.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentMovie.9.Year)]</label2>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.9.Runtime)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.9.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.9.Art(poster))]</icon>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.9.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentMovie.9.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.9.Runtime)]</property>
+			</item>
+			<item id="10">
+				<label>$INFO[Window(Home).Property(RecentMovie.10.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentMovie.10.Year)]</label2>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.10.Runtime)]</thumb>
+				<onclick>$INFO[Window(Home).Property(RecentMovie.10.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.10.Art(poster))]</icon>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.10.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentMovie.10.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.10.Runtime)]</property>
+			</item>
+		</content>
+	</include>
+	
+	<include name="RecentAlbums">
+		<content>
+				<item id="1">
+				<icon>$INFO[Window(Home).Property(RecentAlbum.1.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecentAlbum.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentAlbum.1.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.1.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.1.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Art(tvshow.fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.1.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.1.Play)]</onclick>
+			</item>
+			<item id="2">
+				<icon>$INFO[Window(Home).Property(RecentAlbum.2.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecentAlbum.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentAlbum.2.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.2.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.2.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.2.Art(tvshow.fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.2.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.2.Play)]</onclick>
+			</item>
+			<item id="3">
+				<icon>$INFO[Window(Home).Property(RecentAlbum.3.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecentAlbum.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentAlbum.3.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.3.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.3.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.3.Art(tvshow.fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.3.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.3.Play)]</onclick>
+			</item>
+			<item id="4">
+				<icon>$INFO[Window(Home).Property(RecentAlbum.4.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecentAlbum.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentAlbum.4.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.4.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.4.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.4.Art(tvshow.fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.4.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.4.Play)]</onclick>
+			</item>
+			<item id="5">
+				<icon>$INFO[Window(Home).Property(RecentAlbum.5.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecentAlbum.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentAlbum.5.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.5.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.5.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.5.Art(tvshow.fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.5.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.5.Play)]</onclick>
+			</item>
+			<item id="6">
+				<icon>$INFO[Window(Home).Property(RecentAlbum.6.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecentAlbum.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentAlbum.6.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.6.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.6.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.6.Art(tvshow.fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.6.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.6.Play)]</onclick>
+			</item>
+			<item id="7">
+				<icon>$INFO[Window(Home).Property(RecentAlbum.7.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecentAlbum.7.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentAlbum.7.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.7.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.7.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.7.Art(tvshow.fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.7.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.7.Play)]</onclick>
+			</item>
+			<item id="8">
+				<icon>$INFO[Window(Home).Property(RecentAlbum.8.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecentAlbum.8.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentAlbum.8.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.8.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.8.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.8.Art(tvshow.fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.8.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.8.Play)]</onclick>
+			</item>
+			<item id="9">
+				<icon>$INFO[Window(Home).Property(RecentAlbum.9.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecentAlbum.9.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentAlbum.9.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.9.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.9.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.9.Art(tvshow.fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.9.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.9.Play)]</onclick>
+			</item>
+			<item id="10">
+				<icon>$INFO[Window(Home).Property(RecentAlbum.10.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecentAlbum.10.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecentAlbum.10.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.10.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.10.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.10.Art(tvshow.fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.10.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentAlbum.10.Play)]</onclick>
+			</item>
+		</content>
+	</include>
+	
+	<include name="RandomAddons">
+		<content>
+			<item id="1">
+				<icon>$INFO[Window(Home).Property(RandomAddon.1.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.1.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.1.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.1.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.1.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.1.Path)])</onclick>
+			</item>
+			<item id="2">
+				<icon>$INFO[Window(Home).Property(RandomAddon.2.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.2.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.2.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.2.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.2.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.2.Path)])</onclick>
+			</item>
+			<item id="3">
+				<icon>$INFO[Window(Home).Property(RandomAddon.3.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.3.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.3.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.3.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.3.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.3.Path)])</onclick>
+			</item>
+			<item id="4">
+				<icon>$INFO[Window(Home).Property(RandomAddon.4.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.4.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.4.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.4.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.4.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.4.Path)])</onclick>
+			</item>
+			<item id="5">
+				<icon>$INFO[Window(Home).Property(RandomAddon.5.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.5.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.5.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.5.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.5.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.5.Path)])</onclick>
+			</item>
+			<item id="6">
+				<icon>$INFO[Window(Home).Property(RandomAddon.6.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.6.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.6.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.6.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.6.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.6.Path)])</onclick>
+			</item>
+			<item id="7">
+				<icon>$INFO[Window(Home).Property(RandomAddon.7.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.7.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.7.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.7.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.7.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.7.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.7.Path)])</onclick>
+			</item>
+			<item id="8">
+				<icon>$INFO[Window(Home).Property(RandomAddon.8.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.8.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.8.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.8.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.8.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.8.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.8.Path)])</onclick>
+			</item>
+			<item id="9">
+				<icon>$INFO[Window(Home).Property(RandomAddon.9.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.9.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.9.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.9.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.9.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.9.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.9.Path)])</onclick>
+			</item>
+			<item id="10">
+				<icon>$INFO[Window(Home).Property(RandomAddon.10.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.10.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.10.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.10.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.10.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.10.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.10.Path)])</onclick>
+			</item>
+		</content>
+	</include>
 <!---GLOBAL SEARCH------>
 	<include name="globalsearch_Header">
 		<control type="image">
