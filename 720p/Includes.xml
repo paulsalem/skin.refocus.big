@@ -301,7 +301,7 @@
 	
 	<include name="clock">
 		<control type="group">
-			<visible>Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + !Window.IsActive(infodialog)</visible>
+			<visible>Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + ![Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
@@ -364,7 +364,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Skin.HasSetting(home.time) + Skin.HasSetting(home.timesmall) + !Window.IsActive(infodialog)</visible>
+			<visible>Skin.HasSetting(home.time) + Skin.HasSetting(home.timesmall) + ![Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>

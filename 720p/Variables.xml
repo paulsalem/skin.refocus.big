@@ -149,7 +149,7 @@
 		<value condition="IsEmpty(ListItem.Thumb) + [Container.Content(movies) | Container.Content(sets)]">thumbs/movie_portrait.jpg</value>
 		<value condition="IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)]">thumbs/tvshow_portrait.jpg</value>
 		<value condition="IsEmpty(ListItem.Title) + Container.Content(actors)">thumbs/actor_portrait.jpg</value>
-		<value>$INFO[ListItem.Icon]</value>
+		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="thumb_Portrait.Wide">
 		<value condition="IsEmpty(ListItem.Title) + Container.Content(movies)">thumbs/movie_landscape.jpg</value>
