@@ -321,7 +321,7 @@
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
-					<visible>Control.IsVisible(57) + [[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)] + !SubString(Container.FolderPath,plugin://)] | [Container.Content(movies) + SubString(Container.FolderPath,plugin://)]]</visible>
+					<visible>Control.IsVisible(53) + [[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)] + !SubString(Container.FolderPath,plugin://)] | [Container.Content(movies) + SubString(Container.FolderPath,plugin://)]]</visible>
 					<control type="button" id="90">
 						<label>$LOCALIZE[31062]</label>
 						<onup>31</onup>
@@ -337,7 +337,7 @@
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
-					<visible>Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]</visible>
+					<visible>Control.IsVisible(50) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]</visible>
 					<control type="togglebutton" id="90">
 						<label>$LOCALIZE[31061]</label>
 						<altlabel>$LOCALIZE[31039]</altlabel>
@@ -349,11 +349,11 @@
 						<include>button_Menu</include>
 					</control>
 				</control>
-				<!--THUMBS: info
+				<!--THUMBS: info-->
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
-					<visible>Control.IsVisible(57) + [[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !SubString(Container.FolderPath,plugin://)] | [Container.Content(movies) + SubString(Container.FolderPath,plugin://)]]</visible>
+					<visible>Control.IsVisible(57) + [[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)] + !SubString(Container.FolderPath,plugin://)] | [Container.Content(movies) + SubString(Container.FolderPath,plugin://)]]</visible>
 					<control type="button" id="90">
 						<label>$LOCALIZE[31975]</label>
 						<onup>31</onup>
@@ -364,12 +364,12 @@
 						<onclick>SetFocus(571)</onclick>
 						<include>button_Menu</include>
 					</control>
-				</control>-->
+				</control>
 				<!--THUMBS: no info-->
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
-					<visible>Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					<visible>Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]</visible>
 					<control type="button" id="90">
 						<label>$LOCALIZE[31974]</label>
 						<onup>31</onup>
