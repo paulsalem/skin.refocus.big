@@ -682,7 +682,7 @@
 				</control>
 				<control type="textbox" id="4">
 					<width>435</width>
-					<height>355</height>
+					<height>345</height>
 					<label>$VAR[global_Plot.Condition]</label>
 						<font>descriptionbig</font>
 					<visible>!SubString(ListItem.Icon,default)</visible>
