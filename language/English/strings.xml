@@ -420,5 +420,19 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32102">Enable Network and Studio Logos on Video OSD</string>-->
 <string id="32103">Remove Network/Studios Logos on Views</string>-->
 
+<!--Widgets-->
+<string id="32200">Disable TV Shows Widget</string>
+<string id="32201">Disable Movies Widget</string>
+<string id="32202">Disable Music Widget</string>
+<string id="32203">Disable Addons Widget</string>
+<string id="32204">Disable Weather Widget</string>
+<string id="32205">Use Posters on Recent Items</string>
+<string id="32206">Use Fanart on Recent Movies</string>
+<string id="32207">Use Fanart on Recommended Movies</string>
+
+!--Home Menu-->
+<string id="32300">Disable Left Shade on Home Menu</string>
+
+
 
 </strings>
