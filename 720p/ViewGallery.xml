@@ -254,7 +254,7 @@
 				<pauseatend>2000</pauseatend>
 				<randomize>false</randomize>
 				<loop>yes</loop>
-				<visible>Skin.HasSetting(gallery.extrafanart)</visible>
+				<visible>Skin.HasSetting(gallery.extrafanart) + System.IdleTime(2)</visible>
 			</control>
 			<control type="image">
 				<posx>20</posx>

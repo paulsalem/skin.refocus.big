@@ -134,7 +134,7 @@
 			<control type="textbox">
 				<posy>60</posy>
 				<width>960</width>
-				<height>118</height>
+				<height>100</height>
 				<label>$INFO[ListItem.Property(Addon.Description)]</label>
 				<include>description_Small</include>
 				<visible>!SubString(ListItem.Icon,default)</visible>

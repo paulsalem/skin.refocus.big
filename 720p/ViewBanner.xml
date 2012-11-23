@@ -555,7 +555,7 @@
 					<posy>23</posy>
 					<width>172</width>
 					<height>248</height>
-					<texture diffuse="frames/frame_Portrait-mask.png" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Art(banner)]</texture>
+					<texture diffuse="frames/frame_Portrait-mask.png" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Art(poster)]</texture>
 					<aspectratio scalediffuse="false" align="left">stretch</aspectratio>
 					<include>focus_Banner</include>
 				</control>
