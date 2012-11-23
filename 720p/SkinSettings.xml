@@ -193,22 +193,70 @@
 				<selected>Skin.HasSetting(home.widgets.noanimations)</selected>
 				<include>button_Settings</include>
 			</control>
+			<!--Menu Shade-->
+			<control type="radiobutton" id="114">
+				<label>$LOCALIZE[32300]</label>
+				<onclick>Skin.ToggleSetting(home.menushade)</onclick>
+				<selected>Skin.HasSetting(home.menushade)</selected>
+				<include>button_Settings</include>
+			</control>
 			<!--widgets-->
-			<control type="label" id="114">
+			<control type="label" id="115">
 				<label>$LOCALIZE[32060]</label>
 				<font>category</font>
 				<textcolor>Color2</textcolor>
 				<include>button_Settings</include>
 			</control>
 			<!--Home Widgets-->
-			<control type="radiobutton" id="115">
+			<control type="radiobutton" id="116">
 				<label>$LOCALIZE[32049]</label>
 				<onclick>Skin.ToggleSetting(home.widgets)</onclick>
 				<selected>Skin.HasSetting(home.widgets)</selected>
 				<include>button_Settings</include>
 			</control>
+			<!--Disable TV Shows Widget-->
+			<control type="radiobutton" id="117">
+				<label>$LOCALIZE[32200]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.tvshows)</onclick>
+				<selected>Skin.HasSetting(home.widgets.tvshows)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(home.widgets)</visible>
+			</control>
+			<!--Disable Movies Widget-->
+			<control type="radiobutton" id="118">
+				<label>$LOCALIZE[32201]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.movies)</onclick>
+				<selected>Skin.HasSetting(home.widgets.movies)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(home.widgets)</visible>
+			</control>
+			<!--Disable Music Widget-->
+			<control type="radiobutton" id="119">
+				<label>$LOCALIZE[32202]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.music)</onclick>
+				<selected>Skin.HasSetting(home.widgets.music)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(home.widgets)</visible>
+			</control>
+			<!--Disable Addons Widget-->
+			<control type="radiobutton" id="120">
+				<label>$LOCALIZE[32203]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.addons)</onclick>
+				<selected>Skin.HasSetting(home.widgets.addons)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(home.widgets)</visible>
+			</control>
+			<!--Disable Weather Widget-->
+			<control type="radiobutton" id="121">
+				<label>$LOCALIZE[32204]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.weather)</onclick>
+				<selected>Skin.HasSetting(home.widgets.weather)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(home.widgets)</visible>
+			</control>
+			
 			<!--Home Widgets-->
-			<control type="radiobutton" id="116">
+			<control type="radiobutton" id="122">
 				<label>$LOCALIZE[32025]</label>
 				<onclick>Skin.ToggleSetting(home.widgets.lightopacity)</onclick>
 				<onclick>Skin.ToggleSetting(home.widgets.medopacity)</onclick>
@@ -217,7 +265,7 @@
 				<include>button_Settings</include>
 			</control>
 			<!--Home Widgets-->
-			<control type="radiobutton" id="117">
+			<control type="radiobutton" id="123">
 				<label>$LOCALIZE[32026]</label>
 				<onclick>Skin.ToggleSetting(home.widgets.medopacity)</onclick>
 				<onclick>Skin.ToggleSetting(home.widgets.lightopacity)</onclick>
@@ -226,35 +274,79 @@
 				<include>button_Settings</include>
 			</control>
 			<!--Home Widgets-->
-			<control type="radiobutton" id="118">
+			<control type="radiobutton" id="124">
 				<label>$LOCALIZE[32050]</label>
 				<onclick>Skin.ToggleSetting(home.widgets.watchlist)</onclick>
 				<onclick>Skin.Reset(home.widgets.watchlistrecent)</onclick>
 				<onclick>Skin.Reset(home.widgets.watchlistposters)</onclick>
+				<onclick>Skin.Reset(home.widgets.recentposters)</onclick>
 				<selected>Skin.HasSetting(home.widgets.watchlist)</selected>
 				<visible>Skin.HasSetting(home.widgets)</visible>
 				<include>button_Settings</include>
 			</control>
-			<!--Home Widgets-->
-			<control type="radiobutton" id="119">
+			<!--Use Posters on Recommended Items-->
+			<control type="radiobutton" id="125">
 				<label>$LOCALIZE[32059]</label>
 				<onclick>Skin.ToggleSetting(home.widgets.watchlistposters)</onclick>
 				<selected>Skin.HasSetting(home.widgets.watchlistposters)</selected>
-				<visible>Skin.HasSetting(home.widgets) + [Skin.HasSetting(home.widgets.watchlist) | Skin.HasSetting(home.widgets.watchlistrecent)]</visible>
+				<onclick>Skin.Reset(home.widgets.recentposters)</onclick>
+				<visible>Skin.HasSetting(home.widgets) + [Skin.HasSetting(home.widgets.watchlist) | Skin.HasSetting(home.widgets.watchlistrecent)] + !Skin.HasSetting(home.widgets.watchlistrecent)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Use Fanart on Recent Movies-->
+			<control type="radiobutton" id="126">
+				<label>$LOCALIZE[32206]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.recentfanartmovies)</onclick>
+				<selected>Skin.HasSetting(home.widgets.recentfanartmovies)</selected>
+				<onclick>Skin.Reset(home.widgets.watchlistfanartmovies)</onclick>
+				<visible>Skin.HasSetting(home.widgets) + ![Skin.HasSetting(home.widgets.watchlist)] + !Skin.HasSetting(home.widgets.watchlistrecent)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Use Fanart on Recommended Movies-->
+			<control type="radiobutton" id="127">
+				<label>$LOCALIZE[32207]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.watchlistfanartmovies)</onclick>
+				<selected>Skin.HasSetting(home.widgets.watchlistfanartmovies)</selected>
+				<onclick>Skin.Reset(home.widgets.recentfanartmovies)</onclick>
+				<visible>Skin.HasSetting(home.widgets) + [Skin.HasSetting(home.widgets.watchlist) | Skin.HasSetting(home.widgets.watchlistrecent)] + !Skin.HasSetting(home.widgets.watchlistrecent)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Use Posters on Recent Items-->
+			<control type="radiobutton" id="128">
+				<label>$LOCALIZE[32205]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.recentposters)</onclick>
+				<selected>Skin.HasSetting(home.widgets.recentposters)</selected>
+				<onclick>Skin.Reset(home.widgets.watchlistposters)</onclick>
+				<visible>Skin.HasSetting(home.widgets) + ![Skin.HasSetting(home.widgets.watchlist)] + !Skin.HasSetting(home.widgets.watchlistrecent)</visible>
 				<include>button_Settings</include>
 			</control>
 			<!--Home Widgets-->
-			<control type="radiobutton" id="120">
+			<control type="radiobutton" id="129">
 				<label>$LOCALIZE[32056]</label>
 				<onclick>Skin.ToggleSetting(home.widgets.watchlistrecent)</onclick>
 				<onclick>Skin.Reset(home.widgets.watchlist)</onclick>
-				<onclick>Skin.Reset(home.widgets.watchlistposters)</onclick>
 				<selected>Skin.HasSetting(home.widgets.watchlistrecent)</selected>
 				<visible>Skin.HasSetting(home.widgets)</visible>
 				<include>button_Settings</include>
 			</control>
+			<!--Use Posters on Recommended Items-->
+			<control type="radiobutton" id="130">
+				<label>$LOCALIZE[32059]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.watchlistpostersdouble)</onclick>
+				<selected>Skin.HasSetting(home.widgets.watchlistpostersdouble)</selected>
+				<visible>Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent)</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Use Posters on Recent Items-->
+			<control type="radiobutton" id="131">
+				<label>$LOCALIZE[32205]</label>
+				<onclick>Skin.ToggleSetting(home.widgets.recentpostersdouble)</onclick>
+				<selected>Skin.HasSetting(home.widgets.recentpostersdouble)</selected>
+				<visible>Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent)</visible>
+				<include>button_Settings</include>
+			</control>
 			<!--Home Widgets-->
-			<control type="radiobutton" id="121">
+			<control type="radiobutton" id="132">
 				<label>$LOCALIZE[32100]</label>
 				<onclick>Skin.ToggleSetting(home.widgets.nofanart)</onclick>
 				<selected>Skin.HasSetting(home.widgets.nofanart)</selected>
