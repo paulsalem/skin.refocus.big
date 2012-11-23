@@ -410,12 +410,13 @@
 			<include>fadeinout</include>
 			<visible allowhiddenfocus="true">Container(9000).HasFocus(21)</visible>
 		</control>
-	<!-- menu shade --->
+	<!--menu shade-->
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture>home/menuBackground.png</texture>
 			<aspectratio align="left">stretch</aspectratio>
 			<include>fadeinout</include>
+			<visible>!Skin.HasSetting(home.menushade) + [[Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + !Skin.HasSetting(home.backgroundvideo)]] | ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]]</visible>
 		</control>
 	<!--vignette home-->
 		<control type="image">
