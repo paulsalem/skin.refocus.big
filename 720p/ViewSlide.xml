@@ -412,7 +412,7 @@
 		</focusedlayout>
 	</include>
 
-<!---SQUARE------>
+<!--SQUARE-->
 	<include name="view_SlideSquare">
 		<control type="wraplist" id="522">
 			<viewtype label="Slide">info</viewtype>
