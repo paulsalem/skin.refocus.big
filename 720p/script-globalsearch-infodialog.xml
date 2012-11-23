@@ -147,12 +147,22 @@
 							<onclick>-</onclick>
 							<visible>!IsEmpty(Container(100).ListItem.Property(Year))</visible>
 						</item>
+						
+						
 						<item>
 							<label>$LOCALIZE[563]</label>
 							<label2>$INFO[Container(100).ListItem.Property(Rating)]</label2>
 							<onclick>-</onclick>
-							<visible>!IsEmpty(Container(100).ListItem.Property(Rating))</visible>
+							<visible>!IsEmpty(Container(100).ListItem.Property(Rating)) + !Skin.HasSetting(rating.rt)</visible>
 						</item>
+						<item>
+							<label>$LOCALIZE[563]</label>
+							<label2>$VAR[GlobalSearch.Ratings.Critics.Percentage]%</label2>
+							<onclick>-</onclick>
+							<visible>!IsEmpty(Container(100).ListItem.Property(Rating)) + Skin.HasSetting(rating.rt)</visible>
+						</item>
+						
+						
 						<item>
 							<label>$LOCALIZE[20074]</label>
 							<label2>$INFO[Container(100).ListItem.Property(Mpaa)]</label2>

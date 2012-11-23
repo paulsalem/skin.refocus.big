@@ -530,16 +530,56 @@
 					<font>listInfo</font>
 					<textcolor>Color2</textcolor>
 				</control>
+				
+				
 				<control type="image">
-					<posx>780</posx>
-					<posy>12</posy>
+					<posx>785</posx>
+					<posy>3</posy>
 					<width>128</width>
 					<height>22</height>
 					<info>ListItem.StarRating</info>
 					<aspectratio align="right">keep</aspectratio>
 					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
-					<visible>!IsEmpty(ListItem.Title)</visible>
+					<visible>!IsEmpty(ListItem.Title) + [!Skin.HasSetting(rating.rt) | !Container.Content(movies)]</visible>
 				</control>
+				
+				
+				<!--rotten tomatoes-->
+				<control type="image">
+					<posx>840</posx>
+					<posy>2</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+				</control>
+				<control type="label">
+					<posx>875</posx>
+					<posy>2</posy>
+					<width>67</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<label>$VAR[Ratings.Critics.Percentage]%</label>
+					<font>date</font>
+					<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+				</control>
+				
+				
+				<control type="image">
+					<posx>880</posx>
+					<posy>28</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture>flags/video/HD/nf-HD.png</texture>
+					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
+				</control>
+			
+			
 			</itemlayout>
 			<focusedlayout condition="Container.Content(movies)" width="560" height="295">
 				<control type="image">
@@ -611,17 +651,56 @@
 					<width>565</width>
 					<include>focus_Banner</include>
 				</control>
+				
+				
 				<control type="image">
-					<posx>780</posx>
-					<posy>57</posy>
+					<posx>785</posx>
+					<posy>30</posy>
 					<width>128</width>
 					<height>22</height>
 					<texture>$INFO[ListItem.StarRating,rating/fo-,]</texture>
 					<textcolor>Color4</textcolor>
 					<aspectratio align="right">keep</aspectratio>
 					<include>focus_Banner</include>
-					<visible>!SubString(ListItem.Icon,default)</visible>
+					<colordiffuse>Color4</colordiffuse>
+					<visible>!SubString(ListItem.Icon,default) + [!Skin.HasSetting(rating.rt) | !Container.Content(movies)]</visible>
 				</control>
+				
+				
+				<!--rotten tomatoes-->
+				<control type="image">
+					<posx>840</posx>
+					<posy>25</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+				</control>
+				<control type="label">
+					<posx>875</posx>
+					<posy>25</posy>
+					<width>67</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<label>$VAR[Ratings.Critics.Percentage]%</label>
+					<include>list_Label-sub-focus</include>
+					<visible>Container.Content(movies) + Skin.HasSetting(rating.rt) + !IsEmpty(Listitem.Genre)</visible>
+				</control>
+				
+				
+				<control type="image">
+					<posx>880</posx>
+					<posy>53</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture>flags/video/HD/fo-HD.png</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<colordiffuse>Color4</colordiffuse>
+					<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
+				</control>
+				
+				
 				<control type="textbox" id="4">
 					<posx>215</posx>
 					<posy>95</posy>

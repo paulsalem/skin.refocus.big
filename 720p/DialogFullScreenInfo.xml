@@ -58,12 +58,53 @@
 				<include>transition_OSD2</include>
 			</control>
 		</control>
+		
+		
+		<!-- Logos -->
+		<control type="image" id="9969">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>180</width>
+			<height>64</height>
+			<texture fallback="empty">$VAR[flag_Studio.player.xperience]</texture>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>!VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.realaska)</visible>
+		</control>
+		<control type="image" id="9979">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>180</width>
+			<height>64</height>
+			<texture>$VAR[flag_Studio.player.xperience_alt]</texture>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>StringCompare(Control.GetLabel(9969),empty) + !VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.realaska)</visible>
+		</control>
+		<control type="image" id="9989">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>180</width>
+			<height>64</height>
+			<texture>$VAR[flag_Studio.player.xperience]</texture>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.realaska)</visible>
+		</control>
+		<control type="image" id="9997">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>180</width>
+			<height>64</height>
+			<texture>$VAR[flag_Studio.player.xperience_alt]</texture>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>StringCompare(Control.GetLabel(9989),empty) + VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.realaska)</visible>
+		</control>
+	
 			
 	<!--		<include>osd_Info</include>
 			<include>transition_OSD</include>-->
 			<control type="group">
 
 			<animation effect="slide" start="0,0" end="0,42" time="0" condition="[VideoPlayer.Content(livetv) | VideoPlayer.Content(files)]">Conditional</animation>
+			<visible>Skin.HasSetting(videoosd.realaska) + [Window.IsVisible(fullscreenvideo) | Window.IsActive(visualisation)] + ![[Window.IsActive(seekbar) + Skin.HasSetting(osd.progressbar)]  | [Window.IsActive(visualisationpresetlist) | Window.IsActive(videoosd) | Window.IsVisible(bookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsActive(script-XBMC_Lyrics-main.xml)]]</visible>
 			
 			<control type="image" id="1">
 			<posy>500</posy>
@@ -302,6 +343,17 @@
 				<include>transition_OSD</include>
 				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(livetv)</visible>
 			</control>
+			
+			
+			<control type="image" id="1">
+				<posx>1172</posx>
+				<posy>510</posy>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/video/HD/nf-HD.png</texture>
+				<visible>Skin.HasSetting(videoosd.realaska) + IntegerGreaterThan(VideoPlayer.VideoResolution,540) + Skin.HasSetting(rating.rt)</visible>
+			</control>
 			<control type="image" id="1">
 				
 			<animation effect="slide" start="0,0" end="0,42" time="0" condition="[VideoPlayer.Content(livetv) | VideoPlayer.Content(files)]">Conditional</animation>
@@ -312,8 +364,9 @@
 				<height>48</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture>flags/video/HD/nf-HD.png</texture>
-				<visible>Skin.HasSetting(videoosd.realaska) + IntegerGreaterThan(VideoPlayer.VideoResolution,540)</visible>
+				<visible>Skin.HasSetting(videoosd.realaska) + IntegerGreaterThan(VideoPlayer.VideoResolution,540) + [!Skin.HasSetting(rating.rt) | !VideoPlayer.Content(movies)]</visible>
 			</control>
+			
 
 			<!--info-->
 			<control type="group" id="1">
@@ -323,7 +376,11 @@
 				<posx>310</posx>
 				<posy>520</posy>
 				<control type="label" id="1">
-					<width>870</width>
+				
+				
+					<width>750</width>
+					
+					
 					<label>$VAR[osd.Title.Black]</label>
 					<textcolor>ColorOSD4</textcolor>
 					<font>osdTitle</font>
@@ -331,7 +388,11 @@
 				</control>
 				<control type="label" id="1">
 					<posy>27</posy>
+					
+					
 					<width>750</width>
+					
+					
 					<label>$VAR[osd.Info]</label>
 					<textcolor>Color2</textcolor>
 					<include>info_Sub</include>
@@ -367,6 +428,8 @@
 					<texture>flags/codec/$INFO[MusicPlayer.Codec,,.png]</texture>
 					<visible>Skin.HasSetting(videoosd.realaska)</visible>
 				</control>
+				
+				
 				<control type="image" id="1">
 					<posx>815</posx>
 					<posy>30</posy>
@@ -374,16 +437,64 @@
 					<height>22</height>
 					<texture>$INFO[Player.StarRating,rating/nf-,]</texture>
 					<aspectratio align="right">keep</aspectratio>
-					<visible>Skin.HasSetting(videoosd.realaska)</visible>
+					<visible>Skin.HasSetting(videoosd.realaska) + [!Skin.HasSetting(rating.rt) | !VideoPlayer.Content(movies)]</visible>
 				</control>
 				
+				
+				<!--rotten tomatoes-->
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<posx>865</posx>
+					<posy>34</posy>
+					<visible>Skin.HasSetting(videoosd.realaska) + Skin.HasSetting(rating.rt) + VideoPlayer.Content(movies)</visible>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Critics.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>67</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Critics.Percentage]%</label>
+						<font>smallerCapsBIG</font>
+						<textcolor>ColorOSD4</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<posx>865</posx>
+					<posy>70</posy>
+					<visible>Skin.HasSetting(videoosd.realaska) + Skin.HasSetting(rating.rt) + Skin.HasSetting(rating.specialrt) + VideoPlayer.Content(movies)</visible>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture background="false">rottentomatoes/$VAR[Ratings.Audience.Icon].png</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<width>67</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<label>$VAR[Ratings.Audience.Percentage]%</label>
+						<font>smallerCapsBIG</font>
+						<textcolor>ColorOSD4</textcolor>
+					</control>
+				</control>
+				
+
 				<!--plot-->
 				<control type="group" id="1">
 					<posy>55</posy>
 					<visible>[Skin.HasSetting(videoosd.realaska)] + Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 					<control type="textbox" id="1">
 						<height>55</height>
-						<width>950</width>
+						
+						
+						<width>850</width>
+						
+						
 						<label>$VAR[player_Plot.Condition]</label>
 						<textcolor>ColorOSD4</textcolor>
 						<include>description_OSD</include>
@@ -391,7 +502,11 @@
 					</control>
 					<control type="textbox" id="1">
 						<height>110</height>
-						<width>950</width>
+						
+						
+						<width>850</width>
+						
+						
 						<label>$VAR[player_Plot.Condition]</label>
 						<textcolor>ColorOSD4</textcolor>
 						<include>description_OSD</include>
