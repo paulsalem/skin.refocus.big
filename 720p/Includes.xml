@@ -223,7 +223,7 @@
 				<shadowcolor>black</shadowcolor>
 				<font>date</font>
 				<include>toast_Bottom</include>
-				<visible>Skin.HasSetting(home.date) + !Skin.HasSetting(home.datewhite)</visible>
+				<visible>Skin.HasSetting(home.date) + !Skin.HasSetting(home.datewhite) + ![[Control.HasFocus(8008) | Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.recentpostersdouble)]</visible>
 			</control>
 			<control type="label">
 				<posx>25r</posx>
@@ -232,7 +232,7 @@
 				<shadowcolor>black</shadowcolor>
 				<font>date</font>
 				<include>toast_Bottom_Home</include>
-				<visible>Skin.HasSetting(home.date) + Skin.HasSetting(home.datewhite)</visible>
+				<visible>Skin.HasSetting(home.date) + Skin.HasSetting(home.datewhite) + ![[Control.HasFocus(8008) | Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.recentpostersdouble)]</visible>
 			</control>
 		</control>
 	</include>
