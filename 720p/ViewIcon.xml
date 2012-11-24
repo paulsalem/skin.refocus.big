@@ -241,7 +241,9 @@
 					<width>134</width>
 					<height>185</height>
 					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
-					<bordersize>22</bordersize>
+					<bordertexture border="6">frames/frame_Square-small.png</bordertexture>
+					<bordersize>6</bordersize>
+					<!--<bordersize>22</bordersize>-->
 					<aspectratio align="center">stretch</aspectratio>
 					<include>focus_ThumbPosterInfo</include>
 				</control>

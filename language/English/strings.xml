@@ -415,6 +415,11 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32100">Disable fanart on Widgets</string>
 
 
+<!--Rotten Tomatoes-->
+<string id="32110">Show Rating Like on Rotten Tomatoes (Movies Only)</string>
+<string id="32111">Show Also Audience Using Special Encoding</string>
+
+
 
 
 </strings>
