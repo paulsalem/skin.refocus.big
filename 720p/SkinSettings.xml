@@ -568,47 +568,54 @@
 			<control type="radiobutton" id="707">
 				<label>$LOCALIZE[32028]</label>
 				<onclick>Skin.ToggleSetting(watched.alternative)</onclick>
+				<onclick>Skin.Reset(watched.original)</onclick>
 				<selected>Skin.HasSetting(watched.alternative)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!-->
 			<control type="radiobutton" id="708">
+				<label>$LOCALIZE[32400]</label>
+				<onclick>Skin.ToggleSetting(watched.original)</onclick>
+				<onclick>Skin.Reset(watched.alternative)</onclick>
+				<selected>Skin.HasSetting(watched.original)</selected>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="709">
 				<label>$LOCALIZE[31922]</label>
 				<onclick>Skin.ToggleSetting(overlay.movies)</onclick>
 				<selected>Skin.HasSetting(overlay.movies)</selected>
 				<include>button_Settings</include>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
+				<visible>Skin.HasSetting(watched.original)</visible>
 			</control>
-			<control type="radiobutton" id="709">
+			<control type="radiobutton" id="710">
 				<label>$LOCALIZE[31921]</label>
 				<onclick>Skin.ToggleSetting(overlay.tvshows)</onclick>
 				<selected>Skin.HasSetting(overlay.tvshows)</selected>
 				<include>button_Settings</include>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
+				<visible>Skin.HasSetting(watched.original)</visible>
 			</control>
-			<control type="radiobutton" id="710">
+			<control type="radiobutton" id="711">
 				<label>$LOCALIZE[31924]</label>
 				<onclick>Skin.ToggleSetting(overlay.episodes)</onclick>
 				<selected>Skin.HasSetting(overlay.episodes)</selected>
 				<include>button_Settings</include>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
+				<visible>Skin.HasSetting(watched.original)</visible>
 			</control>
-			<control type="radiobutton" id="711">
+			<control type="radiobutton" id="712">
 				<label>$LOCALIZE[31920]</label>
 				<onclick>Skin.ToggleSetting(overlay.files)</onclick>
 				<selected>Skin.HasSetting(overlay.files)</selected>
 				<include>button_Settings</include>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
+				<visible>Skin.HasSetting(watched.original)</visible>
 			</control>
-			<control type="radiobutton" id="712">
+			<control type="radiobutton" id="713">
 				<label>$LOCALIZE[31918]</label>
 				<onclick>Skin.ToggleSetting(overlay.resumable)</onclick>
 				<selected>Skin.HasSetting(overlay.resumable)</selected>
 				<include>button_Settings</include>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
+				<visible>Skin.HasSetting(watched.original)</visible>
 			</control>-->
 			<!--background video-->
-			<control type="radiobutton" id="713">
+			<control type="radiobutton" id="714">
 				<label>$LOCALIZE[31028]</label>
 				<onclick>Skin.ToggleSetting(backgroundvideo.global)</onclick>
 				<selected>Skin.HasSetting(backgroundvideo.global)</selected>
