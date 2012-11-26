@@ -735,42 +735,32 @@
 		<fadetime>200</fadetime>d
 		<visible>Container.Content(tvshows) + Skin.HasSetting(tvshowlogos.enable)</visible>
 	</include>
-	<!--watchedOverlay-->
+	<!--watchedOverlay
 	<include name="overlay_UnWatched">
 		<width>32</width>
 		<height>32</height>
 		<info>ListItem.Overlay</info>
 		<aspectratio align="right">keep</aspectratio>
-	</include>
+	</include>-->
 	<!--watchedOverlayAlt-->
 	<include name="overlay_UnWatchedAlt">
-		
 		<width>32</width>
 		<height>32</height>
 		<info>ListItem.Overlay</info>
 		<aspectratio align="right">keep</aspectratio>
-		
 	</include>
-	<!--
 	<include name="overlay_UnWatched">
-		<control type = "group">
-			<control type="image" id = "1">
-				<width>32</width>
-				<height>32</height>
-				<texture>$INFO[ListItem.Overlay,overlays/,/default-fo.png]</texture>
-				<aspectratio align="right">keep</aspectratio>
-				<visible>[Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
-			</control>
-				<!--watchedOverlayAlt-->
-			<!--<control type="image" id = "1">
-				<width>64</width>
-				<height>64</height>
-				<texture>$INFO[ListItem.Overlay]</texture>
-				<aspectratio align="right">keep</aspectratio>
-				<visible>Skin.HasSetting(watched.alternative) + [Container.Content(movies) + Skin.HasSetting(overlay.movies)] | [Container.Content(tvshows) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(episodes) + Skin.HasSetting(overlay.episodes)] | [Container.Content(seasons) + Skin.HasSetting(overlay.tvshows)] | [Container.Content(Files) + Container.HasFiles] + ![SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,sources://)]</visible>
-			</control>	
-		</control>
-	</include>-->
+		<width>32</width>
+		<height>32</height>
+		<info>ListItem.Overlay</info>
+		<aspectratio align="right">keep</aspectratio>
+	</include>
+	<include name="overlay_UnWatchedOriginal">
+		<width>32</width>
+		<height>32</height>
+		<texture>$INFO[ListItem.Overlay,overlays/,/default-fo.png]</texture>
+		<aspectratio align="right">keep</aspectratio>
+	</include>
 	<!--resumableOverlay-->
 	<include name="overlay_Resumable">
 		<width>32</width>
@@ -778,17 +768,17 @@
 		<texture>overlays/OverlayResumable.png</texture>
 		<aspect>keepaspect</aspect>
 		<!--<visible>[Container.Content(movies) | Container.Content(episodes)] + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + IsEmpty(ListItem.Property(ReleaseDate) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>-->
-		<visible>!Skin.HasSetting(watched.alternative) + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>	
+		<visible>Skin.HasSetting(watched.original) + !Skin.HasSetting(watched.alternative) + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>	
 	</include>
 	<include name="overlay_Resumable-list">
 		<width>32</width>
 		<height>32</height>
 		<texture>overlays/OverlayResumable.png</texture>
 		<aspect>keepaspect</aspect>
-		<visible>!Skin.HasSetting(watched.alternative) + Container(50).ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>
+		<visible>Skin.HasSetting(watched.original) + !Skin.HasSetting(watched.alternative) + Container(50).ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>
 	</include>
 
-<!---COLUMNS------>
+<!--COLUMNS-->
 	<include name="column_Header">
 		<height>20</height>
 		<font>titleLow</font>
@@ -1217,6 +1207,7 @@
 					<label>$VAR[osd.Title.Info]</label>
 					<textcolor>Color1</textcolor>
 					<font>titleSpecial</font>
+					<include>autoscroll-line</include>
 				</control>
 				<control type="label" id="1">
 					<posy>35</posy>
@@ -1225,6 +1216,7 @@
 					<textcolor>Color3</textcolor>
 					<font>titleSmallest</font>
 					<include>info_Sub</include>
+					<include>autoscroll-line</include>
 				</control>
 				<control type="label" id="1">
 					<posy>64</posy>
@@ -1233,6 +1225,7 @@
 					<textcolor>Color3</textcolor>
 					<font>titletiny</font>
 					<include>info_Sub</include>
+					<include>autoscroll-line</include>
 					<visible>Player.HasAudio</visible>
 				</control>
 				
@@ -1258,6 +1251,7 @@
 					<textcolor>Color3</textcolor>
 					<font>titleSpecial</font>
 					<include>info_Sub</include>
+					<include>autoscroll-line</include>
 					<visible>VideoPlayer.Content(musicvideos)</visible>
 				</control>
 				<control type="image" id="1">
@@ -1276,7 +1270,7 @@
 					<texture>$INFO[Player.StarRating,rating/nf-,]</texture>
 					<aspectratio align="right">keep</aspectratio>
 				</control>
-				<!---plot------>
+				<!--plot-->
 				<control type="group" id="1">
 					<posy>55</posy>
 					<visible>Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
@@ -1299,7 +1293,7 @@
 						<visible>!Skin.HasSetting(osd.progressbar)</visible>
 					</control>
 				</control>
-				<!---progress------>
+				<!--progress-->
 				<control type="group" id="1">
 					<posy>127</posy>
 					<animation effect="slide" start="0,0" end="0,-44" time="0" condition="Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">Conditional</animation>
@@ -1384,9 +1378,18 @@
 				<posy>80</posy>
 				<width>268</width>
 				<height>150</height>
-				<texture fallback="empty">$INFO[Player.FolderPath]../clearart.png</texture>
+				<texture fallback="empty">$INFO[Player.Art(tvshow.clearart)]</texture>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+				<visible>[VideoPlayer.Content(episodes)]</visible>
+			</control>
+			<control type="image" id="10">
+				<posx>7</posx>
+				<posy>80</posy>
+				<width>268</width>
+				<height>150</height>
+				<texture fallback="empty">$INFO[Player.Art(clearart)]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>[VideoPlayer.Content(movies)]</visible>
 			</control>
 			<control type="image" id="11">
 				<posx>7</posx>
@@ -1396,6 +1399,15 @@
 				<texture fallback="empty">$INFO[Player.FolderPath]clearart.png</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			</control>
+			<control type ="image" id="111">
+				<posx>25</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
+				<texture fallback="empty">$INFO[VideoPlayer.Cover]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>[StringCompare(Control.GetLabel(10),empty) + StringCompare(Control.GetLabel(11),empty)] + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
 			</control>
 			<control type ="image" id="111">
 				<posx>25</posx>
@@ -1494,9 +1506,18 @@
 				<posy>1</posy>
 				<width>215</width>
 				<height>280</height>
+				<texture fallback="empty">$INFO[Player.Art(tvshow.poster)]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>[VideoPlayer.Content(episodes)] + [StringCompare(Control.GetLabel(1252),empty) + StringCompare(Control.GetLabel(1253),empty] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+			</control>
+			<control type ="image" id="111">
+				<posx>25</posx>
+				<posy>1</posy>
+				<width>215</width>
+				<height>280</height>
 				<texture fallback="empty">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + [StringCompare(Control.GetLabel(1252),empty) + StringCompare(Control.GetLabel(1253),empty] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
+				<visible>[VideoPlayer.Content(movies)] + [StringCompare(Control.GetLabel(1252),empty) + StringCompare(Control.GetLabel(1253),empty] + !Skin.HasSetting(videoosd.showfolderjpg)</visible>
 			</control>
 			<control type ="image" id="112">
 				<posx>25</posx>
