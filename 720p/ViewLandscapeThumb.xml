@@ -110,12 +110,14 @@
 				<control type="group">
 					<posx>270</posx>
 					<posy>147</posy>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatched</include>
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -124,9 +126,6 @@
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
 					</control>
 				</control>
 			</control>
@@ -151,12 +150,14 @@
 				<control type="group">
 					<posx>270</posx>
 					<posy>147</posy>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatched</include>
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -165,9 +166,6 @@
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
 					</control>
 				</control>
 			</control>

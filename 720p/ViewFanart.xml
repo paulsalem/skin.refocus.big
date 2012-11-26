@@ -98,7 +98,7 @@
 				<width>303</width>
 				<height>170</height>
 				<align>center</align>
-				<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+				<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Container.Content(episodes)</visible>
 			</control>
@@ -153,24 +153,23 @@
 				    </control>
 			    </control>				
 			    <control type="group">
-				    <posx>-49</posx>
-				    <posy>135</posy>
+				<posx>-49</posx>
+				<posy>135</posy>
 				<control type="image">
-					    <include>overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
 				</control>
 				<control type="image">
-							<include>overlay_Resumable-list</include>
-				</control>
+						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
+					</control>
 				<visible>Container.Content(episodes) + !Skin.HasSetting(watched.alternative)</visible>	
 			    </control>
 			 <control type="group">
 				    <posx>-81</posx>
 				    <posy>104</posy>
 				<control type="image">
-					   <info>ListItem.Overlay</info>
-				</control>
-				<control type="image">
-							<include>overlay_Resumable-list</include>
+					<info>ListItem.Overlay</info>
 				</control>
 				<visible>Container.Content(episodes) + Skin.HasSetting(watched.alternative)</visible>	
 			    </control>	

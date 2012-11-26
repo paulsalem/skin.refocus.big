@@ -87,7 +87,7 @@
 			<control type="label">
 				<posx>40</posx>
 				<posy>28</posy>
-				<width>510</width>
+				<width>442</width>
 				<label>$VAR[global_Info]</label>
 				<include>list_Label-sub</include>
 				<!--<visible>!SubString(Container.FolderPath,plugin://)</visible>-->
@@ -102,14 +102,18 @@
 				<aspectratio align="right">keep</aspectratio>
 				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
 			</control>
-			<control type="image">
+			<control type="group">
 				<posx>590</posx>
 				<posy>37</posy>
-				<width>32</width>
-				<height>32</height>
-				
-					<info>ListItem.Overlay</info>
-				
+				<control type="image">
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+				</control>
+				<control type="image">
+					<include>overlay_Resumable</include>
+					<visible>Skin.HasSetting(watched.original)</visible>
+				</control>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>!Skin.HasSetting(watched.alternative)</visible>
@@ -117,10 +121,7 @@
 			<control type="image">
 				<posx>575</posx>
 				<posy>5</posy>
-				
-				
-					<info>ListItem.Overlay</info>
-				
+				<info>ListItem.Overlay</info>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
@@ -165,7 +166,7 @@
 			<control type="label">
 				<posx>40</posx>
 				<posy>28</posy>
-				<width>510</width>
+				<width>442</width>
 				<label>$VAR[global_Info]</label>
 				<include>list_Label-sub-focus</include>
 				<!--<visible>!SubString(Container.FolderPath,plugin://)</visible>-->
@@ -179,12 +180,27 @@
 				<aspectratio align="right">keep</aspectratio>
 				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
 			</control>
+			<control type="group">
+				<posx>590</posx>
+				<posy>37</posy>
+				<control type="image">
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+				</control>
+				<control type="image">
+					<include>overlay_Resumable</include>
+					<visible>Skin.HasSetting(watched.original)</visible>
+				</control>
+				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
+			</control>
 			<control type="image">
 				<posx>575</posx>
 				<posy>5</posy>
-				
-				
-					<info>ListItem.Overlay</info>
+				<info>ListItem.Overlay</info>
+				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 			</control>
@@ -244,14 +260,28 @@
 				<include>list_Label</include>
 				<visible>Container.Content(files)</visible>
 			</control>
-			
+			<control type="group">
+				<posx>590</posx>
+				<posy>16</posy>
+				<control type="image">
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+				</control>
+				<control type="image">
+					<include>overlay_Resumable</include>
+					<visible>Skin.HasSetting(watched.original)</visible>
+				</control>
+				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
+			</control>
 			<control type="image">
 				<posx>590</posx>
 				<posy>16</posy>
 				<width>32</width>
 				<height>32</height>
-					<info>ListItem.Overlay</info>
-				
+				<info>ListItem.Overlay</info>
 				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
 				<visible>Skin.HasSetting(watched.alternative)</visible>
@@ -293,16 +323,31 @@
 				<include>list_Label-focus</include>
 				<visible>Container.Content(files)</visible>
 			</control>
-			
+			<control type="group">
+				<posx>590</posx>
+				<posy>16</posy>
+				<control type="image">
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
+				</control>
+				<control type="image">
+					<include>overlay_Resumable</include>
+					<visible>Skin.HasSetting(watched.original)</visible>
+				</control>
+				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
+			</control>
 			<control type="image">
 				<posx>590</posx>
 				<posy>16</posy>
 				<width>32</width>
 				<height>32</height>
-				
-				<texture>$INFO[ListItem.Overlay]</texture>
+				<info>ListItem.Overlay</info>
+				<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 				<aspectratio align="right">keep</aspectratio>
-
+				<visible>Skin.HasSetting(watched.alternative)</visible>
 			</control>
 			<control type="image">
 				<posx>475</posx>
@@ -810,12 +855,14 @@
 			<control type="group">
 				<posx>209</posx>
 				<posy>106</posy>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<include>overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
+					<visible>Skin.HasSetting(watched.original)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -824,9 +871,6 @@
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<info>ListItem.Overlay</info>
-				</control>
-				<control type="image">
-					<include>overlay_Resumable</include>
 				</control>
 			</control>
 			<control type="image">
@@ -886,12 +930,14 @@
 			<control type="group">
 				<posx>209</posx>
 				<posy>106</posy>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<include>overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
+					<visible>Skin.HasSetting(watched.original)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -900,9 +946,6 @@
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<info>ListItem.Overlay</info>
-				</control>
-				<control type="image">
-					<include>overlay_Resumable</include>
 				</control>
 			</control>
 			<control type="image">
@@ -971,23 +1014,22 @@
 			<control type="group">
 				<posx>62</posx>
 				<posy>106</posy>
-				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<info>ListItem.Overlay</info>
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
+					<visible>Skin.HasSetting(watched.original)</visible>
 				</control>
 			</control>
 			<control type="group">
 				<posx>62</posx>
 				<posy>108</posy>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
+				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<include>overlay_UnWatched</include>
-				</control>
-				<control type="image">
-					<include>overlay_Resumable</include>
+					<info>ListItem.Overlay</info>
 				</control>
 			</control>
 			<control type="image">
@@ -1056,12 +1098,14 @@
 			<control type="group">
 				<posx>62</posx>
 				<posy>106</posy>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
-					<include>overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<visible>!Skin.HasSetting(watched.alternative)</visible>
 				</control>
 				<control type="image">
 					<include>overlay_Resumable</include>
+					<visible>Skin.HasSetting(watched.original)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -1070,9 +1114,6 @@
 				<visible>Skin.HasSetting(watched.alternative)</visible>
 				<control type="image">
 					<info>ListItem.Overlay</info>
-				</control>
-				<control type="image">
-					<include>overlay_Resumable</include>
 				</control>
 			</control>
 			<control type="image">

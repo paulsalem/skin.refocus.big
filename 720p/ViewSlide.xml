@@ -150,7 +150,7 @@
 		</control>
 	</include>
 
-<!---PORTRAIT------>
+<!--PORTRAIT-->
 	<include name="view_SlidePoster">
 		<control type="fixedlist" id="52">
 			<viewtype label="Slide">info</viewtype>
@@ -187,12 +187,14 @@
 				<control type="group">
 					<posx>174</posx>
 					<posy>262</posy>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatched</include>
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -201,9 +203,6 @@
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
 					</control>
 				</control>
 			</control>
@@ -222,12 +221,14 @@
 				<control type="group">
 					<posx>174</posx>
 					<posy>262</posy>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatched</include>
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -236,9 +237,6 @@
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
 					</control>
 				</control>
 			</control>
@@ -293,12 +291,14 @@
 				<control type="group">
 					<posx>396</posx>
 					<posy>218</posy>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatched</include>
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -307,9 +307,6 @@
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
 					</control>
 				</control>
 			</control>
@@ -337,12 +334,14 @@
 				<control type="group">
 					<posx>396</posx>
 					<posy>218</posy>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
-						<include>overlay_UnWatched</include>
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
 					</control>
 					<control type="image">
 						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -351,9 +350,6 @@
 					<visible>Skin.HasSetting(watched.alternative)</visible>
 					<control type="image">
 						<info>ListItem.Overlay</info>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
 					</control>
 				</control>
 			</control>
@@ -414,7 +410,7 @@
 
 <!--SQUARE-->
 	<include name="view_SlideSquare">
-		<control type="wraplist" id="522">
+		<control type="fixedlist" id="522">
 			<viewtype label="Slide">info</viewtype>
 			<posx>-55</posx>
 			<posy>115</posy>
