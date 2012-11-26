@@ -97,28 +97,24 @@
 							<posx>174</posx>
 							<posy>262</posy>
 							<control type="image">
-								<include>overlay_UnWatched</include>
+								<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+								<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+								<visible>!Skin.HasSetting(watched.alternative)</visible>
 							</control>
 							<control type="image">
 								<width>32</width>
 								<height>32</height>
 								<texture>overlays/OverlayResumable.png</texture>
 								<aspect>keepaspect</aspect>
-								<visible>!Skin.HasSetting(watched.alternative) + SubString(ListItem.Property(Progress),True) + !Skin.HasSetting(watched.alternative)</visible>
+								<visible>Skin.HasSetting(watched.original) + SubString(ListItem.Property(Progress),True) + !Skin.HasSetting(watched.alternative)</visible>
 							</control>
 						</control>
 						<control type="group">
 							<posx>174</posx>
 							<posy>262</posy>
+							<visible>Skin.HasSetting(watched.alternative)</visible>
 							<control type="image">
-								<include>overlay_UnWatchedAlt</include>
-							</control>
-							<control type="image">
-								<width>32</width>
-								<height>32</height>
-								<texture>overlays/OverlayResumable.png</texture>
-								<aspect>keepaspect</aspect>
-								<visible>!Skin.HasSetting(watched.alternative) + SubString(ListItem.Property(Progress),True) + Skin.HasSetting(watched.alternative)</visible>
+								<info>ListItem.Overlay</info>
 							</control>
 						</control>
 					</control>
@@ -171,28 +167,24 @@
 							<posx>174</posx>
 							<posy>262</posy>
 							<control type="image">
-								<include>overlay_UnWatched</include>
+								<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+								<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+								<visible>!Skin.HasSetting(watched.alternative)</visible>
 							</control>
 							<control type="image">
 								<width>32</width>
 								<height>32</height>
 								<texture>overlays/OverlayResumable.png</texture>
 								<aspect>keepaspect</aspect>
-								<visible>!Skin.HasSetting(watched.alternative) + SubString(ListItem.Property(Progress),True) + !Skin.HasSetting(watched.alternative)</visible>
+								<visible>Skin.HasSetting(watched.original) + SubString(ListItem.Property(Progress),True) + !Skin.HasSetting(watched.alternative)</visible>
 							</control>
 						</control>
 						<control type="group">
 							<posx>174</posx>
 							<posy>262</posy>
+							<visible>Skin.HasSetting(watched.alternative)</visible>
 							<control type="image">
-								<include>overlay_UnWatchedAlt</include>
-							</control>
-							<control type="image">
-								<width>32</width>
-								<height>32</height>
-								<texture>overlays/OverlayResumable.png</texture>
-								<aspect>keepaspect</aspect>
-								<visible>!Skin.HasSetting(watched.alternative) + SubString(ListItem.Property(Progress),True) + Skin.HasSetting(watched.alternative)</visible>
+								<info>ListItem.Overlay</info>
 							</control>
 						</control>
 					</control>
