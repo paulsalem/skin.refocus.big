@@ -68,24 +68,24 @@
 					</control>
 					<control type="group">
 						<posx>532</posx>
-						<posy>295</posy>
+							<posy>295</posy>
 						<control type="image">
-							<include>overlay_UnWatched</include>
+							<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+							<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
 							<visible>!Container.Content(files) + !Skin.HasSetting(watched.alternative)</visible>
 						</control>
 						<control type="image">
-							<include>overlay_Resumable-list</include>
+							<include>overlay_Resumable</include>
+							<visible>Skin.HasSetting(watched.original)</visible>
 						</control>
 					</control>
 					<control type="group">
 						<posx>500</posx>
-						<posy>263</posy>
+							<posy>263</posy>
+						<include>focus_Banner</include>
+						<visible>!Container.Content(files) + Skin.HasSetting(watched.alternative)</visible>
 						<control type="image">
 							<info>ListItem.Overlay</info>
-							<visible>!Container.Content(files) + Skin.HasSetting(watched.alternative)</visible>
-						</control>
-						<control type="image">
-							<include>overlay_Resumable-list</include>
 						</control>
 					</control>
 				</control>
@@ -127,22 +127,21 @@
 						<posx>397</posx>
 						<posy>591</posy>
 						<control type="image">
-							<include>overlay_UnWatched</include>
-							<visible>!Skin.HasSetting(watched.alternative)</visible>
+							<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+							<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+							<visible>!Container.Content(files) + !Skin.HasSetting(watched.alternative)</visible>
 						</control>
 						<control type="image">
-							<include>overlay_Resumable-list</include>
+							<include>overlay_Resumable</include>
+							<visible>Skin.HasSetting(watched.original)</visible>
 						</control>
 					</control>
 					<control type="group">
 						<posx>365</posx>
 						<posy>559</posy>
+						<visible>!Container.Content(files) + Skin.HasSetting(watched.alternative)</visible>
 						<control type="image">
 							<info>ListItem.Overlay</info>
-							<visible>Skin.HasSetting(watched.alternative)</visible>
-						</control>
-						<control type="image">
-							<include>overlay_Resumable-list</include>
 						</control>
 					</control>
 				</control>
@@ -955,18 +954,23 @@
 			    <control type="group">
 				    <posx>1047</posx>
 				    <posy>146</posy>
-				    <control type="image">
-					<include>overlay_UnWatched</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
-				    </control>
+			   	    <control type="image">
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Container.Content(files) + !Skin.HasSetting(watched.alternative)</visible>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
+					</control>
 			    </control>
 				<control type="group">
 				    <posx>1021</posx>
 				    <posy>115</posy>
-				    <control type="image">
-					<info>ListItem.Overlay</info>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-				    </control>
+				   <visible>!Container.Content(files) + Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<info>ListItem.Overlay</info>
+					</control>
 			    </control>
 			    <control type="group">
 				<posx>960</posx>
