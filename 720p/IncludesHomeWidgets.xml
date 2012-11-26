@@ -32,24 +32,28 @@
 				<include>screen_Dimensions</include>
 				<include>fadeinout</include>
 				<texture background="true">overlays/vignette2.png</texture>
-				<visible>Skin.HasSetting(home.widgets.medopacity) + [Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)]</visible>
+				<visible>!Skin.HasSetting(home.widgets.weather) + Skin.HasSetting(home.widgets.medopacity) + [Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)]</visible>
 				<include>transition_Toast</include>
 			</control>
 			<control type="image" id="919">
-			<include>fadeinout</include>
+				<include>fadeinout</include>
 				<include>screen_Dimensions</include>
 				<texture background="true">overlays/vignette2_full.png</texture>
-				<visible>!Skin.HasSetting(home.widgets.medopacity) + [Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)]</visible>
+				<visible>!Skin.HasSetting(home.widgets.weather) + !Skin.HasSetting(home.widgets.medopacity) + [Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)]</visible>
+				<include>transition_Toast</include>
+			</control>
+			<control type="image" id="919">
+				<include>fadeinout</include>
+				<include>screen_Dimensions</include>
+				<texture background="true">overlays/vignette2.png</texture>
+				<visible>Skin.HasSetting(home.widgets.weather) + Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)</visible>
 				<include>transition_Toast</include>
 			</control>
 				
 			<control type="image">
 				<include>fadeinout</include>
-				<aspectratio>scale</aspectratio>
-				<posy>320</posy>
-				<width>1280</width>
-				<height>400</height>
-				<texture>backgrounds/background.png</texture>
+				<include>menu_BackgroundHide</include>
+				<texture diffuse="overlays/landscapeOverlay.png">backgrounds/background.png</texture>
 				<visible>Skin.HasSetting(wallpaper.original) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
 			</control>
 		
