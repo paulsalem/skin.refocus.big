@@ -11,14 +11,14 @@
 				<include>screen_Dimensions</include>
 				<include>fadeinout</include>
 				<texture background="true">overlays/vignette2_70.png</texture>
-				<visible>Skin.HasSetting(home.widgets.medopacity) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
+				<visible>!Skin.HasSetting(home.widgets.nofanart) + Skin.HasSetting(home.widgets.medopacity) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
 				
 			</control>
 			<control type="image">
 				<include>screen_Dimensions</include>
 				<include>fadeinout</include>
 				<texture background="true">overlays/vignette2_90.png</texture>
-				<visible>!Skin.HasSetting(home.widgets.medopacity) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
+				<visible>!Skin.HasSetting(home.widgets.nofanart) + !Skin.HasSetting(home.widgets.medopacity) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
 				
 			</control>
 			<control type="image" id="9199">
