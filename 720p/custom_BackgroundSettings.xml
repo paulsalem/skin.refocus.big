@@ -167,14 +167,14 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--slideshows-->
-					<control type="radiobutton" id="205">
+					<!--<control type="radiobutton" id="205">
 						<width>557</width>
 						<label>$LOCALIZE[31936]</label>
 						<onclick>Skin.ToggleSetting(slideshow.fanart)</onclick>
 						<onclick>Skin.Reset(slideshow.custom2)</onclick>
 						<selected>Skin.HasSetting(slideshow.fanart)</selected>
 						<include>dialog_Radio</include>
-					</control>
+					</control>-->
 					<control type="radiobutton" id="206">
 						<width>557</width>
 						<label>$LOCALIZE[32046]</label>
