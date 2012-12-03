@@ -617,8 +617,8 @@
 			<!--background video-->
 			<control type="radiobutton" id="714">
 				<label>$LOCALIZE[31028]</label>
-				<onclick>Skin.ToggleSetting(backgroundvideo.global)</onclick>
-				<selected>Skin.HasSetting(backgroundvideo.global)</selected>
+				<onclick>Skin.ToggleSetting(backgroundvideo)</onclick>
+				<selected>Skin.HasSetting(backgroundvideo)</selected>
 				<include>button_Settings</include>
 			</control>
 		</control>
