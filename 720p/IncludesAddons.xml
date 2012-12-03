@@ -1172,7 +1172,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.1.Artist)]</label2>
 				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.1.Rating)]</property>
 				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.1.Album)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Art(tvshow.fanart))]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Art(fanart))]</property>
 				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.1.Year)]</property>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.1.Play)]</onclick>
@@ -1183,7 +1183,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.2.Artist)]</label2>
 				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.2.Rating)]</property>
 				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.2.Album)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.2.Art(tvshow.fanart))]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.2.Art(fanart))]</property>
 				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.2.Year)]</property>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.2.Play)]</onclick>
@@ -1194,7 +1194,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.3.Artist)]</label2>
 				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.3.Rating)]</property>
 				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.3.Album)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.3.Art(tvshow.fanart))]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.3.Art(fanart))]</property>
 				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.3.Year)]</property>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.3.Play)]</onclick>
@@ -1205,7 +1205,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.4.Artist)]</label2>
 				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.4.Rating)]</property>
 				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.4.Album)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.4.Art(tvshow.fanart))]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.4.Art(fanart))]</property>
 				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.4.Year)]</property>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.4.Play)]</onclick>
@@ -1216,7 +1216,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.5.Artist)]</label2>
 				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.5.Rating)]</property>
 				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.5.Album)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.5.Art(tvshow.fanart))]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.5.Art(fanart))]</property>
 				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.5.Year)]</property>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.5.Play)]</onclick>
@@ -1227,7 +1227,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.6.Artist)]</label2>
 				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.6.Rating)]</property>
 				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.6.Album)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.6.Art(tvshow.fanart))]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.6.Art(fanart))]</property>
 				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.6.Year)]</property>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.6.Play)]</onclick>
@@ -1238,7 +1238,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.7.Artist)]</label2>
 				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.7.Rating)]</property>
 				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.7.Album)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.7.Art(tvshow.fanart))]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.7.Art(fanart))]</property>
 				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.7.Year)]</property>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.7.Play)]</onclick>
@@ -1249,7 +1249,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.8.Artist)]</label2>
 				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.8.Rating)]</property>
 				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.8.Album)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.8.Art(tvshow.fanart))]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.8.Art(fanart))]</property>
 				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.8.Year)]</property>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.8.Play)]</onclick>
@@ -1260,7 +1260,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.9.Artist)]</label2>
 				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.9.Rating)]</property>
 				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.9.Album)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.9.Art(tvshow.fanart))]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.9.Art(fanart))]</property>
 				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.9.Year)]</property>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.9.Play)]</onclick>
@@ -1271,7 +1271,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.10.Artist)]</label2>
 				<property name="Rating">$INFO[Window(Home).Property(RecentAlbum.10.Rating)]</property>
 				<property name="Album">$INFO[Window(Home).Property(RecentAlbum.10.Album)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.10.Art(tvshow.fanart))]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.10.Art(fanart))]</property>
 				<property name="Year">$INFO[Window(Home).Property(RecentAlbum.10.Year)]</property>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.10.Play)]</onclick>
