@@ -425,7 +425,7 @@
 			</control>
 			<control type="image" id="1">
 				<posx>15</posx>
-				<posy>442</posy>
+				<posy>360</posy>
 				<width>280</width>
 				<height>340</height>
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.Art(tvshow.poster)]</texture>
@@ -435,7 +435,7 @@
 			</control>
 			<control type="image" id="1">
 				<posx>15</posx>
-				<posy>442</posy>
+				<posy>360</posy>
 				<width>280</width>
 				<height>340</height>
 				<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.Art(tvshow.poster)]</texture>
@@ -701,7 +701,7 @@
 							<width>950</width>
 							<label>$INFO[Player.Time]</label>
 							<font>smallerCapsBIG</font>
-							<textcolor>Color3</textcolor>
+							<textcolor>ColorOSD4</textcolor>
 							<visible>Skin.HasSetting(videoosd.realaska)</visible>
 						</control>
 						<control type="label" id="1">
@@ -710,7 +710,7 @@
 							<label>$INFO[Player.Duration]</label>
 							<align>right</align>
 							<font>smallerCapsBIG</font>
-							<textcolor>Color3</textcolor>
+							<textcolor>ColorOSD4</textcolor>
 							<visible>Skin.HasSetting(videoosd.realaska)</visible>
 						</control>
 						<control type="label" id="1">
