@@ -10,14 +10,18 @@
 			<include>toggle_ToastMute</include>
 			<control type="label" id="200">
 				<posx>130r</posx>
+				<width>250</width>
 				<label>$INFO[MusicPlayer.Title]</label>
 				<include>toast_Top</include>
+				<include>autoscroll-line</include>
 			</control>
 			<control type="label" id="201">
 				<posx>130r</posx>
 				<posy>28</posy>
+				<width>250</width>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<include>toast_Bottom</include>
+				<include>autoscroll-line</include>
 			</control>
 			<control type="label" id="1">
 				<posx>120r</posx>
