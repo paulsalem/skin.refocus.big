@@ -88,7 +88,7 @@
 		<font>
 			<name>info_toast_bottom</name>
 			<filename>Ubuntu-L.ttf</filename>
-			<size>22</size>
+			<size>20</size>
 		</font>
 		<font>
 			<name>info_toast_side</name>
