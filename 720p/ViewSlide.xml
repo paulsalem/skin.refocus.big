@@ -164,7 +164,7 @@
 			<onright>52</onright>
 			<focusposition>1</focusposition>
 			<pagecontrol>72</pagecontrol>
-			<scrolltime tween="Cubic" easing="Out">200</scrolltime>
+			<scrolltime tween="Cubic" easing="Out">500</scrolltime>
 			<orientation>horizontal</orientation>
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
@@ -257,7 +257,7 @@
 			<ondown>72</ondown>
 			<focusposition>2</focusposition>
 			<pagecontrol>72</pagecontrol>
-			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
+			<scrolltime tween="Cubic" easing="Out">500</scrolltime>
 			<preloaditems>2</preloaditems>
 			<orientation>horizontal</orientation>
 			<include>transition_Container</include>
@@ -422,7 +422,7 @@
 			<ondown>72</ondown>
 			<pagecontrol>72</pagecontrol>
 			<focusposition>1</focusposition>
-			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
+			<scrolltime tween="Cubic" easing="Out">500</scrolltime>
 			<orientation>horizontal</orientation>
 			<visible>[Container.Content(albums) | Container.Content(singles) | Container.Content(songs) | Container.Content(artists) | Container.Content(programs)] | [SubString(Container.FolderPath,plugin://) + !Container.HasFiles + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]] | [Container.Content(addons) + !StringCompare(Container.FolderName,$LOCALIZE[24032])]</visible>
 			<include>transition_Container</include>
