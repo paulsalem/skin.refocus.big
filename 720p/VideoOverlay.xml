@@ -10,6 +10,7 @@
 			<include>toggle_ToastMute</include>
 			<control type="label" id="200">
 				<posx>180r</posx>
+				<posy>2</posy>
 				<label>$INFO[VideoPlayer.Title]</label>
 				<include>toast_Top</include>
 			</control>
@@ -35,6 +36,7 @@
 			</control>
 			<control type="label" id="201">
 				<posx>180r</posx>
+				<posy>29</posy>
 				<label>$INFO[VideoPlayer.ChannelName]</label>
 				<include>toast_Bottom</include>
 			</control>
