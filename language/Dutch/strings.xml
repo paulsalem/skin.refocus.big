@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+<string id="31000">
+[COLOR=Color2][B][UPPERCASE]Skin Ontwerp en Ontwikkeling[/UPPERCASE][/B][/COLOR]
+Jeroen
+
+[B][COLOR=Color2]BEDANKT[/COLOR][/B]
+Team-XBMC voor het maken van de meest geavanceerde en veelzijdige mediacenter applicatie. Dank aan de geweldige XBMC gemeenschap voor de hulp, skins, plugins, scripts en applicaties die de XBMC ervaring nog beter maken. En dank U voor het gebruiken van reFocus!
+
+[B][COLOR=Color2]VERTALING[/COLOR][/B]
+MaDDoGo, tonybeccar (Spaans), Rafal W�jcik (Pools), hst, otcho (Duits), epoke (Koreaans), Galefury (Roemeens)
+
+[B][COLOR=Color2]VERKRIJGBAARHEID[/COLOR][/B]
+Gecompileerde reFocus builds zijn beschikbaar op de Google Code project website [B]code.google.com/p/xbmc-focus/[/B]
+Bezoek voor meer informatie het Focus subforum op [B]forum.xbmc.org[/B]
+
+[B][COLOR=Color2]TOT SLOT[/COLOR][/B]
+Steun alstublieft de ontwikkeling van XBMC met een donatie.
+[B]xbmc.org/contribute/donate[/B]
+</string>
+
+<string id="31001">-</string>
+<string id="31002">Gallerij</string>
+<string id="31003">Schuiven</string>
+<string id="31004">Gestapeld</string>
+<string id="31006">-</string>
+<string id="31007">-</string>
+<string id="31008">-</string>
+<string id="31009">Posters</string>
+<string id="31010">-</string>	
+<string id="31011">Trailers</string>
+<string id="31012">Video Afspeellijsten</string>
+<string id="31013">Afsluiten</string>
+<string id="31014">Miniaturen</string>
+<string id="31015">Weergave</string>
+<string id="31016">Fanart</string>
+<string id="31017">Leeftijd</string>	
+<string id="31018">-</string>
+<string id="31019">Miniatuur</string>
+<string id="31020">-</string>
+<string id="31021">Profielen</string>
+<string id="31022">-</string>
+<string id="31023">-</string>
+<string id="31024">Folder</string>	
+<string id="31025">Toon mediaoverlays</string>
+<string id="31026">Gebruik inlogscherm</string>
+<string id="31027">-</string>
+<string id="31028">Toon video in de achtergrond</string>
+<string id="31029">Toon visualisatie in de achtergrond</string>
+<string id="31030">Hoofdmenu</string>
+<string id="31031">Hoofdmenu aanpassen</string>
+<string id="31032">-</string>
+<string id="31033">Slimme afspeellijst</string>
+<string id="31034">-</string>
+<string id="31035">Gebruik virtueel toetsenbord</string>
+<string id="31036">-</string>
+<string id="31037">Toon eerste letter tijdens scrollen</string>
+<string id="31038">-</string>
+<string id="31039">Gebruik fanart</string>
+<string id="31040">Toon item aantal en sorteermethode</string>
+<string id="31041">FWD 2X</string>
+<string id="31042">FWD 4X</string>
+<string id="31043">FWD 8X</string>
+<string id="31044">FWD 16X</string>
+<string id="31045">FWD 32X</string>
+<string id="31046">RWD 2X</string>
+<string id="31047">RWD 4X</string>
+<string id="31048">RWD 8X</string>
+<string id="31049">RWD 16X</string>
+<string id="31050">RWD 32X</string>
+<string id="31051">PLAYING</string>
+<string id="31052">Gebruik alternatief beginscherm</string>
+<string id="31053">Menutoegang indicator inschakelen</string>
+<string id="31054">Poster</string>
+<string id="31055">Verberg scrollbar tot activering</string>
+<string id="31057">Gebruik gallerijweergave in volledig scherm</string>
+<string id="31058">Intro uitschakelen</string>
+<string id="31059">Gebruik thumbnails</string>
+<string id="31060">Soepel bladeren inschakelen</string>
+<string id="31061">Gebruik posters</string>
+<string id="31062">Toon volledig scherm</string>
+<string id="31063">Toon strook</string>
+<string id="31064">Banner</string>
+<string id="31065">Logo</string>
+<string id="31066">Bannerweergave inschakelen voor TV series</string>
+<string id="31067">Gebruik lokaal opgeslagen banners</string>
+
+<string id="31068">Eindtijd:</string>
+<string id="31069">-</string>
+<string id="31070">TV-gids</string>
+<string id="31071">Randapparatuurinstellingen</string>
+<string id="31072">$INFO[ListItem.episode] $LOCALIZE[20360] ($INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101])</string>
+<string id="31073">Overzicht</string>
+<string id="31074">Selecteer miniatuur</string>
+
+<!--NEXTAIRED-->
+<string id="31075">Laatst uitgezonden op</string>
+<string id="31076">Volgende uitzending op</string>
+<string id="31077">Status</string>
+
+<!--WATCHLIST-->
+<string id="31078">Blader door alle films</string>
+<string id="31079">Blader door alle TV series</string>
+<string id="31080">De 25 meest recent toegevoegde films</string>
+<string id="31081">De 25 meest recent toegevoegde afleveringen</string>
+<string id="31082">Watchlist add-on uitschakelen</string>
+
+<string id="31083">-</string>
+<string id="31084">-</string>
+<string id="31085">Timers</string>
+<string id="31086">Watchlist</string>
+<string id="31087">seizoen</string>
+<string id="31088">aflevering</string>
+<string id="31089">Totaal</string>
+<string id="31090">Live TV</string>
+<string id="31091">Gerelateerde films</string>
+<string id="31092">-</string>
+<string id="31093">Banners</string>
+<string id="31094">Nieuwe afleveringen</string>
+<string id="31095">Nieuwe films</string>
+<string id="31096">Nieuwe albums</string>
+<string id="31097">Nu aan het kijken</string>
+<string id="31098">Aanbevolen films</string>
+<string id="31099">Algemene fanartachtergrond inschakelen</string>
+<string id="31100">Min</string>
+<string id="31101">Temperatuur</string>
+<string id="31102">Welkom</string>
+
+<string id="31103">-</string>
+<string id="31104">-</string>
+<string id="31105">-</string>
+<string id="31106">Door</string>
+<string id="31107">Druk links voor opties</string>
+<string id="31108">-</string>
+<string id="31109">-</string>
+<string id="31110">Inloggen alstublieft</string>
+<string id="31111">Afspeellijstopties</string>
+<string id="31112">Aan</string>
+<string id="31113">Willekeurig: uit</string>
+<string id="31114">Willekeurig: aan</string>
+<string id="31115">-</string>
+<string id="31116">items</string>
+<string id="31117">op</string><!--TRANSLATORS: example usage = "sorted by date/name/episode"--->
+<string id="31118">-</string>
+<string id="31119">Andere</string>
+<string id="31120">Gebruik fanart in visualisatie scherm</string>
+<string id="31121">Repositories</string>
+<string id="31122">Plugin</string>
+<string id="31123">Uitvoer</string>
+<string id="31124">Hoofdmenu</string>
+<string id="31125">Folder</string>
+<string id="31126">Meng visualisatie en fanart</string>
+<string id="31127">Artwork</string>
+<string id="31128">Toon status balk (rss feed uit)</string>
+<string id="31129">Download banners</string>
+<string id="31130">Download logo's</string>
+<string id="31131">Download extra fanart (Artwork Downloader)</string>
+<string id="31132">Gebruik extra fanart in gallerijweergave</string>
+
+<string id="31900">Toon alles</string>
+<string id="31901">Bestands-mode</string>
+<string id="31902">Beschikbare groepen</string>
+<string id="31903">Verborgen kanalen</string>
+<string id="31904">Kanalen in groepen</string>
+<string id="31905">Niet plat</string>
+<string id="31906">Huidige media</string>
+<string id="31907">Toon tijd</string>
+<string id="31908">Achtergrond</string>
+<string id="31909">Over</string>
+
+<!--weather plus-->
+<string id="31910">Gemiddeld hoog</string>
+<string id="31911">Gemiddeld laag</string>
+<string id="31912">Waargenomen hoog</string>
+<string id="31913">Waargenomen laag</string>
+<string id="31914">Record hoog</string>
+<string id="31915">Record laag</string>
+<string id="31916">Huidig</string>
+<!---->
+
+<string id="31917">Toon voortgangsbalk in OSD</string>
+<string id="31918">Toon hervattings-indicators</string>
+<string id="31920">Toon niet-bekeken-indicators bij bestanden</string>
+<string id="31921">Toon niet-bekeken-indicators bij TV series</string>
+<string id="31922">Toon niet-bekeken-indicators bij films</string>
+<string id="31923">Toon niet-bekeken-indicators bij seizoenen</string>
+<string id="31924">Toon niet-bekeken-indicators bij afleveringen</string>
+<string id="31925">[COLOR=Color2]Nieuwe[/COLOR] afleveringen</string>
+<string id="31926">[COLOR=Color2]Nieuwe[/COLOR] films</string>
+<string id="31927">-</string>
+<string id="31928">Timer</string>
+<string id="31929">Vignette Overlay inschakelen</string>
+<string id="31930">Kies weergave</string>
+<string id="31931">[COLOR=Color2]Nieuwe[/COLOR] muziekvideo's</string>
+<string id="31932">[COLOR=Color2]Nieuwe[/COLOR] albums</string>
+<string id="31933">Toon zoekfunctie</string>
+<string id="31934">Gebruik GlobalSearch add-on</string>
+<string id="31935">-</string>
+<string id="31936">Gebruik fanartdiavoorstelling</string>
+<string id="31937">Selecteer aangepaste diavoorstelling</string>
+<string id="31938">Toon dit onderdeel</string>
+<string id="31939">-</string>
+<string id="31940">-</string>
+<string id="31941">[COLOR=Color2]Recent[/COLOR] afgespeeld</string>
+
+<string id="31942">Informatie verversen</string>
+<string id="31943">Poster</string>
+<string id="31944">Fanart</string>
+<string id="31945">Banner</string>
+<string id="31946">Logo</string>
+<string id="31947">Huidige Afspeellijst</string>
+<string id="31948">Informatie</string>
+<string id="31949">-</string>
+
+<string id="31952">Toon videos</string>
+<string id="31953">Trailers</string>
+<string id="31954">Toon afbeeldingen</string>
+<string id="31955">Toon schijf (indien schijf aanwezig)</string>
+<string id="31956">Toon add-ons</string>
+<string id="31957">Toon weer</string>
+<string id="31958">-</string>
+<string id="31959">Toon Favorieten</string>
+<string id="31960">Submenu</string>
+<string id="31961">Hoofdmenu</string>
+<string id="31962">-</string>
+<string id="31963">-</string>
+<string id="31964">Kioskmode</string>
+<string id="31965">Omstandigheden</string>
+<string id="31966">Weer-fanart inschakelen</string>
+<string id="31967">Selecteer weer-fanart locatie</string>
+<string id="31968">Systeem[COLOR=Color2]Informatie[/COLOR]</string>
+<string id="31969">Bestands[COLOR=Color2]Beheer[/COLOR]</string>
+<string id="31970">Nieuwe albums</string>
+<string id="31971">Recent afgespeeld</string>
+<string id="31972">TV serie logo's inschakelen</string>
+<string id="31973">-</string>
+<string id="31974">Grote raster</string>
+<string id="31975">Klein raster</string>
+
+<!--addons-->
+<string id="31976">Ondertitel add-on inschakelen</string>
+<string id="31977">Selecteer Add-on</string>
+<string id="31978">Liedtekst add-on inschakelen</string>
+<string id="31979">Versie</string>
+<string id="31980">Zoek ondertitels</string>
+<string id="31981">Zoek liedtekst</string>
+
+<!--temporary strings until PVR related strings are present in xbmc main branch-->
+<string id="31982">Groep toevoegen</string>
+<string id="31983">Groep hernoemen</string>
+<string id="31984">Groep verwijderen</string>
+<string id="31985">TV</string>
+<string id="31986">Kanalen</string>
+<string id="31987">EPG</string>
+<string id="31988">Opniew afspelen</string>
+<string id="31990">Opnames</string>
+<string id="31991">Toepassen</string>
+
+<!--programs-->
+<string id="31992">Programma</string>
+
+<!--moviesets-->
+<string id="31993">Filmcollecties</string>
+
+<!--date-->
+<string id="31994">Datum weergeven</string>
+
+<!--artist logos-->
+<string id="31995">Artiesten logo's bij muziek inschakelen</string>
+<string id="31996">Muziek-map locatie</string>
+
+<!--realaska-->
+<string id="31997">ReAlaska OSD inschakelen</string>
+<string id="31998">ReAlaska OSD voortgangsbalk inschakelen</string>
+
+<!--BIG-->
+<string id="31999">Originele klok inschakelen</string>
+
+<!--Backspace to Home-->
+<string id="32000">Backspace-toets naar Home</string>
+
+<!--Artistslideshow-->
+<string id="32001">Gebruik Artistslideshow add-on</string>
+
+<!--Backgrounds-->
+<string id="32002">Achtergronden aanpassen</string>
+<string id="32003">Achtergrondafbeelding instellen</string>
+<string id="32004">Achtergrondmap instellen</string>
+<string id="32005">Herstellen</string>
+<string id="32006">Gebruik weer-fantart gebaseerd op huidige weersomstandigheden</string>
+<string id="32007">Weer-fanartmap instellen</string>
+<string id="32008">Globaal</string>
+
+<!--TV Tunes-->
+<string id="32009">Gebruik TV-Tunes add-on</string>
+<string id="32010">Download TV-Tunes</string>
+
+<!--Random Movie-->
+<string id="32011">Willekeurig genre</string>
+<string id="32012">Willekeurige film</string>
+
+<!--Favourites-->
+<string id="32013">Gebruik favorieten i.p.v. slimme afspeellijsten</string>
+<string id="32014">Favoriet</string>
+
+<!--context menu-->
+<string id="32015">Zoeken op YouTube</string>
+<string id="32016">Willekeurige film afspelen</string>
+<string id="32017">Willekeurig genre afspelen</string>
+
+<!--date-->
+<string id="32018">Geef de datum in het wit weer in het hoofdmenu</string>
+
+<!--double row banner view-->
+<string id="32019">Banners (2 kolommen)</string>
+
+<!--tv netowork logos-->
+<string id="32020">TV-zender logo's inschakelen</string>
+
+<!--poster banner view-->
+<string id="32021">Banners en posters</string>
+
+<!--tv show status-->
+<string id="32022">Geëindigd</string>
+
+<!--xperience1080 OSD-->
+<string id="32023">Xperience1080 OSD inschakelen</string>
+
+<!--opacity-->
+<string id="32024">Achtergrondtransparantie instellen</string>
+<string id="32025">Weinig transparantie</string>
+<string id="32026">Middelmatige transparantie</string>
+<string id="32027">Veel transparantie</string>
+
+<!--alternate watched icons-->
+<string id="32028">Alternatieve bekeken-indicators</string>
+
+<!--enable zoom on artistslideshow-->
+<string id="32029">Inzoomen op artiestendiavoorstelling inschakelen</string>
+
+<!--OSD-->
+<string id="32030">OSD</string>
+
+<!--Chapters-->
+<string id="32031">Geef hoofdstukkeninformatie weer bij pauze</string>
+
+<!--Chapters-->
+<string id="32032">Geef medianaam weer bij Xperience1080 OSD</string>
+
+<!--Opacity-->
+<string id="32033">Pas transparantie alleen toe bij mediaschermen</string>
+
+<!--OSD-->
+<string id="32034">Geef Voortgang weer op de statusbalk bij Xperience1080 OSD</string>
+<string id="32035">Toon Poster op OSD</string>
+
+<!--Fanart-->
+<string id="32036">Gebruik Extra Fanart bij mediaschermen</string>
+<string id="32037">Animeer achtergrond</string>
+<string id="32038">Langzame animatie</string>
+
+<!--OSD Overlay-->
+<string id="32039">Toon gloed boven OSD</string>
+<string id="32040">Grijze gloed</string>
+<string id="32041">Zwarte gloed</string>
+
+<!--menuSelect-->
+<string id="32042">Toon ReAlaska aanwijzer in Hoofdmenu</string>
+
+<!--osd-->
+<string id="32043">Gebruik folder.jpg in OSD</string>
+<string id="32044">Minimalistisch OSD</string>
+
+<!--wallpapers-->
+<string id="32045">Gebruik originele achtergrond</string>
+<string id="32046">Gebruik Custom Slideshow</string>
+
+<!--thumbnails wide-->
+<string id="32047">Brede Thumbnails</string>
+
+<!--list 1row-->
+<string id="32048">Lijst Enkele Rij</string>
+
+<!--home menu-->
+<string id="32049">Widgets in hoofdmenu inschakelen</string>
+<string id="32050">Toon Watchlist Items</string>
+<string id="32051">Laatste Afleveringen</string>
+<string id="32052">Nu aan het kijken</string>
+<string id="32053">Laatste Films</string>
+<string id="32054">Laatste Albums</string>
+<string id="32055">Willekurige Addons</string>
+<string id="32056">Gebruik Watchlist en Recente Items</string>
+<string id="32057">Vignette Overlay in hoofdmenu inschakelen</string>
+<string id="32058">Reset achtergronden</string>
+<string id="32059">Toon Posters in Watchlist Items</string>
+<string id="32060">Widgets</string>
+
+<!--Opacity-->
+<string id="32061">Transparantie instellen</string>
+<string id="32062">Transparantie inschakelen</string>
+
+<!--Search-->
+<string id="32063">Het woord 'zoeken' in hoofdmenu uitschakelen</string>
+
+<!--Animations-->
+<string id="32070">Animaties in Widgets uitschakelen</string>
+
+<!--Addons-->
+<string id="32090">Watchlist script uitvoeren tijdens elke hoofdmenu/watchlist verversing</string>
+
+<!--Widgets-->
+<string id="32100">Fanart in Widgets uitschakelen</string>
+
+<!--OSD Settings-->
+<string id="32200">Algemene Instellingen</string>
+<string id="32201">Alternatieve OSD</string>
+
+
+</strings>

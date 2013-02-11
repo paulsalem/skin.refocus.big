@@ -1,0 +1,284 @@
+﻿﻿<includes>
+<!---STRIP LAYOUT------>	
+	<include name="view_Gallery">
+		<!---strip top------>
+		<control type="group">
+			<include>transition_Container</include>
+			<include>toggle_Menu</include>
+			<include>infoDialogHide</include>
+			<visible>Control.IsVisible(53)</visible>
+			<control type="group">
+				<posx>265</posx>
+				<posy>102</posy>
+				<control type="group">
+					<control type="label">
+						<label>$INFO[ListItem.Label]</label>
+						<width>750</width>
+						<font>titleSpecial</font>
+						<include>info_Title</include>
+					</control>
+					<control type="label">
+						<posx>750</posx>
+						<label>$INFO[Container(53).ListItem(1).Label]</label>
+						<width>750</width>
+						<include>info_Title</include>
+						<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
+					</control>
+				</control>
+			</control>
+			<!---frame--->																	
+			<control type="image">
+				<posy>108</posy>
+				<width>screen_Width</width>
+				<height>475</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="29">frames/frame_Gallery_mod2.png</texture>
+			</control>
+		</control>
+		<!--container--->
+		<control type="wraplist" id="53">
+			<viewtype label="Gallery">wrap</viewtype>
+			<posx>-485</posx>
+			<posy>135</posy>
+			<width>1900</width>
+			<height>800</height>
+			<onleft>53</onleft>
+			<onright>53</onright>
+			<onup>6000</onup>
+			<ondown>8000</ondown>
+			<preloaditems>2</preloaditems>
+			<focusposition>1</focusposition>
+			<scrolltime tween="Cubic" easing="Out">300</scrolltime>
+			<orientation>horizontal</orientation>
+			<include>transition_Container</include>
+			<include>toggle_Menu</include>
+			<include>infoDialogHide</include>
+			<include condition="Window.IsVisible(videolibrary)">GalleryVideo</include>
+			<include condition="Window.IsVisible(pictures)">GalleryPictures</include>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Window.IsActive(pictures)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]</visible>
+		</control>
+	</include>
+	<!---container contents--->
+	<include name="GalleryVideo">
+		<itemlayout height="800" width="749">
+			<control type="image">
+				<width>750</width>
+				<height>422</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>300</posy>
+				<width>750</width>
+				<height>96</height>
+				<include>art_TVShowLogo</include>
+			</control>
+			<control type="group">
+				<posx>718</posx>
+				<posy>390</posy>
+				<visible>!Skin.HasSetting(watched.alternative)</visible>
+				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+				</control>
+				<control type="image">
+					<include>overlay_Resumable</include>
+					<visible>Skin.HasSetting(watched.original)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<posx>685</posx>
+				<posy>360</posy>
+				<visible>Skin.HasSetting(watched.alternative)</visible>
+				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<info>ListItem.Overlay</info>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout height="800" width="750">
+			<control type="image">
+				<width>750</width>
+				<height>422</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000) + !IsEmpty(ListItem.Title)">Conditional</animation>
+			</control>
+			<control type="multiimage">
+				<width>750</width>
+				<height>422</height>
+				<imagepath background="true">$INFO[ListItem.Path,,extrafanart]</imagepath>
+				<aspectratio align="center">scale</aspectratio>
+				<timeperimage>1500</timeperimage>
+				<fadetime>800</fadetime>
+				<pauseatend>2000</pauseatend>
+				<randomize>false</randomize>
+				<loop>yes</loop>
+				<visible>Skin.HasSetting(gallery.extrafanart) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Path,,extrafanart) + !ControlGroup(6000).HasFocus</visible>
+				<include>menu_BackgroundHide</include>
+				<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000) + !IsEmpty(ListItem.Title)">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>300</posy>
+				<width>750</width>
+				<height>96</height>
+				<include>art_TVShowLogo</include>
+				<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000)">Conditional</animation>
+			</control>
+			<control type="group">
+				<posx>718</posx>
+				<posy>390</posy>
+				<visible>!Skin.HasSetting(watched.alternative) + !Control.HasFocus(8000)</visible>
+				<control type="image">
+					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+				</control>
+				<control type="image">
+					<include>overlay_Resumable</include>
+					<visible>Skin.HasSetting(watched.original)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<posx>686</posx>
+				<posy>359</posy>
+				<visible>Skin.HasSetting(watched.alternative) + !Control.HasFocus(8000)</visible>
+				<control type="image">
+					<info>ListItem.Overlay</info>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="GalleryPictures">
+		<itemlayout height="800" width="749">
+			<control type="image">
+				<width>750</width>
+				<height>422</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" fallback="thumbs/picture_landscape.jpg">$INFO[ListItem.Thumb]</texture>
+				<visible>Window.IsActive(2)</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout height="800" width="750">
+			<control type="image">
+				<width>750</width>
+				<height>422</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" fallback="thumbs/picture_landscape.jpg">$INFO[ListItem.Thumb]</texture>
+				<visible>Window.IsActive(2)</visible>
+				<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000)">Conditional</animation>
+			</control>
+		</focusedlayout>
+	</include>
+
+<!---FULLSCREEN LAYOUT------>
+	<include name="view_GalleryFull">																																																																
+		<control type="wraplist" id="531">
+			<viewtype label="Gallery">bigwrap</viewtype>
+			<width>screen_Width</width>
+			<height>720</height>
+			<onleft>56</onleft>
+			<onright>56</onright>
+			<onup>6000</onup>
+			<ondown>8000</ondown>
+			<preloaditems>2</preloaditems>
+			<scrolltime tween="Cubic" easing="Out">300</scrolltime>
+			<orientation>horizontal</orientation>
+			<include>transition_Container</include>
+			<include>infoDialogHide</include>
+			<include condition="Window.IsVisible(videolibrary)">GalleryFullVideo</include>
+			<include condition="Window.IsVisible(pictures)">GalleryFullPictures</include>		
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Window.IsActive(pictures)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]</visible>
+		</control>
+		<!---window menu shade-->
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture>home/menuBackground.png</texture>
+			<include>fadeinout</include>
+			<visible>Control.IsVisible(531) + ControlGroup(6000).HasFocus()</visible>
+		</control>
+		<!---scroll indicators------->
+		<control type="group">
+			<posy>336</posy>
+			<include>fadeinout</include>
+			<visible>Control.IsVisible(531) + System.IdleTime(3) + ![ControlGroup(6000).HasFocus() | Window.IsActive(movieinformation)]</visible>
+			<control type="image">
+				<posx>20</posx>
+				<width>48</width>
+				<height>48</height>
+				<texture>views/scrollLeftIndicator.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>1212</posx>
+				<width>48</width>
+				<height>48</height>
+				<texture>views/scrollRightIndicator.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</control>
+	</include>
+	<!---container contents--->
+	<include name="GalleryFullVideo">
+		<itemlayout height="screen_Height" width="screen_Width">
+			<control type="image">
+				<include>screen_Dimensions</include>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>217</width>
+				<height>84</height>
+				<include>art_TVShowLogo</include>
+			</control>
+		</itemlayout>
+		<focusedlayout height="screen_Height" width="screen_Width">
+			<control type="image">
+				<include>screen_Dimensions</include>
+				<aspectratio aligny="left">scale</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			</control>
+			<control type="multiimage">
+				<include>screen_Dimensions</include>
+				<imagepath background="true">$INFO[ListItem.Path,,extrafanart]</imagepath>
+				<aspectratio align="center">scale</aspectratio>
+				<timeperimage>1500</timeperimage>
+				<fadetime>800</fadetime>
+				<pauseatend>2000</pauseatend>
+				<randomize>false</randomize>
+				<loop>yes</loop>
+				<visible>Skin.HasSetting(gallery.extrafanart) + System.IdleTime(2)</visible>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>217</width>
+				<height>84</height>
+				<include>art_TVShowLogo</include>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="GalleryFullPictures">
+		<itemlayout height="screen_Height" width="screen_Width">
+			<control type="image">
+				<include>screen_Dimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" fallback="backgrounds/pictures.jpg">$INFO[ListItem.FilenameAndPath]</texture>
+				<visible>Window.IsActive(2)</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout height="screen_Height" width="12screen_Width80">
+			<control type="image">
+				<include>screen_Dimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" fallback="backgrounds/pictures.jpg">$INFO[ListItem.FilenameAndPath]</texture>
+				<visible>Window.IsActive(2)</visible>
+			</control>
+		</focusedlayout>
+	</include>
+</includes>

@@ -1,0 +1,86 @@
+﻿<window id="603">
+	<defaultcontrol>9001</defaultcontrol>
+	<include>dialogOpen</include>
+	<coordinates>
+		<system>1</system>
+		<posx>315</posx>
+		<posy>60</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<width>650</width>
+			<height>600</height>
+			<include>dialogWindow</include>
+		</control>
+		<control type="label" id="2">
+			<width>612</width>
+			<scroll>true</scroll>
+			<label>-</label>
+			<include>dialog_Windowtitle</include>
+		</control>
+		<control type="group">
+			<posx>19</posx>
+			<posy>75</posy>
+			<control type="image">
+				<width>612</width>
+				<include>dialog_Separator</include>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<width>613</width>
+				<height>440</height>
+				<itemgap>-1</itemgap>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+			</control>
+		</control>
+		<!--default button-->
+		<control type="button" id="7">
+			<include>dialog_Button-list</include>
+		</control>
+		<!--default radiobutton-->
+		<control type="radiobutton" id="8">
+			<include>dialog_Radio</include>
+		</control>
+		<!--default spincontrolex-->
+		<control type="spincontrolex" id="9">
+			<include>dialog_Spin</include>
+		</control>
+		<!--default slider-->
+		<control type="sliderex" id="10">
+			<include>dialog_Slider</include>
+		</control>
+		<!--default separator-->
+		<control type="image" id="11">
+			<visible>false</visible>
+		</control>
+		<!--default edit-->
+		<control type="edit" id="12">
+			<font>title</font>
+			<include>dialog_Button-list</include>
+		</control>
+		<control type="group" id="9001">
+			<posx>367</posx>
+			<posy>525</posy>
+			<control type="button" id="28">
+				<!--ok-->
+				<label>$LOCALIZE[186]</label>
+				<onleft>29</onleft>
+				<onright>29</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<include>dialog_Button</include>
+			</control>
+			<control type="button" id="29">
+				<!--cancel-->
+				<posx>130</posx>
+				<label>$LOCALIZE[222]</label>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<include>dialog_Button</include>
+			</control>
+		</control>
+	</controls>
+</window>

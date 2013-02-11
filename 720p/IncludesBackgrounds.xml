@@ -1,0 +1,256 @@
+﻿<includes>
+	<include name="global_Background">
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<texture background="true">$VAR[global_Background.Fallback]</texture>
+			<visible>Skin.HasSetting(fanart.global) + IsEmpty(ListItem.Property(Fanart_Image)) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.global)] + !ControlGroup(6000).HasFocus</visible>
+			<include>transition_Fanart</include>
+			<include>menu_BackgroundHide</include>
+		</control>
+		
+		<control type="image" id="78900">
+			<include>screen_Dimensions</include>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<visible>[!Skin.HasSetting(fanart.extra) | IsEmpty(ListItem.Path,,extrafanart) | !IsEmpty(ListItem.Property(Fanart_Image)) | SubString(Container.FolderPath,plugin://)] + Skin.HasSetting(fanart.global) | Control.IsVisible(550) | Control.IsVisible(551) + !IsEmpty(ListItem.Property(Fanart_Image)) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.global)] + !ControlGroup(6000).HasFocus</visible>
+			<include>transition_Fanart</include>
+			<fadetime>fadetime_Fanart</fadetime>
+			<include>menu_BackgroundHide</include>
+			<include>AnimateBackgrounds</include>
+		</control>
+		<control type="multiimage" id="7890">
+			<include>screen_Dimensions</include>
+			<imagepath background="true">$INFO[ListItem.Path,,extrafanart]</imagepath>
+			<aspectratio align="center">scale</aspectratio>
+			<timeperimage>1500</timeperimage>
+			<fadetime>900</fadetime>
+			<randomize>false</randomize>
+			<loop>yes</loop>
+			<pauseatend>2000</pauseatend>
+			<include>AnimateBackgrounds</include>
+			<visible>[!Control.IsVisible(53) + !Window.isActive(2003) + !SubString(Container.FolderPath,plugin://)] + Skin.HasSetting(fanart.extra) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Path,,extrafanart) + Skin.HasSetting(fanart.global) + System.IdleTime(0.5)</visible>
+		</control>
+		
+		<!--playing video background-->
+		<control type="group">
+			<visible>Player.HasVideo + Skin.HasSetting(backgroundvideo.global)</visible>
+			<control type="image">
+				<aspectratio>stretch</aspectratio>
+				<include>screen_Dimensions</include>
+				<texture>black.png</texture>
+				<visible></visible>
+			</control>
+			<control type="videowindow">
+				<include>screen_Dimensions</include>
+				<visible>![Window.IsActive(pictures) + Control.IsVisible(531)] + !Window.IsActive(weather)</visible>
+			</control>
+		</control>
+		 <!---LANDSCAPE---->
+		<control type="image">
+		<include>screen_Dimensions</include>
+			<posy>320</posy>
+			<width>1280</width>
+			<height>400</height>
+			<texture diffuse="overlays/landscapeOverlay.png">backgrounds/background.png</texture>
+			<visible>[Control.IsVisible(550) | Control.IsVisible(551)] + !Window.IsActive(2003)</visible>
+			<include>menu_BackgroundHide</include>
+			<include>AnimateBackgrounds</include>
+		</control>
+		
+		<control type="group">
+			<!--global background default opacity media only-->
+			
+			
+
+	<!--new opacity controls-->
+		<control type="group">
+			<control type="group">
+			<visible>Skin.HasSetting(background.opacitymediaonly)</visible>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_100.png</texture>
+					<visible>Skin.String(background.opacity,100) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_90.png</texture>
+					<visible>Skin.String(background.opacity,90) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_80.png</texture>
+					<visible>Skin.String(background.opacity,80) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_70.png</texture>
+					<visible>Skin.String(background.opacity,70) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_60.png</texture>
+					<visible>Skin.String(background.opacity,60) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_50.png</texture>
+					<visible>Skin.String(background.opacity,50) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_40.png</texture>
+					<visible>Skin.String(background.opacity,40) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_30.png</texture>
+					<visible>Skin.String(background.opacity,30) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_20.png</texture>
+					<visible>Skin.String(background.opacity,20) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_10.png</texture>
+					<visible>Skin.String(background.opacity,10) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<!--global background default opacity-->
+				<control type="image">
+					<aspectratio>stretch</aspectratio>
+					<include>screen_Dimensions</include>
+					<texture background="true">backgrounds/background.png</texture>
+					<visible>[!Skin.HasSetting(fanart.global)] | [[![Container.Content(movies) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Window.IsActive(63) | Container.Content(studios) | Container.Content(directors)] + Skin.HasSetting(background.opacity.enabled)] + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006) + !Window.IsActive(weather) + [!Control.IsVisible(550) + !Control.IsVisible(551)] | Window.IsActive(2003)]</visible>
+					<include>transition_BG</include>
+				</control>
+				<!--vignette default opacity-->
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette.png</texture>
+					<visible>![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006) + Skin.HasSetting(fanart.global.alt)</visible>
+					<include>transition_BG</include>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+			<visible>!Skin.HasSetting(background.opacitymediaonly)</visible>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_100.png</texture>
+					<visible>Skin.String(background.opacity,100) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_90.png</texture>
+					<visible>Skin.String(background.opacity,90) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_80.png</texture>
+					<visible>Skin.String(background.opacity,80) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_70.png</texture>
+					<visible>Skin.String(background.opacity,70) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_60.png</texture>
+					<visible>Skin.String(background.opacity,60) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_50.png</texture>
+					<visible>Skin.String(background.opacity,50) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_40.png</texture>
+					<visible>Skin.String(background.opacity,40) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_30.png</texture>
+					<visible>Skin.String(background.opacity,30) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_20.png</texture>
+					<visible>Skin.String(background.opacity,20) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette2_10.png</texture>
+					<visible>Skin.String(background.opacity,10) + Skin.HasSetting(background.opacity.enabled)</visible>
+					<include>transition_Toast</include>
+				</control>
+				<!--global background default opacity-->
+				<control type="image">
+					<aspectratio>stretch</aspectratio>
+					<include>screen_Dimensions</include>
+					<texture background="true">backgrounds/background.png</texture>
+					<colordiffuse>$VAR[global_background.Opacity]</colordiffuse>
+					<visible>[!Skin.HasSetting(fanart.global)] | [[![Container.Content(movies) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Window.IsActive(63) | Container.Content(studios) | Container.Content(directors)] + Skin.HasSetting(background.opacity.enabled)] + ![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006) + !Window.IsActive(weather) + [!Control.IsVisible(550) + !Control.IsVisible(551)] | Window.IsActive(2003)]</visible>
+					<include>transition_BG</include>
+				</control>
+				<!--vignette default opacity-->
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture background="true">overlays/vignette.png</texture>
+					<visible>![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006) + Skin.HasSetting(fanart.global.alt)</visible>
+					<include>transition_BG</include>
+				</control>
+			</control>
+			<!--global background-->
+			<control type="image">
+				<aspectratio>stretch</aspectratio>
+				<include>screen_Dimensions</include>
+				<texture background="true">backgrounds/background.png</texture>
+				<visible>!Skin.HasSetting(background.opacity.enabled) + [![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + !Window.IsActive(weather)</visible>
+				<include>transition_BG</include>
+			</control>
+			<!--vignette-->
+			<control type="image">
+				<include>screen_Dimensions</include>
+				<texture background="true">overlays/vignette.png</texture>
+				<visible>!Skin.HasSetting(background.opacity.enabled) + [![Window.IsActive(2) + Control.IsVisible(531)] + !Window.IsActive(2006)] + Skin.HasSetting(fanart.global.alt)</visible>
+				<include>transition_BG</include>
+			</control>
+		</control>
+	</include>
+	<!--slideshows-->
+	<include name="home_Slideshows">
+		<control type="multiimage" id="1">
+			<imagepath>special://profile/Thumbnails/Video/Fanart/</imagepath>
+			<visible>Skin.HasSetting(slideshow.fanart) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.home)] + !ControlGroup(2100).HasFocus</visible>
+			<include>home_Slideshow</include>
+			<include>screen_Dimensions</include>
+		</control>
+		<control type="multiimage" id="1">
+			<info>Skin.String(slideshow.custom.path)</info>
+			<visible>Skin.HasSetting(slideshow.custom2) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.home)]</visible>
+			<include>home_Slideshow</include>
+			<include>screen_Dimensions</include>
+		</control>
+	</include>
+</includes>

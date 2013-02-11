@@ -1,0 +1,116 @@
+﻿<window type="dialog" id="134">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<include>dialogOpen</include>
+	<coordinates>
+		<system>1</system>
+		<posx>340</posx>
+		<posy>100</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<width>600</width>
+			<height>475</height>
+			<include>dialogWindow</include>
+		</control>
+		<control type="label" id="1">
+			<width>532</width>
+			<label>$LOCALIZE[1036]</label>
+			<include>dialog_Windowtitle</include>
+		</control>
+		<control type="group">
+			<posx>19</posx>
+			<posy>70</posy>
+			<control type="image">
+				<width>563</width>
+				<include>dialog_Separator</include>
+			</control>
+			<control type="list" id="450">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>563</width>
+				<height>340</height>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<onright>-</onright>
+				<scrolltime tween="Cubic" easing="Out">scrolltime_Dialog</scrolltime>
+				<itemlayout height="57">
+						<control type="image">
+							<width>53</width>
+							<height>53</height>
+							<info>ListItem.Icon</info>
+							<include>dialog_CommonList</include>
+						</control>
+						<control type="label">
+							<posy>7</posy>
+							<posx>64</posx>
+							<width>241</width>
+							<height>35</height>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<include>dialog_CommonListItem</include>
+						</control>
+						<control type="image">
+							<posy>55</posy>
+							<width>302</width>
+							<include>dialog_Separator</include>
+						</control>
+					</itemlayout>
+				<focusedlayout height="57">
+						<control type="image">
+							<width>310</width>
+							<height>53</height>
+							<visible>Control.HasFocus(450)</visible>
+							<include>dialog_CommonListFocus</include>
+						</control>
+						<control type="image">
+							<width>310</width>
+							<height>53</height>
+							<visible>!Control.HasFocus(450)</visible>
+							<include>dialog_CommonList</include>
+						</control>
+						<control type="group">
+							<include>ListViewFocusAnim</include>
+							<control type="image">
+								<width>53</width>
+								<height>53</height>
+								<info>ListItem.Icon</info>
+								<include>dialog_CommonList</include>
+							</control>
+							<control type="label">
+								<posy>7</posy>
+								<posx>64</posx>
+								<width>241</width>
+								<height>35</height>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+								<include>dialog_CommonListItemFocus</include>
+							</control>
+						</control>
+					</focusedlayout>
+			</control>
+		</control>
+		<control type="image">
+			<description>Thumbnail</description>
+			<posx>350</posx>
+			<posy>79</posy>
+			<width>226</width>
+			<height>295</height>
+			<info>ListItem.Icon</info>
+			<aspectratio align="center">keep</aspectratio>
+			<fadetime>IconCrossfadeTime</fadetime>
+		</control>
+		<control type="image">
+			<posx>345</posx>
+			<posy>79</posy>
+			<height>320</height>
+			<include>dialog_Separator-y</include>
+		</control>
+		<control type="label">
+			<posx>34</posx>
+			<posy>405</posy>
+			<width>534</width>
+			<label>$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
+			<include>dialog_Label-pages</include>
+		</control>
+	</controls>
+</window>

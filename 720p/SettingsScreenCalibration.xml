@@ -1,0 +1,47 @@
+﻿<window id="11">
+	<defaultcontrol>8</defaultcontrol>
+	<backgroundcolor>0xff000000</backgroundcolor>
+	<controls>
+		<control type="videowindow" id="20">
+			<include>screen_Dimensions</include>
+		</control>
+		<control type="mover" id="8">
+			<description>top left mover</description>
+			<texturefocus>calibration/topleft-focus.png</texturefocus>
+			<texturenofocus>calibration/topleft.png</texturenofocus>
+		</control>
+		<control type="mover" id="9">
+			<description>right bottom mover</description>
+			<posx>700</posx>
+			<posy>500</posy>
+			<texturefocus>calibration/bottomright-focus.png</texturefocus>
+			<texturenofocus>calibration/bottomright.png</texturenofocus>
+		</control>
+		<control type="mover" id="10">
+			<description>subtitle position mover</description>
+			<posx>200</posx>
+			<posy>500</posy>
+			<texturefocus>calibration/subtitles-focus.png</texturefocus>
+			<texturenofocus>calibration/subtitles.png</texturenofocus>
+		</control>
+		<control type="resize" id="11">
+			<description>pixel aspect ratio box</description>
+			<posy>270</posy>
+			<width>288</width>
+			<height>288</height>
+			<texturefocus>calibration/pixelratio-focus.png</texturefocus>
+			<texturenofocus>calibration/pixelratio.png</texturenofocus>
+		</control>
+		<control type="label" id="2">
+			<description>coordinates label</description>
+			<posy>20</posy>
+			<label>-</label>
+			<font>normalCaps</font>
+			<align>center</align>
+			<posy>60</posy>
+			<label>-</label>
+			<width>screen_Width</width>
+			<align>center</align>
+		</control>
+	</controls>
+</window>

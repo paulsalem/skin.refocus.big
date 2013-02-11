@@ -1,0 +1,185 @@
+<includes>
+<!---INFO------>
+	<include name="info_PortraitFanart">
+		<control type="group">
+			<include>toggle_Menu</include>
+			<include>transition_Info</include>
+			<include>infoDialogHide</include>
+			<visible>[Control.IsVisible(550) | Control.IsVisible(551)] + Container.Content(movies)</visible>
+			<!---flags--->
+            <posy>640</posy>
+			<control type="image" id="99199">
+				<posx>10</posx>
+                <posy>-15</posy>
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture fallback="empty">$VAR[flag_Studio]</texture>
+			</control>
+			<control type="image" id="99299">
+				<posx>10</posx>
+                <posy>-15</posy>
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
+				<visible>StringCompare(Control.GetLabel(99199),empty)</visible>
+			</control>
+            <control type="image">
+                <posx>132</posx>
+				<width>128</width>
+				<height>32</height>
+				<info>ListItem.StarRating</info>
+				<aspectratio align="center">keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>1125</posx>
+				<posy>-10</posy>
+				<width>55</width>
+				<height>55</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>flags/video/HD/nf-HD.png</texture>
+				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
+			</control>
+			<control type="image">
+                <posx>1220</posx>
+				<width>53</width>
+				<height>34</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>$INFO[Listitem.AudioChannels,flags/audio/,.png]</texture>
+				<visible>!IsEmpty(Listitem.AudioChannels)</visible>
+			</control>
+			<!-- logo -->
+			<control type="image">
+				<posx>20</posx>
+				<posy>-600</posy>
+				<width>250</width>
+				<height>97</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+			</control>
+			<!---info--->	
+			<control type="group">
+				<visible>!Container.Content(addons)</visible>
+				<control type="label">
+				<posx>270</posx>                    
+				<width>730</width>
+					<label>$VAR[global_Title]</label>
+					<font>titleSpecial</font>
+                    <align>center</align>
+                    <include>info_Title</include>
+				</control>
+				<control type="label">
+					<posy>39</posy>
+					<width>1280</width>
+					<label>$VAR[global_Info]</label>
+					<font>titleSmallest</font>
+                    <align>center</align>
+					<include>info_Sub</include>
+					<!--<visible>!SubString(Container.FolderPath,plugin)</visible>-->
+				</control>
+			</control>
+		</control>
+	</include>
+    <!---PORTRAIT--->
+    <include name="view_PortraitFanart">
+		<control type="wraplist" id="551">
+			<viewtype label="WideSlide">biginfo</viewtype>
+			<posx>-150</posx>
+			<posy>390</posy>
+			<width>2200</width>
+			<height>330</height>
+			<onleft>521</onleft>
+			<onright>521</onright>
+			<onup>6000</onup>
+			<ondown>72</ondown>
+			<focusposition>5</focusposition>
+			<pagecontrol>72</pagecontrol>
+			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
+			<preloaditems>2</preloaditems>
+			<orientation>horizontal</orientation>
+			<include>transition_Container</include>
+			<include>infoDialogHide</include>
+			<include>toggle_Menu</include>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !SubString(Container.FolderPath,plugin.video.hulu)</visible>
+			<include condition="Window.IsVisible(videolibrary)">PortraitFanart</include>
+		</control>	
+		<!---window menu shade-->
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture>home/menuBackground.png</texture>
+			<include>fadeinout</include>
+			<visible>Control.IsVisible(551) + ControlGroup(6000).HasFocus()</visible>
+		</control>
+    </include>
+	<include name="PortraitFanart">
+		<itemlayout width="140" height="260">
+			<control type="group">
+				<control type="image">
+					<width>180</width>
+					<height>240</height>
+					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+					<bordertexture border="31">frames/frame_Square.png</bordertexture>
+                    <aspectratio align="center">stretch</aspectratio>
+					<bordersize>22</bordersize>
+				</control>
+				<control type="group">
+					<posx>126</posx>
+					<posy>186</posy>
+					<control type="image">
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<posx>126</posx>
+					<posy>186</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<info>ListItem.Overlay</info>
+					</control>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout width="140" height="260">
+			<control type="group">
+				<include>focus_FanartPortrait</include>
+				<control type="image">
+					<width>180</width>
+					<height>240</height>
+					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+					<bordertexture border="27">frames/frame_Square.png</bordertexture>
+                    <aspectratio align="center">stretch</aspectratio>
+					<bordersize>22</bordersize>
+				</control>
+				<control type="group">
+					<posx>126</posx>
+					<posy>186</posy>
+					<control type="image">
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<posx>126</posx>
+					<posy>186</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<info>ListItem.Overlay</info>
+					</control>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>    
+</includes>

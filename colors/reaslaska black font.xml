@@ -1,0 +1,19 @@
+<colors>
+	<color name="Color0">FF000000</color>
+	<color name="Color1">FF666666</color>
+	<color name="Color2">FF000000</color>
+	<color name="Color3">FF000000</color>
+	<color name="Color4">FF000000</color>
+	<color name="Color5">FF000000</color>
+	<color name="Color7">FF000000</color>
+
+	<color name="Color8">ffffffff</color>	
+	<color name="Focused">FF000000</color>
+	<color name="Disabled">FF000000</color>
+	<color name="Selected">FF000000</color>
+	
+	<color name="column1">FF000000</color>
+	<color name="column2">FF000000</color>
+	<color name="column3">FF000000</color>
+	<color name="column4">FF000000</color>
+</colors>
