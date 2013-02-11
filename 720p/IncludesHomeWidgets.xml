@@ -3,7 +3,7 @@
 	<include name="HomeWidgets">
 		<control type="group" id="8004">
 		 <visible>![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + Skin.HasSetting(home.widgets)</visible>
-
+		<include>transition_Container</include>
 		<!--vignette default opacity-->
 			<control type="image">
 				<include>screen_Dimensions</include>
