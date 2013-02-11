@@ -153,7 +153,11 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31129">Download Banners</string>
 <string id="31130">Download Logos</string>
 <string id="31131">Download Extrafanart</string>
+<<<<<<< HEAD
 <string id="31132">Use "extrafanart" in Gallery View</string>
+=======
+<string id="31132">use "extrafanart" in gallery view</string>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 
 <string id="31900">Show All</string>
 <string id="31901">Files Mode</string>
@@ -234,7 +238,11 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31969">File [COLOR=Color2]Manager[/COLOR]</string>
 <string id="31970">New Albums</string>
 <string id="31971">Recently Played</string>
+<<<<<<< HEAD
 <string id="31972">Enable TV Show Logos</string>
+=======
+<string id="31972">enable TV Show Logos</string>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 <string id="31973">-</string>
 <string id="31974">Large Grid</string>
 <string id="31975">Small Grid</string>
@@ -414,9 +422,14 @@ Please consider supporting the development of XBMC by making a donation.
 <!--Widgets-->
 <string id="32100">Disable fanart on Widgets</string>
 
+<<<<<<< HEAD
 
 <!--studio network logos-->
 <!-->
+=======
+<!-->
+<!--studio network logos
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 <string id="32101">Enable Network and Studio Logos on Views</string>
 <string id="32102">Enable Network and Studio Logos on Video OSD</string>-->
 <string id="32103">Remove Network/Studios Logos on Views</string>-->
@@ -430,6 +443,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32205">Use Posters on Recent Items</string>
 <string id="32206">Use Fanart on Recent Movies</string>
 <string id="32207">Use Fanart on Recommended Movies</string>
+<<<<<<< HEAD
 <string id="32208">Customize Widgets</string>
 <string id="32209">Use Posters</string>
 <string id="32210">Use Fanart</string>
@@ -457,5 +471,12 @@ Please consider supporting the development of XBMC by making a donation.
 
 <!--fanart-->
 <string id="32700">Use Extra Fanart</string>
+=======
+
+!--Home Menu-->
+<string id="32300">Disable Left Shade on Home Menu</string>
+
+
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 
 </strings>

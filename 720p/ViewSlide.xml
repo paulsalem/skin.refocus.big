@@ -47,7 +47,11 @@
 				</control>
 				<control type="label">
 					<posy>34</posy>
+<<<<<<< HEAD
 					<width>960</width>
+=======
+						<width>960</width>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<label>$VAR[global_Info]</label>
 					<font>titleSmallest</font>
 					<include>info_Sub</include>
@@ -179,7 +183,11 @@
 				<control type="image">
 					<width>228</width>
 					<height>316</height>
+<<<<<<< HEAD
 					<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$VAR[thumb_Portrait.Condition]</texture>
+=======
+					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<bordertexture border="40">frames/frame_Square.png</bordertexture>
 					<aspectratio align="center">stretch</aspectratio>
 					<bordersize>22</bordersize>

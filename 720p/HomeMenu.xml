@@ -16,17 +16,29 @@
 			<content>
 				<!--videos-->
 				<item id="1">
+<<<<<<< HEAD
 					<label>$VAR[tvshows_homemenu]</label>
+=======
+					<label>$LOCALIZE[3]</label>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<onclick>SetFocus(1110)</onclick>
 					<visible>!Skin.HasSetting(homemenu.videos) + ![IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path))+ IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)]</visible>
 				</item>
 				<item id="2">
+<<<<<<< HEAD
 					<label>$VAR[tvshows_homemenu]</label>
+=======
+					<label>$LOCALIZE[3]</label>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<onclick>ActivateWindow(Videos,Files)</onclick>
 					<visible>!Skin.HasSetting(backspacehome.enable) + !Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
 				</item>
 				<item id="2">
+<<<<<<< HEAD
 					<label>$VAR[tvshows_homemenu]</label>
+=======
+					<label>$LOCALIZE[3]</label>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<onclick>ActivateWindow(Videos,Files,return)</onclick>
 					<visible>Skin.HasSetting(backspacehome.enable) + !Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
 				</item>
@@ -61,6 +73,7 @@
 				</item>
 				<!--tv shows-->
 				<item id="5">
+<<<<<<< HEAD
 					<label>$VAR[tvshows_homemenu_tvshows]</label>
 					<onclick>SetFocus(1210)</onclick>
 					<visible>Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + [Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
@@ -74,6 +87,31 @@
 					<label>$VAR[tvshows_homemenu_tvshows]</label>
 					<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
 					<visible>Skin.HasSetting(backspacehome.enable) + Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + ![Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
+=======
+					<label>$LOCALIZE[20343]</label>
+					<onclick>SetFocus(1210)</onclick>
+					<visible>![[Control.HasFocus(8008) + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.recentpostersdouble)] | Control.HasFocus(8009) + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.watchlistpostersdouble) + Skin.HasSetting(home.widgets.recentpostersdouble)]] + Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + [Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
+				</item>
+				<item id="6">
+					<label>$LOCALIZE[20343]</label>
+					<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles)</onclick>
+					<visible>![[Control.HasFocus(8008) + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.recentpostersdouble)] | Control.HasFocus(8009) + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.watchlistpostersdouble + Skin.HasSetting(home.widgets.recentpostersdouble)]]) + !Skin.HasSetting(backspacehome.enable) + Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + ![Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
+				</item>
+				<item id="6">
+					<label>$LOCALIZE[20343]</label>
+					<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
+					<visible>![[Control.HasFocus(8008) + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.recentpostersdouble)] | Control.HasFocus(8009) + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.watchlistpostersdouble) + Skin.HasSetting(home.widgets.recentpostersdouble)]] + !Skin.HasSetting(homemenu.tvshows) + ![Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
+				</item>
+				<item id="6">
+					<label>$LOCALIZE[32051]</label>
+					<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
+					<visible>Control.HasFocus(8008) + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.recentpostersdouble)</visible>
+				</item>
+				<item id="6">
+					<label>$LOCALIZE[32052]</label>
+					<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
+					<visible>Control.HasFocus(8009) + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.watchlistpostersdouble) + Skin.HasSetting(home.widgets.recentpostersdouble)</visible>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</item>
 				<!--live tv-->
 				<item id="7">
@@ -136,14 +174,22 @@
 					<label>$LOCALIZE[8]</label>
 					<onclick>ActivateWindow(weather)</onclick>
 					
+<<<<<<< HEAD
 					<visible>!Skin.HasSetting(homemenu.weather) + Weather.IsFetched + [[Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009) | Control.HasFocus(80081) | Control.HasFocus(80091)] | [[Container(9000).HasFocus(5) | Container(9000).HasFocus(6) | Container(9000).HasFocus(3) | Container(9000).HasFocus(1) | Container(9000).HasFocus(4) | Container(9000).HasFocus(9) | Container(9000).HasFocus(10) | Container(9000).HasFocus(13) | Container(9000).HasFocus(14) | Container(9000).HasFocus(17)]] + Skin.HasSetting(home.widgets)]]</visible>
+=======
+					<visible>!Skin.HasSetting(homemenu.weather) + Weather.IsFetched + [[Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009)] | [[Container(9000).HasFocus(5) | Container(9000).HasFocus(6) | Container(9000).HasFocus(3) | Container(9000).HasFocus(4) | Container(9000).HasFocus(9) | Container(9000).HasFocus(10) | Container(9000).HasFocus(13) | Container(9000).HasFocus(14) | Container(9000).HasFocus(17)]] + Skin.HasSetting(home.widgets)]]</visible>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</item>				
 				<item id="17">
 					<!--<label>$LOCALIZE[8]</label>-->
 					<label>$INFO[Weather.Temperature]$INFO[Window(Weather).Property(Location), in ,]</label>
 					<onclick>ActivateWindow(weather)</onclick>
 					
+<<<<<<< HEAD
 					<visible>!Skin.HasSetting(homemenu.weather) + Weather.IsFetched + [[![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009) | Control.HasFocus(80081) | Control.HasFocus(80091)] + [![Container(9000).HasFocus(5) | Container(9000).HasFocus(6) | Container(9000).HasFocus(3) | Container(9000).HasFocus(1) | Container(9000).HasFocus(4) | Container(9000).HasFocus(9) | Container(9000).HasFocus(10) | Container(9000).HasFocus(13) | Container(9000).HasFocus(14) | Container(9000).HasFocus(17)] + Skin.HasSetting(home.widgets)]] | !Skin.HasSetting(home.widgets)]</visible>
+=======
+					<visible>!Skin.HasSetting(homemenu.weather) + Weather.IsFetched + [[![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8005) | Control.HasFocus(8006) | Control.HasFocus(8007) | Control.HasFocus(8008) | Control.HasFocus(8009)] + [![Container(9000).HasFocus(5) | Container(9000).HasFocus(6) | Container(9000).HasFocus(3) | Container(9000).HasFocus(4) | Container(9000).HasFocus(9) | Container(9000).HasFocus(10) | Container(9000).HasFocus(13) | Container(9000).HasFocus(14) | Container(9000).HasFocus(17)] + Skin.HasSetting(home.widgets)]] | !Skin.HasSetting(home.widgets)]</visible>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</item>
 				
 				<!--favourites-->
@@ -167,13 +213,21 @@
 				<item id="22">
 					<label>31051</label>
 					<onclick>ActivateWindow(videoplaylist)</onclick>
+<<<<<<< HEAD
 					<visible>!Skin.HasSetting(homemenu.playing) + Player.HasVideo + !Skin.HasSetting(backgroundvideo)</visible>
+=======
+					<visible>!Skin.HasSetting(homemenu.playing) + Player.HasVideo + Skin.HasSetting(home.backgroundvideo)]</visible>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<!--<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>-->
 				</item>
 				<item id="23">
 					<label>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label>
 					<onclick>ActivateWindow(videoplaylist)</onclick>
+<<<<<<< HEAD
 					<visible>!Skin.HasSetting(homemenu.playing) + Player.HasVideo + Skin.HasSetting(backgroundvideo)</visible>
+=======
+					<visible>!Skin.HasSetting(homemenu.playing) + Player.HasVideo + !Skin.HasSetting(home.backgroundvideo)]</visible>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<!--<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>-->
 				</item>
 			</content>

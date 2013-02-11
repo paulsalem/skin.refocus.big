@@ -243,7 +243,11 @@
 
 	<include name="List_Video_1Row">
 		 
+<<<<<<< HEAD
 		<itemlayout condition="[[Container.Content(movies) | Container.Content(tvshows) | [Container.Content(seasons) + !SubString(Container.FolderPath,plugin://)] | Container.Content(episodes) | Container.Content(musicvideos)]] |  Container.Content(addons) | [Container.Content(files) + !SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus)" width="625" height="40">		
+=======
+		<itemlayout condition="[[Container.Content(movies) | Container.Content(tvshows) | [Container.Content(seasons) + !SubString(Container.FolderPath,plugin://)] | Container.Content(episodes) | Container.Content(musicvideos)]] |  Container.Content(addons) | [Container.Content(files) + !SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus" width="625" height="40">		
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<control type="label">
 				<posx>40</posx>
 				<posy>6</posy>
@@ -298,7 +302,11 @@
 				<visible>!Container.Content(artists)</visible>
 			</control>
 		</itemlayout>
+<<<<<<< HEAD
 		<focusedlayout condition="[[Container.Content(movies) | Container.Content(tvshows) | [Container.Content(seasons) + !SubString(Container.FolderPath,plugin://)] | Container.Content(episodes) | Container.Content(musicvideos)]] | Container.Content(addons) | [Container.Content(files) + !SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus)" width="625" height="40">		
+=======
+		<focusedlayout condition="[[Container.Content(movies) | Container.Content(tvshows) | [Container.Content(seasons) + !SubString(Container.FolderPath,plugin://)] | Container.Content(episodes) | Container.Content(musicvideos)]] | Container.Content(addons) | [Container.Content(files) + !SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus" width="625" height="40">		
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<control type="image">
 				<posy>-28</posy>
 				<width>650</width>
@@ -803,7 +811,11 @@
 				<preloaditems>2</preloaditems>
 				<orientation>vertical</orientation>
 				<animation effect="slide" start="0,0" end="0,8" time="0" condition="Skin.HasSetting(numitems.enable)">Conditional</animation>
+<<<<<<< HEAD
 				<visible>[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)] + !SubString(Container.FolderPath,plugin://)] | [Container.Content(movies) + SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus)</visible>
+=======
+				<visible>[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)] + !SubString(Container.FolderPath,plugin://)] | [Container.Content(movies) + SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus</visible>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<include condition="Window.IsVisible(videolibrary)">BigList_Video</include>
 				<include condition="Window.IsVisible(musiclibrary)">BigList_Music</include>
 			</control>
@@ -811,7 +823,11 @@
 	</include>
 	<!--landscape-->
 	<include name="BigList_Video">
+<<<<<<< HEAD
 		<itemlayout condition="!SubString(Container.FolderPath,plugin://) + [[Container.Content(movies) | Container.Content(tvshows)] + !Skin.HasSetting(view.biglist.posters)] | Container.Content(episodes) | SubString(Container.FolderPath,plugin.video.rtmpGUIplus)" width="625" height="150">
+=======
+		<itemlayout condition="!SubString(Container.FolderPath,plugin://) + [[Container.Content(movies) | Container.Content(tvshows)] + !Skin.HasSetting(view.biglist.posters)] | Container.Content(episodes) | SubString(Container.FolderPath,plugin.video.rtmpGUIplus" width="625" height="150">
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<control type="image">
 				<width>247</width>
 				<height>144</height>
@@ -894,7 +910,11 @@
 				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
 			</control>
 		</itemlayout>
+<<<<<<< HEAD
 		<focusedlayout condition="!SubString(Container.FolderPath,plugin://) + [[Container.Content(movies) | Container.Content(tvshows)] + !Skin.HasSetting(view.biglist.posters)] | Container.Content(episodes) | SubString(Container.FolderPath,plugin.video.rtmpGUIplus)" width="625" height="150">
+=======
+		<focusedlayout condition="!SubString(Container.FolderPath,plugin://) + [[Container.Content(movies) | Container.Content(tvshows)] + !Skin.HasSetting(view.biglist.posters)] | Container.Content(episodes) | SubString(Container.FolderPath,plugin.video.rtmpGUIplus" width="625" height="150">
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<control type="image">
 				<width>247</width>
 				<height>144</height>
@@ -970,7 +990,11 @@
 			</control>
 		</focusedlayout>
 		<!--portrait-->
+<<<<<<< HEAD
 		<itemlayout condition="[[Container.Content(tvshows) | Container.Content(movies)] + Skin.HasSetting(view.biglist.posters)] | [[Container.Content(tvshows) | Container.Content(movies)] + SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus)"width="625" height="150">
+=======
+		<itemlayout condition="[[Container.Content(tvshows) | Container.Content(movies)] + Skin.HasSetting(view.biglist.posters)] | [[Container.Content(tvshows) | Container.Content(movies)] + SubString(Container.FolderPath,plugin://)]  | SubString(Container.FolderPath,plugin.video.rtmpGUIplus"width="625" height="150">
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<control type="image">
 				<width>100</width>
 				<height>144</height>
@@ -1053,7 +1077,11 @@
 				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
 			</control>
 		</itemlayout>
+<<<<<<< HEAD
 		<focusedlayout condition="[[Container.Content(tvshows) | Container.Content(movies)] + Skin.HasSetting(view.biglist.posters)] | [[Container.Content(tvshows) | Container.Content(movies)] + SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,plugin.video.rtmpGUIplus)]" width="625" height="150">
+=======
+		<focusedlayout condition="[[Container.Content(tvshows) | Container.Content(movies)] + Skin.HasSetting(view.biglist.posters)] | [[Container.Content(tvshows) | Container.Content(movies)] + SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,plugin.video.rtmpGUIplus]" width="625" height="150">
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<control type="image">
 				<width>100</width>
 				<height>144</height>

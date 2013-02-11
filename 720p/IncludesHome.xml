@@ -21,7 +21,11 @@
 				<aspectratio align="left">stretch</aspectratio>
 				<texture border="1">home/menuSelectOriginal.png</texture>
 				<include>home_ListScroll</include>
+<<<<<<< HEAD
 				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5) + !Skin.HasSetting(home.menuselect.disablefading)">Conditional</animation>
+=======
+				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5)">Conditional</animation>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<visible>!Control.HasFocus(888) + !Skin.HasSetting(home.menuselect.realaska)</visible>
 			</control>
 			<control type="image">
@@ -31,7 +35,11 @@
 				<aspectratio align="left">stretch</aspectratio>
 				<texture border="1">home/menuSelectReAlaska.png</texture>
 				<include>home_ListScroll</include>
+<<<<<<< HEAD
 				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5) + !Skin.HasSetting(home.menuselect.disablefading)">Conditional</animation>
+=======
+				<animation effect="fade" start="100" end="50" time="350" condition="System.IdleTime(5)">Conditional</animation>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<visible>!Control.HasFocus(888) + Skin.HasSetting(home.menuselect.realaska)</visible>
 			</control>
 			<!--

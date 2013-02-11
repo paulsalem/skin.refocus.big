@@ -9,15 +9,23 @@
 			<visible>![Window.IsActive(startup) | Window.IsActive(fullscreenvideo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC_Lyrics-main.xml) | Window.IsActive(videooverlay)]</visible>
 			<include>toggle_ToastMute</include>
 			<control type="fadelabel" id="30">
+<<<<<<< HEAD
 				<posx>690r</posx>
 				<posy>2</posy>
 				<width>559</width>
 				<align>right</align>
+=======
+				<posx>530r</posx>
+				<width>400</width>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<include>toast_Top</include>
 			</control>
 			<control type="fadelabel" id="31">
 				<posx>530r</posx>
+<<<<<<< HEAD
 				<posy>28</posy>
+=======
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<width>400</width>
 				<include>toast_Bottom</include>
 			</control>

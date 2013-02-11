@@ -1,7 +1,16 @@
 ﻿<window id="2006">
 	<allowoverlay>no</allowoverlay>
+<<<<<<< HEAD
 	<onload condition="Skin.HasSetting(background-slideshow)">RunScript(script.artistslideshow)</onload>
 	<controls>
+=======
+	<onload>RunScript(script.artistslideshow)</onload>
+	<controls>
+		<control type="visualisation" id="2">
+			<include>screen_Dimensions</include>
+			<visible>!Skin.HasSetting(fanart.visualization) | Skin.HasSetting(fanart.visualization.blend)</visible>
+		</control>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 		<control type="multiimage">
     			<posx>0</posx>
     			<posy>0</posy>
@@ -15,6 +24,11 @@
     			<randomize>true</randomize>
 			<animation effect="fade" start="0" end="100" time="300">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+<<<<<<< HEAD
+=======
+<!--			<animation effect="zoom" start="110" end="130" center="auto" time="6000" pulse="true" condition="true">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="40,40" time="7000" pulse="true" condition="true">Conditional</animation>-->
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 		</control>
 		<control type="multiimage">
     			<posx>0</posx>
@@ -34,6 +48,7 @@
 		</control>
 		<control type="image">
 			<include>screen_Dimensions</include>
+<<<<<<< HEAD
 			<texture fallback="backgrounds/artist.jpg">$INFO[Player.Art(fanart)]</texture>
 			<visible>Skin.HasSetting(fanart.visualization) + !Skin.HasSetting(fanart.visualization.extra)</visible>
 			<include>transition_Fanart</include>
@@ -56,6 +71,13 @@
 			<include>screen_Dimensions</include>
 			<visible>!Skin.HasSetting(background-slideshow) + [!Skin.HasSetting(fanart.visualization) | Skin.HasSetting(fanart.visualization.blend)]</visible>
 		</control>
+=======
+			<texture fallback="backgrounds/artist.jpg">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<visible>Skin.HasSetting(fanart.visualization) + [!Skin.HasSetting(background-slideshow) | !System.HasAddon(script.artistslideshow)]</visible>
+			<include>transition_Fanart</include>
+			<animation effect="fade" start="100" end="80" time="0" condition="Skin.HasSetting(fanart.visualization.blend)">Conditional</animation>
+		</control>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 		<control type="group">
 			<posx>5</posx>
 			<posy>5</posy>

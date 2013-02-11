@@ -97,7 +97,11 @@
 						<height>244</height>
 						<label>$INFO[ListItem.Plot]</label>
 							<font>descriptionbig</font>
+<<<<<<< HEAD
 						<visible>[[Skin.HasSetting(view.list.fanart) + [Container.Content(movies) | Container.Content(tvshows)]] | [Container.Content(episodes) + !IsEmpty(ListItem.Title)] | Container.Content(musicvideos)] + !SubString(ListItem.Icon,default) | SubString(Container.FolderPath,plugin.video.rtmpGUIplus)</visible>
+=======
+						<visible>[[Skin.HasSetting(view.list.fanart) + [Container.Content(movies) | Container.Content(tvshows)]] | [Container.Content(episodes) + !IsEmpty(ListItem.Title)] | Container.Content(musicvideos)] + !SubString(ListItem.Icon,default | SubString(Container.FolderPath,plugin.video.rtmpGUIplus )</visible>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					</control>
 					<control type="textbox">
 						<width>525</width>

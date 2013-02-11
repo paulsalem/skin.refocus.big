@@ -17,12 +17,20 @@
 		<include>PageControls</include>
 	<!---window title--->
 		<control type="label">
+<<<<<<< HEAD
 			<label>$LOCALIZE[20343] [COLOR=Color2]$LOCALIZE[32052][/COLOR]</label>
+=======
+			<label>$LOCALIZE[20343] [COLOR=Color2]$LOCALIZE[31086][/COLOR]</label>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<include>windowTitle</include>
 			<visible>Skin.String(Watchlist,Shows)</visible>
 		</control>
 		<control type="label">
+<<<<<<< HEAD
 			<label>$LOCALIZE[342] [COLOR=Color2]$LOCALIZE[32052][/COLOR]</label>
+=======
+			<label>$LOCALIZE[342] [COLOR=Color2]$LOCALIZE[31086][/COLOR]</label>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<include>windowTitle</include>
 			<visible>Skin.String(Watchlist,Movies)</visible>
 		</control>
@@ -232,7 +240,11 @@
 					<control type="label">
 						<posy>34</posy>
 						<width>960</width>
+<<<<<<< HEAD
 						<label>$INFO[Container(52).ListItem.Property(Node)]$INFO[Container(52).ListItem.Property(Year)]$INFO[Container(52).ListItem(0).Label2, • ]$INFO[Container(52).ListItem.Property(Info), • ]</label>
+=======
+						<label>$INFO[Container(52).ListItem.Property(Node)]$INFO[Container(52).ListItem.Property(Year)]$INFO[Container(52).ListItem(0).Label2, • ]$INFO[Container(52).ListItem.Property(Genre), • ]</label>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						<font>titleSmallest</font>						
 						<include>info_Sub</include>
 						<visible>Skin.String(Watchlist,Movies)</visible>

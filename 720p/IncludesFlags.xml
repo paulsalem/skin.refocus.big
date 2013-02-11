@@ -8,7 +8,11 @@
 			<height>64</height>
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
+<<<<<<< HEAD
 			<visible>[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522)] + IsEmpty(ListItem.Property(ReleaseDate))</visible>
+=======
+			<visible>[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522)] + IsEmpty(ListItem.Property(ReleaseDate)</visible>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<control type="image">
 				<width>128</width>
 				<height>32</height>

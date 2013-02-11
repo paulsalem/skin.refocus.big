@@ -156,7 +156,11 @@
 						<onclick>Skin.ToggleSetting(fanart.global.alt)</onclick>
 						<selected>Skin.HasSetting(fanart.global.alt)</selected>
 						<include>dialog_Radio</include>
+<<<<<<< HEAD
 						<enable>Skin.HasSetting(fanart.global)</enable>
+=======
+						<visible>Skin.HasSetting(fanart.global)</visible>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					</control>
 					<!--vignette home-->
 					<control type="radiobutton" id="204">
@@ -166,7 +170,20 @@
 						<selected>Skin.HasSetting(home.vignette)</selected>
 						<include>dialog_Radio</include>
 					</control>
+<<<<<<< HEAD
 					<control type="radiobutton" id="205">
+=======
+					<!--slideshows-->
+					<!--<control type="radiobutton" id="205">
+						<width>557</width>
+						<label>$LOCALIZE[31936]</label>
+						<onclick>Skin.ToggleSetting(slideshow.fanart)</onclick>
+						<onclick>Skin.Reset(slideshow.custom2)</onclick>
+						<selected>Skin.HasSetting(slideshow.fanart)</selected>
+						<include>dialog_Radio</include>
+					</control>-->
+					<control type="radiobutton" id="206">
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						<width>557</width>
 						<label>$LOCALIZE[32046]</label>
 						<onclick>Skin.ToggleSetting(slideshow.custom2)</onclick>
@@ -174,12 +191,17 @@
 						<selected>Skin.HasSetting(slideshow.custom2)</selected>
 						<include>dialog_Radio</include>
 					</control>
+<<<<<<< HEAD
 					<control type="button" id="206">
+=======
+					<control type="button" id="207">
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						<width>557</width>
 						<label>$LOCALIZE[31937]</label>
 						<onclick>Skin.SetPath(slideshow.custom.path)</onclick>
 						<label2>[COLOR=Color2]$INFO[Skin.String(slideshow.custom.path)][/COLOR]</label2>
 						<include>dialog_Radio</include>
+<<<<<<< HEAD
 						<enable>Skin.HasSetting(slideshow.custom2)</enable>
 					</control>
 					<!--background video-->
@@ -192,6 +214,20 @@
 					</control>
 					<!--reset wallpapers-->
 					<control type="button" id="208">
+=======
+						<visible>Skin.HasSetting(slideshow.custom2)</visible>
+					</control>
+					<!--background video-->
+					<control type="radiobutton" id="208">
+						<width>557</width>
+						<label>$LOCALIZE[31028]</label>
+						<onclick>Skin.ToggleSetting(home.backgroundvideo)</onclick>
+						<selected>!Skin.HasSetting(home.backgroundvideo)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--reset wallpapers-->
+					<control type="button" id="209">
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						<width>557</width>
 						<label>$LOCALIZE[32058]</label>
 						<onclick>Skin.Reset(fanart.video.path)</onclick>

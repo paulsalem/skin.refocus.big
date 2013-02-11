@@ -73,7 +73,11 @@
 	</variable>
 	
 	
+<<<<<<< HEAD
 	
+=======
+	<!--
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 	<variable name="global_Info.Addon">
 		<value condition="Container.Content(movies) + !IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Property(ReleaseDate)]$INFO[ListItem.Genre, • ]</value>
 		<value condition="[Container.Content(movies) | Container.Content(tvshows)] + !IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31100]]$INFO[ListItem.Genre, • ]</value>
@@ -81,6 +85,10 @@
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[ListItem.Episode,, • $LOCALIZE[20359]]$INFO[ListItem.Premiered]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
+<<<<<<< HEAD
+=======
+	-->
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 	
 	<variable name="gallery_Title">
 		<value condition="Container.Content(episodes) + !SubString(ListItem.Icon,default)">$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>
@@ -128,8 +136,13 @@
 		<value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(movies)">thumbs/movie_landscape.jpg</value>
 		<value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(tvshows)">thumbs/tvshow_landscape.jpg</value>
 		<value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(artists)">thumbs/artist_landscape.png</value>
+<<<<<<< HEAD
 		<value condition="Container.Content(musicvideos) + IsEmpty(ListItem.Thumb)">thumbs/music_landscape.jpg</value>
 		<value condition="Container.Content(episodes) + IsEmpty(ListItem.Thumb)">thumbs/tvshow_landscape.jpg</value>
+=======
+		<value condition="Container.Content(musicvideos) + IsEmpty(ListItem.Title)">thumbs/music_landscape.jpg</value>
+		<value condition="Container.Content(episodes) + IsEmpty(ListItem.Title)">thumbs/tvshow_landscape.jpg</value>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 		<value condition="Window.IsActive(pictures) + IsEmpty(ListItem.Thumb)">thumbs/picture_landscape.jpg</value>
 		<value condition="Container.Content(files) + IsEmpty(ListItem.Thumb)">thumbs/video_landscape.png</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Path]</value>
@@ -146,8 +159,13 @@
 	<variable name="thumb_Portrait.Condition">
 		<value condition="StringCompare(Container.FolderPath,plugin://plugin.video.the.trailers/)">$INFO[ListItem.Icon]</value>
 		<value condition="IsEmpty(ListItem.Thumb) + [Container.Content(movies) | Container.Content(sets)]">thumbs/movie_portrait.jpg</value>
+<<<<<<< HEAD
 		<value condition="IsEmpty(ListItem.Thumb) + [Container.Content(tvshows) | Container.Content(seasons)]">thumbs/tvshow_portrait.jpg</value>
 		<value condition="IsEmpty(ListItem.Thumb) + Container.Content(actors)">thumbs/actor_portrait.jpg</value>
+=======
+		<value condition="IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)]">thumbs/tvshow_portrait.jpg</value>
+		<value condition="IsEmpty(ListItem.Title) + Container.Content(actors)">thumbs/actor_portrait.jpg</value>
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="thumb_Portrait.Wide">
@@ -407,6 +425,7 @@
 		<value condition="ListItem.IsRecording">pvr/status_recording.png</value>
 		<value>pvr/status_none.png</value>
 	</variable>
+<<<<<<< HEAD
 	
 <!---WIDGETS------>	
 	<variable name="tvshows_posters">
@@ -432,4 +451,6 @@
 	
 	
 	
+=======
+>>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 </includes>
