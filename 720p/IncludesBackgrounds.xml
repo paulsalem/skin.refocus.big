@@ -7,12 +7,8 @@
 			<include>transition_Fanart</include>
 			<include>menu_BackgroundHide</include>
 		</control>
-<<<<<<< HEAD
 		
 		<control type="image" id="78900">
-=======
-		<control type="image">
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<include>screen_Dimensions</include>
 			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<visible>[!Skin.HasSetting(fanart.extra) | IsEmpty(ListItem.Path,,extrafanart) | !IsEmpty(ListItem.Property(Fanart_Image)) | SubString(Container.FolderPath,plugin://)] + Skin.HasSetting(fanart.global) | Control.IsVisible(550) | Control.IsVisible(551) + !IsEmpty(ListItem.Property(Fanart_Image)) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo.global)] + !ControlGroup(6000).HasFocus</visible>
@@ -21,11 +17,7 @@
 			<include>menu_BackgroundHide</include>
 			<include>AnimateBackgrounds</include>
 		</control>
-<<<<<<< HEAD
 		<control type="multiimage" id="7890">
-=======
-		<control type="multiimage">
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<include>screen_Dimensions</include>
 			<imagepath background="true">$INFO[ListItem.Path,,extrafanart]</imagepath>
 			<aspectratio align="center">scale</aspectratio>
@@ -35,14 +27,9 @@
 			<loop>yes</loop>
 			<pauseatend>2000</pauseatend>
 			<include>AnimateBackgrounds</include>
-<<<<<<< HEAD
 			<visible>[!Control.IsVisible(53) + !Window.isActive(2003) + !SubString(Container.FolderPath,plugin://)] + Skin.HasSetting(fanart.extra) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Path,,extrafanart) + Skin.HasSetting(fanart.global) + System.IdleTime(0.5)</visible>
 		</control>
 		
-=======
-			<visible>[!Control.IsVisible(53) + !Window.isActive(2003) + !SubString(Container.FolderPath,plugin://)] + Skin.HasSetting(fanart.extra) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Path,,extrafanart) + Skin.HasSetting(fanart.global) + System.IdleTime(2)</visible>
-		</control>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 		<!--playing video background-->
 		<control type="group">
 			<visible>Player.HasVideo + Skin.HasSetting(backgroundvideo.global)</visible>

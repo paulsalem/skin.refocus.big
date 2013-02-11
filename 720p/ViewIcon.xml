@@ -18,11 +18,7 @@
 			<include>transition_Container</include>
 			<include>toggle_Menu</include>
 			<include>infoDialogHide</include>
-<<<<<<< HEAD
 			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)] + [SubString(Container.FolderPath,videodb) | SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,special://profile/playlists/video/) | SubString(Container.FolderPath,special://skin/playlists)]</visible>
-=======
-			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets] + [SubString(Container.FolderPath,videodb) | SubString(Container.FolderPath,plugin://) | SubString(Container.FolderPath,special://profile/playlists/video/) | SubString(Container.FolderPath,special://skin/playlists)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<itemlayout height="260" width="186">
 				<control type="image">
 					<width>177</width>

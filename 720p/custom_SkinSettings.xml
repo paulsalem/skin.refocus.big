@@ -307,10 +307,7 @@
 				<label>$LOCALIZE[31120]</label>
 				<onclick>Skin.ToggleSetting(fanart.visualization)</onclick>
 				<onclick>Skin.ToggleSetting(fanart.visualization.blend)</onclick>
-<<<<<<< HEAD
 				<onclick>Skin.Reset(fanart.visualization.extra)</onclick>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<selected>Skin.HasSetting(fanart.visualization)</selected>
 				<include>button_Settings</include>
 			</control>
@@ -322,7 +319,6 @@
 				<enable>Skin.HasSetting(fanart.visualization)</enable>
 				<include>button_Settings</include>
 			</control>
-<<<<<<< HEAD
 			<control type="radiobutton" id="608">
 				<label>- $LOCALIZE[32700]</label>
 				<onclick>Skin.ToggleSetting(fanart.visualization.extra)</onclick>
@@ -330,8 +326,6 @@
 				<selected>Skin.HasSetting(fanart.visualization.extra)</selected>
 				<include>button_Settings</include>
 			</control>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<control type="label" id="610">
 				<label>$LOCALIZE[31119]</label>
 				<font>category</font>
@@ -511,11 +505,7 @@
 			<control type="radiobutton" id="713">
 				<label>$LOCALIZE[31028]</label>
 				<onclick>Skin.ToggleSetting(backgroundvideo.global)</onclick>
-<<<<<<< HEAD
 				<selected>!Skin.HasSetting(backgroundvideo.global)</selected>
-=======
-				<selected>Skin.HasSetting(backgroundvideo.global)</selected>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<include>button_Settings</include>
 			</control>
 		</control>
@@ -539,7 +529,6 @@
 				<textcolor>Color2</textcolor>
 				<include>button_Settings</include>
 			</control>
-<<<<<<< HEAD
 			<!--original reFocus OSD-->
 			<control type="radiobutton" id="752">
 				<label>$LOCALIZE[32600]</label>
@@ -549,32 +538,20 @@
 			</control>
 			<!--progressbar-->
 			<control type="radiobutton" id="753">
-=======
-			<!--progressbar-->
-			<control type="radiobutton" id="752">
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<label>$LOCALIZE[31917]</label>
 				<onclick>Skin.ToggleSetting(osd.progressbar)</onclick>
 				<selected>Skin.HasSetting(osd.progressbar)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!--Chapters-->
-<<<<<<< HEAD
 			<control type="radiobutton" id="754">
-=======
-			<control type="radiobutton" id="753">
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<label>$LOCALIZE[32031]</label>
 				<onclick>Skin.ToggleSetting(videoosd.showchapters)</onclick>
 				<selected>Skin.HasSetting(videoosd.showchapters)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!--Posters-->
-<<<<<<< HEAD
 			<control type="radiobutton" id="755">
-=======
-			<control type="radiobutton" id="754">
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<label>$LOCALIZE[32035]</label>
 				<onclick>Skin.ToggleSetting(videoosd.showposter)</onclick>
 				<onclick>Skin.Reset(videoosd.showfolderjpg)</onclick>
@@ -583,11 +560,7 @@
 				<include>button_Settings</include>
 			</control>
 			<!--folder.jpg-->
-<<<<<<< HEAD
 			<control type="radiobutton" id="756">
-=======
-			<control type="radiobutton" id="755">
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<label>$LOCALIZE[32043]</label>
 				<onclick>Skin.ToggleSetting(videoosd.showfolderjpg)</onclick>
 				<onclick>PlayerControl(stop)</onclick>
@@ -596,11 +569,7 @@
 				<visible>Skin.HasSetting(videoosd.showposter)</visible>
 			</control>
 			<!--Glow-->
-<<<<<<< HEAD
 			<control type="radiobutton" id="757">
-=======
-			<control type="radiobutton" id="756">
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<label>$LOCALIZE[32039]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.gray)</onclick>
@@ -609,11 +578,7 @@
 				<include>button_Settings</include>
 				<visible>!Skin.HasSetting(videoosd.xperience1080)</visible>
 			</control>
-<<<<<<< HEAD
 			<control type="radiobutton" id="758">
-=======
-			<control type="radiobutton" id="757">
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<label>$LOCALIZE[32040]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow.gray)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.black)</onclick>
@@ -621,11 +586,7 @@
 				<visible>Skin.HasSetting(videoosd.glow) + !Skin.HasSetting(videoosd.xperience1080)</visible>
 				<include>button_Settings</include>
 			</control>
-<<<<<<< HEAD
 			<control type="radiobutton" id="759">
-=======
-			<control type="radiobutton" id="758">
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<label>$LOCALIZE[32041]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow.black)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.gray)</onclick>

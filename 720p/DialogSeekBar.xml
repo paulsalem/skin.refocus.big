@@ -86,11 +86,7 @@
 				        <label>$INFO[Player.FinishTime,$LOCALIZE[41371] ,]</label>
 				        <scroll>false</scroll>
 				        <scrollout>false</scrollout>
-<<<<<<< HEAD
 				        <pauseatend>2500</pauseatend>
-=======
-				        <pauseatend>5000</pauseatend>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				        <font>osdxperience</font>
 			 		<textcolor>Color8</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -128,15 +124,9 @@
 					<animation effect="fade" start="0" end="100" time="400" tween="sine" easing="inout">Visible</animation>
 				        <animation effect="fade" start="100" end="0" time="400" tween="sine" easing="inout">Hidden</animation>					
 					<control type="progress" id="1">
-<<<<<<< HEAD
 						<posx>93</posx>
 						<posy>5</posy>
 						<width>739</width>
-=======
-						<posx>61</posx>
-						<posy>5</posy>
-						<width>790</width>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						<height>18</height>
 						<texturebg border="10">dialogs/progressBackground.png</texturebg>
 						<lefttexture>-</lefttexture>
@@ -147,33 +137,19 @@
 						<visible>Player.Paused + ![Window.IsActive(videoosd) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding]</visible>						
 					</control>
 					<control type="label" id="1">
-<<<<<<< HEAD
 						<posx>91</posx>
 						<width>1000</width>
 						<label>$INFO[Player.Time]</label>
 						<font>description</font>
 						<align>right</align>
-=======
-						<posx>5</posx>
-						<width>1000</width>
-						<label>$INFO[Player.Time]</label>
-						<font>description</font>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						<textcolor>Color8</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="label" id="1">
-<<<<<<< HEAD
 						<posx>842</posx>
 						<width>1000</width>
 						<label>$INFO[Player.TimeRemaining]</label>
 						<align>left</align>
-=======
-						<posx>914</posx>
-						<width>1000</width>
-						<label>$INFO[Player.TimeRemaining]</label>
-						<align>right</align>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						<textcolor>Color8</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -754,11 +730,7 @@
 
 		<!-- clearart -->
 			<control type ="group">
-<<<<<<< HEAD
 				<visible>!Skin.HasSetting(osd.original) + !Skin.HasSetting(videoosd.showposter) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
-=======
-				<visible>!Skin.HasSetting(videoosd.showposter) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<control type ="image" id="21234">
 					<posx>1010</posx>
 					<posy>527</posy>
@@ -787,11 +759,7 @@
 					<texture background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<include>transition_OSD</include>
-<<<<<<< HEAD
 					<visible>!Skin.HasSetting(osd.original) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + [VideoPlayer.Content(files) | VideoPlayer.Content(livetv) | SubString(Player.FolderPath,http)]</visible>
-=======
-					<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + [VideoPlayer.Content(files) | VideoPlayer.Content(livetv) | SubString(Player.FolderPath,http)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 
 			<!-- clearlogo 
@@ -828,13 +796,8 @@
 				<height>68</height>
 				<texture fallback ="empty">$VAR[flag_Studio.player.xperience]</texture>
 				<aspectratio align="center">keep</aspectratio>
-<<<<<<< HEAD
 				<visible>!Skin.HasSetting(osd.original) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(episodes)</visible>
 				<visible>!Skin.HasSetting(osd.original) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
-=======
-				<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(episodes)</visible>
-				<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<include>transition_OSD</include>
 			</control>
 			<control type ="image" id="22722">
@@ -844,23 +807,14 @@
 				<height>68</height>
 				<texture fallback ="empty">$VAR[flag_Studio.player.xperience_alt]</texture>
 				<aspectratio align="center">keep</aspectratio>
-<<<<<<< HEAD
 				<visible>!Skin.HasSetting(osd.original) + StringCompare(Control.GetLabel(22522),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(episodes)</visible>
 				<visible>!Skin.HasSetting(osd.original) + StringCompare(Control.GetLabel(22522),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
-=======
-				<visible>StringCompare(Control.GetLabel(22522),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(episodes)</visible>
-				<visible>StringCompare(Control.GetLabel(22522),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<include>transition_OSD</include>
 			</control>
 			
 			<!-- episode thumb -->
 			<control type ="group">
-<<<<<<< HEAD
 				<visible>!Skin.HasSetting(osd.original) + !Skin.HasSetting(videoosd.showposter) + [VideoPlayer.Content(episodes)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
-=======
-				<visible>!Skin.HasSetting(videoosd.showposter) + [VideoPlayer.Content(episodes)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<control type ="image">
 					<posx>10</posx>
 					<posy>410</posy>
@@ -874,11 +828,7 @@
 			
 			<!-- movie poster -->
 			<control type ="group">
-<<<<<<< HEAD
 				<visible>!Skin.HasSetting(osd.original) + !Skin.HasSetting(videoosd.showposter) + [VideoPlayer.Content(movies)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
-=======
-				<visible>!Skin.HasSetting(videoosd.showposter) + [VideoPlayer.Content(movies)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<control type ="image">
 					<posx>10</posx>
 					<posy>375</posy>
@@ -891,11 +841,7 @@
 			</control>
 
 			<control type ="group">
-<<<<<<< HEAD
 				<visible>!Skin.HasSetting(osd.original) + Skin.HasSetting(videoosd.showposter) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
-=======
-				<visible>Skin.HasSetting(videoosd.showposter) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<control type ="image" id="1759">
 					<posx>10</posx>
 					<posy>375</posy>
@@ -987,13 +933,8 @@
 					<height>68</height>
 					<texture fallback="empty">$VAR[flag_Studio.player.xperience]</texture>
 					<aspectratio align="center">keep</aspectratio>
-<<<<<<< HEAD
 					<visible>!Skin.HasSetting(osd.original) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(movies)</visible>
 					<visible>!Skin.HasSetting(osd.original) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
-=======
-					<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(movies)</visible>
-					<visible>![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<include>transition_OSD</include>
 				</control>
 				<control type ="image" id="77877">
@@ -1003,13 +944,8 @@
 					<height>68</height>
 					<texture fallback="empty">$VAR[flag_Studio.player.xperience_alt]</texture>
 					<aspectratio align="center">keep</aspectratio>
-<<<<<<< HEAD
 					<visible>!Skin.HasSetting(osd.original) + StringCompare(Control.GetLabel(77577),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(movies)</visible>
 					<visible>!Skin.HasSetting(osd.original) + StringCompare(Control.GetLabel(77577),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
-=======
-					<visible>StringCompare(Control.GetLabel(77577),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + VideoPlayer.Content(movies)</visible>
-					<visible>StringCompare(Control.GetLabel(77577),empty) + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)] + Window.IsActive(fullscreenvideo) + [Player.Paused] + ![Window.IsActive(fullscreeninfo) | Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<include>transition_OSD</include>
 				</control>
 

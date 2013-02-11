@@ -2,48 +2,27 @@
 <includes>
 	<include name="HomeWidgets">
 		<control type="group" id="8004">
-<<<<<<< HEAD
 		 <visible>![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + Skin.HasSetting(home.widgets)</visible>
 
-=======
-		 <visible>![Player.HasVideo + !Skin.HasSetting(home.backgroundvideo)] + Skin.HasSetting(home.widgets)</visible>
-			
-		
-					
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 		<!--vignette default opacity-->
 			<control type="image">
 				<include>screen_Dimensions</include>
 				<include>fadeinout</include>
 				<texture background="true">overlays/vignette2_70.png</texture>
-<<<<<<< HEAD
 				<visible>!Skin.HasSetting(home.widgets.nofanart) + Skin.HasSetting(home.widgets.medopacity) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)] | [Control.HasFocus(80081) | Control.HasFocus(80091)]]</visible>
-=======
-				<visible>!Skin.HasSetting(home.widgets.nofanart) + Skin.HasSetting(home.widgets.medopacity) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
-				
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			</control>
 			<control type="image">
 				<include>screen_Dimensions</include>
 				<include>fadeinout</include>
 				<texture background="true">overlays/vignette2_90.png</texture>
-<<<<<<< HEAD
 				<visible>![Skin.HasSetting(home.widgets.nofanart) + Skin.HasSetting(wallpaper.original)] + !Skin.HasSetting(home.widgets.medopacity) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)] | [Control.HasFocus(80081) | Control.HasFocus(80091)]]</visible>
-=======
-				<visible>!Skin.HasSetting(home.widgets.nofanart) + !Skin.HasSetting(home.widgets.medopacity) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				
 			</control>
 			<control type="image" id="9199">
 				<include>screen_Dimensions</include>
 				<include>fadeinout</include>
 				<texture background="true">overlays/vignette2_80.png</texture>
-<<<<<<< HEAD
 				<visible>![Skin.HasSetting(home.widgets.nofanart) + Skin.HasSetting(wallpaper.original)] + !Skin.HasSetting(wallpaper.original) + [[[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.tvshows)] | [[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.movies)] | [[Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + !Skin.HasSetting(home.widgets.music)] | [[Container(9000).HasFocus(13) | Container(9000).HasFocus(14)] + !Skin.HasSetting(home.widgets.addons)] | [[Container(9000).HasFocus(1) | Container(9000).HasFocus(2)] + !Skin.HasSetting(home.widgets.tvmovies)]] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)] | [Control.HasFocus(80081) | Control.HasFocus(80091)]]</visible>
-=======
-				<visible>!Skin.HasSetting(wallpaper.original) + [Container(9000).HasFocus(5) | Container(9000).HasFocus(6) | Container(9000).HasFocus(3) | Container(9000).HasFocus(4) | Container(9000).HasFocus(9) | Container(9000).HasFocus(10) | Container(9000).HasFocus(13) | Container(9000).HasFocus(14)] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
-				
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			</control>
 			<control type="image" id="919">
 				<include>screen_Dimensions</include>
@@ -71,11 +50,7 @@
 				<include>fadeinout</include>
 				<include>menu_BackgroundHide</include>
 				<texture diffuse="overlays/landscapeOverlay.png">backgrounds/background.png</texture>
-<<<<<<< HEAD
 				<visible>Skin.HasSetting(wallpaper.original) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)] | [Control.HasFocus(80081) | Control.HasFocus(80091)]]</visible>
-=======
-				<visible>Skin.HasSetting(wallpaper.original) + [Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			</control>
 		
 			<control type="label">
@@ -100,7 +75,6 @@
 				<visible>Player.HasVideo</visible>
 				<!--<label2>$INFO[VideoPlayer.TVshowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>-->
 			</control>
-<<<<<<< HEAD
 		
 			
 			
@@ -562,8 +536,6 @@
 					<include>watchlist_Shows</include>
 				</control>
 			</control>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 
 				<!-- RECENTLY ADDED TV SHOWS -->
 		<control type="group">
@@ -573,11 +545,7 @@
 				<animation effect="slide" end="100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Control.HasFocus(1210) + Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>				
 				<animation effect="slide" end="-100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>				
 				<visible>Library.HasContent(TVShows)</visible>
-<<<<<<< HEAD
 				<visible>[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.watchlistrecent.tvshows) + !Skin.HasSetting(home.widgets.tvshows)</visible>
-=======
-				<visible>[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.watchlistrecent) + !Skin.HasSetting(home.widgets.tvshows</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<control type="label">
 					<description>Latest Episodes</description>
 					<posx>179</posx>
@@ -590,11 +558,7 @@
 					<font>homeMenuInfo</font>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>!Skin.HasSetting(home.widgets.watchlist.tvshows) + !Skin.HasSetting(home.widgets.posters.tvshows) + !IsEmpty(Window(Home).Property(RecentEpisode.1.Title))</visible>
-=======
-					<visible>!Skin.HasSetting(home.widgets.watchlist) + !Skin.HasSetting(home.widgets.recentposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Latest Episodes Poster</description>
@@ -608,11 +572,7 @@
 					<font>homeMenuInfo</font>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>					
-<<<<<<< HEAD
 					<visible>!Skin.HasSetting(home.widgets.watchlist.tvshows) + Skin.HasSetting(home.widgets.posters.tvshows) +  !IsEmpty(Window(Home).Property(RecentEpisode.1.Title))</visible>
-=======
-					<visible>!Skin.HasSetting(home.widgets.watchlist) + Skin.HasSetting(home.widgets.recentposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Currently Watching</description>
@@ -626,11 +586,7 @@
 					<font>homeMenuInfo</font>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Skin.HasSetting(home.widgets.watchlist.tvshows) + !Skin.HasSetting(home.widgets.posters.tvshows) + !IsEmpty(Window(Home).Property(RecommendedEpisode.1.TVShowTitle))</visible>
-=======
-					<visible>Skin.HasSetting(home.widgets.watchlist) + !Skin.HasSetting(home.widgets.watchlistposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Currently Watching Posters</description>
@@ -644,11 +600,7 @@
 					<font>homeMenuInfo</font>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>					
-<<<<<<< HEAD
 					<visible>Skin.HasSetting(home.widgets.watchlist.tvshows) + Skin.HasSetting(home.widgets.posters.tvshows) + !IsEmpty(Window(Home).Property(RecommendedEpisode.1.TVShowTitle))</visible>
-=======
-					<visible>Skin.HasSetting(home.widgets.watchlist) + Skin.HasSetting(home.widgets.watchlistposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control> 
 				<control type="label">
 					<description>Title Recent</description>
@@ -663,11 +615,7 @@
 					<include>info_Title</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlist.tvshows) + !Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlistposters) + !Skin.HasSetting(home.widgets.watchlist + !Skin.HasSetting(home.widgets.recentposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Title Recommended</description>
@@ -682,11 +630,7 @@
 					<include>info_Title</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8001) + Skin.HasSetting(home.widgets.watchlist.tvshows) + !Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlistposters) + Skin.HasSetting(home.widgets.watchlist</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Title Posters Recent</description>
@@ -700,11 +644,7 @@
 					<include>info_Title</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlist.tvshows) + Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlistposters) + !Skin.HasSetting(home.widgets.watchlist + Skin.HasSetting(home.widgets.recentposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Title Posters Watchlist</description>
@@ -719,11 +659,7 @@
 					<include>info_Title</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8001) + Skin.HasSetting(home.widgets.watchlist.tvshows) + Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Control.HasFocus(8001) + Skin.HasSetting(home.widgets.watchlistposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Season Recently Added</description>
@@ -738,11 +674,7 @@
 					<include>info_Sub</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8001) + !Skin.ToggleSetting(home.widgets.watchlist.tvshows) + !Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlistposters) + !Skin.HasSetting(home.widgets.watchlist + !Skin.HasSetting(home.widgets.recentposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Season Recently Posters</description>
@@ -757,11 +689,7 @@
 					<include>info_Sub</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlist.tvshows) + Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlistposters) + !Skin.HasSetting(home.widgets.watchlist + Skin.HasSetting(home.widgets.recentposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Season Watchlist</description>
@@ -776,11 +704,7 @@
 					<include>info_Sub</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8001) + Skin.HasSetting(home.widgets.watchlist.tvshows) + !Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Control.HasFocus(8001) + Skin.HasSetting(home.widgets.watchlist) + !Skin.HasSetting(home.widgets.watchlistposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Season Watchlist Posters</description>
@@ -795,11 +719,7 @@
 					<include>info_Sub</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8001) + Skin.HasSetting(home.widgets.watchlist.tvshows) + Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Control.HasFocus(8001) + Skin.HasSetting(home.widgets.watchlist) + Skin.HasSetting(home.widgets.watchlistposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="textbox">
 					<description>Plot</description>
@@ -814,11 +734,7 @@
 					<include>description_Small</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8001)  + Skin.HasSetting(home.widgets.watchlist.tvshows) + !Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.watchlistposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="textbox">
 					<description>Plot Posters</description>
@@ -833,11 +749,7 @@
 					<include>description_Small</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8001) + Skin.HasSetting(home.widgets.watchlist.tvshows) + Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Control.HasFocus(8001) + Skin.HasSetting(home.widgets.watchlistposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="fixedlist" id="8001">
 					<posx>200</posx>
@@ -857,11 +769,7 @@
 					<preloaditems>3</preloaditems>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="6100" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>!Skin.HasSetting(home.widgets.posters.tvshows)</visible>					
-=======
-					<visible>![Skin.HasSetting(home.widgets.watchlistposters) | Skin.HasSetting(home.widgets.recentposters)] </visible>					
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<itemlayout width="311" height="261">
 						<control type="image">
 							<posx>0</posx>
@@ -872,11 +780,7 @@
 							<bordertexture border="-5">frames/frame_Landscape.png</bordertexture>
 							<bordersize>5</bordersize>
 							<aspectratio>stretch</aspectratio>
-<<<<<<< HEAD
 							<visible>!Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-							<visible>!Skin.HasSetting(home.widgets.watchlist) + !Skin.HasSetting(home.widgets.watchlistposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -887,7 +791,6 @@
 							<bordertexture border="-5">frames/frame_Landscape.png</bordertexture>
 							<bordersize>5</bordersize>
 							<aspectratio>stretch</aspectratio>
-<<<<<<< HEAD
 							<visible>!Skin.HasSetting(home.widgets.posters.tvshows) + !Skin.HasSetting(home.widgets.fanart.tvshows)</visible>
 						</control>
 						<control type="image">
@@ -900,9 +803,6 @@
 							<bordersize>5</bordersize>
 							<aspectratio>stretch</aspectratio>
 							<visible>Skin.HasSetting(home.widgets.fanart.tvshows)</visible>
-=======
-							<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						</control>
 					</itemlayout>
 					<focusedlayout width="311" height="261">
@@ -918,11 +818,7 @@
 							<bordersize>5</bordersize>
 							<animation reversible="false" effect="zoom" start="20,15,300,168" end="12,6,320,192" time="200">focus</animation>
 							<animation reversible="false" effect="zoom" end="20,15,300,168" start="12,6,320,192" time="200">unfocus</animation>
-<<<<<<< HEAD
 							<visible>!Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-						<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -936,7 +832,6 @@
 							<bordersize>5</bordersize>
 							<animation reversible="false" effect="zoom" start="20,15,300,168" end="12,6,320,192" time="200">focus</animation>
 							<animation reversible="false" effect="zoom" end="20,15,300,168" start="12,6,320,192" time="200">unfocus</animation>
-<<<<<<< HEAD
 							<visible>!Skin.HasSetting(home.widgets.posters.tvshows) + !Skin.HasSetting(home.widgets.fanart.tvshows)</visible>
 						</control>
 						<control type="image">
@@ -955,13 +850,6 @@
 					</focusedlayout>
 					<include condition="!Skin.HasSetting(home.widgets.watchlist.tvshows)">RecentTVShows</include>
 					<include condition="Skin.HasSetting(home.widgets.watchlist.tvshows)">watchlist_Shows</include>
-=======
-						<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-						</control>
-					</focusedlayout>
-					<include condition="!Skin.HasSetting(home.widgets.watchlist)">RecentTVShows</include>
-					<include condition="Skin.HasSetting(home.widgets.watchlist)">watchlist_Shows</include>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="fixedlist" id="8001">
 					<posx>217</posx>
@@ -979,19 +867,11 @@
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<preloaditems>3</preloaditems>
-<<<<<<< HEAD
 					<visible>Skin.HasSetting(home.widgets.posters.tvshows)</visible>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="6100" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<itemlayout width="195" height="315">
 					<visible>Skin.HasSetting(home.widgets.posters.tvshows)</visible>
-=======
-					<visible>Skin.HasSetting(home.widgets.watchlistposters) | Skin.HasSetting(home.widgets.recentposters)</visible>
-					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="6100" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-					<itemlayout width="195" height="315">
-					<visible>Skin.HasSetting(home.widgets.watchlistposters) | Skin.HasSetting(home.widgets.recentposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						<control type="image" id="289">
 							<posx>0</posx>
 							<posy>2</posy>
@@ -1001,30 +881,11 @@
 							<bordertexture border="40">frames/frame_Square.png</bordertexture>
 							<bordersize>22</bordersize>
 							<aspectratio align="center">stretch</aspectratio>
-<<<<<<< HEAD
 							<visible>Skin.HasSetting(home.widgets.posters.tvshows)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="195" height="315">
 					 <visible>[Skin.ToggleSetting(home.widgets.watchlist.tvshows) | Skin.HasSetting(home.widgets.posters.tvshows)]</visible>
-=======
-							<visible>!StringCompare(Control.GetLabel(289),empty) + Skin.HasSetting(home.widgets.recentposters) + !Skin.HasSetting(home.widgets.watchlistposters)</visible>
-						</control>
-						<control type="image" id="289">
-							<posx>0</posx>
-							<posy>2</posy>
-							<width>205</width>
-							<height>284</height>
-							<texture background="true">$INFO[ListItem.icon]</texture>
-							<bordertexture border="40">frames/frame_Square.png</bordertexture>
-							<bordersize>22</bordersize>
-							<aspectratio align="center">stretch</aspectratio>
-							<visible>!StringCompare(Control.GetLabel(289),empty) + Skin.HasSetting(home.widgets.watchlistposters + !Skin.HasSetting(home.widgets.recentposters)</visible>
-						</control>
-					</itemlayout>
-					<focusedlayout width="195" height="315">
-					 <visible>[Skin.HasSetting(home.widgets.watchlistposters) | Skin.HasSetting(home.widgets.recentposters)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					 	<control type="image" id="299">
 							<posx>0</posx>
 							<posy>2</posy>
@@ -1037,33 +898,11 @@
 							<aspectratio align="center">stretch</aspectratio>
 							<animation reversible="false" effect="zoom" start="30,20,205,284" end="-4,6,220,305" time="200">focus</animation>
 							<animation reversible="false" effect="zoom" end="30,20,205,284" start="-4,6,220,305" time="200">unfocus</animation>							
-<<<<<<< HEAD
 							<visible>Skin.HasSetting(home.widgets.posters.tvshows)</visible>
 						</control>
 					</focusedlayout>
 					<include condition="!Skin.HasSetting(home.widgets.watchlist.tvshows)">RecentTVShows</include>
 					<include condition="Skin.HasSetting(home.widgets.watchlist.tvshows)">watchlist_Shows</include>
-=======
-							<visible>!StringCompare(Control.GetLabel(889),empty) + Skin.HasSetting(home.widgets.recentposters) + !Skin.HasSetting(home.widgets.watchlistposters)</visible>
-						</control>
-						<control type="image" id="299">
-							<posx>0</posx>
-							<posy>2</posy>
-							<width>205</width>
-							<height>284</height>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<texture background="true">$INFO[ListItem.icon]</texture>
-							<bordertexture border="40">frames/frame_Square.png</bordertexture>
-							<bordersize>22</bordersize>
-							<aspectratio align="center">stretch</aspectratio>
-							<animation reversible="false" effect="zoom" start="30,20,205,284" end="-4,6,220,305" time="200">focus</animation>
-							<animation reversible="false" effect="zoom" end="30,20,205,284" start="-4,6,220,305" time="200">unfocus</animation>							
-							<visible>!StringCompare(Control.GetLabel(889),empty) + Skin.HasSetting(home.widgets.watchlistposters + !Skin.HasSetting(home.widgets.recentposters)</visible>
-						</control>
-					</focusedlayout>
-					<include condition="!Skin.HasSetting(home.widgets.watchlist)">RecentTVShows</include>
-					<include condition="Skin.HasSetting(home.widgets.watchlist)">watchlist_Shows</include>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 			</control>
 
@@ -1075,11 +914,7 @@
 				<animation effect="slide" end="100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Control.HasFocus(1210) + Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>				
 				<animation effect="slide" end="-100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>								
 				<visible>Library.HasContent(TVShows)</visible>
-<<<<<<< HEAD
 				<visible>[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + Skin.HasSetting(home.widgets.watchlistrecent.tvshows) + !Skin.HasSetting(home.widgets.tvshows)</visible>
-=======
-				<visible>[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + Skin.HasSetting(home.widgets.watchlistrecent) + !Skin.HasSetting(home.widgets.tvshows</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<control type="label">
 					<description>Latest Episodes</description>
 					<posx>179</posx>
@@ -1148,11 +983,7 @@
 					<include>info_Title</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8008) + !Skin.HasSetting(home.widgets.recentpostersdouble)</visible>
-=======
-					<visible>Control.HasFocus(8008) + !Skin.HasSetting(home.widgets.recentpostersdouble</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Title Episodes Poster</description>
@@ -1167,11 +998,7 @@
 					<include>info_Title</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8008) + Skin.HasSetting(home.widgets.recentpostersdouble)</visible>
-=======
-					<visible>Control.HasFocus(8008) + Skin.HasSetting(home.widgets.recentpostersdouble</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Title Watchlist</description>
@@ -1265,11 +1092,7 @@
 				</control>
 				<control type="fixedlist" id="8008">
 					<posx>200</posx>
-<<<<<<< HEAD
 					<posy>60</posy>
-=======
-					<posy>68</posy>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<width>990</width>
 					<height>400</height>
 					<onleft>8001</onleft>
@@ -1351,11 +1174,7 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="311" height="261">
-<<<<<<< HEAD
 						<visible>!Skin.ToggleSetting(home.widgets.watchlist.tvshows)</visible>
-=======
-						<visible>!Skin.HasSetting(home.widgets.watchlistposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						<control type="image">
 							<posx>0</posx>
 							<posy>2</posy>
@@ -1484,11 +1303,7 @@
 				<animation effect="slide" end="100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Control.HasFocus(1200) + Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>				
 				<animation effect="slide" end="-100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>								
 				<visible>Library.HasContent(Movies)</visible>
-<<<<<<< HEAD
 				<visible>[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.watchlistrecent.movies) + !Skin.HasSetting(home.widgets.movies)</visible>
-=======
-				<visible>[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.watchlistrecent) + !Skin.HasSetting(home.widgets.movies)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<control type="label">
 					<description>Latest Movies</description>
 					<posx>159</posx>
@@ -1501,11 +1316,7 @@
 					<font>homeMenuInfo</font>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>!Skin.HasSetting(home.widgets.watchlist.movies) + !IsEmpty(Window(Home).Property(RecentMovie.1.Title))</visible>
-=======
-					<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				 <control type="label">
 					<description>Currently Watching</description>
@@ -1517,11 +1328,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>homeMenuInfo</font>
-<<<<<<< HEAD
 					<visible>Skin.HasSetting(home.widgets.watchlist.movies) + !IsEmpty(Window(Home).Property(RecommendedMovie.1.Title))</visible>
-=======
-					<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 				</control> 
@@ -1538,11 +1345,7 @@
 					<include>info_Title</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8000) + [Skin.HasSetting(home.widgets.fanart.movies) | Skin.HasSetting(home.widgets.fanart.movies)]</visible>
-=======
-					<visible>Control.HasFocus(8000) + [Skin.HasSetting(home.widgets.recentfanartmovies) | Skin.HasSetting(home.widgets.watchlistfanartmovies)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Title</description>
@@ -1557,11 +1360,7 @@
 					<include>info_Title</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8000) + ![Skin.HasSetting(home.widgets.fanart.movies) | Skin.HasSetting(home.widgets.fanart.movies)]</visible>
-=======
-					<visible>Control.HasFocus(8000) + ![Skin.HasSetting(home.widgets.recentfanartmovies) | Skin.HasSetting(home.widgets.watchlistfanartmovies)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Year and Runtime Fanart</description>
@@ -1569,22 +1368,14 @@
 					<posy>280</posy>
 					<height>20</height>
 					<width>800</width>
-<<<<<<< HEAD
 					<label>$INFO[Container(8000).ListItem.Property(Node)]$INFO[Container(8000).ListItem.Property(Year)]$INFO[Container(8000).ListItem.Property(RunningTime), • ] mins$INFO[Container(8000).ListItem.Property(Info), • ]</label>
-=======
-					<label>$INFO[Container(8000).ListItem.Property(Node)]$INFO[Container(8000).ListItem.Property(Year)]$INFO[Container(8000).ListItem.Property(RunningTime), • ] mins</label>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<align>left</align>
 					<font>titleSmallest</font>
 					<shadowcolor>black</shadowcolor>
 					<include>info_Sub</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8000) + [Skin.HasSetting(home.widgets.fanart.movies) | Skin.HasSetting(home.widgets.fanart.movies)]</visible>
-=======
-					<visible>Control.HasFocus(8000) + [Skin.HasSetting(home.widgets.recentfanartmovies) | Skin.HasSetting(home.widgets.watchlistfanartmovies)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Year and Runtime Recently Added</description>
@@ -1592,22 +1383,14 @@
 					<posy>365</posy>
 					<height>20</height>
 					<width>800</width>
-<<<<<<< HEAD
 					<label>$INFO[Container(8000).ListItem.Property(Node)]$INFO[Container(8000).ListItem.Property(Year)]$INFO[Container(8000).ListItem.Property(RunningTime), • ] mins$INFO[Container(8000).ListItem.Property(Info), • ]</label>
-=======
-					<label>$INFO[Container(8000).ListItem.Property(Node)]$INFO[Container(8000).ListItem.Property(Year)]$INFO[Container(8000).ListItem.Property(RunningTime), • ] mins</label>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<align>left</align>
 					<font>titleSmallest</font>
 					<shadowcolor>black</shadowcolor>
 					<include>info_Sub</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8000) + ![Skin.HasSetting(home.widgets.fanart.movies) | Skin.HasSetting(home.widgets.fanart.movies)] + !Skin.HasSetting(home.widgets.watchlist.movies)</visible>
-=======
-					<visible>Control.HasFocus(8000) + ![Skin.HasSetting(home.widgets.recentfanartmovies) | Skin.HasSetting(home.widgets.watchlistfanartmovies)] + !Skin.HasSetting(home.widgets.watchlist)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="label">
 					<description>Year and Genre Watchlist</description>
@@ -1615,22 +1398,14 @@
 					<posy>365</posy>
 					<height>20</height>
 					<width>800</width>
-<<<<<<< HEAD
 					<label>$INFO[Container(8000).ListItem.Property(Year) ]$INFO[Container(8000).ListItem.Property(Genre), • ]$INFO[Container(8000).ListItem.Property(Runtime)  • ] mins$INFO[Container(8000).ListItem.Property(Info), • ]</label>
-=======
-					<label>$INFO[Container(8000).ListItem.Property(Year) ]$INFO[Container(8000).ListItem.Property(Genre), • ]$INFO[Container(8000).ListItem.Property(Runtime)  • ] mins.</label>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<align>left</align>
 					<font>titleSmallest</font>
 					<shadowcolor>black</shadowcolor>
 					<include>info_Sub</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8000) + ![Skin.HasSetting(home.widgets.fanart.movies) | Skin.HasSetting(home.widgets.fanart.movies)] + Skin.HasSetting(home.widgets.watchlist.movies)</visible>
-=======
-					<visible>Control.HasFocus(8000) + ![Skin.HasSetting(home.widgets.recentfanartmovies) | Skin.HasSetting(home.widgets.watchlistfanartmovies)] + Skin.HasSetting(home.widgets.watchlist)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="textbox">
 					<description>Plot Fanart</description>
@@ -1645,11 +1420,7 @@
 					<include>description_Small</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8000) + [Skin.HasSetting(home.widgets.fanart.movies) | Skin.HasSetting(home.widgets.fanart.movies)]</visible>
-=======
-					<visible>Control.HasFocus(8000) + [Skin.HasSetting(home.widgets.recentfanartmovies) | Skin.HasSetting(home.widgets.watchlistfanartmovies)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="textbox">
 					<description>Plot</description>
@@ -1664,11 +1435,7 @@
 					<include>description_Small</include>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
-<<<<<<< HEAD
 					<visible>Control.HasFocus(8000)+ ![Skin.HasSetting(home.widgets.fanart.movies) | Skin.HasSetting(home.widgets.fanart.movies)]</visible>
-=======
-					<visible>Control.HasFocus(8000)+ ![Skin.HasSetting(home.widgets.recentfanartmovies) | Skin.HasSetting(home.widgets.watchlistfanartmovies)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="fixedlist" id="8000">
 					<posx>177</posx>
@@ -1686,11 +1453,7 @@
 					<pagecontrol>-</pagecontrol>
 					<scrolltime tween="Cubic" easing="Out">400</scrolltime>
 					<preloaditems>3</preloaditems>
-<<<<<<< HEAD
 					<visible>![Skin.HasSetting(home.widgets.fanart.movies) | Skin.HasSetting(home.widgets.fanart.movies)]</visible>
-=======
-					<visible>![Skin.HasSetting(home.widgets.recentfanartmovies) | Skin.HasSetting(home.widgets.watchlistfanartmovies)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="6100" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<itemlayout width="195" height="315">
@@ -1720,13 +1483,8 @@
 							<animation reversible="false" effect="zoom" end="30,20,205,284" start="-4,6,220,305" time="200">unfocus</animation>							
 						</control>
 					</focusedlayout>
-<<<<<<< HEAD
 					<include condition="!Skin.HasSetting(home.widgets.watchlist.movies)">RecentMovies</include>
 					<include condition="Skin.HasSetting(home.widgets.watchlist.movies)">watchlist_Movies</include>
-=======
-					<include condition="!Skin.HasSetting(home.widgets.watchlist)">RecentMovies</include>
-					<include condition="Skin.HasSetting(home.widgets.watchlist)">watchlist_Movies</include>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 				<control type="fixedlist" id="8000">
 					<posx>177</posx>
@@ -1744,11 +1502,7 @@
 					<pagecontrol>-</pagecontrol>
 					<scrolltime tween="Cubic" easing="Out">400</scrolltime>
 					<preloaditems>3</preloaditems>
-<<<<<<< HEAD
 					<visible>Skin.HasSetting(home.widgets.fanart.movies) | Skin.HasSetting(home.widgets.fanart.movies)</visible>
-=======
-					<visible>Skin.HasSetting(home.widgets.recentfanartmovies) | Skin.HasSetting(home.widgets.watchlistfanartmovies)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="6100" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<itemlayout width="311" height="261">
@@ -1761,11 +1515,7 @@
 							<bordertexture border="-5">frames/frame_Landscape.png</bordertexture>
 							<bordersize>5</bordersize>
 							<aspectratio>stretch</aspectratio>
-<<<<<<< HEAD
 							<visible>!Skin.HasSetting(home.widgets.watchlist.movies) + !Skin.HasSetting(home.widgets.watchlistposters.movies)</visible>
-=======
-							<visible>!Skin.HasSetting(home.widgets.watchlist) + !Skin.HasSetting(home.widgets.watchlistposters)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -1776,11 +1526,7 @@
 							<bordertexture border="-5">frames/frame_Landscape.png</bordertexture>
 							<bordersize>5</bordersize>
 							<aspectratio>stretch</aspectratio>
-<<<<<<< HEAD
 							<visible>Skin.HasSetting(home.widgets.watchlist.movies)</visible>
-=======
-							<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						</control>
 					</itemlayout>
 					<focusedlayout width="311" height="261">
@@ -1796,11 +1542,7 @@
 							<bordersize>5</bordersize>
 							<animation reversible="false" effect="zoom" start="20,15,300,168" end="12,6,320,192" time="200">focus</animation>
 							<animation reversible="false" effect="zoom" end="20,15,300,168" start="12,6,320,192" time="200">unfocus</animation>
-<<<<<<< HEAD
 						<visible>!Skin.HasSetting(home.widgets.watchlist.movies)</visible>
-=======
-						<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -1814,19 +1556,11 @@
 							<bordersize>5</bordersize>
 							<animation reversible="false" effect="zoom" start="20,15,300,168" end="12,6,320,192" time="200">focus</animation>
 							<animation reversible="false" effect="zoom" end="20,15,300,168" start="12,6,320,192" time="200">unfocus</animation>
-<<<<<<< HEAD
 						<visible>Skin.HasSetting(home.widgets.watchlist.movies)</visible>
 						</control>
 					</focusedlayout>
 					<include condition="!Skin.HasSetting(home.widgets.watchlist.movies)">RecentMovies</include>
 					<include condition="Skin.HasSetting(home.widgets.watchlist.movies)">watchlist_Movies</include>
-=======
-						<visible>Skin.HasSetting(home.widgets.watchlist)</visible>
-						</control>
-					</focusedlayout>
-					<include condition="Skin.HasSetting(home.widgets.recentfanartmovies)">RecentMovies</include>
-					<include condition="!Skin.HasSetting(home.widgets.recentfanartmovies)">watchlist_Movies</include>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</control>
 			</control>
 
@@ -1839,11 +1573,7 @@
 				<animation effect="slide" end="100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Control.HasFocus(1200) + Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>				
 				<animation effect="slide" end="-100,0" delay="0" time="0" tween="back" easing="inout" pulse="false" condition="Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>								
 				<visible>Library.HasContent(Movies)</visible>
-<<<<<<< HEAD
 				<visible>[[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)]] + Skin.HasSetting(home.widgets.watchlistrecent.movies) + !Skin.HasSetting(home.widgets.movies)</visible>
-=======
-				<visible>[[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)]] + Skin.HasSetting(home.widgets.watchlistrecent) + !Skin.HasSetting(home.widgets.movies)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<control type="label">
 					<description>Latest Movies</description>
 					<posx>159</posx>
@@ -1855,10 +1585,7 @@
 					<aligny>center</aligny>
 					<font>homeMenuInfo</font>
 					<shadowcolor>black</shadowcolor>
-<<<<<<< HEAD
 					<visible>!IsEmpty(Window(Home).Property(RecentMovie.1.Title))</visible>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 				</control>
@@ -1873,10 +1600,7 @@
 					<aligny>center</aligny>
 					<font>homeMenuInfo</font>
 					<shadowcolor>black</shadowcolor>
-<<<<<<< HEAD
 					<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.1.Title))</visible>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 				</control>
@@ -1912,11 +1636,7 @@
 					<pagecontrol>-</pagecontrol>
 					<scrolltime tween="Cubic" easing="Out">400</scrolltime>
 					<preloaditems>3</preloaditems>
-<<<<<<< HEAD
 					<visible>!Skin.HasSetting(home.widgets.watchlist.movies)</visible>
-=======
-					<visible>!Skin.HasSetting(home.widgets.watchlist)</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="6100" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<itemlayout width="195" height="315">
@@ -2016,10 +1736,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>homeMenuInfo</font>
-<<<<<<< HEAD
 					<visible>!IsEmpty(Window(Home).Property(RecentAlbum.1.Title))</visible>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 				</control>
@@ -2131,10 +1848,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>homeMenuInfo</font>
-<<<<<<< HEAD
 					<visible>!IsEmpty(Window(Home).Property(RandomAddon.1.Title))</visible>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(13) | Container(9000).HasFocus(14)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(13) | Container(9000).HasFocus(14)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 				</control>

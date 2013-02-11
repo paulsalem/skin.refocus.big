@@ -248,10 +248,7 @@
 			</control>
 			<control type="label">
 				<posx>25r</posx>
-<<<<<<< HEAD
 				<posy>28</posy>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<label>$INFO[System.Date(DDD)] $INFO[System.Date(d)] $INFO[System.Date(MMM)]</label>
 				<shadowcolor>black</shadowcolor>
 				<include>toast_Bottom</include>
@@ -259,10 +256,7 @@
 			</control>
 			<control type="label">
 				<posx>25r</posx>
-<<<<<<< HEAD
 				<posy>28</posy>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				<label>$INFO[System.Date(DDD)] $INFO[System.Date(d)] $INFO[System.Date(MMM)]</label>
 				<shadowcolor>black</shadowcolor>
 				<include>toast_Bottom_Home</include>
@@ -775,11 +769,7 @@
 		<height>32</height>
 		<texture>overlays/OverlayResumable.png</texture>
 		<aspect>keepaspect</aspect>
-<<<<<<< HEAD
 		<!--<visible>[Container.Content(movies) | Container.Content(episodes)] + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + IsEmpty(ListItem.Property(ReleaseDate)) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>-->
-=======
-		<!--<visible>[Container.Content(movies) | Container.Content(episodes)] + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + IsEmpty(ListItem.Property(ReleaseDate) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>-->
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 		<visible>Skin.HasSetting(watched.original) + !Skin.HasSetting(watched.alternative) + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>	
 	</include>
 	<include name="overlay_Resumable-list">
@@ -1906,11 +1896,7 @@
 		<include>autoscroll-line</include>
 		<animation effect="slide" end="0,-3" condition="Skin.HasSetting(numitems.enable)">Conditional</animation>
 		<animation effect="slide" end="25" condition="Skin.HasSetting(indicator.enable) + Control.IsVisible(6100)">Conditional</animation>
-<<<<<<< HEAD
 		<visible>!Window.IsActive(extendedprogressdialog)  + !Control.IsVisible(5411) + !Control.IsVisible(54111) + !Window.IsActive(busydialog) + ![Control.IsVisible(9900) | Control.IsVisible(531) | Control.IsVisible(550) | Control.IsVisible(551) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
-=======
-		<visible>!Control.IsVisible(5411) + !Control.IsVisible(54111) + !Window.IsActive(busydialog) + ![Control.IsVisible(9900) | Control.IsVisible(531) | Control.IsVisible(550) | Control.IsVisible(551) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 	</include>
 	<include name="windowTitle_Video">
 		<control type="label">
@@ -2251,13 +2237,9 @@
         <scroll>false</scroll>
     </include>
 
-<<<<<<< HEAD
 <include name="screenwidth">
 </include>
     
-=======
-
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 	<include name="OSDFwRwLabelMinimal">
         <posx>1083</posx>
         <font>description</font>

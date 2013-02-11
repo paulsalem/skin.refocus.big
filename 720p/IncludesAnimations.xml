@@ -267,7 +267,6 @@
 			<effect type="fade" start="95" end="0" time="300" tween="Quadratic" easing="Out" />
 		</animation>
 	</include>
-<<<<<<< HEAD
 	<include name="transition_OSD2">
 		<animation type="Visible" reversible="false">
 			<effect type="fade" start="0" end="95" time="300" tween="Quadratic" easing="Out" />
@@ -282,8 +281,6 @@
 			<effect type="fade" start="95" end="0" time="300" tween="Quadratic" easing="Out" />
 		</animation>
 	</include>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 	<include name="transition_HomeMenu">
 		<animation type="WindowOpen">
 			<effect type="fade" start="0" end="100" time="250" />

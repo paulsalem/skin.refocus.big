@@ -4,10 +4,7 @@
 	
 
 	<controls>
-<<<<<<< HEAD
 	
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 	<!-- global background --->
 		<control type="largeimage">
 			<include>screen_Dimensions</include>
@@ -37,7 +34,6 @@
 			<include>screen_Dimensions</include>
 			<visible>[Skin.HasSetting(backgroundvideo) + !Window.IsActive(videoplaylist) + Player.HasVideo] | [Container(9000).HasFocus(22) + Player.HasVideo]</visible>
 		</control>
-<<<<<<< HEAD
 		<!-- now playing widget -->
 			<control type ="group">
 				<visible>[Player.HasVideo + Skin.HasSetting(home.widgets.nowplaying) + Skin.HasSetting(backgroundvideo)] | [!Skin.HasSetting(homemenu.playing) + Player.HasVideo + !Skin.HasSetting(backgroundvideo) + Container(9000).HasFocus(22)]</visible>
@@ -102,8 +98,6 @@
 					<include>transition_OSD</include>
 				</control>
 			</control>
-=======
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 		<!-- weather fanart --->
 		<control type="multiimage" id="1">
 			<include>screen_Dimensions</include>
@@ -170,7 +164,6 @@
 			<fadetime>850</fadetime>
 			<include>fadeinout</include>
 			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.video.path)) + IsEmpty(Skin.String(fanart.video.image)) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)]</visible>
-<<<<<<< HEAD
 		</control>
 		<control type="image">
 			<include>screen_Dimensions</include>
@@ -190,9 +183,6 @@
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(80091) + !Skin.HasSetting(home.widgets.nofanart)</visible>
 		</control>
-=======
-		</control>]
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 		<!-- movies fanart --->
 		<control type="image">
 			<include>screen_Dimensions</include>
@@ -522,7 +512,6 @@
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true">overlays/vignette.png</texture>
-<<<<<<< HEAD
 			<visible>Skin.HasSetting(home.vignette) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + ![Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(5)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(1)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(6)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(3)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(4)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(9)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(10)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(13)]</visible>
 			<include>transition_Toast</include>
 		</control>
@@ -531,9 +520,6 @@
 			<include>screen_Dimensions</include>
 			<texture background="true">overlays/vignette.png</texture>
 			<visible>Skin.HasSetting(home.vignette) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + [[[Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + Skin.HasSetting(home.widgets.tvshows)] | [[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + Skin.HasSetting(home.widgets.movies)] | [[Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + Skin.HasSetting(home.widgets.music)] | [[Container(9000).HasFocus(13) | Container(9000).HasFocus(14)] + Skin.HasSetting(home.widgets.addons)] | [[Container(9000).HasFocus(1) | Container(9000).HasFocus(2)] + Skin.HasSetting(home.widgets.tvmovies)]] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)] | [Control.HasFocus(80081) | Control.HasFocus(80091)]]</visible>
-=======
-			<visible>Skin.HasSetting(home.vignette) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + ![Container(9000).HasFocus(17) + Skin.HasSetting(home.widgets)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(5)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(6)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(3)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(4)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(9)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(10)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(13)] + ![Skin.HasSetting(home.widgets) + Container(9000).HasFocus(14)]</visible>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 			<include>transition_Toast</include>
 		</control>
 	<include>HomeWidgets</include>
@@ -550,11 +536,7 @@
 				<shadowcolor>black</shadowcolor>
 				<animation type="WindowOpen" condition="!Skin.HasSetting(home.widgets.noanimations)">
 					<effect type="fade" tween="Quadratic" easing="Out" start="0" end="100" time="1250"/>
-<<<<<<< HEAD
 					<effect type="slide" tween="Quadratic" easing="Out" start="250" end="-10" time="1250"/>
-=======
-					<effect type="slide" tween="Quadratic" easing="Out" start="250" end="-10" time="3000"/>
->>>>>>> f226ed99ed533ebefd9e07b016f9897b6f20a5eb
 				</animation>
 				<visible>!Skin.HasSetting(home.widgets.noanimations) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(infodialog)] + !Window.IsActive(virtualkeyboard) + !Window.IsActive(favourites) + ![Control.HasFocus(1110) | Control.HasFocus(1120) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160) | Control.HasFocus(1170) | Control.HasFocus(1180) | Control.HasFocus(1200) | Control.HasFocus(1210)] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
 			</control>
