@@ -709,8 +709,9 @@
 			<!--backspace to home-->
 			<control type="radiobutton" id="901">
 				<label>$LOCALIZE[32000]</label>
-				<onclick>Skin.ToggleSetting(backspacehome.enable)</onclick>
-				<selected>Skin.HasSetting(backspacehome.enable)</selected>
+				<onclick condition="Skin.String(backspacehome,return)">Skin.SetString(backspacehome,)</onclick>
+				<onclick condition="!Skin.String(backspacehome,return)">Skin.SetString(backspacehome, return)</onclick>
+				<selected>Skin.String(backspacehome,return)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!--smooth scrolling-->

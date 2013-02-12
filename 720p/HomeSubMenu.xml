@@ -20,56 +20,56 @@
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[1024]</label>
-						<onclick>ActivateWindow(Videos,Files)</onclick>
+						<onclick>ActivateWindow(Videos,Files,$INFO[Skin.String(backspacehome)])</onclick>
 					</item>
 					<item id="2">
 						<label>$INFO[Skin.String(videomenu.playlist1.label)]</label>
-						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist1.path)],return)</onclick>
+						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist1.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist1.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Skin.String(videomenu.playlist2.label)]</label>
-						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist2.path)],return)</onclick>
+						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist2.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist2.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="4">
 						<label>$INFO[Skin.String(videomenu.playlist3.label)]</label>
-						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist3.path)],return)</onclick>
+						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist3.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist3.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="5">
 						<label>$INFO[Skin.String(videomenu.playlist4.label)]</label>
-						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist4.path)],return)</onclick>
+						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist4.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist4.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="6">
 						<label>$INFO[Skin.String(videomenu.playlist5.label)]</label>
-						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist5.path)],return)</onclick>
+						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist5.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist5.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="7">
 						<label>$INFO[Skin.String(videomenu.playlist6.label)]</label>
-						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist6.path)],return)</onclick>
+						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist6.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist6.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="8">
 						<label>$INFO[Skin.String(videomenu.playlist7.label)]</label>
-						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist7.path)],return)</onclick>
+						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist7.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist7.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="9">
 						<label>$INFO[Skin.String(videomenu.playlist8.label)]</label>
-						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist8.path)],return)</onclick>
+						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist8.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist8.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="10">
 						<label>$LOCALIZE[24001]</label>
-						<onclick>ActivateWindow(VideoLibrary,Addons,return)</onclick>
+						<onclick>ActivateWindow(VideoLibrary,Addons,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!Skin.HasSetting(videomenu.addons)</visible>
 					</item>
 					<item id="11">
 						<label>$LOCALIZE[136]</label>
-						<onclick>ActivateWindow(videolibrary,playlists, return)</onclick>
+						<onclick>ActivateWindow(videolibrary,playlists, $INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!Skin.HasSetting(videomenu.videoplaylists)</visible>
 					</item>
 					<item id="12">
@@ -181,73 +181,38 @@
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[132]</label>
-						<onclick>ActivateWindow(MusicLibrary,albums)</onclick>
-						<visible>Library.HasContent(music) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="1">
-						<label>$LOCALIZE[132]</label>
-						<onclick>ActivateWindow(MusicLibrary,albums,return)</onclick>
-						<visible>Library.HasContent(music) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(MusicLibrary,albums,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Library.HasContent(music)</visible>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[31970]</label>
-						<onclick>ActivateWindow(MusicLibrary,recentlyaddedalbums)</onclick>
-						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.recent) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="2">
-						<label>$LOCALIZE[31970]</label>
-						<onclick>ActivateWindow(MusicLibrary,recentlyaddedalbums,return)</onclick>
-						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.recent) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(MusicLibrary,recentlyaddedalbums,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.recent)</visible>
 					</item>
 					<item id="3">
 						<label>$LOCALIZE[31971]</label>
-						<onclick>ActivateWindow(MusicLibrary,recentlyplayedalbums)</onclick>
-						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.played) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="3">
-						<label>$LOCALIZE[31971]</label>
-						<onclick>ActivateWindow(MusicLibrary,recentlyplayedalbums,return)</onclick>
-						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.played) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(MusicLibrary,recentlyplayedalbums,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.played)</visible>
 					</item>
 					<item id="4">
 						<label>$LOCALIZE[133]</label>
-						<onclick>ActivateWindow(MusicLibrary,artists)</onclick>
-						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.artists) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="4">
-						<label>$LOCALIZE[133]</label>
-						<onclick>ActivateWindow(MusicLibrary,artists,return)</onclick>
-						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.artists) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(MusicLibrary,artists,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.artists)</visible>
 					</item>
 					<item id="5">
 						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(MusicLibrary,genres)</onclick>
-						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.genres) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="5">
-						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(MusicLibrary,genres,return)</onclick>
-						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.genres) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(MusicLibrary,genres,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.genres)</visible>
 					</item>
 					<item id="6">
 						<label>$LOCALIZE[24001]</label>
-						<onclick>ActivateWindow(MusicLibrary,Addons)</onclick>
-						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.addons) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="6">
-						<label>$LOCALIZE[24001]</label>
-						<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
-						<visible>!Library.HasContent(music) + Skin.HasSetting(musicmenu.addons) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(MusicLibrary,Addons,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Library.HasContent(music) + Skin.HasSetting(musicmenu.addons)</visible>
 					</item>
 					<item id="8">
 						<label>$LOCALIZE[136]</label>
-						<onclick>ActivateWindow(MusicLibrary,playlists)</onclick>
-						<visible>Skin.HasSetting(musicmenu.playlists) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="8">
-						<label>$LOCALIZE[136]</label>
-						<onclick>ActivateWindow(MusicLibrary,playlists,return)</onclick>
-						<visible>Skin.HasSetting(musicmenu.playlists) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(MusicLibrary,playlists,$INFO[Skin.String(backspacehome)]))</onclick>
+						<visible>Skin.HasSetting(musicmenu.playlists)</visible>
 					</item>
 					<item id="9">
 						<label>$LOCALIZE[589]</label>
@@ -261,7 +226,7 @@
 					</item>
 					<item id="11">
 						<label>$LOCALIZE[20389]</label>
-						<onclick>ActivateWindow(videolibrary,musicvideotitles)</onclick>
+						<onclick>ActivateWindow(videolibrary,musicvideotitles,$INFO[Skin.String(backspacehome)]))</onclick>
 						<visible>Library.HasContent(musicvideos) + Skin.HasSetting(musicmenu.videos)</visible>
 					</item>
 					<item id="12">
@@ -270,7 +235,7 @@
 					</item>
 					<item id="13">
 						<label>$INFO[Skin.String(musicmenu.playlist1.label)]</label>
-						<onclick>ActivateWindow(musiclibrary,$INFO[Skin.String(musicmenu.playlist1.path)],return)</onclick>
+						<onclick>ActivateWindow(musiclibrary,$INFO[Skin.String(musicmenu.playlist1.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(musicmenu.playlist1.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="13">
@@ -358,21 +323,21 @@
 					</item>
 					<item id="8">
 						<label>$LOCALIZE[24033]</label>
-						<onclick>ActivateWindow(addonbrowser,addons://all/)</onclick>
+						<onclick>ActivateWindow(addonbrowser,addons://all/, $INFO[Skin.String(backspacehome)])</onclick>
 					</item>
 					<item id="9">
 						<label>$LOCALIZE[24043]</label>
-						<onclick>ActivateWindow(addonbrowser,addons://outdated/)</onclick>
+						<onclick>ActivateWindow(addonbrowser,addons://outdated/, $INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(addonsmenu.updates)</visible>
 					</item>
 					<item id="10">
 						<label>$LOCALIZE[24062]</label>
-						<onclick>ActivateWindow(addonbrowser,addons://enabled/)</onclick>
+						<onclick>ActivateWindow(addonbrowser,addons://enabled/, $INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(addonsmenu.enabled)</visible>
 					</item>
 					<item id="11">
 						<label>$LOCALIZE[0]</label>
-						<onclick>ActivateWindow(programs,addons, return)</onclick>
+						<onclick>ActivateWindow(programs,addons, $INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(addonsmenu.programs)</visible>
 					</item>
 				</content>
@@ -520,13 +485,7 @@
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[1024]</label>
-						<onclick>ActivateWindow(Videos,MovieTitles)</onclick>
-						<visible>!Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="1">
-						<label>$LOCALIZE[1024]</label>
-						<onclick>ActivateWindow(videolibrary,movietitles,return)</onclick>
-						<visible>Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(Videos,MovieTitles,$INFO[Skin.String(backspacehome)])</onclick>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[32052]</label>
@@ -537,63 +496,43 @@
 					</item>
 					<item id="3">
 						<label>$LOCALIZE[31095]</label>
-						<onclick>ActivateWindow(Videos,recentlyaddedmovies)</onclick>
-						<visible>Skin.HasSetting(moviesmenu.recent) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="3">
-						<label>$LOCALIZE[31095]</label>
-						<onclick>ActivateWindow(Videos,recentlyaddedmovies,return)</onclick>
-						<visible>Skin.HasSetting(moviesmenu.recent) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(Videos,recentlyaddedmovies,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Skin.HasSetting(moviesmenu.recent)</visible>
 					</item>
 					<item id="4">
 						<label>$LOCALIZE[16101]</label>
-						<onclick>ActivateWindow(Videos,special://skin/playlists/Unwatched Movies.xsp,return)</onclick>
+						<onclick>ActivateWindow(Videos,special://skin/playlists/Unwatched Movies.xsp,$INFO[Skin.String(backspacehome)]))</onclick>
 						<visible>Skin.HasSetting(moviesmenu.unwatched)</visible>
 					</item>
 					<item id="5">
 						<label>$LOCALIZE[575]</label>
-						<onclick>ActivateWindow(videolibrary,special://skin/playlists/Movies In Progress.xsp,return)</onclick>
+						<onclick>ActivateWindow(videolibrary,special://skin/playlists/Movies In Progress.xsp,$INFO[Skin.String(backspacehome)]))</onclick>
 						<visible>Skin.HasSetting(moviesmenu.inprogress)</visible>
 					</item>
 					<item id="6">
 						<label>$LOCALIZE[20434]</label>
-						<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
+						<onclick>ActivateWindow(Videos,MovieSets,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Library.HasContent(MovieSets) + Skin.HasSetting(moviesmenu.sets)</visible>
 					</item>
 					<item id="7">
 						<label>$LOCALIZE[31011]</label>
-						<onclick>XBMC.ActivateWindow(Videos, plugin://plugin.video.the.trailers/)</onclick>
+						<onclick>XBMC.ActivateWindow(Videos, plugin://plugin.video.the.trailers/,$INFO[Skin.String(backspacehome)]))</onclick>
 						<visible>Skin.HasSetting(moviesmenu.trailers) + System.HasAddon(plugin.video.the.trailers)</visible>
 					</item>
 					<item id="8">
 						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(Videos,moviegenres)</onclick>
-						<visible>Skin.HasSetting(moviesmenu.genres) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="8">
-						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(Videos,moviegenres,return)</onclick>
-						<visible>Skin.HasSetting(moviesmenu.genres) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(Videos,moviegenres,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Skin.HasSetting(moviesmenu.genres)</visible>
 					</item>
 					<item id="9">
 						<label>$LOCALIZE[652]</label>
-						<onclick>ActivateWindow(Videos,movieyears)</onclick>
-						<visible>Skin.HasSetting(moviesmenu.years) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="9">
-						<label>$LOCALIZE[652]</label>
-						<onclick>ActivateWindow(Videos,movieyears,return)</onclick>
-						<visible>Skin.HasSetting(moviesmenu.years) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(Videos,movieyears,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Skin.HasSetting(moviesmenu.years)</visible>
 					</item>
 					<item id="10">
 						<label>$LOCALIZE[344]</label>
-						<onclick>ActivateWindow(Videos,movieactors)</onclick>
-						<visible>Skin.HasSetting(moviesmenu.actors) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="10">
-						<label>$LOCALIZE[344]</label>
-						<onclick>ActivateWindow(Videos,movieactors,return)</onclick>
-						<visible>Skin.HasSetting(moviesmenu.actors) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(Videos,movieactors,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Skin.HasSetting(moviesmenu.actors)</visible>
 					</item>
 					<item id="11">
 						<label>$LOCALIZE[32011]</label>
@@ -626,13 +565,7 @@
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[1024]</label>
-						<onclick>ActivateWindow(Videos,tvshowtitles)</onclick>
-						<visible>!Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="1">
-						<label>$LOCALIZE[1024]</label>
-						<onclick>ActivateWindow(videolibrary,tvshowtitles,return)</onclick>
-						<visible>Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(Videos,tvshowtitles,$INFO[Skin.String(backspacehome)])</onclick>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[32052]</label>
@@ -643,53 +576,33 @@
 					</item>
 					<item id="3">
 						<label>$LOCALIZE[31094]</label>
-						<onclick>ActivateWindow(Videos,recentlyaddedepisodes)</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.recent) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="3">
-						<label>$LOCALIZE[31094]</label>
-						<onclick>ActivateWindow(Videos,recentlyaddedepisodes,return)</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.recent) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(Videos,recentlyaddedepisodes,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Skin.HasSetting(tvshowsmenu.recent)</visible>
 					</item>
 					<item id="4">
 						<label>$LOCALIZE[16101]</label>
-						<onclick>ActivateWindow(Videos,special://skin/playlists/Unwatched Episodes.xsp,return)</onclick>
+						<onclick>ActivateWindow(Videos,special://skin/playlists/Unwatched Episodes.xsp,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(tvshowsmenu.unwatched)</visible>
 					</item>
 					<item id="5">
 						<label>$LOCALIZE[575]</label>
-						<onclick>ActivateWindow(Videos,library://video/inprogressshows.xml,return)</onclick>
+						<onclick>ActivateWindow(Videos,library://video/inprogressshows.xml,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(tvshowsmenu.inprogress)</visible>
 					</item>
 					<item id="6">
 						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(Videos,tvshowgenres)</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.genres) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="6">
-						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(Videos,tvshowgenres,return)</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.genres) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(Videos,tvshowgenres,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Skin.HasSetting(tvshowsmenu.genres)</visible>
 					</item>
 					<item id="7">
 						<label>$LOCALIZE[652]</label>
-						<onclick>ActivateWindow(Videos,tvshowyears)</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.years) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="7">
-						<label>$LOCALIZE[652]</label>
-						<onclick>ActivateWindow(Videos,tvshowyears,return)</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.years) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(Videos,tvshowyears,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Skin.HasSetting(tvshowsmenu.years)</visible>
 					</item>
 					<item id="8">
 						<label>$LOCALIZE[344]</label>
-						<onclick>ActivateWindow(Videos,tvshowactors)</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.actors) + !Skin.HasSetting(backspacehome.enable)</visible>
-					</item>
-					<item id="8">
-						<label>$LOCALIZE[344]</label>
-						<onclick>ActivateWindow(Videos,tvshowactors,return)</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.actors) + Skin.HasSetting(backspacehome.enable)</visible>
+						<onclick>ActivateWindow(Videos,tvshowactors,$INFO[Skin.String(backspacehome)])</onclick>
+						<visible>Skin.HasSetting(tvshowsmenu.actors)</visible>
 					</item>
 					<item id="9">
 						<label>$LOCALIZE[31070]</label>
