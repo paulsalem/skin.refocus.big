@@ -1,5 +1,10 @@
 <window id="0">
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<!-- convert existing backspacehome setting to string -->
+	<onload condition="Skin.HasSetting(backspacehome.enable) + !Skin.HasSetting(backspacehome.upgraded)">Skin.SetString(backspacehome, return)</onload>
+	<onload condition="!Skin.HasSetting(backspacehome.upgraded)">Skin.SetBool(backspacehome.upgraded)</onload>
+	<!-- -->
+
+	<defaultcontrol always="false">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	
 
