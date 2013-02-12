@@ -22,13 +22,8 @@
 				</item>
 				<item id="2">
 					<label>$VAR[tvshows_homemenu]</label>
-					<onclick>ActivateWindow(Videos,Files)</onclick>
-					<visible>!Skin.HasSetting(backspacehome.enable) + !Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
-				</item>
-				<item id="2">
-					<label>$VAR[tvshows_homemenu]</label>
-					<onclick>ActivateWindow(Videos,Files,return)</onclick>
-					<visible>Skin.HasSetting(backspacehome.enable) + !Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
+					<onclick>ActivateWindow(Videos,Files,$INFO[Skin.String(backspacehome)])</onclick>
+					<visible>!Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
 				</item>
 				<!-- MOVIE SETS 
 					<item id="523">
@@ -51,13 +46,8 @@
 				</item>
 				<item id="4">
 					<label>$LOCALIZE[342]</label>
-					<onclick>ActivateWindow(MyVideoLibrary,movietitles)</onclick>
-					<visible>!Skin.HasSetting(backspacehome.enable) + Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + ![Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors) | Skin.HasSetting(moviesmenu.moviesets) | Skin.HasSetting(moviesmenu.randomgenre) | Skin.HasSetting(moviesmenu.randommovie)]</visible>
-				</item>
-				<item id="4">
-					<label>$LOCALIZE[342]</label>
-					<onclick>ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
-					<visible>Skin.HasSetting(backspacehome.enable) + Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + ![Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors) | Skin.HasSetting(moviesmenu.moviesets) | Skin.HasSetting(moviesmenu.randomgenre) | Skin.HasSetting(moviesmenu.randommovie)]</visible>
+					<onclick>ActivateWindow(MyVideoLibrary,movietitles,$INFO[Skin.String(backspacehome)])</onclick>
+					<visible>Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + ![Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors) | Skin.HasSetting(moviesmenu.moviesets) | Skin.HasSetting(moviesmenu.randomgenre) | Skin.HasSetting(moviesmenu.randommovie)]</visible>
 				</item>
 				<!--tv shows-->
 				<item id="5">
@@ -67,13 +57,8 @@
 				</item>
 				<item id="6">
 					<label>$VAR[tvshows_homemenu_tvshows]</label>
-					<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles)</onclick>
-					<visible>!Skin.HasSetting(backspacehome.enable) + Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + ![Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
-				</item>
-				<item id="6">
-					<label>$VAR[tvshows_homemenu_tvshows]</label>
-					<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
-					<visible>Skin.HasSetting(backspacehome.enable) + Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + ![Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
+					<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles,$INFO[Skin.String(backspacehome)])</onclick>
+					<visible>Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + ![Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
 				</item>
 				<!--live tv-->
 				<item id="7">
