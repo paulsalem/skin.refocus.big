@@ -3,11 +3,11 @@
 	<controls>
 		<control type="group">
 			<include>controls_Video</include>
-			<visible>!Skin.HasSetting(videoosd.xperience1080)</visible>
+			<visible>!Skin.HasSetting(videoosd.xperience1080) | VideoPlayer.Content(livetv)</visible>
 		</control>
 	
 	  <control type="group">
-           <visible>Skin.HasSetting(videoosd.xperience1080)</visible>
+           <visible>Skin.HasSetting(videoosd.xperience1080) + !VideoPlayer.Content(livetv)</visible>
             <include>NowPlayingFullscreenOSD</include>
             <control type="group">
 		<visible>!Skin.HasSetting(videoosd.xperience1080minimal)</visible>

@@ -17,6 +17,7 @@
 		<include>NowPlayingFullscreen</include>
 		<include>chapters</include>
 		<visible>Skin.HasSetting(videoosd.xperience1080)</visible>
+
 		<control type="group">
 			<visible>!Skin.HasSetting(videoosd.xperience1080minimal) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd)]</visible>
 			<include>OSDWeatherClock</include>                
@@ -727,7 +728,7 @@
 				
 		
 		<!-- reFocus BIG OSD -->
-
+		
 		<!-- clearart -->
 			<control type ="group">
 				<visible>!Skin.HasSetting(osd.original) + !Skin.HasSetting(videoosd.showposter) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>

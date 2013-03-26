@@ -207,7 +207,7 @@
 	<include name="dialog_Slider">
 		<sliderwidth>210</sliderwidth>
 		<sliderheight>32</sliderheight>
-		<font>small</font>
+		<font>small</font>e
 		<height>40</height>
 		<textcolor>Color4</textcolor>
 		<focusedcolor>Color1</focusedcolor>
@@ -215,9 +215,9 @@
 		<pulseonselect>false</pulseonselect>
 		<texturefocus border="3">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
-		<texturesliderbar>osd/sliderBGsmall.png</texturesliderbar>
-		<textureslidernib>osd/sliderNib.png</textureslidernib>
-		<textureslidernibfocus>osd/sliderNibsmall.png</textureslidernibfocus>
+		<texturesliderbar>dialogs/sliderBGsmall.png</texturesliderbar>
+		<textureslidernib>dialogs/sliderNib.png</textureslidernib>
+		<textureslidernibfocus>dialogs/sliderNibsmall.png</textureslidernibfocus>
 	</include>
 	<include name="dialog_Separator">
 		<height>1</height>

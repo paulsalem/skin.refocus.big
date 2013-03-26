@@ -73,14 +73,14 @@
 	</variable>
 	
 	
-	
+	<!-->
 	<variable name="global_Info.Addon">
 		<value condition="Container.Content(movies) + !IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Property(ReleaseDate)]$INFO[ListItem.Genre, • ]</value>
 		<value condition="[Container.Content(movies) | Container.Content(tvshows)] + !IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31100]]$INFO[ListItem.Genre, • ]</value>
 		<value condition="[Container.Content(movies) | Container.Content(tvshows)] + IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[ListItem.Episode,, • $LOCALIZE[20359]]$INFO[ListItem.Premiered]</value>
 		<value>$INFO[ListItem.Label2]</value>
-	</variable>
+	</variable>-->
 	
 	<variable name="gallery_Title">
 		<value condition="Container.Content(episodes) + !SubString(ListItem.Icon,default)">$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>
@@ -148,6 +148,7 @@
 		<value condition="IsEmpty(ListItem.Thumb) + [Container.Content(movies) | Container.Content(sets)]">thumbs/movie_portrait.jpg</value>
 		<value condition="IsEmpty(ListItem.Thumb) + [Container.Content(tvshows) | Container.Content(seasons)]">thumbs/tvshow_portrait.jpg</value>
 		<value condition="IsEmpty(ListItem.Thumb) + Container.Content(actors)">thumbs/actor_portrait.jpg</value>
+		<value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="thumb_Portrait.Wide">
@@ -161,7 +162,6 @@
 		<value condition="!IsEmpty(ListItem.Title) + Container.Content(tvshows) + IsEmpty(ListItem.Property(Fanart_Image))">thumbs/tvshow_landscape.jpg</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	
 	<variable name="thumb_Square.Condition">
 		<value condition="Container.Content(albums) + IsEmpty(ListItem.Thumb)">thumbs/album.png</value>
 		<value condition="Container.Content(artists) + IsEmpty(ListItem.Thumb)">thumbs/artist.png</value>

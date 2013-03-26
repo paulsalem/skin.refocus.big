@@ -1,5 +1,23 @@
 ﻿<fonts>
 	<fontset id="Default" unicode="true">
+	<!-- NEW FONTS -->
+		<font>
+			<name>regular.Big</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>regular.Small</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>regular.SmallCaps</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+			<aspect>0.92</aspect>
+		</font>
 
 <!-- HOME -->
 		<font>
@@ -328,6 +346,24 @@
 	</fontset>
 
 <fontset id="Original" unicode="true">
+<!-- NEW FONTS -->
+		<font>
+			<name>regular.Big</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>regular.Small</name>
+			<filename>Regular.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>regular.SmallCaps</name>
+			<filename>Regular.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+			<aspect>0.92</aspect>
+		</font>
 <!-- HOME -->
 		<font>
 			<name>homeMenu</name>
@@ -657,6 +693,24 @@
 
 
 	<fontset id="reAlaska" unicode="true">
+<!-- NEW FONTS -->
+		<font>
+			<name>regular.Big</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>regular.Small</name>
+			<filename>Regular.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>regular.SmallCaps</name>
+			<filename>Regular.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+			<aspect>0.92</aspect>
+		</font>
 <!---HOME------>
 		<font>
 			<name>homeMenu</name>

@@ -382,7 +382,7 @@
 					<posy>55</posy>
 					<visible>[Skin.HasSetting(videoosd.realaska)] + Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 					<control type="textbox" id="1">
-						<height>55</height>
+						<height>64</height>
 						<width>950</width>
 						<label>$VAR[player_Plot.Condition]</label>
 						<textcolor>ColorOSD4</textcolor>

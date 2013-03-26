@@ -470,40 +470,33 @@
 						<selected>Skin.HasSetting(moviesmenu.years)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<!--actors-->
+					<!--random genre-->
 					<control type="radiobutton" id="211">
+						<label>$LOCALIZE[32011]</label>
+						<width>557</width>
+						<onclick>Skin.ToggleSetting(moviesmenu.randomgenre)</onclick>
+						<selected>Skin.HasSetting(moviesmenu.randomgenre)</selected>
+						<enable>System.HasAddon(script.randommovie)</enable>
+						<include>dialog_Radio</include>
+					</control>
+					<!--random movie-->
+					<control type="radiobutton" id="212">
+						<label>$LOCALIZE[32012]</label>
+						<width>557</width>
+						<onclick>Skin.ToggleSetting(moviesmenu.randommovie)</onclick>
+						<selected>Skin.HasSetting(moviesmenu.randommovie)</selected>
+						<enable>System.HasAddon(script.randommovie)</enable>
+						<include>dialog_Radio</include>
+					</control>
+					<!--actors-->
+					<control type="radiobutton" id="213">
 						<label>$LOCALIZE[344]</label>
 						<width>557</width>
 						<onclick>Skin.ToggleSetting(moviesmenu.actors)</onclick>
 						<selected>Skin.HasSetting(moviesmenu.actors)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<!--movie sets-->
-					<control type="radiobutton" id="212">
-						<label>$LOCALIZE[31993]</label>
-						<width>557</width>
-						<onclick>Skin.ToggleSetting(moviesmenu.moviesets)</onclick>
-						<selected>Skin.HasSetting(moviesmenu.moviesets)</selected>
-						<include>dialog_Radio</include>
-					</control>
-					<!--random genre-->
-					<control type="radiobutton" id="213">
-						<label>$LOCALIZE[32011]</label>
-						<width>557</width>
-						<onclick>Skin.ToggleSetting(moviesmenu.randomgenre)</onclick>
-						<selected>Skin.HasSetting(moviesmenu.randomgenre)</selected>
-						<visible>System.HasAddon(script.randommovie)</visible>
-						<include>dialog_Radio</include>
-					</control>
-					<!--random movie-->
-					<control type="radiobutton" id="214">
-						<label>$LOCALIZE[32012]</label>
-						<width>557</width>
-						<onclick>Skin.ToggleSetting(moviesmenu.randommovie)</onclick>
-						<selected>Skin.HasSetting(moviesmenu.randommovie)</selected>
-						<visible>System.HasAddon(script.randommovie)</visible>
-						<include>dialog_Radio</include>
-					</control>
+					
 				</control>
 			<!--tv shows submenu-->
 				<control type="grouplist" id="200">
