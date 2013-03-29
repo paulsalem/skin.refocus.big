@@ -2418,21 +2418,22 @@
 						<effect type="fade" start="100" end="0" time="500" delay="20000" />
 					</animation>
 					<control type="label">
-						<posx>271r</posx>
-						<posy>27</posy>
+						<posx>120r</posx>
+						<posy>0</posy>
 						<width>140</width>
+						<height>37</height>
 						<label>$LOCALIZE[209]...</label>
-						<include>toast_Top_Home</include>
+						<include>toast_Side</include>
 					</control>
 					<control type="label" id="200">
-						<posx>1r</posx>
+						<posx>130r</posx>
 						<width>250</width>
 						<label>$INFO[MusicPlayer.offset(1).Title]</label>
 						<include>toast_Top</include>
 						<include>autoscroll-line</include>
 					</control>
 					<control type="label" id="201">
-						<posx>1r</posx>
+						<posx>130r</posx>
 						<posy>28</posy>
 						<width>250</width>
 						<label>$INFO[MusicPlayer.offset(1).Artist]</label>
