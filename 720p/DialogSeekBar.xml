@@ -737,7 +737,7 @@
 					<posy>527</posy>
 					<width>268</width>
 					<height>150</height>
-					<texture background="true">$VAR[PlayerArtworkVar]</texture>
+					<texture background="true">$VAR[PlayerArtwork]</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<include>transition_OSD</include>
 				</control>
@@ -748,7 +748,7 @@
 					<posy>410</posy>
 					<width>280</width>
 					<height>340</height>
-					<texture background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPosterVar]</texture>
+					<texture background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPoster]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<include>transition_OSD</include>
 					<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)]  + [VideoPlayer.Content(files) | VideoPlayer.Content(livetv) | SubString(Player.FolderPath,http)]</visible>
@@ -855,7 +855,7 @@
 					<posy>375</posy>
 					<width>215</width>
 					<height>300</height>
-					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPosterVar]</texture>
+					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPoster]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>[StringCompare(Control.GetLabel(1759),empty) + StringCompare(Control.GetLabel(17599),empty)] + !SubString(Player.FolderPath,http) + !Skin.HasSetting(videoosd.showfolderjpg) + VideoPlayer.Content(Episodes)</visible>
 					<include>transition_OSD</include>
@@ -865,7 +865,7 @@
 					<posy>375</posy>
 					<width>215</width>
 					<height>300</height>
-					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPosterVar]</texture>
+					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPoster]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>[StringCompare(Control.GetLabel(1779),empty) + StringCompare(Control.GetLabel(17799),empty)] + !SubString(Player.FolderPath,http) + Skin.HasSetting(videoosd.showfolderjpg) + VideoPlayer.Content(Episodes)</visible>
 					<include>transition_OSD</include>
@@ -875,7 +875,7 @@
 					<posy>375</posy>
 					<width>215</width>
 					<height>300</height>
-					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPosterVar]</texture>
+					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPoster]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>[StringCompare(Control.GetLabel(1759),empty) + StringCompare(Control.GetLabel(17599),empty)] + !SubString(Player.FolderPath,http) + !Skin.HasSetting(videoosd.showfolderjpg) + VideoPlayer.Content(Movies)</visible>
 					<include>transition_OSD</include>
@@ -885,7 +885,7 @@
 					<posy>375</posy>
 					<width>215</width>
 					<height>300</height>
-					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPosterVar]</texture>
+					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPoster]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>[StringCompare(Control.GetLabel(1779),empty) + StringCompare(Control.GetLabel(17799),empty)] + !SubString(Player.FolderPath,http) + Skin.HasSetting(videoosd.showfolderjpg) + VideoPlayer.Content(Movies)</visible>
 					<include>transition_OSD</include>

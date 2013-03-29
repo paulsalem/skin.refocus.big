@@ -1,6 +1,6 @@
 ﻿<includes>
 <!--OSD-->
-	<variable name="TVShowClearArtVar">
+	<variable name="TVShowClearArt">
 		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Art(tvshow.clearart)]</value>
 		<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
 		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
@@ -11,7 +11,7 @@
 		<value condition="!IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
 		<value>$INFO[Player.Art(clearlogo)]</value>
 	</variable>
-	 <variable name="PlayerPosterVar">
+	 <variable name="PlayerPoster">
 		<value condition="VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshow.poster)]</value>
 		<value>$INFO[VideoPlayer.Cover]</value>
 	</variable>
