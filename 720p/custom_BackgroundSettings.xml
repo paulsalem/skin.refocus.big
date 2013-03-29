@@ -182,8 +182,16 @@
 						<include>dialog_Radio</include>
 						<enable>Skin.HasSetting(slideshow.custom2)</enable>
 					</control>
-					<!--background video-->
+					<!--Homescreen Fanart Slideshow-->
 					<control type="radiobutton" id="207">
+						<width>557</width>
+						<label>$LOCALIZE[32900]</label>
+						<onclick>Skin.ToggleSetting(slideshow.home)</onclick>
+						<selected>!Skin.HasSetting(slideshow.home)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--background video-->
+					<control type="radiobutton" id="208">
 						<width>557</width>
 						<label>$LOCALIZE[31028]</label>
 						<onclick>Skin.ToggleSetting(backgroundvideo)</onclick>
@@ -191,7 +199,7 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--reset wallpapers-->
-					<control type="button" id="208">
+					<control type="button" id="209">
 						<width>557</width>
 						<label>$LOCALIZE[32058]</label>
 						<onclick>Skin.Reset(fanart.video.path)</onclick>

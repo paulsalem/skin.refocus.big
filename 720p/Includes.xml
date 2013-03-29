@@ -645,6 +645,11 @@
 		<aligny>top</aligny>
 		<include>autoscroll-plot</include>
 	</include>
+	<include name="description_Home">
+		<textcolor>Color7</textcolor>
+		<font>regular.DescriptionSmaller</font>
+		<aligny>top</aligny>
+	</include>
 
 <!---BUTTONS------>
 	<!--contextButton-->

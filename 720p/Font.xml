@@ -1,10 +1,116 @@
 ﻿<fonts>
 	<fontset id="Default" unicode="true">
-	<!-- NEW FONTS -->
+	<!---NEW------>	
+		<font>
+			<name>light</name>
+			<filename>Light.ttf</filename>
+			<size>52</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Home</name>
+			<filename>Light.ttf</filename>
+			<size>48</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Menu</name>
+			<filename>Light.ttf</filename>
+			<size>34</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Window</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>52</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Header</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>46</size>
+		</font>
+		<font>
+			<name>light.Category</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>42</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.ToastProgress</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>42</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>light.Title</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>28</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>light.ColumnHeader</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>28</size>
+			<style>lowercase</style>
+		</font>
+
+		<font>
+			<name>dialog.Title</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>32</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>dialog.Regular</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>dialog.SmallCaps</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>dialog.Caps</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>dialog.CapsBold</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>20</size>
+			<style>uppercase bold</style>
+		</font>
+		<font>
+			<name>dialog.Button</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>22</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>regular</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>regular.Info</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
 		<font>
 			<name>regular.Big</name>
 			<filename>Ubuntu-R.ttf</filename>
 			<size>22</size>
+		</font>
+		<font>
+			<name>regular.BigCaps</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>22</size>
+			<style>uppercase</style>
 		</font>
 		<font>
 			<name>regular.Small</name>
@@ -17,6 +123,75 @@
 			<size>18</size>
 			<style>uppercase</style>
 			<aspect>0.92</aspect>
+		</font>
+		<font>
+			<name>regular.Description</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>regular.DescriptionSmall</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>regular.DescriptionHome</name>
+			<filename>Ubuntu-L.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>description.Regular</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>description.Big</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>list</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>22</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>list.Regular</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>list.Big</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>26</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>list.Small</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>list.SmallCaps</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>list.Alt</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>list.Info</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>dialog.Header</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>46</size>
 		</font>
 
 <!-- HOME -->
@@ -346,11 +521,116 @@
 	</fontset>
 
 <fontset id="Original" unicode="true">
-<!-- NEW FONTS -->
+<font>
+			<name>light</name>
+			<filename>Light.ttf</filename>
+			<size>52</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Home</name>
+			<filename>Light.ttf</filename>
+			<size>48</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Menu</name>
+			<filename>Light.ttf</filename>
+			<size>34</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Window</name>
+			<filename>Light.ttf</filename>
+			<size>52</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Header</name>
+			<filename>Light.ttf</filename>
+			<size>46</size>
+		</font>
+		<font>
+			<name>light.Category</name>
+			<filename>Light.ttf</filename>
+			<size>42</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.ToastProgress</name>
+			<filename>Light.ttf</filename>
+			<size>42</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>light.Title</name>
+			<filename>Light.ttf</filename>
+			<size>28</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>light.ColumnHeader</name>
+			<filename>Light.ttf</filename>
+			<size>28</size>
+			<style>lowercase</style>
+		</font>
+
+		<font>
+			<name>dialog.Title</name>
+			<filename>Light.ttf</filename>
+			<size>32</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>dialog.Regular</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>dialog.SmallCaps</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>dialog.Caps</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>dialog.CapsBold</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase bold</style>
+		</font>
+		<font>
+			<name>dialog.Button</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>regular</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>regular.Info</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
 		<font>
 			<name>regular.Big</name>
 			<filename>Regular.ttf</filename>
 			<size>22</size>
+		</font>
+		<font>
+			<name>regular.BigCaps</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+			<style>uppercase</style>
 		</font>
 		<font>
 			<name>regular.Small</name>
@@ -363,6 +643,75 @@
 			<size>18</size>
 			<style>uppercase</style>
 			<aspect>0.92</aspect>
+		</font>
+		<font>
+			<name>regular.Description</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>regular.DescriptionSmall</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>regular.DescriptionHome</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>description.Regular</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>description.Big</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>list</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>list.Regular</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>list.Big</name>
+			<filename>Regular.ttf</filename>
+			<size>26</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>list.Small</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>list.SmallCaps</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>list.Alt</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>list.Info</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>dialog.Header</name>
+			<filename>Light.ttf</filename>
+			<size>46</size>
 		</font>
 <!-- HOME -->
 		<font>
@@ -693,11 +1042,116 @@
 
 
 	<fontset id="reAlaska" unicode="true">
-<!-- NEW FONTS -->
+<font>
+			<name>light</name>
+			<filename>Light.ttf</filename>
+			<size>52</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Home</name>
+			<filename>Light.ttf</filename>
+			<size>48</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Menu</name>
+			<filename>Light.ttf</filename>
+			<size>34</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Window</name>
+			<filename>Light.ttf</filename>
+			<size>52</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.Header</name>
+			<filename>Light.ttf</filename>
+			<size>46</size>
+		</font>
+		<font>
+			<name>light.Category</name>
+			<filename>Light.ttf</filename>
+			<size>42</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>light.ToastProgress</name>
+			<filename>Light.ttf</filename>
+			<size>42</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>light.Title</name>
+			<filename>Light.ttf</filename>
+			<size>28</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>light.ColumnHeader</name>
+			<filename>Light.ttf</filename>
+			<size>28</size>
+			<style>lowercase</style>
+		</font>
+
+		<font>
+			<name>dialog.Title</name>
+			<filename>Light.ttf</filename>
+			<size>32</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>dialog.Regular</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>dialog.SmallCaps</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>dialog.Caps</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>dialog.CapsBold</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase bold</style>
+		</font>
+		<font>
+			<name>dialog.Button</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>regular</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>regular.Info</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
 		<font>
 			<name>regular.Big</name>
 			<filename>Regular.ttf</filename>
 			<size>22</size>
+		</font>
+		<font>
+			<name>regular.BigCaps</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+			<style>uppercase</style>
 		</font>
 		<font>
 			<name>regular.Small</name>
@@ -711,6 +1165,76 @@
 			<style>uppercase</style>
 			<aspect>0.92</aspect>
 		</font>
+		<font>
+			<name>regular.Description</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>regular.DescriptionSmall</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>regular.DescriptionHome</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>description.Regular</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>description.Big</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>list</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>list.Regular</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>list.Big</name>
+			<filename>Regular.ttf</filename>
+			<size>26</size>
+			<style>lowercase</style>
+		</font>
+		<font>
+			<name>list.Small</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>list.SmallCaps</name>
+			<filename>Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>list.Alt</name>
+			<filename>Regular.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>list.Info</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>dialog.Header</name>
+			<filename>Light.ttf</filename>
+			<size>46</size>
+		</font>
+		
 <!---HOME------>
 		<font>
 			<name>homeMenu</name>

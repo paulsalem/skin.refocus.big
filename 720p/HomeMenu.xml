@@ -7,7 +7,7 @@
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<onright>8004</onright>
-			<onleft>RunAddon(script.globalsearch)</onleft>
+			<onleft condition="!Skin.HasSetting(home.searchleft)">RunAddon(script.globalsearch)</onleft>
 			<orientation>vertical</orientation>
 			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
 			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>	
