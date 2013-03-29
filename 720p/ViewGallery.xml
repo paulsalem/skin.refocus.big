@@ -26,7 +26,7 @@
 					</control>
 				</control>
 			</control>
-			<!---frame--->																	
+			<!---frame--->																
 			<control type="image">
 				<posy>108</posy>
 				<width>screen_Width</width>
