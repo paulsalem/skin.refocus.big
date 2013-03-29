@@ -1,4 +1,29 @@
 ﻿<includes>
+<!--OSD-->
+	<variable name="TVShowClearArtVar">
+		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Art(tvshow.clearart)]</value>
+		<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+	</variable>
+	<variable name="PlayerArtworkVar">
+		<value condition="VideoPlayer.Content(episodes) + !IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshow.clearlogo)]</value>
+		<value condition="!IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
+		<value>$INFO[Player.Art(clearlogo)]</value>
+	</variable>
+	 <variable name="PlayerPosterVar">
+		<value condition="VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshow.poster)]</value>
+		<value>$INFO[VideoPlayer.Cover]</value>
+	</variable>
+	<variable name="PlayerThumb">
+		<!--<value condition="VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshowthumb)]</value>-->
+		<value>$INFO[Player.Art(thumb)]</value>
+	</variable>
+	<variable name="PlayerLogo">
+		<value condition="VideoPlayer.Content(episodes) + !IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearlogo)]</value>
+		<value>$INFO[Player.Art(clearlogo)]</value>
+	</variable>
+
 <!---GLOBAL------>
 	<variable name="global_Clock.Formats">
 		<value condition="substring(system.time,AM,right)">[B]$INFO[System.Time(h),,:]$INFO[System.Time(mm)][/B]AM</value>
@@ -21,7 +46,7 @@
 		<value condition="Window.IsActive(programs)">backgrounds/programs.jpg</value>
 		<value condition="Window.IsActive(weather) + !Skin.HasSetting(fanart.weather)">backgrounds/weather.jpg</value>
 		<value condition="[Window.IsActive(picturessettings) | Window.IsActive(appearancesettings) | Window.IsActive(networksettings) | Window.IsActive(videossettings) | Window.IsActive(systemsettings) | Window.IsActive(musicsettings) | Window.IsActive(weathersettings) | Window.IsActive(programssettings) | Window.IsActive(picturessettings) | Window.IsActive(filemanager) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(profiles)]">backgrounds/settings.jpg</value>
-		<value condition="Window.IsActive(59)">backgrounds/skin.jpg</value>
+		<value condition="Window.IsActive(skinsettings)">backgrounds/skin.jpg</value>
 		<value condition="Window.IsActive(addonbrowser)">backgrounds/addons.jpg</value>
 		<value condition="!Control.IsVisible(56)">$INFO[ListItem.Art(fanart)]</value>
 	</variable>
