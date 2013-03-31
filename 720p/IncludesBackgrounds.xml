@@ -257,30 +257,33 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio align="center">scale</aspectratio>
 				</control>
-				<control type="label">
-					<posx>1260</posx>
-					<posy>500</posy>
-					<width>960</width>
-					<label>$INFO[ListItem.Label]</label>
-					<font>light.Menu</font>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<posx>1260</posx>
-					<posy>530</posy>
-					<width>960</width>
-					<label>$INFO[ListItem.Label2]</label>
-					<font>regular.BigCaps</font>
-					<align>right</align>
-				</control>
-				<control type="textbox">
-					<posx>660</posx>
-					<posy>563</posy>
-					<width>600</width>
-					<height>122</height>
-					<label>$INFO[ListItem.Property(Plot)]</label>
-					<align>right</align>
-					<include>description_Home</include>
+				<control type="group">
+					<visible>![!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(1)] + ![!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(2)] + ![!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(3)] + ![!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(4)] + ![!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(5)] + ![!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(6)] + ![!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(9)] + ![!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(10)] + ![!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(13)] + ![!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(14)] + ![!Skin.HasSetting(home.widgets.weather) + Container(9000).HasFocus(17)]</visible>
+					<control type="label">
+						<posx>1260</posx>
+						<posy>500</posy>
+						<width>960</width>
+						<label>$INFO[ListItem.Label]</label>
+						<font>light.Menu</font>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<posx>1260</posx>
+						<posy>530</posy>
+						<width>960</width>
+						<label>$INFO[ListItem.Label2]</label>
+						<font>regular.BigCaps</font>
+						<align>right</align>
+					</control>
+					<control type="textbox">
+						<posx>660</posx>
+						<posy>563</posy>
+						<width>600</width>
+						<height>122</height>
+						<label>$INFO[ListItem.Property(Plot)]</label>
+						<align>right</align>
+						<include>description_Home</include>
+					</control>
 				</control>
 			</itemlayout>
 			<focusedlayout width="1280" height="720">
@@ -297,30 +300,33 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio align="center">scale</aspectratio>
 				</control>
-				<control type="label">
-					<posx>1260</posx>
-					<posy>500</posy>
-					<width>960</width>
-					<label>$INFO[ListItem.Label]</label>
-					<font>light.Menu</font>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<posx>1260</posx>
-					<posy>530</posy>
-					<width>960</width>
-					<label>$INFO[ListItem.Label2]</label>
-					<font>regular.BigCaps</font>
-					<align>right</align>
-				</control>
-				<control type="textbox">
-					<posx>660</posx>
-					<posy>563</posy>
-					<width>600</width>
-					<height>122</height>
-					<label>$INFO[ListItem.Property(Plot)]</label>
-					<align>right</align>
-					<include>description_Home</include>
+				<control type="group">
+					<visible>![!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(1)] + ![!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(2)] + ![!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(3)] + ![!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(4)] + ![!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(5)] + ![!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(6)] + ![!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(9)] + ![!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(10)] + ![!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(13)] + ![!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(14)] + ![!Skin.HasSetting(home.widgets.weather) + Container(9000).HasFocus(17)]</visible>
+					<control type="label">
+						<posx>1260</posx>
+						<posy>500</posy>
+						<width>960</width>
+						<label>$INFO[ListItem.Label]</label>
+						<font>light.Menu</font>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<posx>1260</posx>
+						<posy>530</posy>
+						<width>960</width>
+						<label>$INFO[ListItem.Label2]</label>
+						<font>regular.BigCaps</font>
+						<align>right</align>
+					</control>
+					<control type="textbox">
+						<posx>660</posx>
+						<posy>563</posy>
+						<width>600</width>
+						<height>122</height>
+						<label>$INFO[ListItem.Property(Plot)]</label>
+						<align>right</align>
+						<include>description_Home</include>
+					</control>
 				</control>
 			</focusedlayout>
 			<content>
