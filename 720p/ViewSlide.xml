@@ -179,7 +179,7 @@
 				<control type="image">
 					<width>228</width>
 					<height>316</height>
-					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+					<texture background="true" fallback="thumbs/tvshow_portrait.jpg">$VAR[thumb_Portrait.Condition]</texture>
 					<bordertexture border="40">frames/frame_Square.png</bordertexture>
 					<aspectratio align="center">stretch</aspectratio>
 					<bordersize>22</bordersize>

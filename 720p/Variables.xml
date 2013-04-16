@@ -447,12 +447,46 @@
 	<variable name="tvshows_homemenu">
 		<value condition="!Skin.HasSetting(home.widgets.tvmovies) + Control.HasFocus(80081) + Skin.HasSetting(home.widgets) + !Skin.HasSetting(home.widgets.tvmovies)">$LOCALIZE[32051]</value>
 		<value condition="!Skin.HasSetting(home.widgets.tvmovies) + Control.HasFocus(80091) + Skin.HasSetting(home.widgets) + !Skin.HasSetting(home.widgets.tvmovies)">$LOCALIZE[32052]</value>
+		<value condition="Control.HasFocus(600) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)]">$LOCALIZE[208]</value>
 		<value>$LOCALIZE[3]</value>
 	</variable>
 	<variable name="tvshows_homemenu_tvshows">
 		<value condition="Control.HasFocus(8008) + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.recentpostersdouble)">$LOCALIZE[32051]</value>
 		<value condition="Control.HasFocus(8009) + Skin.HasSetting(home.widgets) + Skin.HasSetting(home.widgets.watchlistrecent) + Skin.HasSetting(home.widgets.watchlistpostersdouble) + Skin.HasSetting(home.widgets.recentpostersdouble)">$LOCALIZE[32052]</value>
+		<value condition="Control.HasFocus(600) + [Container(9000).HasFocus(5) | Container(9000).HasFocus(6)]">$LOCALIZE[208]</value>
 		<value>$LOCALIZE[20343]</value>
+	</variable>
+	<variable name="movies_homemenu">
+		<value condition="Control.HasFocus(600) + [Container(9000).HasFocus(3) | Container(9000).HasFocus(4)]">$LOCALIZE[208]</value>
+		<value>$LOCALIZE[342]</value>
+	</variable>
+	<variable name="livetv_homemenu">
+		<value condition="Control.HasFocus(600) + [Container(9000).HasFocus(7) | Container(9000).HasFocus(8)]">$LOCALIZE[208]</value>
+		<value>$LOCALIZE[31090]</value>
+	</variable>
+	<variable name="music_homemenu">
+		<value condition="Control.HasFocus(600) + [Container(9000).HasFocus(9) | Container(9000).HasFocus(10)]">$LOCALIZE[208]</value>
+		<value>$LOCALIZE[2]</value>
+	</variable>
+	<variable name="pictures_homemenu">
+		<value condition="Control.HasFocus(600) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(12)]">$LOCALIZE[208]</value>
+		<value>$LOCALIZE[1]</value>
+	</variable>
+	<variable name="addons_homemenu">
+		<value condition="Control.HasFocus(600) + [Container(9000).HasFocus(13) | Container(9000).HasFocus(14)]">$LOCALIZE[208]</value>
+		<value>$LOCALIZE[24001]</value>
+	</variable>
+	<variable name="system_homemenu">
+		<value condition="Control.HasFocus(600) + [Container(9000).HasFocus(15) | Container(9000).HasFocus(16)]">$LOCALIZE[208]</value>
+		<value>$LOCALIZE[13000]</value>
+	</variable>
+	<variable name="weather_homemenu">
+		<value condition="Control.HasFocus(600) + [Container(9000).HasFocus(17) | Container(9000).HasFocus(17)]">$LOCALIZE[208]</value>
+		<value>$LOCALIZE[8]</value>
+	</variable>
+	<variable name="favourites_homemenu">
+		<value condition="Control.HasFocus(600) + [Container(9000).HasFocus(18) | Container(9000).HasFocus(18)]">$LOCALIZE[208]</value>
+		<value>$LOCALIZE[1036]</value>
 	</variable>
 	
 	

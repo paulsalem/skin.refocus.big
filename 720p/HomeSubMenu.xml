@@ -382,6 +382,11 @@
 						<onclick>ActivateWindow(shutdownmenu)</onclick>
 						<visible>Skin.HasSetting(systemmenu.exit)</visible>
 					</item>
+					<item id="6">
+						<label>$LOCALIZE[137]</label>
+						<onclick>RunAddon(script.globalsearch)</onclick>
+						<visible>!Skin.HasSetting(home.searchleft) | Skin.HasSetting(slideshow.home)</visible>
+					</item>
 				</content>
 			</control>
 <!---EXIT SUBMENU
