@@ -177,7 +177,15 @@
 						<selected>Skin.HasSetting(home.widgets.nofanart)</selected>
 						<include>dialog_Radio</include>
 					</control>
-				</control>
+					<!--Show Widgets when pressing right
+					<control type="radiobutton" id="205">
+						<width>557</width>
+						<label>$LOCALIZE[32101]</label>
+						<onclick>Skin.ToggleSetting(home.widgets.pressright)</onclick>
+						<selected>Skin.HasSetting(home.widgets.pressright)</selected>
+						<include>dialog_Radio</include>
+					</control>
+				</control>-->
 				<!--video submenu-->
 				<control type="grouplist" id="200">
 					<posx>206</posx>

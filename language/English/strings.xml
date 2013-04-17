@@ -413,6 +413,7 @@ Please consider supporting the development of XBMC by making a donation.
 
 <!--Widgets-->
 <string id="32100">Disable fanart on Widgets</string>
+<string id="32101">Press right to show Widgets</string>
 
 
 <!--studio network logos-->
@@ -445,6 +446,7 @@ Please consider supporting the development of XBMC by making a donation.
 
 <!--Home Menu-->
 <string id="32300">Disable Left Shade on Home Menu</string>
+<string id="32301">Disable Left to Search on Home Menu</string>
 
 <!--alternate watched icons-->
 <string id="32400">Show Unwatched Overlays</string>
@@ -454,8 +456,17 @@ Please consider supporting the development of XBMC by making a donation.
 
 <!--osd-->
 <string id="32600">Use original reFocus OSD</string>
+<string id="32601">Use reFocus BIG OSD</string>
+<string id="32602">Use Clearart</string>
+<string id="32603">Use Poster</string>
+<string id="32604">Use Episode Thumb</string>
+<string id="32605">Use Network/Studio Thumb</string>
+<string id="32606">Use Logo</string>
 
 <!--fanart-->
 <string id="32700">Use Extra Fanart</string>
+
+<!--Homescreen Fanart Slideshow-->
+<string id="32900">Use Homescreen Fanart Slideshow</string>
 
 </strings>
