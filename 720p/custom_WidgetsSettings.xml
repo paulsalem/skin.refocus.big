@@ -184,8 +184,8 @@
 						<onclick>Skin.ToggleSetting(home.widgets.pressright)</onclick>
 						<selected>Skin.HasSetting(home.widgets.pressright)</selected>
 						<include>dialog_Radio</include>
-					</control>
-				</control>-->
+					</control>-->
+				</control>
 				<!--video submenu-->
 				<control type="grouplist" id="200">
 					<posx>206</posx>
