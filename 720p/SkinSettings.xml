@@ -598,7 +598,7 @@
 				<onclick>PlayerControl(stop)</onclick>
 				<selected>Skin.HasSetting(videoosd.showposter)</selected>
 				<include>button_Settings</include>
-				<visible>[Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
+				<visible>[Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)] + !Skin.HasSetting(videoosd.xperience1080minimal) </visible>
 			</control>
 			<!--Clearart-->
 			<control type="radiobutton" id="761">
@@ -606,7 +606,7 @@
 				<onclick>Skin.ToggleSetting(videoosd.clearart)</onclick>
 				<selected>Skin.HasSetting(videoosd.clearart)</selected>
 				<include>button_Settings</include>
-				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
+				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)] | [Skin.HasSetting(videoosd.xperience1080) + Skin.HasSetting(videoosd.xperience1080minimal)]</visible>
 			</control>
 			<!--Poster-->
 			<control type="radiobutton" id="762">
@@ -616,7 +616,7 @@
 				<onclick>Skin.Reset(videoosd.logo)</onclick>
 				<selected>Skin.HasSetting(videoosd.poster)</selected>
 				<include>button_Settings</include>
-				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
+				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)] | [Skin.HasSetting(videoosd.xperience1080) + Skin.HasSetting(videoosd.xperience1080minimal)]</visible>
 			</control>
 			<!--Thumb-->
 			<control type="radiobutton" id="763">
@@ -626,7 +626,7 @@
 				<onclick>Skin.Reset(videoosd.logo)</onclick>
 				<selected>Skin.HasSetting(videoosd.thumb)</selected>
 				<include>button_Settings</include>
-				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
+				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)] | [Skin.HasSetting(videoosd.xperience1080) + Skin.HasSetting(videoosd.xperience1080minimal)]</visible>
 			</control>
 			<!--Network/Studio-->
 			<control type="radiobutton" id="764">
@@ -634,7 +634,7 @@
 				<onclick>Skin.ToggleSetting(videoosd.network)</onclick>
 				<selected>Skin.HasSetting(videoosd.network)</selected>
 				<include>button_Settings</include>
-				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
+				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)] | [Skin.HasSetting(videoosd.xperience1080) + Skin.HasSetting(videoosd.xperience1080minimal)]</visible>
 			</control>
 			<!--Logo-->
 			<control type="radiobutton" id="765">
@@ -644,7 +644,7 @@
 				<onclick>Skin.Reset(videoosd.thumb)</onclick>
 				<selected>Skin.HasSetting(videoosd.logo)</selected>
 				<include>button_Settings</include>
-				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
+				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)] | [Skin.HasSetting(videoosd.xperience1080) + Skin.HasSetting(videoosd.xperience1080minimal)]</visible>
 			</control>
 			<!--folder.jpg-->
 			<control type="radiobutton" id="766">
@@ -661,7 +661,7 @@
 				<onclick>Skin.ToggleSetting(videoosd.title)</onclick>
 				<selected>Skin.HasSetting(videoosd.title)</selected>
 				<include>button_Settings</include>
-				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
+				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)] | [Skin.HasSetting(videoosd.xperience1080) + Skin.HasSetting(videoosd.xperience1080minimal)]</visible>
 			</control>
 			<!--Glow-->
 			<control type="radiobutton" id="768">
