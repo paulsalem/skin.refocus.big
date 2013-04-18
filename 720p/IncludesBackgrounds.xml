@@ -19,7 +19,7 @@
 		</control>
 		<control type="multiimage" id="7890">
 			<include>screen_Dimensions</include>
-			<imagepath background="true">$INFO[ListItem.Path,,extrafanart]</imagepath>
+			<imagepath background="true">$INFO[ListItem.Path]../extrafanart</imagepath>
 			<aspectratio align="center">scale</aspectratio>
 			<timeperimage>1500</timeperimage>
 			<fadetime>800</fadetime>

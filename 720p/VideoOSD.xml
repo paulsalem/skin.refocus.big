@@ -7,7 +7,7 @@
 		</control>
 	
 	  <control type="group">
-           <visible>Skin.HasSetting(videoosd.xperience1080) + !VideoPlayer.Content(livetv)</visible>
+           <visible>Skin.HasSetting(videoosd.xperience1080) + !VideoPlayer.Content(livetv) + !Window.IsActive(123) + !Window.IsActive(124)</visible>
             <include>NowPlayingFullscreenOSD</include>
             <control type="group">
 		<visible>!Skin.HasSetting(videoosd.xperience1080minimal)</visible>

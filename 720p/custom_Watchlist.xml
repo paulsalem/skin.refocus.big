@@ -197,7 +197,7 @@
 				<!---flags--->
 				<control type="group">
 					<posx>60</posx>
-					<posy>459</posy>
+					<posy>550</posy>
 					<control type="image" id="78">
 						<width>128</width>
 						<height>64</height>

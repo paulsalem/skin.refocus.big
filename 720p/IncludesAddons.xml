@@ -168,6 +168,7 @@
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.1.Rating)]</property>
 				<property name="Studio">$INFO[Window(Home).Property(RecommendedEpisode.1.Studio)]</property>
 				<property name="Progress">$INFO[Window(Home).Property(RecommendedEpisode.1.IsResumable)]</property>
+				<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.clearlogo))]</property>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.1.Play)]</onclick>
 				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title))</visible>
 			</item>

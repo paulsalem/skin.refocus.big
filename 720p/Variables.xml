@@ -227,10 +227,12 @@
 		<value>rating/nf-rating5.png</value>
 	</variable>
 	<variable name="art_Logo.Condition">
+		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
 		<value condition="Skin.HasSetting(artistlogo.enable) + [Window.IsVisible(musiclibrary) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]">$INFO[Skin.String(artistlogo.path)]$INFO[ListItem.Artist]/logo.png</value>
 		<value condition="Skin.HasSetting(artistlogo.enable) + [Window.IsVisible(musiclibrary) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]">$INFO[Skin.String(artistlogo.path)]$INFO[ListItem.Artist]../logo.png</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Path]/logo.png</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Path]../logo.png</value>
+		<value>$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 
 <!---FLAGS------>

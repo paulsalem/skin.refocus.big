@@ -655,8 +655,16 @@
 				<include>button_Settings</include>
 				<visible>Skin.HasSetting(videoosd.showposter)</visible>
 			</control>
-			<!--Glow-->
+			<!--Info-->
 			<control type="radiobutton" id="767">
+				<label>$LOCALIZE[32607]</label>
+				<onclick>Skin.ToggleSetting(videoosd.title)</onclick>
+				<selected>Skin.HasSetting(videoosd.title)</selected>
+				<include>button_Settings</include>
+				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
+			</control>
+			<!--Glow-->
+			<control type="radiobutton" id="768">
 				<label>$LOCALIZE[32039]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.gray)</onclick>
@@ -666,7 +674,7 @@
 				<visible>!Skin.HasSetting(videoosd.xperience1080)</visible>
 			</control>
 			<!--Glow-->
-			<control type="radiobutton" id="768">
+			<control type="radiobutton" id="769">
 				<label>$LOCALIZE[32040]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow.gray)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.black)</onclick>
@@ -675,7 +683,7 @@
 				<include>button_Settings</include>
 			</control>
 			<!--Glow-->
-			<control type="radiobutton" id="769">
+			<control type="radiobutton" id="770">
 				<label>$LOCALIZE[32041]</label>
 				<onclick>Skin.ToggleSetting(videoosd.glow.black)</onclick>
 				<onclick>Skin.Reset(videoosd.glow.gray)</onclick>

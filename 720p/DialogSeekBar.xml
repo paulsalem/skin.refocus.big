@@ -369,6 +369,16 @@
 				<include>transition_OSD</include>
 				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes)]</visible>
 			</control>
+			<control type="image" id="115999">
+				<posx>10</posx>
+				<posy>555</posy>
+				<width>290</width>
+				<height>170</height>
+				<texture>$INFO[Player.FolderPath]../clearart.png</texture>
+				<aspectratio>keep</aspectratio>
+				<include>transition_OSD</include>
+				<visible>Skin.HasSetting(videoosd.realaska) + [VideoPlayer.Content(episodes)]</visible>
+			</control>
 			<control type="image" id="1">
 				<posx>10</posx>
 				<posy>498</posy>
@@ -519,7 +529,7 @@
 				<posy>360</posy>
 				<width>280</width>
 				<height>340</height>
-				<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../folder.jpg</texture>
+				<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]folder.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
 				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
@@ -529,7 +539,7 @@
 				<posy>360</posy>
 				<width>280</width>
 				<height>340</height>
-				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]folder.jpg</texture>
+				<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.FolderPath]../folder.jpg</texture>
 				<aspectratio>keep</aspectratio>
 				<include>transition_OSD</include>
 				<visible>Skin.HasSetting(videoosd.realaska) + VideoPlayer.Content(movies) + Skin.HasSetting(videoosd.showfolderjpg)</visible>
@@ -745,7 +755,7 @@
 
 				<control type="image" id="1">
 					<posx>10</posx>
-					<posy>410</posy>
+					<posy>400</posy>
 					<width>280</width>
 					<height>340</height>
 					<texture background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerPoster]</texture>
@@ -803,6 +813,22 @@
 					<texture fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$VAR[PlayerLogo]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<include>transition_OSD</include>
+				</control>
+			</control>
+			
+			<!-- episode info -->
+			<control type ="group">
+				<visible>Skin.HasSetting(videoosd.title) + [VideoPlayer.Content(episodes)] + ![Skin.HasSetting(videoosd.realaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
+				<control type="label">
+					<posx>220</posx>
+					<posy>640</posy>
+					<width>800</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
 				</control>
 			</control>
 			

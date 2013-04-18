@@ -497,7 +497,7 @@
 			<!---flags--->
 			<control type="image" id="88788">
 				<posx>60</posx>
-				<posy>459</posy>
+				<posy>560</posy>
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
@@ -505,7 +505,7 @@
 			</control>
 			<control type="image" id="88988">
 				<posx>60</posx>
-				<posy>459</posy>
+				<posy>560</posy>
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
