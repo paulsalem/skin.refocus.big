@@ -1,0 +1,761 @@
+﻿<window type="dialog" id="345">
+	<defaultcontrol always="true">100</defaultcontrol>
+	<include>dialogOpen</include>
+	<coordinates>
+		<system>1</system>
+		<posx>240</posx>
+		<posy>70</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<width>800</width>
+			<height>630</height>
+			<include>dialogWindow</include>
+		</control>
+		<control type="label">
+			<label>$LOCALIZE[40000]</label>
+			<width>762</width>
+			<include>dialog_Windowtitle</include>
+		</control>
+		<control type="group">
+			<posx>19</posx>
+			<posy>75</posy>		
+			<control type="image">
+				<width>762</width>
+				<include>dialog_Separator</include>
+			</control>
+			<control type="image">
+				<posx>205</posx>
+				<height>479</height>
+				<include>dialog_Separator-y</include>
+			</control>
+			<control type="image">
+				<posy>479</posy>
+				<width>762</width>
+				<include>dialog_Separator</include>
+			</control>
+			<!--button area--->	
+			<control type="grouplist" id="100">
+				<width>225</width>
+				<height>480</height>
+				<itemgap>0</itemgap>
+				<onleft>12</onleft>
+				<onright>200</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<scrolltime tween="Cubic" easing="Out">200</scrolltime>
+				<control type="button" id="101">
+					<width>206</width>
+					<label>$LOCALIZE[40001]</label>
+					<onfocus>Skin.SetString(Sub,First)</onfocus>
+					<include>dialog_Button-list</include>
+				</control>
+				<control type="button" id="102">
+					<width>206</width>
+					<label>$LOCALIZE[40010]</label>
+					<onfocus>Skin.SetString(Sub,Second)</onfocus>
+					<include>dialog_Button-list</include>
+				</control>
+				<control type="button" id="103">
+					<width>206</width>
+					<label>$LOCALIZE[40011]</label>
+					<onfocus>Skin.SetString(Sub,Third)</onfocus>
+					<include>dialog_Button-list</include>
+				</control>
+				<control type="button" id="104">
+					<width>206</width>
+					<label>$LOCALIZE[40012]</label>
+					<onfocus>Skin.SetString(Sub,Fourth)</onfocus>
+					<include>dialog_Button-list</include>
+				</control>
+				<control type="button" id="105">
+					<width>206</width>
+					<label>$LOCALIZE[40013]</label>
+					<onfocus>Skin.SetString(Sub,Fifth)</onfocus>
+					<include>dialog_Button-list</include>
+				</control>
+			</control>
+
+			<!--control area-->	
+			<control type="group">
+				<!--first submenu-->
+				<control type="grouplist" id="200">
+					<posx>206</posx>
+					<width>557</width>
+					<height>480</height>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<itemgap>0</itemgap>
+					<visible>Skin.String(Sub,First)</visible>
+					<!--Addon-->
+					<control type="radiobutton" id="201">
+						<width>557</width>
+						<label>$LOCALIZE[40002]</label>
+						<onclick>Skin.ToggleSetting(home.category1.addon)</onclick>
+						<onclick>Skin.Reset(home.category1.program)</onclick>
+						<onclick>Skin.Reset(home.category1.playlist)</onclick>
+						<onclick>Skin.Reset(home.category1.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category1.addon)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Program-->
+					<control type="radiobutton" id="202">
+						<width>557</width>
+						<label>$LOCALIZE[40003]</label>
+						<onclick>Skin.ToggleSetting(home.category1.program)</onclick>
+						<onclick>Skin.Reset(home.category1.addon)</onclick>
+						<onclick>Skin.Reset(home.category1.playlist)</onclick>
+						<onclick>Skin.Reset(home.category1.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category1.program)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Playlist-->
+					<control type="radiobutton" id="203">
+						<width>557</width>
+						<label>$LOCALIZE[40004]</label>
+						<onclick>Skin.ToggleSetting(home.category1.playlist)</onclick>
+						<onclick>Skin.Reset(home.category1.program)</onclick>
+						<onclick>Skin.Reset(home.category1.addon)</onclick>
+						<onclick>Skin.Reset(home.category1.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category1.playlist)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Favourite-->
+					<control type="radiobutton" id="204">
+						<width>557</width>
+						<label>$LOCALIZE[40005]</label>
+						<onclick>Skin.ToggleSetting(home.category1.favourite)</onclick>
+						<onclick>Skin.Reset(home.category1.program)</onclick>
+						<onclick>Skin.Reset(home.category1.playlist)</onclick>
+						<onclick>Skin.Reset(home.category1.addon)</onclick>
+						<selected>Skin.HasSetting(home.category1.favourite)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<control type="button" id="205">
+						<width>557</width>
+						<label>$LOCALIZE[40006]</label>
+						<label2>[I]$INFO[Skin.String(addonsmenu.category1.addon.label)][/I]</label2>
+						<onclick>Skin.Reset(addonsmenu.category1.addon)</onclick>
+						<onclick>Skin.Reset(addonsmenu.category1.addon.path)</onclick>
+						<onclick>Skin.Reset(addonsmenu.category1.addon.label)</onclick>
+						<onclick>Skin.SetAddOn(addonsmenu.category1.addon.path,xbmc.python.pluginsource)</onclick>
+						<onclick>Skin.SetString(addonsmenu.category1.addon.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category1.addon)</enable>
+					</control>
+					<control type="button" id="206">
+						<width>557</width>
+						<label>$LOCALIZE[40007]</label>
+						<label2>[I]$INFO[Skin.String(programs.category1.program.label)][/I]</label2>
+						<onclick>Skin.Reset(programs.category1.program)</onclick>
+						<onclick>Skin.Reset(programs.category1.program.path)</onclick>
+						<onclick>Skin.Reset(programs.category1.program.label)</onclick>
+						<onclick>Skin.SetAddOn(programs.category1.program.path,xbmc.addon.executable)</onclick>
+						<onclick>Skin.SetString(programs.category1.program.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category1.program)</enable>
+					</control>
+					<control type="button" id="207">
+						<width>557</width>
+						<label>$LOCALIZE[40008]</label>
+						<label2>[I]$INFO[Skin.String(videomenu.category1.playlist.label)][/I]</label2>
+						<onclick>Skin.Reset(videomenu.category1.playlist)</onclick>
+						<onclick>Skin.Reset(videomenu.category1.playlist.path)</onclick>
+						<onclick>Skin.Reset(videomenu.category1.playlist.label)</onclick>
+						<onclick>Skin.SetFile(videomenu.category1.playlist.path,.xsp,special://profile/playlists/video/)</onclick>
+						<onclick>Skin.SetString(videomenu.category1.playlist.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category1.playlist)</enable>
+					</control>
+					<control type="button" id="208">
+						<width>557</width>
+						<label>$LOCALIZE[40009]</label>
+       						<label2>$INFO[Skin.String(CustomVideo.Category1.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.Category1)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category1.favourite)</enable>
+					</control>
+					<!--fanart image-->
+					<control type="button" id="209">
+						<width>557</width>
+						<label>$LOCALIZE[32003]</label>
+						<onclick>Skin.SetImage(fanart.category1.image)</onclick>
+						<onclick>Skin.Reset(fanart.category1.path)</onclick>
+						<label2>$INFO[Skin.String(fanart.category1.image)]</label2>
+						<selected>Skin.HasSetting(fanart.category1.image)</selected>
+						<selected>!Skin.HasSetting(fanart.category1)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--fanart path-->
+					<control type="button" id="210">
+						<width>557</width>
+						<label>$LOCALIZE[32004]</label>
+						<onclick>Skin.SetPath(fanart.category1.path)</onclick>
+						<onclick>Skin.Reset(fanart.category1.image)</onclick>
+						<label2>$INFO[Skin.String(fanart.category1.path)]</label2>
+						<selected>Skin.HasSetting(fanart.category1)</selected>
+						<selected>!Skin.HasSetting(fanart.category1.image)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--clear-->
+					<control type="button" id="211">
+						<width>557</width>
+						<label>$LOCALIZE[32005]</label>
+						<onclick>Skin.Reset(fanart.category1)</onclick>
+						<onclick>Skin.Reset(fanart.category1.path)</onclick>
+						<onclick>Skin.Reset(fanart.category1.image)</onclick>
+						<selected>!Skin.HasSetting(fanart.category1)</selected>
+						<selected>!Skin.HasSetting(fanart.category1.image)</selected>
+						<include>dialog_Radio</include>
+					</control>
+				</control>
+				<!--second submenu-->
+				<control type="grouplist" id="200">
+					<posx>206</posx>
+					<width>557</width>
+					<height>480</height>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<itemgap>0</itemgap>
+					<visible>Skin.String(Sub,Second)</visible>
+					<!--Addon-->
+					<control type="radiobutton" id="201">
+						<width>557</width>
+						<label>$LOCALIZE[40002]</label>
+						<onclick>Skin.ToggleSetting(home.category2.addon)</onclick>
+						<onclick>Skin.Reset(home.category2.program)</onclick>
+						<onclick>Skin.Reset(home.category2.playlist)</onclick>
+						<onclick>Skin.Reset(home.category2.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category2.addon)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Program-->
+					<control type="radiobutton" id="202">
+						<width>557</width>
+						<label>$LOCALIZE[40003]</label>
+						<onclick>Skin.ToggleSetting(home.category2.program)</onclick>
+						<onclick>Skin.Reset(home.category2.addon)</onclick>
+						<onclick>Skin.Reset(home.category2.playlist)</onclick>
+						<onclick>Skin.Reset(home.category2.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category2.program)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Playlist-->
+					<control type="radiobutton" id="203">
+						<width>557</width>
+						<label>$LOCALIZE[40004]</label>
+						<onclick>Skin.ToggleSetting(home.category2.playlist)</onclick>
+						<onclick>Skin.Reset(home.category2.program)</onclick>
+						<onclick>Skin.Reset(home.category2.addon)</onclick>
+						<onclick>Skin.Reset(home.category2.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category2.playlist)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Favourite-->
+					<control type="radiobutton" id="204">
+						<width>557</width>
+						<label>$LOCALIZE[40005]</label>
+						<onclick>Skin.ToggleSetting(home.category2.favourite)</onclick>
+						<onclick>Skin.Reset(home.category2.program)</onclick>
+						<onclick>Skin.Reset(home.category2.playlist)</onclick>
+						<onclick>Skin.Reset(home.category2.addon)</onclick>
+						<selected>Skin.HasSetting(home.category2.favourite)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<control type="button" id="205">
+						<width>557</width>
+						<label>$LOCALIZE[40006]</label>
+						<label2>[I]$INFO[Skin.String(addonsmenu.category2.addon.label)][/I]</label2>
+						<onclick>Skin.Reset(addonsmenu.category2.addon)</onclick>
+						<onclick>Skin.Reset(addonsmenu.category2.addon.path)</onclick>
+						<onclick>Skin.Reset(addonsmenu.category2.addon.label)</onclick>
+						<onclick>Skin.SetAddOn(addonsmenu.category2.addon.path,xbmc.python.pluginsource)</onclick>
+						<onclick>Skin.SetString(addonsmenu.category2.addon.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category2.addon)</enable>
+					</control>
+					<control type="button" id="206">
+						<width>557</width>
+						<label>$LOCALIZE[40007]</label>
+						<label2>[I]$INFO[Skin.String(programs.category2.program.label)][/I]</label2>
+						<onclick>Skin.Reset(programs.category2.program)</onclick>
+						<onclick>Skin.Reset(programs.category2.program.path)</onclick>
+						<onclick>Skin.Reset(programs.category2.program.label)</onclick>
+						<onclick>Skin.SetAddOn(programs.category2.program.path,xbmc.addon.executable)</onclick>
+						<onclick>Skin.SetString(programs.category2.program.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category2.program)</enable>
+					</control>
+					<control type="button" id="207">
+						<width>557</width>
+						<label>$LOCALIZE[40008]</label>
+						<label2>[I]$INFO[Skin.String(videomenu.category2.playlist.label)][/I]</label2>
+						<onclick>Skin.Reset(videomenu.category2.playlist)</onclick>
+						<onclick>Skin.Reset(videomenu.category2.playlist.path)</onclick>
+						<onclick>Skin.Reset(videomenu.category2.playlist.label)</onclick>
+						<onclick>Skin.SetFile(videomenu.category2.playlist.path,.xsp,special://profile/playlists/video/)</onclick>
+						<onclick>Skin.SetString(videomenu.category2.playlist.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category2.playlist)</enable>
+					</control>
+					<control type="button" id="208">
+						<width>557</width>
+						<label>$LOCALIZE[40009]</label>
+       						<label2>$INFO[Skin.String(CustomVideo.category2.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.category2)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category2.favourite)</enable>
+					</control>
+					<!--fanart image-->
+					<control type="button" id="209">
+						<width>557</width>
+						<label>$LOCALIZE[32003]</label>
+						<onclick>Skin.SetImage(fanart.category2.image)</onclick>
+						<onclick>Skin.Reset(fanart.category2.path)</onclick>
+						<label2>$INFO[Skin.String(fanart.category2.image)]</label2>
+						<selected>Skin.HasSetting(fanart.category2.image)</selected>
+						<selected>!Skin.HasSetting(fanart.category2)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--fanart path-->
+					<control type="button" id="210">
+						<width>557</width>
+						<label>$LOCALIZE[32004]</label>
+						<onclick>Skin.SetPath(fanart.category2.path)</onclick>
+						<onclick>Skin.Reset(fanart.category2.image)</onclick>
+						<label2>$INFO[Skin.String(fanart.category2.path)]</label2>
+						<selected>Skin.HasSetting(fanart.category2)</selected>
+						<selected>!Skin.HasSetting(fanart.category2.image)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--clear-->
+					<control type="button" id="211">
+						<width>557</width>
+						<label>$LOCALIZE[32005]</label>
+						<onclick>Skin.Reset(fanart.category2)</onclick>
+						<onclick>Skin.Reset(fanart.category2.path)</onclick>
+						<onclick>Skin.Reset(fanart.category2.image)</onclick>
+						<selected>!Skin.HasSetting(fanart.category2)</selected>
+						<selected>!Skin.HasSetting(fanart.category2.image)</selected>
+						<include>dialog_Radio</include>
+					</control>
+				</control>
+				<!--third submenu-->
+				<control type="grouplist" id="200">
+					<posx>206</posx>
+					<width>557</width>
+					<height>480</height>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<itemgap>0</itemgap>
+					<visible>Skin.String(Sub,Third)</visible>
+					<!--Addon-->
+					<control type="radiobutton" id="201">
+						<width>557</width>
+						<label>$LOCALIZE[40002]</label>
+						<onclick>Skin.ToggleSetting(home.category3.addon)</onclick>
+						<onclick>Skin.Reset(home.category3.program)</onclick>
+						<onclick>Skin.Reset(home.category3.playlist)</onclick>
+						<onclick>Skin.Reset(home.category3.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category3.addon)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Program-->
+					<control type="radiobutton" id="202">
+						<width>557</width>
+						<label>$LOCALIZE[40003]</label>
+						<onclick>Skin.ToggleSetting(home.category3.program)</onclick>
+						<onclick>Skin.Reset(home.category3.addon)</onclick>
+						<onclick>Skin.Reset(home.category3.playlist)</onclick>
+						<onclick>Skin.Reset(home.category3.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category3.program)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Playlist-->
+					<control type="radiobutton" id="203">
+						<width>557</width>
+						<label>$LOCALIZE[40004]</label>
+						<onclick>Skin.ToggleSetting(home.category3.playlist)</onclick>
+						<onclick>Skin.Reset(home.category3.program)</onclick>
+						<onclick>Skin.Reset(home.category3.addon)</onclick>
+						<onclick>Skin.Reset(home.category3.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category3.playlist)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Favourite-->
+					<control type="radiobutton" id="204">
+						<width>557</width>
+						<label>$LOCALIZE[40005]</label>
+						<onclick>Skin.ToggleSetting(home.category3.favourite)</onclick>
+						<onclick>Skin.Reset(home.category3.program)</onclick>
+						<onclick>Skin.Reset(home.category3.playlist)</onclick>
+						<onclick>Skin.Reset(home.category3.addon)</onclick>
+						<selected>Skin.HasSetting(home.category3.favourite)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<control type="button" id="205">
+						<width>557</width>
+						<label>$LOCALIZE[40006]</label>
+						<label2>[I]$INFO[Skin.String(addonsmenu.category3.addon.label)][/I]</label2>
+						<onclick>Skin.Reset(addonsmenu.category3.addon)</onclick>
+						<onclick>Skin.Reset(addonsmenu.category3.addon.path)</onclick>
+						<onclick>Skin.Reset(addonsmenu.category3.addon.label)</onclick>
+						<onclick>Skin.SetAddOn(addonsmenu.category3.addon.path,xbmc.python.pluginsource)</onclick>
+						<onclick>Skin.SetString(addonsmenu.category3.addon.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category3.addon)</enable>
+					</control>
+					<control type="button" id="206">
+						<width>557</width>
+						<label>$LOCALIZE[40007]</label>
+						<label2>[I]$INFO[Skin.String(programs.category3.program.label)][/I]</label2>
+						<onclick>Skin.Reset(programs.category3.program)</onclick>
+						<onclick>Skin.Reset(programs.category3.program.path)</onclick>
+						<onclick>Skin.Reset(programs.category3.program.label)</onclick>
+						<onclick>Skin.SetAddOn(programs.category3.program.path,xbmc.addon.executable)</onclick>
+						<onclick>Skin.SetString(programs.category3.program.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category3.program)</enable>
+					</control>
+					<control type="button" id="207">
+						<width>557</width>
+						<label>$LOCALIZE[40008]</label>
+						<label2>[I]$INFO[Skin.String(videomenu.category3.playlist.label)][/I]</label2>
+						<onclick>Skin.Reset(videomenu.category3.playlist)</onclick>
+						<onclick>Skin.Reset(videomenu.category3.playlist.path)</onclick>
+						<onclick>Skin.Reset(videomenu.category3.playlist.label)</onclick>
+						<onclick>Skin.SetFile(videomenu.category3.playlist.path,.xsp,special://profile/playlists/video/)</onclick>
+						<onclick>Skin.SetString(videomenu.category3.playlist.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category3.playlist)</enable>
+					</control>
+					<control type="button" id="208">
+						<width>557</width>
+						<label>$LOCALIZE[40009]</label>
+       						<label2>$INFO[Skin.String(CustomVideo.category3.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.category3)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category3.favourite)</enable>
+					</control>
+					<!--fanart image-->
+					<control type="button" id="209">
+						<width>557</width>
+						<label>$LOCALIZE[32003]</label>
+						<onclick>Skin.SetImage(fanart.category3.image)</onclick>
+						<onclick>Skin.Reset(fanart.category3.path)</onclick>
+						<label2>$INFO[Skin.String(fanart.category3.image)]</label2>
+						<selected>Skin.HasSetting(fanart.category3.image)</selected>
+						<selected>!Skin.HasSetting(fanart.category3)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--fanart path-->
+					<control type="button" id="210">
+						<width>557</width>
+						<label>$LOCALIZE[32004]</label>
+						<onclick>Skin.SetPath(fanart.category3.path)</onclick>
+						<onclick>Skin.Reset(fanart.category3.image)</onclick>
+						<label2>$INFO[Skin.String(fanart.category3.path)]</label2>
+						<selected>Skin.HasSetting(fanart.category3)</selected>
+						<selected>!Skin.HasSetting(fanart.category3.image)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--clear-->
+					<control type="button" id="211">
+						<width>557</width>
+						<label>$LOCALIZE[32005]</label>
+						<onclick>Skin.Reset(fanart.category3)</onclick>
+						<onclick>Skin.Reset(fanart.category3.path)</onclick>
+						<onclick>Skin.Reset(fanart.category3.image)</onclick>
+						<selected>!Skin.HasSetting(fanart.category3)</selected>
+						<selected>!Skin.HasSetting(fanart.category3.image)</selected>
+						<include>dialog_Radio</include>
+					</control>
+				</control>
+				<!--fourth submenu-->
+				<control type="grouplist" id="200">
+					<posx>206</posx>
+					<width>557</width>
+					<height>480</height>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<itemgap>0</itemgap>
+					<visible>Skin.String(Sub,Fourth)</visible>
+					<!--Addon-->
+					<control type="radiobutton" id="201">
+						<width>557</width>
+						<label>$LOCALIZE[40002]</label>
+						<onclick>Skin.ToggleSetting(home.category4.addon)</onclick>
+						<onclick>Skin.Reset(home.category4.program)</onclick>
+						<onclick>Skin.Reset(home.category4.playlist)</onclick>
+						<onclick>Skin.Reset(home.category4.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category4.addon)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Program-->
+					<control type="radiobutton" id="202">
+						<width>557</width>
+						<label>$LOCALIZE[40003]</label>
+						<onclick>Skin.ToggleSetting(home.category4.program)</onclick>
+						<onclick>Skin.Reset(home.category4.addon)</onclick>
+						<onclick>Skin.Reset(home.category4.playlist)</onclick>
+						<onclick>Skin.Reset(home.category4.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category4.program)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Playlist-->
+					<control type="radiobutton" id="203">
+						<width>557</width>
+						<label>$LOCALIZE[40004]</label>
+						<onclick>Skin.ToggleSetting(home.category4.playlist)</onclick>
+						<onclick>Skin.Reset(home.category4.program)</onclick>
+						<onclick>Skin.Reset(home.category4.addon)</onclick>
+						<onclick>Skin.Reset(home.category4.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category4.playlist)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Favourite-->
+					<control type="radiobutton" id="204">
+						<width>557</width>
+						<label>$LOCALIZE[40005]</label>
+						<onclick>Skin.ToggleSetting(home.category4.favourite)</onclick>
+						<onclick>Skin.Reset(home.category4.program)</onclick>
+						<onclick>Skin.Reset(home.category4.playlist)</onclick>
+						<onclick>Skin.Reset(home.category4.addon)</onclick>
+						<selected>Skin.HasSetting(home.category4.favourite)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<control type="button" id="205">
+						<width>557</width>
+						<label>$LOCALIZE[40006]</label>
+						<label2>[I]$INFO[Skin.String(addonsmenu.category4.addon.label)][/I]</label2>
+						<onclick>Skin.Reset(addonsmenu.category4.addon)</onclick>
+						<onclick>Skin.Reset(addonsmenu.category4.addon.path)</onclick>
+						<onclick>Skin.Reset(addonsmenu.category4.addon.label)</onclick>
+						<onclick>Skin.SetAddOn(addonsmenu.category4.addon.path,xbmc.python.pluginsource)</onclick>
+						<onclick>Skin.SetString(addonsmenu.category4.addon.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category4.addon)</enable>
+					</control>
+					<control type="button" id="206">
+						<width>557</width>
+						<label>$LOCALIZE[40007]</label>
+						<label2>[I]$INFO[Skin.String(programs.category4.program.label)][/I]</label2>
+						<onclick>Skin.Reset(programs.category4.program)</onclick>
+						<onclick>Skin.Reset(programs.category4.program.path)</onclick>
+						<onclick>Skin.Reset(programs.category4.program.label)</onclick>
+						<onclick>Skin.SetAddOn(programs.category4.program.path,xbmc.addon.executable)</onclick>
+						<onclick>Skin.SetString(programs.category4.program.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category4.program)</enable>
+					</control>
+					<control type="button" id="207">
+						<width>557</width>
+						<label>$LOCALIZE[40008]</label>
+						<label2>[I]$INFO[Skin.String(videomenu.category4.playlist.label)][/I]</label2>
+						<onclick>Skin.Reset(videomenu.category4.playlist)</onclick>
+						<onclick>Skin.Reset(videomenu.category4.playlist.path)</onclick>
+						<onclick>Skin.Reset(videomenu.category4.playlist.label)</onclick>
+						<onclick>Skin.SetFile(videomenu.category4.playlist.path,.xsp,special://profile/playlists/video/)</onclick>
+						<onclick>Skin.SetString(videomenu.category4.playlist.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category4.playlist)</enable>
+					</control>
+					<control type="button" id="208">
+						<width>557</width>
+						<label>$LOCALIZE[40009]</label>
+       						<label2>$INFO[Skin.String(CustomVideo.category4.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.category4)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category4.favourite)</enable>
+					</control>
+					<!--fanart image-->
+					<control type="button" id="209">
+						<width>557</width>
+						<label>$LOCALIZE[32003]</label>
+						<onclick>Skin.SetImage(fanart.category4.image)</onclick>
+						<onclick>Skin.Reset(fanart.category4.path)</onclick>
+						<label2>$INFO[Skin.String(fanart.category4.image)]</label2>
+						<selected>Skin.HasSetting(fanart.category4.image)</selected>
+						<selected>!Skin.HasSetting(fanart.category4)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--fanart path-->
+					<control type="button" id="210">
+						<width>557</width>
+						<label>$LOCALIZE[32004]</label>
+						<onclick>Skin.SetPath(fanart.category4.path)</onclick>
+						<onclick>Skin.Reset(fanart.category4.image)</onclick>
+						<label2>$INFO[Skin.String(fanart.category4.path)]</label2>
+						<selected>Skin.HasSetting(fanart.category4)</selected>
+						<selected>!Skin.HasSetting(fanart.category4.image)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--clear-->
+					<control type="button" id="211">
+						<width>557</width>
+						<label>$LOCALIZE[32005]</label>
+						<onclick>Skin.Reset(fanart.category4)</onclick>
+						<onclick>Skin.Reset(fanart.category4.path)</onclick>
+						<onclick>Skin.Reset(fanart.category4.image)</onclick>
+						<selected>!Skin.HasSetting(fanart.category4)</selected>
+						<selected>!Skin.HasSetting(fanart.category4.image)</selected>
+						<include>dialog_Radio</include>
+					</control>
+				</control>
+				<!--fifth submenu-->
+				<control type="grouplist" id="200">
+					<posx>206</posx>
+					<width>557</width>
+					<height>480</height>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<itemgap>0</itemgap>
+					<visible>Skin.String(Sub,Fifth)</visible>
+					<!--Addon-->
+					<control type="radiobutton" id="201">
+						<width>557</width>
+						<label>$LOCALIZE[40002]</label>
+						<onclick>Skin.ToggleSetting(home.category5.addon)</onclick>
+						<onclick>Skin.Reset(home.category5.program)</onclick>
+						<onclick>Skin.Reset(home.category5.playlist)</onclick>
+						<onclick>Skin.Reset(home.category5.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category5.addon)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Program-->
+					<control type="radiobutton" id="202">
+						<width>557</width>
+						<label>$LOCALIZE[40003]</label>
+						<onclick>Skin.ToggleSetting(home.category5.program)</onclick>
+						<onclick>Skin.Reset(home.category5.addon)</onclick>
+						<onclick>Skin.Reset(home.category5.playlist)</onclick>
+						<onclick>Skin.Reset(home.category5.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category5.program)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Playlist-->
+					<control type="radiobutton" id="203">
+						<width>557</width>
+						<label>$LOCALIZE[40004]</label>
+						<onclick>Skin.ToggleSetting(home.category5.playlist)</onclick>
+						<onclick>Skin.Reset(home.category5.program)</onclick>
+						<onclick>Skin.Reset(home.category5.addon)</onclick>
+						<onclick>Skin.Reset(home.category5.favourite)</onclick>
+						<selected>Skin.HasSetting(home.category5.playlist)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--Favourite-->
+					<control type="radiobutton" id="204">
+						<width>557</width>
+						<label>$LOCALIZE[40005]</label>
+						<onclick>Skin.ToggleSetting(home.category5.favourite)</onclick>
+						<onclick>Skin.Reset(home.category5.program)</onclick>
+						<onclick>Skin.Reset(home.category5.playlist)</onclick>
+						<onclick>Skin.Reset(home.category5.addon)</onclick>
+						<selected>Skin.HasSetting(home.category5.favourite)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<control type="button" id="205">
+						<width>557</width>
+						<label>$LOCALIZE[40006]</label>
+						<label2>[I]$INFO[Skin.String(addonsmenu.category5.addon.label)][/I]</label2>
+						<onclick>Skin.Reset(addonsmenu.category5.addon)</onclick>
+						<onclick>Skin.Reset(addonsmenu.category5.addon.path)</onclick>
+						<onclick>Skin.Reset(addonsmenu.category5.addon.label)</onclick>
+						<onclick>Skin.SetAddOn(addonsmenu.category5.addon.path,xbmc.python.pluginsource)</onclick>
+						<onclick>Skin.SetString(addonsmenu.category5.addon.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category5.addon)</enable>
+					</control>
+					<control type="button" id="206">
+						<width>557</width>
+						<label>$LOCALIZE[40007]</label>
+						<label2>[I]$INFO[Skin.String(programs.category5.program.label)][/I]</label2>
+						<onclick>Skin.Reset(programs.category5.program)</onclick>
+						<onclick>Skin.Reset(programs.category5.program.path)</onclick>
+						<onclick>Skin.Reset(programs.category5.program.label)</onclick>
+						<onclick>Skin.SetAddOn(programs.category5.program.path,xbmc.addon.executable)</onclick>
+						<onclick>Skin.SetString(programs.category5.program.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category5.program)</enable>
+					</control>
+					<control type="button" id="207">
+						<width>557</width>
+						<label>$LOCALIZE[40008]</label>
+						<label2>[I]$INFO[Skin.String(videomenu.category5.playlist.label)][/I]</label2>
+						<onclick>Skin.Reset(videomenu.category5.playlist)</onclick>
+						<onclick>Skin.Reset(videomenu.category5.playlist.path)</onclick>
+						<onclick>Skin.Reset(videomenu.category5.playlist.label)</onclick>
+						<onclick>Skin.SetFile(videomenu.category5.playlist.path,.xsp,special://profile/playlists/video/)</onclick>
+						<onclick>Skin.SetString(videomenu.category5.playlist.label)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category5.playlist)</enable>
+					</control>
+					<control type="button" id="208">
+						<width>557</width>
+						<label>$LOCALIZE[40009]</label>
+       						<label2>$INFO[Skin.String(CustomVideo.category5.Label)]</label2>
+        					<onclick>RunScript(script.favourites,property=CustomVideo.category5)</onclick>
+						<include>dialog_Radio</include>
+						<enable>Skin.HasSetting(home.category5.favourite)</enable>
+					</control>
+					<!--fanart image-->
+					<control type="button" id="209">
+						<width>557</width>
+						<label>$LOCALIZE[32003]</label>
+						<onclick>Skin.SetImage(fanart.category5.image)</onclick>
+						<onclick>Skin.Reset(fanart.category5.path)</onclick>
+						<label2>$INFO[Skin.String(fanart.category5.image)]</label2>
+						<selected>Skin.HasSetting(fanart.category5.image)</selected>
+						<selected>!Skin.HasSetting(fanart.category5)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--fanart path-->
+					<control type="button" id="210">
+						<width>557</width>
+						<label>$LOCALIZE[32004]</label>
+						<onclick>Skin.SetPath(fanart.category5.path)</onclick>
+						<onclick>Skin.Reset(fanart.category5.image)</onclick>
+						<label2>$INFO[Skin.String(fanart.category5.path)]</label2>
+						<selected>Skin.HasSetting(fanart.category5)</selected>
+						<selected>!Skin.HasSetting(fanart.category5.image)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<!--clear-->
+					<control type="button" id="211">
+						<width>557</width>
+						<label>$LOCALIZE[32005]</label>
+						<onclick>Skin.Reset(fanart.category5)</onclick>
+						<onclick>Skin.Reset(fanart.category5.path)</onclick>
+						<onclick>Skin.Reset(fanart.category5.image)</onclick>
+						<selected>!Skin.HasSetting(fanart.category5)</selected>
+						<selected>!Skin.HasSetting(fanart.category5.image)</selected>
+						<include>dialog_Radio</include>
+					</control>
+				</control>
+			</control>
+		</control>
+		<!--ok-->
+		<control type="button" id="10">
+			<posx>645</posx>
+			<posy>563</posy>
+			<label>$LOCALIZE[186]</label>
+			<onup>200</onup>
+			<onleft>100</onleft>
+			<onright>11</onright>
+			<ondown>311</ondown>
+			<onclick>Close</onclick>
+			<include>dialog_Button</include>
+		</control>
+	</controls>
+</window>

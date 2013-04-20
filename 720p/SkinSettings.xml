@@ -120,29 +120,36 @@
 				<onclick>ActivateWindow(61)</onclick>
 				<include>button_Settings</include>
 			</control>
-			<!--backgrounds configuration-->
+			<!--home menu categories configuration-->
 			<control type="button" id="102">
+				<label>$LOCALIZE[40000]</label>
+				<onfocus>Skin.SetString(SubMenu,Categories)</onfocus>
+				<onclick>ActivateWindow(345)</onclick>
+				<include>button_Settings</include>
+			</control>
+			<!--backgrounds configuration-->
+			<control type="button" id="103">
 				<label>$LOCALIZE[32002]</label>
 				<onfocus>Skin.SetString(SubMenu,Video)</onfocus>
 				<onclick>ActivateWindow(160)</onclick>
 				<include>button_Settings</include>
 			</control>
 			<!--widgets configuration-->
-			<control type="button" id="103">
+			<control type="button" id="104">
 				<label>$LOCALIZE[32208]</label>
 				<onfocus>Skin.SetString(SubMenu,Widgets)</onfocus>
 				<onclick>ActivateWindow(1160)</onclick>
 				<include>button_Settings</include>
 			</control>
 			<!--time-->
-			<control type="radiobutton" id="104">
+			<control type="radiobutton" id="105">
 				<label>$LOCALIZE[31907]</label>
 				<onclick>Skin.ToggleSetting(home.time)</onclick>
 				<selected>Skin.HasSetting(home.time)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!--time skin format-->
-			<control type="radiobutton" id="105">
+			<control type="radiobutton" id="106">
 				<label>$LOCALIZE[31999]</label>
 				<onclick>Skin.ToggleSetting(home.timesmall)</onclick>
 				<selected>Skin.HasSetting(home.timesmall)</selected>
@@ -150,14 +157,14 @@
 				<visible>Skin.HasSetting(home.time)</visible>
 			</control>
 			<!--date-->
-			<control type="radiobutton" id="106">
+			<control type="radiobutton" id="107">
 				<label>$LOCALIZE[31994]</label>
 				<onclick>Skin.ToggleSetting(home.date)</onclick>
 				<selected>Skin.HasSetting(home.date)</selected>
 				<include>button_Settings</include>
 				<visible>Skin.HasSetting(home.time)</visible>
 			</control>
-			<control type="radiobutton" id="107">
+			<control type="radiobutton" id="108">
 				<label>$LOCALIZE[32018]</label>
 				<onclick>Skin.ToggleSetting(home.datewhite)</onclick>
 				<selected>Skin.HasSetting(home.datewhite)</selected>
@@ -165,27 +172,12 @@
 				<visible>Skin.HasSetting(home.time) + Skin.HasSetting(home.date)</visible>
 			</control>
 			<!--statistics-->
-			<control type="radiobutton" id="108">
+			<control type="radiobutton" id="109">
 				<label>$LOCALIZE[31128]</label>
 				<onclick>Skin.ToggleSetting(home.stats)</onclick>
 				<selected>Skin.HasSetting(home.stats)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!--search CURRENTLY REMOVED
-			<control type="radiobutton" id="110">
-				<label>$LOCALIZE[31933]</label>
-				<onclick>Skin.ToggleSetting(home.search)</onclick>
-				<selected>Skin.HasSetting(home.search)</selected>
-				<visible>!Skin.HasSetting(home.widgets)</visible>
-				<include>button_Settings</include>
-			</control>
-			<control type="radiobutton" id="111">
-				<label>- $LOCALIZE[31934]</label>
-				<onclick>Skin.ToggleSetting(search.addon)</onclick>
-				<selected>Skin.HasSetting(search.addon)</selected>
-				<visible>Skin.HasSetting(home.search) + !Skin.HasSetting(home.widgets)</visible>
-				<include>button_Settings</include>
-			</control>-->
 			<!--MenuSelect-->
 			<control type="radiobutton" id="112">
 				<label>$LOCALIZE[32042]</label>
@@ -213,13 +205,6 @@
 				<selected>Skin.HasSetting(home.menushade)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!--widgets
-			<control type="label" id="116">
-				<label>$LOCALIZE[32060]</label>
-				<font>category</font>
-				<textcolor>Color2</textcolor>
-				<include>button_Settings</include>
-			</control>-->
 			<!--Search-->
 			<control type="radiobutton" id="116">
 				<label>$LOCALIZE[32301]</label>

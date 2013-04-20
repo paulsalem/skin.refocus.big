@@ -3,10 +3,10 @@
 		<control type="list" id="9000">
 			<posy>20</posy>
 			<width>1000</width>
-			<height>700</height>
+			<height>640</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
-			<onright condition="!Skin.HasSetting(slideshow.home)">600</onright>
+			<onright condition="!Skin.HasSetting(slideshow.home)">8004</onright>
 			<onright condition="Skin.HasSetting(slideshow.home) + [!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(1)] | [!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(2)] | [!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(3)] | [!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(4)] | [!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(5)] | [!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(6)] | [!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(9)] | [!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(10)] | [!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(13)] | [!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(14)] | [!Skin.HasSetting(home.widgets.weather) + Container(9000).HasFocus(17)]">8004</onright>
 			<onright condition="Skin.HasSetting(slideshow.home) + ![!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(1)] + ![!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(2)] + ![!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(3)] + ![!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(4)] + ![!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(5)] + ![!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(6)] + ![!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(9)] + ![!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(10)] + ![!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(13)] + ![!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(14)] + ![!Skin.HasSetting(home.widgets.weather) + Container(9000).HasFocus(17)]">600</onright>
 			<onleft condition="!Skin.HasSetting(home.searchleft)">RunAddon(script.globalsearch)</onleft>
@@ -163,6 +163,114 @@
 					<visible>!Skin.HasSetting(homemenu.playing) + Player.HasVideo + Skin.HasSetting(backgroundvideo)</visible>
 					<!--<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>-->
 				</item>
+				
+				<!--custom categories-->
+				<!--first subcategory-->
+				<item id="24">
+					<label>$INFO[Skin.String(addonsmenu.category1.addon.label)]</label>
+					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category1.addon.path)])</onclick>
+					<visible>Skin.HasSetting(home.category1.addon)</visible>
+				</item>
+				<item id="24">
+					<label>$INFO[Skin.String(programs.category1.program.label)]</label>
+					<onclick>RunAddon($INFO[Skin.String(programs.category1.program.path)])</onclick>
+					<visible>Skin.HasSetting(home.category1.program)</visible>
+				</item>
+				<item id="24">
+					<label>$INFO[Skin.String(videomenu.category1.playlist.label)]</label>
+					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category1.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
+					<visible>Skin.HasSetting(home.category1.playlist)</visible>
+				</item>
+				<item id="24">
+    					<label>$INFO[Skin.String(CustomVideo.Category1.Label)]</label>
+    					<onclick>$INFO[Skin.String(CustomVideo.Category1.Path)]</onclick>
+    					<visible>Skin.HasSetting(home.category1.favourite)</visible>
+				</item>
+				<!--second subcategory-->
+				<item id="25">
+					<label>$INFO[Skin.String(addonsmenu.category2.addon.label)]</label>
+					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category2.addon.path)])</onclick>
+					<visible>Skin.HasSetting(home.category2.addon)</visible>
+				</item>
+				<item id="25">
+					<label>$INFO[Skin.String(programs.category2.program.label)]</label>
+					<onclick>RunAddon($INFO[Skin.String(programs.category2.program.path)])</onclick>
+					<visible>Skin.HasSetting(home.category2.program)</visible>
+				</item>
+				<item id="25">
+					<label>$INFO[Skin.String(videomenu.category2.playlist.label)]</label>
+					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category2.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
+					<visible>Skin.HasSetting(home.category2.playlist)</visible>
+				</item>
+				<item id="25">
+    					<label>$INFO[Skin.String(CustomVideo.category2.Label)]</label>
+    					<onclick>$INFO[Skin.String(CustomVideo.category2.Path)]</onclick>
+    					<visible>Skin.HasSetting(home.category2.favourite)</visible>
+				</item>
+				<!--third subcategory-->
+				<item id="26">
+					<label>$INFO[Skin.String(addonsmenu.category3.addon.label)]</label>
+					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category3.addon.path)])</onclick>
+					<visible>Skin.HasSetting(home.category3.addon)</visible>
+				</item>
+				<item id="26">
+					<label>$INFO[Skin.String(programs.category3.program.label)]</label>
+					<onclick>RunAddon($INFO[Skin.String(programs.category3.program.path)])</onclick>
+					<visible>Skin.HasSetting(home.category3.program)</visible>
+				</item>
+				<item id="26">
+					<label>$INFO[Skin.String(videomenu.category3.playlist.label)]</label>
+					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category3.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
+					<visible>Skin.HasSetting(home.category3.playlist)</visible>
+				</item>
+				<item id="26">
+    					<label>$INFO[Skin.String(CustomVideo.category3.Label)]</label>
+    					<onclick>$INFO[Skin.String(CustomVideo.category3.Path)]</onclick>
+    					<visible>Skin.HasSetting(home.category3.favourite)</visible>
+				</item>
+				<!--fourth subcategory-->
+				<item id="27">
+					<label>$INFO[Skin.String(addonsmenu.category4.addon.label)]</label>
+					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category4.addon.path)])</onclick>
+					<visible>Skin.HasSetting(home.category4.addon)</visible>
+				</item>
+				<item id="27">
+					<label>$INFO[Skin.String(programs.category4.program.label)]</label>
+					<onclick>RunAddon($INFO[Skin.String(programs.category4.program.path)])</onclick>
+					<visible>Skin.HasSetting(home.category4.program)</visible>
+				</item>
+				<item id="27">
+					<label>$INFO[Skin.String(videomenu.category4.playlist.label)]</label>
+					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category4.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
+					<visible>Skin.HasSetting(home.category4.playlist)</visible>
+				</item>
+				<item id="27">
+    					<label>$INFO[Skin.String(CustomVideo.category4.Label)]</label>
+    					<onclick>$INFO[Skin.String(CustomVideo.category4.Path)]</onclick>
+    					<visible>Skin.HasSetting(home.category4.favourite)</visible>
+				</item>
+				<!--fifth subcategory-->
+				<item id="28">
+					<label>$INFO[Skin.String(addonsmenu.category5.addon.label)]</label>
+					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category5.addon.path)])</onclick>
+					<visible>Skin.HasSetting(home.category5.addon)</visible>
+				</item>
+				<item id="28">
+					<label>$INFO[Skin.String(programs.category5.program.label)]</label>
+					<onclick>RunAddon($INFO[Skin.String(programs.category5.program.path)])</onclick>
+					<visible>Skin.HasSetting(home.category5.program)</visible>
+				</item>
+				<item id="28">
+					<label>$INFO[Skin.String(videomenu.category5.playlist.label)]</label>
+					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category5.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
+					<visible>Skin.HasSetting(home.category5.playlist)</visible>
+				</item>
+				<item id="28">
+    					<label>$INFO[Skin.String(CustomVideo.category5.Label)]</label>
+    					<onclick>$INFO[Skin.String(CustomVideo.category5.Path)]</onclick>
+    					<visible>Skin.HasSetting(home.category5.favourite)</visible>
+				</item>
+				
 			</content>
 		</control>
 		<include>homeSubMenu</include>

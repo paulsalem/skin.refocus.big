@@ -3,7 +3,7 @@
 		<itemlayout width="640" height="52">
 			<control type="label">
 				<posx>20</posx>
-				<posy>70</posy>
+				<posy>55</posy>
 				<posy>100</posy>
 				<width>640</width>
 				<height>50</height>
@@ -13,9 +13,9 @@
 				<textcolor>Color0</textcolor>
 			</control>
 		</itemlayout>			
-		<focusedlayout width="640" height="52">
+		<focusedlayout width="640" height="70">
 			<control type="image">
-				<posy>0</posy>
+				<posy>-7</posy>
 				<width>375</width>
 				<height>200</height>
 				<aspectratio align="left">stretch</aspectratio>
@@ -25,7 +25,7 @@
 				<visible>!Control.HasFocus(888) + !Skin.HasSetting(home.menuselect.realaska)</visible>
 			</control>
 			<control type="image">
-				<posy>0</posy>
+				<posy>-7</posy>
 				<width>375</width>
 				<height>200</height>
 				<aspectratio align="left">stretch</aspectratio>
@@ -46,7 +46,7 @@
 			</control>
 			-->
 			<control type="label">
-				<posy>70</posy>
+				<posy>64</posy>
 				<posx>20</posx>
 				<width>640</width>
 				<height>50</height>

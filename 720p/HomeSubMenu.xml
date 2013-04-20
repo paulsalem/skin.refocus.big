@@ -6,7 +6,7 @@
 			<control type="list" id="1110">
 				<posx>-800</posx>
 				<width>640</width>
-				<height>800</height>
+				<height>640</height>
 				<onback>9000</onback>
 				<onleft>9000</onleft>
 				<onright>888</onright>
