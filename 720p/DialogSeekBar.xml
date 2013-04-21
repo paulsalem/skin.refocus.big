@@ -408,11 +408,13 @@
 						<visible>[Window.IsActive(videoosd) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding]</visible>
 					</control>
 					<control type="label" id="1">
-						<posx>761</posx>
+						<posx>1184</posx>
 						<label>$INFO[Player.FinishTime]</label>
 						<font>description</font>
 						<textcolor>Color8</textcolor>
 						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<scroll>false</scroll>
 						<include>seekbar_Label-Info_xperience_osd</include>
 					</control>
 					
