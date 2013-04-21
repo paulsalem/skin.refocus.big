@@ -15,7 +15,7 @@
 				<orientation>vertical</orientation>
 				<scrolltime tween="Cubic" easing="Out">400</scrolltime>
 				<include>home_SubFocus</include>
-				<include>homeMenusLayout</include>
+				<include>homeMenusLayoutOriginal</include>
 				<visible allowhiddenfocus="true">Container(9000).HasFocus(1)</visible>
 				<content>
 					<item id="1">
@@ -127,7 +127,7 @@
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Container(9000).HasFocus(7)</visible>
 				<include>home_SubFocus</include>
-				<include>homeMenusLayout</include>
+				<include>homeMenusLayoutOriginal</include>
 				<content>
 					<!--channels-->
 					<item id="1">
@@ -177,7 +177,7 @@
 				<scrolltime>150</scrolltime>
 				<visible>Container(9000).HasFocus(9)</visible>
 				<include>home_SubFocus</include>
-				<include>homeMenusLayout</include>
+				<include>homeMenusLayoutOriginal</include>
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[132]</label>
@@ -258,7 +258,7 @@
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Container(9000).HasFocus(11)</visible>
 				<include>home_SubFocus</include>
-				<include>homeMenusLayout</include>
+				<include>homeMenusLayoutOriginal</include>
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[1024]</label>
@@ -284,7 +284,7 @@
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Container(9000).HasFocus(13)</visible>
 				<include>home_SubFocus</include>
-				<include>homeMenusLayout</include>
+				<include>homeMenusLayoutOriginal</include>
 				<content>
 					<item id="1">
 						<label>$INFO[Skin.String(addonsmenu.addon1.label)]</label>
@@ -355,7 +355,7 @@
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Container(9000).HasFocus(15)</visible>
 				<include>home_SubFocus</include>
-				<include>homeMenusLayout</include>
+				<include>homeMenusLayoutOriginal</include>
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[5]</label>
@@ -402,7 +402,7 @@
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Container(9000).HasFocus(13)</visible>
 				<include>home_SubFocus</include>
-				<include>homeMenusLayout</include>
+				<include>homeMenusLayoutOriginal</include>
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[20126]</label>
@@ -458,7 +458,7 @@
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Container(9000).HasFocus(19)</visible>
 				<include>home_SubFocus</include>
-				<include>homeMenusLayout</include>
+				<include>homeMenusLayoutOriginal</include>
 				<content>
 					<item id="1">
 						<description>play</description>
@@ -486,7 +486,7 @@
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Library.HasContent(movies) + Container(9000).HasFocus(3)</visible>
 				<include>home_SubFocus</include>
-				<include>homeMenusLayout</include>
+				<include>homeMenusLayoutOriginal</include>
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[1024]</label>
@@ -566,7 +566,7 @@
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Library.HasContent(tvshows) + Container(9000).HasFocus(5)</visible>
 				<include>home_SubFocus</include>
-				<include>homeMenusLayout</include>
+				<include>homeMenusLayoutOriginal</include>
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[1024]</label>
