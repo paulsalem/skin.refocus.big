@@ -226,13 +226,12 @@
 				</control>
 			</control>
 			
-			
 			<!-- episode info -->
 			<control type ="group">
 				<visible>Skin.HasSetting(videoosd.title) + [VideoPlayer.Content(episodes)]</visible>
 				<control type="label">
 					<posx>260</posx>
-					<posy>646</posy>
+					<posy>642</posy>
 					<width>800</width>
 					<description>Title</description>
 					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
@@ -240,6 +239,92 @@
 					<shadowcolor>black</shadowcolor>
 					<scroll>true</scroll>
 					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.logo) + Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>225</posx>
+					<posy>642</posy>
+					<width>800</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.poster) + Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>230</posx>
+					<posy>642</posy>
+					<width>800</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.thumb) + Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>642</posy>
+					<width>1000</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>!Skin.HasSetting(videoosd.thumb) + !Skin.HasSetting(videoosd.poster) + !Skin.HasSetting(videoosd.logo) + Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>260</posx>
+					<posy>642</posy>
+					<width>1000</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.logo) + !Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>225</posx>
+					<posy>642</posy>
+					<width>1000</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.poster) + !Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>230</posx>
+					<posy>642</posy>
+					<width>1000</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.thumb) + !Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>642</posy>
+					<width>1250</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>!Skin.HasSetting(videoosd.thumb) + !Skin.HasSetting(videoosd.poster) + !Skin.HasSetting(videoosd.logo) + !Skin.HasSetting(videoosd.clearart)</visible>
 				</control>
 			</control>
 			
@@ -1123,6 +1208,92 @@
 					<shadowcolor>black</shadowcolor>
 					<scroll>true</scroll>
 					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.logo) + Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>225</posx>
+					<posy>640</posy>
+					<width>800</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.poster) + Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>230</posx>
+					<posy>640</posy>
+					<width>800</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.thumb) + Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>640</posy>
+					<width>1000</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>!Skin.HasSetting(videoosd.thumb) + !Skin.HasSetting(videoosd.poster) + !Skin.HasSetting(videoosd.logo) + Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>260</posx>
+					<posy>640</posy>
+					<width>1000</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.logo) + !Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>225</posx>
+					<posy>640</posy>
+					<width>1000</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.poster) + !Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>230</posx>
+					<posy>640</posy>
+					<width>1000</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>Skin.HasSetting(videoosd.thumb) + !Skin.HasSetting(videoosd.clearart)</visible>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>640</posy>
+					<width>1250</width>
+					<description>Title</description>
+					<label>$INFO[VideoPlayer.Title] : $INFO[VideoPlayer.Season,$LOCALIZE[20373] ] : $INFO[VideoPlayer.Episode,$LOCALIZE[20359]  ]</label>
+					<textcolor>Color8</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<font>date</font>
+					<visible>!Skin.HasSetting(videoosd.thumb) + !Skin.HasSetting(videoosd.poster) + !Skin.HasSetting(videoosd.logo) + !Skin.HasSetting(videoosd.clearart)</visible>
 				</control>
 			</control>
 			
