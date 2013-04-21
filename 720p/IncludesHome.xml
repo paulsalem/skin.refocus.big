@@ -3,10 +3,10 @@
 		<itemlayout width="640" height="52">
 			<control type="label">
 				<posx>20</posx>
-				<posy>55</posy>
+				<posy>52</posy>
 				<posy>100</posy>
 				<width>640</width>
-				<height>50</height>
+				<height>51</height>
 				<font>homeMenu</font>
 				<align>left</align>
 				<label>$INFO[ListItem.Label]</label>
@@ -46,10 +46,10 @@
 			</control>
 			-->
 			<control type="label">
-				<posy>64</posy>
+				<posy>52</posy>
 				<posx>20</posx>
 				<width>640</width>
-				<height>50</height>
+				<height>70</height>
 				<font>homeMenu</font>
 				<align>left</align>
 				<textcolor>Color5</textcolor>
@@ -57,10 +57,10 @@
 				<!--<visible>![Container(9000).HasFocus(21) | Container(9000).HasFocus(22)]</visible>-->
 			</control>
 			<control type="label">
-				<posy>70</posy>
+				<posy>52</posy>
 				<posx>20</posx>
 				<width>640</width>
-				<height>50</height>
+				<height>70</height>
 				<font>homeMenu</font>
 				<align>left</align>
 				<textcolor>Color1</textcolor>
@@ -68,10 +68,10 @@
 				<visible>Control.HasFocus(888)</visible>
 			</control>
 			<control type="label">
-				<posy>72</posy>
+				<posy>54</posy>
 				<posx>20</posx>
 				<width>640</width>
-				<height>50</height>
+				<height>70</height>
 				<font>homeMenuInfo</font>
 				<align>left</align>
 				<textcolor>Color5</textcolor>

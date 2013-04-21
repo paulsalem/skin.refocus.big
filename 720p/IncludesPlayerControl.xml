@@ -1,4 +1,10 @@
 ﻿<includes>
+	<include name="OSDNonLiveTV">
+		<defaultcontrol>3</defaultcontrol>
+	</include>
+	<include name="OSDLiveTV">
+		<defaultcontrol>1</defaultcontrol>
+	</include>
 	<include name="controls_Music">
 		<control type="group">
 			<visible>![Window.IsActive(visualisationpresetlist) | Window.IsActive(script-XBMC_Lyrics-main.xml)]</visible>
