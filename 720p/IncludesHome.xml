@@ -1,21 +1,20 @@
 ﻿<includes>
 	<include name="homeMenusLayout">
-		<itemlayout width="640" height="52">
+		<itemlayout width="640" height="54">
 			<control type="label">
+				<posy>60</posy>
 				<posx>20</posx>
-				<posy>52</posy>
-				<posy>100</posy>
 				<width>640</width>
-				<height>51</height>
+				<height>20</height>
 				<font>homeMenu</font>
 				<align>left</align>
-				<label>$INFO[ListItem.Label]</label>
 				<textcolor>Color0</textcolor>
+				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>			
-		<focusedlayout width="640" height="70">
+		<focusedlayout width="640" height="54">
 			<control type="image">
-				<posy>-7</posy>
+				<posy>-25</posy>
 				<width>375</width>
 				<height>200</height>
 				<aspectratio align="left">stretch</aspectratio>
@@ -25,7 +24,7 @@
 				<visible>!Control.HasFocus(888) + !Skin.HasSetting(home.menuselect.realaska)</visible>
 			</control>
 			<control type="image">
-				<posy>-7</posy>
+				<posy>-25</posy>
 				<width>375</width>
 				<height>200</height>
 				<aspectratio align="left">stretch</aspectratio>
@@ -46,10 +45,10 @@
 			</control>
 			-->
 			<control type="label">
-				<posy>52</posy>
+				<posy>60</posy>
 				<posx>20</posx>
 				<width>640</width>
-				<height>70</height>
+				<height>20</height>
 				<font>homeMenu</font>
 				<align>left</align>
 				<textcolor>Color5</textcolor>
@@ -57,10 +56,10 @@
 				<!--<visible>![Container(9000).HasFocus(21) | Container(9000).HasFocus(22)]</visible>-->
 			</control>
 			<control type="label">
-				<posy>52</posy>
+				<posy>60</posy>
 				<posx>20</posx>
 				<width>640</width>
-				<height>70</height>
+				<height>20</height>
 				<font>homeMenu</font>
 				<align>left</align>
 				<textcolor>Color1</textcolor>
@@ -68,10 +67,10 @@
 				<visible>Control.HasFocus(888)</visible>
 			</control>
 			<control type="label">
-				<posy>54</posy>
+				<posy>62</posy>
 				<posx>20</posx>
 				<width>640</width>
-				<height>70</height>
+				<height>20</height>
 				<font>homeMenuInfo</font>
 				<align>left</align>
 				<textcolor>Color5</textcolor>
