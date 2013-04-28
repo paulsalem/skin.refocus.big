@@ -1,6 +1,6 @@
 ﻿<includes>
 	<include name="homeMenusLayoutMod">
-		<itemlayout width="640" height="54">
+		<itemlayout width="640" height="53">
 			<control type="label">
 				<posy>60</posy>
 				<posx>20</posx>
@@ -12,7 +12,7 @@
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>				
-		<focusedlayout width="640" height="54">
+		<focusedlayout width="640" height="53">
 			<control type="image">
 				<posy>-25</posy>
 				<width>375</width>

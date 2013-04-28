@@ -3,7 +3,7 @@
 		<control type="list" id="9000">
 			<posy>30</posy>
 			<width>1000</width>
-			<height>640</height>
+			<height>633</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<onright condition="!Skin.HasSetting(slideshow.home)">8004</onright>
