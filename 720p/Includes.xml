@@ -1073,7 +1073,7 @@
 			<include>toggle_Menu</include>
 			<control type="group">
 				<control type="image">
-					<width>505</width>
+					<width>444</width>
 					<height>444</height>
 					<texture background="true" border="31">frames/frame_Square.png</texture>
 					<aspectratio align="center">stretch</aspectratio>
@@ -1083,7 +1083,7 @@
 				<control type="image">
 					<posx>22</posx>
 					<posy>22</posy>
-					<width>460</width>
+					<width>400</width>
 					<height>400</height>
 					<texture fallback="thumbs/album.png" background="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio align="center">scale</aspectratio>
