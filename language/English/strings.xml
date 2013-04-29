@@ -469,4 +469,20 @@ Please consider supporting the development of XBMC by making a donation.
 <!--Homescreen Fanart Slideshow-->
 <string id="32900">Use Homescreen Fanart Slideshow</string>
 
+<!--Homescreen Categories-->
+<string id="40000">Customize Home Menu Custom Items</string>
+<string id="40001">First Item</string>
+<string id="40002">Use Addon</string>
+<string id="40003">Use Program</string>
+<string id="40004">Use Smart Playlist</string>
+<string id="40005">Use Favourite</string>
+<string id="40006">Set Addon</string>
+<string id="40007">Set Program</string>
+<string id="40008">Set Smart Playlist</string>
+<string id="40009">Set Favourite</string>
+<string id="40010">Second Item</string>
+<string id="40011">Third Item</string>
+<string id="40012">Fourth Item</string>
+<string id="40013">Fifth Item</string>
+
 </strings>
