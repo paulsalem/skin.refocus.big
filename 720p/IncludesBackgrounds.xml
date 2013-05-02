@@ -27,6 +27,18 @@
 			<loop>yes</loop>
 			<pauseatend>2000</pauseatend>
 			<include>AnimateBackgrounds</include>
+			<visible>[!Control.IsVisible(53) + !Window.isActive(2003) + !SubString(Container.FolderPath,plugin://)] + Skin.HasSetting(fanart.extra) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Path,extrafanart) + Skin.HasSetting(fanart.global) + System.IdleTime(0.5)</visible>
+		</control>
+		<control type="multiimage" id="7891">
+			<include>screen_Dimensions</include>
+			<imagepath background="true">$INFO[ListItem.Path]extrafanart</imagepath>
+			<aspectratio align="center">scale</aspectratio>
+			<timeperimage>1500</timeperimage>
+			<fadetime>800</fadetime>
+			<randomize>false</randomize>
+			<loop>yes</loop>
+			<pauseatend>2000</pauseatend>
+			<include>AnimateBackgrounds</include>
 			<visible>[!Control.IsVisible(53) + !Window.isActive(2003) + !SubString(Container.FolderPath,plugin://)] + Skin.HasSetting(fanart.extra) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Path,,extrafanart) + Skin.HasSetting(fanart.global) + System.IdleTime(0.5)</visible>
 		</control>
 		
