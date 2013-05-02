@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-	<addon id="skin.refocus.big" version="0.88.2" name="reFocus Big" provider-name="Jeroen Modded by Salem">
+	<addon id="skin.refocus.big" version="0.88.3" name="reFocus Big" provider-name="Jeroen Modded by Salem">
 	<requires>
 		<import addon="xbmc.gui" version="4.0.0"/>
 		<import addon="script.favourites" version="3.2.4"/>
