@@ -820,7 +820,7 @@
 				<visible>Library.HasContent(music) + [Container(9000).HasFocus(9) | Container(9000).HasFocus(10)]</visible>
 			</control>
 			<control type="label">
-				<label>$LOCALIZE[31965]: [COLOR=Color1]$INFO[Weather.Conditions], $INFO[Weather.Temperature][/COLOR] \95 $LOCALIZE[402]: [COLOR=Color1]$INFO[Window(Weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/COLOR] \95 $LOCALIZE[406]: [COLOR=Color1]$INFO[Window(Weather).Property(Current.Humidity)][/COLOR] \95 $LOCALIZE[404]: [COLOR=Color1]$INFO[Window(Weather).Property(Current.Wind)][/COLOR]</label>
+				<label>$LOCALIZE[31965]: [COLOR=Color1]$INFO[Weather.Conditions], $INFO[Weather.Temperature][/COLOR] $LOCALIZE[402]: [COLOR=Color1]$INFO[Window(Weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/COLOR] $LOCALIZE[406]: [COLOR=Color1]$INFO[Window(Weather).Property(Current.Humidity)][/COLOR] $LOCALIZE[404]: [COLOR=Color1]$INFO[Window(Weather).Property(Current.Wind)][/COLOR]</label>
 				<include>home_statuslabel</include>
 				<visible>Container(9000).HasFocus(17)</visible>
 			</control>
