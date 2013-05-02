@@ -462,6 +462,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32604">Use Episode Thumb</string>
 <string id="32605">Use Network/Studio Thumb</string>
 <string id="32606">Use Logo</string>
+<string id="32607">Display Episode Info</string>
 
 <!--fanart-->
 <string id="32700">Use Extra Fanart</string>
