@@ -496,7 +496,7 @@
 			<visible>Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522)</visible>
 			<!---flags--->
 			<control type="image" id="88788">
-				<posx>60</posx>
+				<posx>46</posx>
 				<posy>560</posy>
 				<width>128</width>
 				<height>64</height>
@@ -504,7 +504,7 @@
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>
 			<control type="image" id="88988">
-				<posx>60</posx>
+				<posx>46</posx>
 				<posy>560</posy>
 				<width>128</width>
 				<height>64</height>
