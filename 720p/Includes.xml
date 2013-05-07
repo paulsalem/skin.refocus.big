@@ -1162,7 +1162,7 @@
 				<visible>StringCompare(Control.GetLabel(9969),empty) + !VideoPlayer.Content(movies)</visible>
 			</control>
 			<control type="image" id="9989">
-				<posx>10</posx>
+				<posx>16</posx>
 				<posy>30</posy>
 				<width>128</width>
 				<height>64</height>
@@ -1171,7 +1171,7 @@
 				<visible>VideoPlayer.Content(movies)</visible>
 			</control>
 			<control type="image" id="9997">
-				<posx>10</posx>
+				<posx>16</posx>
 				<posy>30</posy>
 				<width>128</width>
 				<height>64</height>
