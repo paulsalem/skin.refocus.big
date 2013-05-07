@@ -13,7 +13,7 @@
 			<posy>5</posy>
 			<control type="image" id="1">
 				<width>1270</width>
-				<height>113</height>
+				<height>127</height>
 				<texture border="4">views/column_Single.png</texture>
 				<colordiffuse>Color5</colordiffuse>
 			</control>
@@ -29,7 +29,7 @@
 				</control>
 				<!--line 2-->
 				<control type="label" id="11">
-					<posy>31</posy>
+					<posy>35</posy>
 					<width>1260</width>
 					<label>-</label>
 					<font>smallerCaps</font>
@@ -37,7 +37,7 @@
 				</control>
 				<!--line 3-->
 				<control type="label" id="12">
-					<posy>48</posy>
+					<posy>64</posy>
 					<width>1260</width>
 					<height>60</height>
 					<label>-</label>
