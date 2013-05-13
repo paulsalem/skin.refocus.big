@@ -2381,7 +2381,7 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
-			<visible>Player.HasAudio + !Skin.HasSetting(overlay.enable) + ![Window.IsActive(infodialog) | Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(home) | Window.IsActive(fullscreenvideo) | Window.IsActive(614) | Window.IsActive(extendedprogressdialog)]</visible>
+			<visible>Player.HasAudio + !SubString(Window(Videos).Property(TvTunesIsAlive),True) + !Skin.HasSetting(overlay.enable) + ![Window.IsActive(infodialog) | Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(home) | Window.IsActive(fullscreenvideo) | Window.IsActive(614) | Window.IsActive(extendedprogressdialog)]</visible>
 				
 	 <!-- Music -->
 			<control type="group">
