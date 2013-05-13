@@ -322,20 +322,25 @@
 						<visible>!IsEmpty(Skin.String(programs.program1.label))</visible>
 					</item>
 					<item id="8">
+						<label>$INFO[Skin.String(programs.program2.label)]</label>
+						<onclick>RunAddon($INFO[Skin.String(programs.program2.path)])</onclick>
+						<visible>!IsEmpty(Skin.String(programs.program2.label))</visible>
+					</item>
+					<item id="9">
 						<label>$LOCALIZE[24033]</label>
 						<onclick>ActivateWindow(addonbrowser,addons://all/, $INFO[Skin.String(backspacehome)])</onclick>
 					</item>
-					<item id="9">
+					<item id="10">
 						<label>$LOCALIZE[24043]</label>
 						<onclick>ActivateWindow(addonbrowser,addons://outdated/, $INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(addonsmenu.updates)</visible>
 					</item>
-					<item id="10">
+					<item id="11">
 						<label>$LOCALIZE[24062]</label>
 						<onclick>ActivateWindow(addonbrowser,addons://enabled/, $INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(addonsmenu.enabled)</visible>
 					</item>
-					<item id="11">
+					<item id="12">
 						<label>$LOCALIZE[0]</label>
 						<onclick>ActivateWindow(programs,addons, $INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(addonsmenu.programs)</visible>
