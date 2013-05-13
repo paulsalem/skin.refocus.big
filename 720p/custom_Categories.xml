@@ -46,29 +46,35 @@
 				<scrolltime tween="Cubic" easing="Out">200</scrolltime>
 				<control type="button" id="101">
 					<width>206</width>
+					<label>$LOCALIZE[32008]</label>
+					<onfocus>Skin.SetString(Sub,Global)</onfocus>
+					<include>dialog_Button-list</include>
+				</control>
+				<control type="button" id="102">
+					<width>206</width>
 					<label>$LOCALIZE[40001]</label>
 					<onfocus>Skin.SetString(Sub,First)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="102">
+				<control type="button" id="103">
 					<width>206</width>
 					<label>$LOCALIZE[40010]</label>
 					<onfocus>Skin.SetString(Sub,Second)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="103">
+				<control type="button" id="104">
 					<width>206</width>
 					<label>$LOCALIZE[40011]</label>
 					<onfocus>Skin.SetString(Sub,Third)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="104">
+				<control type="button" id="105">
 					<width>206</width>
 					<label>$LOCALIZE[40012]</label>
 					<onfocus>Skin.SetString(Sub,Fourth)</onfocus>
 					<include>dialog_Button-list</include>
 				</control>
-				<control type="button" id="105">
+				<control type="button" id="106">
 					<width>206</width>
 					<label>$LOCALIZE[40013]</label>
 					<onfocus>Skin.SetString(Sub,Fifth)</onfocus>
@@ -78,6 +84,26 @@
 
 			<!--control area-->	
 			<control type="group">
+			<!--global submenu-->
+				<control type="grouplist" id="200">
+					<posx>206</posx>
+					<width>557</width>
+					<height>480</height>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<itemgap>0</itemgap>
+					<visible>Skin.String(Sub,Global)</visible>
+					<!--display custom items on top-->
+					<control type="radiobutton" id="201">
+						<width>557</width>
+						<label>$LOCALIZE[40014]</label>
+						<onclick>Skin.ToggleSetting(home.category.top)</onclick>
+						<selected>Skin.HasSetting(home.category.top)</selected>
+						<include>dialog_Radio</include>
+					</control>
+				</control>
 				<!--first submenu-->
 				<control type="grouplist" id="200">
 					<posx>206</posx>
