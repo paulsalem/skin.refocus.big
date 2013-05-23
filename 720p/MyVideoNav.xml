@@ -500,7 +500,7 @@
 				<posy>560</posy>
 				<width>128</width>
 				<height>64</height>
-				<aspectratio align="right">keep</aspectratio>
+				<aspectratio align="center">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>
 			<control type="image" id="88988">
@@ -508,7 +508,7 @@
 				<posy>560</posy>
 				<width>128</width>
 				<height>64</height>
-				<aspectratio align="right">keep</aspectratio>
+				<aspectratio align="center">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 				<visible>StringCompare(Control.GetLabel(88788),empty)</visible>
 			</control>
@@ -543,20 +543,11 @@
 				<control type="textbox">
 					<posy>60</posy>
 					<width>960</width>
-					<height>110</height>
+					<height>136</height>
 					<label>$VAR[global_Plot.Condition]</label>
 					<font>descriptionbig</font>
 					<include>description_Small</include>
-					<visible>IsEmpty(ListItem.Property(ReleaseDate))</visible>
-				</control>
-				<control type="textbox">
-					<posy>60</posy>
-					<width>960</width>
-					<height>163</height>
-					<label>$VAR[global_Plot.Condition]</label>
-					<font>descriptionbig</font>
-					<include>description_Small</include>
-					<visible>!IsEmpty(ListItem.Property(ReleaseDate))</visible>
+					<visible>system.getbool(videolibrary.showunwatchedplots) | ListItem.IsFolder | !system.getbool(videolibrary.showunwatchedplots) + !IsEmpty(ListItem.PlayCount)</visible>
 				</control>
 			</control>
 		</control>

@@ -676,6 +676,29 @@
 				<visible>Skin.HasSetting(videoosd.glow) + !Skin.HasSetting(videoosd.xperience1080)</visible>
 				<include>button_Settings</include>
 			</control>
+			<!--eXtended Info-->
+			<control type="label" id="771">
+				<label>$LOCALIZE[32608]</label>
+				<font>category</font>
+				<textcolor>Color2</textcolor>
+				<include>button_Settings</include>
+			</control>
+			<!--eXtended Info-->
+			<control type="radiobutton" id="772">
+				<label>$LOCALIZE[32609]</label>
+				<onclick>Skin.ToggleSetting(videoosd.extended)</onclick>
+				<selected>Skin.HasSetting(videoosd.extended)</selected>
+				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)]</visible>
+				<include>button_Settings</include>
+			</control>
+			<!--Codecs-->
+			<control type="radiobutton" id="773">
+				<label>$LOCALIZE[32610]</label>
+				<onclick>Skin.ToggleSetting(videoosd.extended.nocodec)</onclick>
+				<selected>Skin.HasSetting(videoosd.extended.nocodec)</selected>
+				<visible>![Skin.HasSetting(videoosd.reAlaska) | Skin.HasSetting(videoosd.xperience1080)] + Skin.HasSetting(videoosd.extended)</visible>
+				<include>button_Settings</include>
+			</control>
 		</control>
 <!--ADDONS-->
 		<control type="grouplist" id="800">

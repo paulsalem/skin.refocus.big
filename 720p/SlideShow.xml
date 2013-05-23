@@ -1,6 +1,7 @@
 ﻿<window id="2007">
 	<defaultcontrol>2</defaultcontrol>
 	<controls>
-		<include condition="Player.HasAudio">osd_Info</include>
+		<include condition="Player.HasAudio + !Skin.HasSetting(videoosd.extended)">osd_Info</include>
+		<include condition="Player.HasAudio + Skin.HasSetting(videoosd.extended)">osd_Info_eXtended</include>
 	</controls>
 </window>

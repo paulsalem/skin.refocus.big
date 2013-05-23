@@ -158,6 +158,7 @@
 		<value condition="Window.IsActive(pictures) + IsEmpty(ListItem.Thumb)">thumbs/picture_landscape.jpg</value>
 		<value condition="Container.Content(files) + IsEmpty(ListItem.Thumb)">thumbs/video_landscape.png</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Path]</value>
+		<value condition="Container.Content(episodes) + IsEmpty(ListItem.PlayCount) + !system.getbool(videolibrary.showunwatchedplots)">$INFO[ListItem.Art(fanart)]</value>		
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="view_Landscape.Thumb">

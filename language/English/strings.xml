@@ -463,6 +463,9 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32605">Use Network/Studio Thumb</string>
 <string id="32606">Use Logo</string>
 <string id="32607">Display Episode Info</string>
+<string id="32608">OSD Extended</string>
+<string id="32609">Use OSD Extended Info</string>
+<string id="32610">Hide Codec Information</string>
 
 <!--fanart-->
 <string id="32700">Use Extra Fanart</string>

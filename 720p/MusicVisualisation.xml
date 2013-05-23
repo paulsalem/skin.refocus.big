@@ -91,7 +91,8 @@
 			</control>
 		</control>
 		<control type="group" id="1">
-			<include>osd_Info</include>
+			<include condition="!Skin.HasSetting(videoosd.extended)">osd_Info</include>
+			<include condition="Skin.HasSetting(videoosd.extended)">osd_Info_eXtended</include>
 			<include>transition_OSD</include>
 			<visible>Player.ShowInfo</visible>
 		</control>
