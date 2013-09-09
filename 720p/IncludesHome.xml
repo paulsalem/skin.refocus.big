@@ -87,7 +87,7 @@
 				<posy>100</posy>
 				<width>640</width>
 				<height>50</height>
-				<font>light.Home</font>
+				<font>homeMenu</font>
 				<align>left</align>
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>Color0</textcolor>
@@ -130,7 +130,7 @@
 				<posx>20</posx>
 				<width>640</width>
 				<height>50</height>
-				<font>light.Home</font>
+				<font>homeMenu</font>
 				<align>left</align>
 				<textcolor>Color5</textcolor>
 				<label>$INFO[ListItem.Label]</label>

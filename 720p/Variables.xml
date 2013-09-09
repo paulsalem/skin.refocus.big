@@ -492,6 +492,76 @@
 		<value>$LOCALIZE[1036]</value>
 	</variable>
 	
-	
+
+<!-- Home menu background -->
+	<variable name="value_mainmenubg_category1">
+		<value condition="!IsEmpty(Skin.String(fanart.category1.image))">$INFO[Skin.String(fanart.category1.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.category1.path))">$INFO[Skin.String(fanart.category1.path)]</value>
+	</variable>	
+	<variable name="value_mainmenubg_category2">
+		<value condition="!IsEmpty(Skin.String(fanart.category2.image))">$INFO[Skin.String(fanart.category2.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.category2.path))">$INFO[Skin.String(fanart.category2.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_category3">
+		<value condition="!IsEmpty(Skin.String(fanart.category3.image))">$INFO[Skin.String(fanart.category3.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.category3.path))">$INFO[Skin.String(fanart.category3.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_category4">
+		<value condition="!IsEmpty(Skin.String(fanart.category4.image))">$INFO[Skin.String(fanart.category4.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.category4.path))">$INFO[Skin.String(fanart.category4.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_category5">
+		<value condition="!IsEmpty(Skin.String(fanart.category5.image))">$INFO[Skin.String(fanart.category5.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.category5.path))">$INFO[Skin.String(fanart.category5.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_videos">
+		<value condition="!IsEmpty(Skin.String(fanart.video.image))">$INFO[Skin.String(fanart.video.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.video.path))">$INFO[Skin.String(fanart.video.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_movies">
+		<value condition="!IsEmpty(Skin.String(fanart.movies.image))">$INFO[Skin.String(fanart.movies.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.movies.path))">$INFO[Skin.String(fanart.movies.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_tvshows">
+		<value condition="!IsEmpty(Skin.String(fanart.tvshows.image))">$INFO[Skin.String(fanart.tvshows.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.tvshows.path))">$INFO[Skin.String(fanart.tvshows.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_pvr">
+		<value condition="!IsEmpty(Skin.String(fanart.pvr.image))">$INFO[Skin.String(fanart.pvr.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.pvr.path))">$INFO[Skin.String(fanart.pvr.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_music">
+		<value condition="!IsEmpty(Skin.String(fanart.music.image))">$INFO[Skin.String(fanart.music.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.music.path))">$INFO[Skin.String(fanart.music.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_pictures">
+		<value condition="!IsEmpty(Skin.String(fanart.pictures.image))">$INFO[Skin.String(fanart.pictures.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.pictures.path))">$INFO[Skin.String(fanart.pictures.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_addons">
+		<value condition="!IsEmpty(Skin.String(fanart.addons.image))">$INFO[Skin.String(fanart.addons.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.addons.path))">$INFO[Skin.String(fanart.addons.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_system">
+		<value condition="!IsEmpty(Skin.String(fanart.system.image))">$INFO[Skin.String(fanart.system.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.system.path))">$INFO[Skin.String(fanart.system.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_favourites">
+		<value condition="!IsEmpty(Skin.String(fanart.favourites.image))">$INFO[Skin.String(fanart.favourites.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.favourites.path))">$INFO[Skin.String(fanart.favourites.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_disc">
+		<value condition="!IsEmpty(Skin.String(fanart.disc.image))">$INFO[Skin.String(fanart.disc.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.disc.path))">$INFO[Skin.String(fanart.disc.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_favourites">
+		<value condition="!IsEmpty(Skin.String(fanart.favourites.image))">$INFO[Skin.String(fanart.favourites.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.favourites.path))">$INFO[Skin.String(fanart.favourites.path)]</value>
+	</variable>
+	<variable name="value_mainmenubg_weather">
+		<value condition="!IsEmpty(Skin.String(fanart.weather.image))">$INFO[Skin.String(fanart.weather.image)]</value>
+		<value condition="!IsEmpty(Skin.String(fanart.weather.singlepath))">$INFO[Skin.String(fanart.weather.singlepath)]</value>
+		<value condition="Skin.HasSetting(fanart.weather) + !IsEmpty(Skin.String(fanart.weather.path))">$INFO[Skin.String(fanart.weather.path)]/$INFO[Weather.FanartCode]</value>
+	</variable>	
 	
 </includes>

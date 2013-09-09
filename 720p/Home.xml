@@ -117,73 +117,21 @@
 					<include>transition_OSD</include>
 				</control>
 			</control>
-		<!-- weather fanart --->
-		<control type="multiimage" id="1">
+			
+		<!-- MULTI BG fanart --->
+		<control type="multiimage">
 			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.weather.path)]/$INFO[Weather.FanartCode]</imagepath>
+			<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<include>fadeinout</include>
 			<timeperimage>slideshow_Timer</timeperimage>
 			<fadetime>200</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">Skin.HasSetting(fanart.weather) + [!Skin.HasSetting(fanart.weather.singleimage) | !Skin.HasSetting(fanart.weather.singlepaths)] + Container(9000).HasFocus(17)</visible>
+			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))]  + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)]</visible>
 		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.weather.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.weather.singleimage) + !Skin.HasSetting(fanart.weather) + Container(9000).HasFocus(17)</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.weather.singlepath)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.weather.singlepaths) + !Skin.HasSetting(fanart.weather) + Container(9000).HasFocus(17)</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/weather.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(fanart.weather) +  IsEmpty(Skin.String(fanart.weather.singlepath)) + IsEmpty(Skin.String(fanart.weather.image)) + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + Container(9000).HasFocus(17)</visible>
-		</control>
+		
 		<!-- videos fanart --->
-		<control type="image" id="100">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.video.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))]  + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.video.image) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)]</visible>
-		</control>
-		<control type="multiimage" id="101">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.video.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.video.path) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)]</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/videos.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.video.path)) + IsEmpty(Skin.String(fanart.video.image)) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)]</visible>
-		</control>
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true" fallback="special://skin/backgrounds/movies.jpg">$INFO[Container(8000).ListItem.Property(Fanart)]</texture>
@@ -205,33 +153,6 @@
 		<!-- movies fanart --->
 		<control type="image">
 			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.movies.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.movies.image) + [Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + [![Control.HasFocus(8000) | [Control.HasFocus(8006) | Control.HasFocus(8007)]] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.movies.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.movies) + [Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + [![Control.HasFocus(8000) | [Control.HasFocus(8006) | Control.HasFocus(8007)]] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/movies.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.movies.image)) + IsEmpty(Skin.String(fanart.movies.path)) + [Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + [![Control.HasFocus(8000) | [Control.HasFocus(8006) | Control.HasFocus(8007)]] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
 			<texture background="true" fallback="special://skin/backgrounds/movies.jpg">$INFO[Container(8000).ListItem.Property(Fanart)]</texture>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(8000) + !Skin.HasSetting(home.widgets.nofanart)</visible>
@@ -251,33 +172,6 @@
 		<!-- tvshows fanart --->
 		<control type="image">
 			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.tvshows.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.tvshows.image) + [Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + [![Control.HasFocus(8001) | Control.HasFocus(8008) | Control.HasFocus(8009)] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.tvshows.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.tvshows) + [Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + [![Control.HasFocus(8001) | Control.HasFocus(8008) | Control.HasFocus(8009)] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/tvshows.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.tvshows.image)) + IsEmpty(Skin.String(fanart.tvshows.path)) + [Container(9000).HasFocus(5) | Container(9000).HasFocus(6)] + [![Control.HasFocus(8001) | Control.HasFocus(8008) | Control.HasFocus(8009)] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
 			<texture background="true" fallback="special://skin/backgrounds/tvshows.jpg">$INFO[Container(8001).ListItem.Property(Fanart)]</texture>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(8001) + !Skin.HasSetting(home.widgets.nofanart)</visible>
@@ -295,61 +189,8 @@
 			<visible>Control.HasFocus(8009) + !Skin.HasSetting(home.widgets.nofanart)</visible>
 		</control>
 		<!-- pvr fanart --->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.pvr.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.pvr.image) + [Container(9000).HasFocus(7) | Container(9000).HasFocus(8)]</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.pvr.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.pvr) + [Container(9000).HasFocus(7) | Container(9000).HasFocus(8)]</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/livetv.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.pvr.image)) + IsEmpty(Skin.String(fanart.pvr.path)) + [Container(9000).HasFocus(7) | Container(9000).HasFocus(8)]</visible>
-		</control>
+		
 		<!-- music fanart --->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.music.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.music.image) + [Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + [![Control.HasFocus(8004)] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.music.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(music.pvr) + [Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + [![Control.HasFocus(8004)] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/music.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.music.image)) + IsEmpty(Skin.String(fanart.music.path)) + [Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + [![Control.HasFocus(8004)] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true" fallback="special://skin/backgrounds/music.jpg">$INFO[Container(8002).ListItem.Property(Fanart)]</texture>
@@ -357,304 +198,14 @@
 			<visible>Control.HasFocus(8002) + !Skin.HasSetting(home.widgets.nofanart)</visible>
 		</control>
 		<!-- pictures fanart --->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.pictures.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.pictures.image) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(12)]</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.pictures.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.pictures) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(12)]</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/pictures.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.pictures.image)) + IsEmpty(Skin.String(fanart.pictures.path)) + [Container(9000).HasFocus(11) | Container(9000).HasFocus(12)]</visible>
-		</control>
+		
 		<!-- addons fanart --->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.addons.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.addons.image) + [Container(9000).HasFocus(13) | Container(9000).HasFocus(14)] + [![Control.HasFocus(8005)] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.addons.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.addons) + [Container(9000).HasFocus(13) | Container(9000).HasFocus(14)] + [![Control.HasFocus(8005)] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/addons.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.addons.image)) + IsEmpty(Skin.String(fanart.addons.path)) + [Container(9000).HasFocus(13) | Container(9000).HasFocus(14)] + [![Control.HasFocus(8005)] | Skin.HasSetting(home.widgets.nofanart)]</visible>
-		</control>
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true" fallback="special://skin/backgrounds/addons.jpg">$INFO[Container(8005).ListItem.Property(Fanart)]</texture>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(8005) + !Skin.HasSetting(home.widgets.nofanart)</visible>
 		</control>
-		
-		<!-- system fanart --->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.system.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.system.image) + [Container(9000).HasFocus(15) | Container(9000).HasFocus(16)]</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.system.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.system) + [Container(9000).HasFocus(15) | Container(9000).HasFocus(16)]</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/settings.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.system.image)) + IsEmpty(Skin.String(fanart.system.path)) + [Container(9000).HasFocus(15) | Container(9000).HasFocus(16)]</visible>
-		</control>
-		<!-- favourites fanart --->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.favourites.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.favourites.image) + Container(9000).HasFocus(18)</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.favourites.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.favourites) + Container(9000).HasFocus(18)</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/favourites.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.favourites.image)) + IsEmpty(Skin.String(fanart.favourites.path)) + Container(9000).HasFocus(18)</visible>
-		</control>
-		<!-- disc fanart --->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.disc.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.disc.image) + Container(9000).HasFocus(19)</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.disc.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.disc) + Container(9000).HasFocus(19)</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/disc.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.disc.image)) + IsEmpty(Skin.String(fanart.disc.path)) + Container(9000).HasFocus(19)</visible>
-		</control>
-	<!-- now playing fanart --->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">Container(9000).HasFocus(21)</visible>
-		</control>
-		
-	<!-- custom categories fanart --->
-	<!-- category1 -->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.category1.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.category1.path) + !IsEmpty(Skin.String(fanart.category1.image) + Container(9000).HasFocus(24)</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.category1.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.category1.image) + !IsEmpty(Skin.String(fanart.category1.path) + Container(9000).HasFocus(24)</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/category.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.category1.image)) + IsEmpty(Skin.String(fanart.category1.path)) + Container(9000).HasFocus(24)</visible>
-		</control>
-		<!-- category2 -->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.category2.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.category2.path) + !IsEmpty(Skin.String(fanart.category2.image) + Container(9000).HasFocus(25)</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.category2.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.category2.image) + !IsEmpty(Skin.String(fanart.category2.path) + Container(9000).HasFocus(25)</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/category.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.category2.image)) + IsEmpty(Skin.String(fanart.category2.path)) + Container(9000).HasFocus(25)</visible>
-		</control>
-		<!-- category3 -->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.category3.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.category3.path) + !IsEmpty(Skin.String(fanart.category3.image) + Container(9000).HasFocus(26)</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.category3.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.category3.image) + !IsEmpty(Skin.String(fanart.category3.path) + Container(9000).HasFocus(26)</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/category.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.category3.image)) + IsEmpty(Skin.String(fanart.category3.path)) + Container(9000).HasFocus(26)</visible>
-		</control>
-		<!-- category4 -->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.category4.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.category4.path) + !IsEmpty(Skin.String(fanart.category4.image) + Container(9000).HasFocus(27)</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.category4.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.category4.image) + !IsEmpty(Skin.String(fanart.category4.path) + Container(9000).HasFocus(27)</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/category.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.category4.image)) + IsEmpty(Skin.String(fanart.category4.path)) + Container(9000).HasFocus(27)</visible>
-		</control>
-		<!-- category5 -->
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture>$INFO[Skin.String(fanart.category5.image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.category5.path) + !IsEmpty(Skin.String(fanart.category5.image) + Container(9000).HasFocus(28)</visible>
-		</control>
-		<control type="multiimage" id="1">
-			<include>screen_Dimensions</include>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Skin.String(fanart.category5.path)]</imagepath>
-			<timeperimage>slideshow_Timer</timeperimage>
-			<fadetime>200</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + !Skin.HasSetting(fanart.category5.image) + !IsEmpty(Skin.String(fanart.category5.path) + Container(9000).HasFocus(28)</visible>
-		</control>
-		<control type="image">
-			<include>screen_Dimensions</include>
-			<texture background="true">special://skin/backgrounds/category.jpg</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>850</fadetime>
-			<include>fadeinout</include>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))] + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + IsEmpty(Skin.String(fanart.category5.image)) + IsEmpty(Skin.String(fanart.category5.path)) + Container(9000).HasFocus(28)</visible>
-		</control>
-	
 		
 	<!--menu shade-->
 		<control type="image">
