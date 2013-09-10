@@ -989,7 +989,7 @@
 				<texture fallback="thumbs/addon.png" background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio align="left">keep</aspectratio>
 				<fadetime>fadetime_Thumb</fadetime>
-				<visible>Control.IsVisible(50) + !SubString(ListItem.Icon,default) + ![SubString(Container.FolderPath,plugin://) + [Container.Content(movies) | Container.Content(tvshows)]]</visible>
+				<visible>!Container.Content(seasons) + Control.IsVisible(50) + !SubString(ListItem.Icon,default) + ![SubString(Container.FolderPath,plugin://) + [Container.Content(movies) | Container.Content(tvshows)]]</visible>
 			</control>
 			<control type="group">
 				<posx>0</posx>
@@ -1011,7 +1011,7 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<textcolor>Color7</textcolor>
 					<font>descriptionSmall</font>
-					<visible>SubString(Container.FolderPath,plugin) + ![Container.Content(movies) | Container.Content(tvshows)]</visible>
+					<visible>!Container.Content(seasons) + SubString(Container.FolderPath,plugin) + ![Container.Content(movies) | Container.Content(tvshows)]</visible>
 				</control>
 			</control>
 		</control>
