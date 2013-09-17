@@ -1320,6 +1320,131 @@
 		</content>
 	</include>
 	
+	<include name="RecommendedAlbums">
+		<content>
+				<item id="1">
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.1.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.1.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedAlbum.1.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecommendedAlbum.1.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.1.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.1.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.1.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.1.Title))</visible>
+			</item>
+			<item id="2">
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.2.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.2.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedAlbum.2.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecommendedAlbum.2.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.2.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.2.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.2.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.2.Title))</visible>
+			</item>
+			<item id="3">
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.3.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.3.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedAlbum.3.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecommendedAlbum.3.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.3.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.3.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.3.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.3.Title))</visible>
+			</item>
+			<item id="4">
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.4.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.4.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedAlbum.4.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecommendedAlbum.4.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.4.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.4.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.4.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.4.Title))</visible>
+			</item>
+			<item id="5">
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.5.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.5.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedAlbum.5.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecommendedAlbum.5.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.5.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.5.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.5.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.5.Title))</visible>
+			</item>
+			<item id="6">
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.6.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.6.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedAlbum.6.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecommendedAlbum.6.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.6.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.6.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.6.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.6.Title))</visible>
+			</item>
+			<item id="7">
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.7.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.7.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.7.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedAlbum.7.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecommendedAlbum.7.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.7.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.7.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.7.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.7.Title))</visible>
+			</item>
+			<item id="8">
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.8.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.8.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.8.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedAlbum.8.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecommendedAlbum.8.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.8.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.8.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.8.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.8.Title))</visible>
+			</item>
+			<item id="9">
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.9.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.9.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.9.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedAlbum.9.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecommendedAlbum.9.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.9.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.9.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.9.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.9.Title))</visible>
+			</item>
+			<item id="10">
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.10.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.10.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.10.Artist)]</label2>
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedAlbum.10.Rating)]</property>
+				<property name="Album">$INFO[Window(Home).Property(RecommendedAlbum.10.Album)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.10.Art(fanart))]</property>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.10.Year)]</property>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.10.Play)]</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.10.Title))</visible>
+			</item>
+		</content>
+	</include>
+	
 	<include name="RandomAddons">
 		<content>
 			<item id="1">
@@ -1425,6 +1550,113 @@
 			</item>
 		</content>
 	</include>
+	
+	<include name="RandomAddons">
+		<content>
+			<item id="1">
+				<icon>$INFO[Window(Home).Property(RandomAddon.1.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.1.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.1.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.1.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.1.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.1.Path)])</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RandomAddon.1.Title))</visible>
+			</item>
+			<item id="2">
+				<icon>$INFO[Window(Home).Property(RandomAddon.2.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.2.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.2.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.2.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.2.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.2.Path)])</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RandomAddon.2.Title))</visible>
+				
+			</item>
+			<item id="3">
+				<icon>$INFO[Window(Home).Property(RandomAddon.3.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.3.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.3.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.3.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.3.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.3.Path)])</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RandomAddon.3.Title))</visible>
+			</item>
+			<item id="4">
+				<icon>$INFO[Window(Home).Property(RandomAddon.4.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.4.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.4.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.4.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.4.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.4.Path)])</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RandomAddon.4.Title))</visible>
+			</item>
+			<item id="5">
+				<icon>$INFO[Window(Home).Property(RandomAddon.5.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.5.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.5.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.5.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.5.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.5.Path)])</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RandomAddon.5.Title))</visible>
+			</item>
+			<item id="6">
+				<icon>$INFO[Window(Home).Property(RandomAddon.6.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.6.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.6.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.6.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.6.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.6.Path)])</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RandomAddon.6.Title))</visible>
+			</item>
+			<item id="7">
+				<icon>$INFO[Window(Home).Property(RandomAddon.7.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.7.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.7.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.7.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.7.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.7.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.7.Path)])</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RandomAddon.7.Title))</visible>
+			</item>
+			<item id="8">
+				<icon>$INFO[Window(Home).Property(RandomAddon.8.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.8.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.8.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.8.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.8.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.8.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.8.Path)])</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RandomAddon.8.Title))</visible>
+			</item>
+			<item id="9">
+				<icon>$INFO[Window(Home).Property(RandomAddon.9.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.9.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.9.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.9.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.9.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.9.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.9.Path)])</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RandomAddon.9.Title))</visible>
+			</item>
+			<item id="10">
+				<icon>$INFO[Window(Home).Property(RandomAddon.10.Thumb)]</icon>
+				<label>$INFO[Window(Home).Property(RandomAddon.10.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAddon.10.Author)]</label2>
+				<property name="Version">$INFO[Window(Home).Property(RandomAddon.10.Version)]</property>
+				<property name="Summary">$INFO[Window(Home).Property(RandomAddon.10.Summary)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.10.Fanart)]</property>
+				<onclick>RunAddon($INFO[Window(Home).Property(RandomAddon.10.Path)])</onclick>
+				<visible>!IsEmpty(Window(Home).Property(RandomAddon.10.Title))</visible>
+			</item>
+		</content>
+	</include>
+
 <!---GLOBAL SEARCH------>
 	<include name="globalsearch_Header">
 		<control type="image">

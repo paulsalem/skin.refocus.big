@@ -1736,7 +1736,21 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>homeMenuInfo</font>
-					<visible>!IsEmpty(Window(Home).Property(RecentAlbum.1.Title))</visible>
+					<visible>!IsEmpty(Window(Home).Property(RecentAlbum.1.Title)) + !Skin.HasSetting(home.widgets.music.recommended)</visible>
+					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
+					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>Most Played Albums</description>
+					<posx>179</posx>
+					<posy>10</posy>
+					<height>20</height>
+					<width>450</width>
+					<label>32220</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>homeMenuInfo</font>
+					<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.1.Title)) + Skin.HasSetting(home.widgets.music.recommended)</visible>
 					<animation effect="fade" tween="Quadratic" easing="Out" start="0" end="100" time="10900" condition="[Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 					<animation effect="slide" end="-100,0" delay="0" time="3000" tween="back" easing="inout" pulse="false" condition="[Container(9000).HasFocus(9) | Container(9000).HasFocus(10)] + !Skin.HasSetting(home.widgets.noanimations)">Conditional</animation>
 				</control>
@@ -1826,7 +1840,8 @@
 							<animation reversible="false" effect="zoom" end="20,15,311,300" start="12,6,331,320" time="200">unfocus</animation>
 						</control>
 					</focusedlayout>
-					<include>RecentAlbums</include>
+					<include condition="!Skin.HasSetting(home.widgets.music.recommended)">RecentAlbums</include>
+					<include condition="Skin.HasSetting(home.widgets.music.recommended)">RecommendedAlbums</include>
 				</control>
 			</control>
 

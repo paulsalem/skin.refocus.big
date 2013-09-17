@@ -391,6 +391,13 @@
 						<selected>Skin.HasSetting(home.widgets.music)</selected>
 						<include>dialog_Radio</include>
 					</control>
+					<control type="radiobutton" id="204">
+						<width>557</width>
+						<label>$LOCALIZE[32219]</label>
+						<onclick>Skin.ToggleSetting(home.widgets.music.recommended)</onclick>
+						<selected>Skin.HasSetting(home.widgets.music.recommended)</selected>
+						<include>dialog_Radio</include>
+					</control>
 				</control>
 				<!--pictures submenu-->
 				<control type="grouplist" id="200">
@@ -423,6 +430,14 @@
 						<selected>Skin.HasSetting(home.widgets.addons)</selected>
 						<include>dialog_Radio</include>
 					</control>
+					<!--Recent Addons
+					<control type="radiobutton" id="204">
+						<width>557</width>
+						<label>$LOCALIZE[32218]</label>
+						<onclick>Skin.ToggleSetting(home.widgets.addons.recent)</onclick>
+						<selected>Skin.HasSetting(home.widgets.addons.recent)</selected>
+						<include>dialog_Radio</include>
+					</control>-->
 				</control>
 				<!--system submenu-->
 				<control type="grouplist" id="200">
