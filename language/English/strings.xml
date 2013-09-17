@@ -441,7 +441,8 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32215">Now Playing</string>
 <string id="32216">Enable Now Playing Widget</string>
 <string id="32217">Use Clearart</string>
-
+<string id="32218">Use Recent Items</string>
+<string id="32219">Use Most Played Albums</string>
 
 
 <!--Home Menu-->
