@@ -1,4 +1,4 @@
-﻿﻿<includes>
+﻿<includes>
 <!---STRIP LAYOUT------>	
 	<include name="view_Gallery">
 		<!---strip top------>

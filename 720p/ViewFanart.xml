@@ -45,13 +45,12 @@
 			</control>
 			<control type="multiimage">
 				<include>screen_Dimensions</include>
-				<imagepath background="true">$INFO[ListItem.Path]../extrafanart</imagepath>
+				<imagepath background="true">$VAR[extrafanart.path]</imagepath>
 				<aspectratio align="center">scale</aspectratio>
-				<timeperimage>1500</timeperimage>
-				<fadetime>800</fadetime>
-				<pauseatend>2000</pauseatend>
-				<randomize>false</randomize>
-				<loop>yes</loop>
+				<timeperimage>9000</timeperimage>
+                    <randomize>true</randomize>
+                    <fadetime>600</fadetime>
+                    <loop>yes</loop>
 				<visible>Control.IsVisible(47) + Skin.HasSetting(gallery.extrafanart)</visible>
 				</control>
 			<!--<control type="group">

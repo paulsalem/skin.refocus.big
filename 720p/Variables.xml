@@ -149,8 +149,8 @@
 
 <!---IMAGES------>
      <variable name="extrafanart.path">
-    	<value condition="Skin.HasSetting(fanart.extra)  + [Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Path,,/extrafanart/]</value>
-    	<value condition="Skin.HasSetting(fanart.extra)  + Container.Content(episodes)">$INFO[ListItem.Path]extrafanart</value>
+    	<value condition="Skin.HasSetting(fanart.extra) + [Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Path,,/extrafanart/]</value>
+    	<value condition="Skin.HasSetting(fanart.extra) + Container.Content(episodes)">$INFO[ListItem.Path]extrafanart</value>
     	<value condition="Skin.HasSetting(fanart.extra) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/extrafanart/]</value>
     	<value condition="Skin.HasSetting(fanart.extra) + [Container.Content(movies)]">$INFO[ListItem.Path,,/extrafanart/]</value>
     	<value>-</value>
